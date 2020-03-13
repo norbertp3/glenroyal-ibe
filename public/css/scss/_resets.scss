@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    &:focus {
+        outline: none;
+    }
+}
+html, body {
+    overflow-x: hidden!important;
+}
+p {
+    margin-bottom: 0;
+    word-wrap: break-word;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0;
+}
+button {
+    margin-bottom: 0;
+}
+a {
+    color: $primaryColor;
+    &:hover {
+        color: $primaryColor;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    &:focus {
+        color: $primaryColor;
+        text-decoration: none;
+    }
+}
+
+// Bootstrap buttons reset
+
+.btn-primary {
+    background-color: $primaryColor;
+    border-radius: 0;
+    border: 1px solid $primaryColor;
+}
+
+.btn {
+    border-radius: 0;
+    &:hover {
+        background-color: #fff;
+        color: $primaryColor;
+        border: 1px solid $primaryColor;
+    }
+    &:focus {
+        box-shadow: none;
+    }
+    &:not(:disabled):not(.disabled):active {
+        box-shadow: none;
+        background-color: $primaryColor;
+        background-color: $secondaryColor;
+        color: $primaryColor;
+    }
+    &:not(:disabled):not(.disabled).active:focus, &:not(:disabled):not(.disabled):active:focus, .show>&.dropdown-toggle:focus {
+        box-shadow: none;
+    }
+    &:not(:disabled):not(.disabled).active, &:not(:disabled):not(.disabled):active, .show>&.dropdown-toggle {
+        border-color: $primaryColor;
+    }
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-size: 15px;
+    background-position: calc(100% - 8px) 50%;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    background-image: $selectIcon;
+    padding: 4px 23px 4px 10px;
+    &:focus {
+        outline: none;
+        border-color: none;
+        box-shadow: none;
+    }
+}
+.form-control {
+    &:focus {
+        background-color: #f2f2f2;
+        // box-shadow: inset 1px 1px 0 0 #d8d8d8;
+        box-shadow: none;
+        border: none;
+    }
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+}
+
+form select::-ms-expand { display: none; }

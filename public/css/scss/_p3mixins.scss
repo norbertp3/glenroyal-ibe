@@ -1,0 +1,108 @@
+@mixin bodyText {
+    font-size: 15px;
+    line-height: 26px;
+    color: rgba(51, 50, 50, 0.8);
+}
+@mixin smallText {
+    color: rgba(51, 50, 50, 0.5);
+    font-size: 13px;
+}
+@mixin sectionHeading {
+    font-size: 22px;
+    color: #333232;
+    margin-right: 10px;
+}
+@mixin bodyLink {
+    color: $primaryFontColor;
+    &:hover {
+        color: $primaryFontColor;
+        cursor: pointer;
+    }
+}
+@mixin rateName {
+    color: $primaryFontColor;
+    &:hover {
+        text-decoration: none;
+    }
+}
+@mixin cardHeading {
+    font-size: 17px;
+    color: #333232;
+    margin-bottom: 10px;
+}
+@mixin bookingSummaryBackground {
+    background-color: #f2f2f2;
+    // box-shadow: inset 1px 1px 0 0 #d8d8d8;
+    // border: 1px solid red;
+    @include mQ(992px) {
+        background-color: #f2f2f2;
+        // border: 1px solid brown;
+    }
+}
+@mixin cardStyle {
+    box-shadow: inset 0px 0px 0px 1px #d8d8d8;
+    margin-bottom: 30px;
+    background-color: $cardBackgroundColor;
+    // border: ;
+    // background-color: ;
+}
+@mixin btnPrimary {
+    background-color: #333232;
+    border-radius: 25px;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    height: 50px;
+    padding: 0 15px;
+}
+@mixin btnSecondary {
+    background-color: inherit;
+    border-radius: 25px;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    height: 50px;
+    padding: 0 15px;
+}
+@mixin hotelInfoBtn {
+    border: 1px solid rgba(131, 111, 111, 0.8);
+    height: 40px;
+    margin-right: 20px;
+    background-color: inherit;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    padding-left: 20;
+    padding-right: 20;
+}
+@mixin inputSelect {
+    box-shadow: inset 1px 1px 0 0 #d8d8d8;
+    background-color: #f2f2f2;
+    color: rgba(51, 50, 50, 0.8);
+    font-size: 16px;
+    border: solid 1px transparent;
+    &:focus {
+        box-shadow: inset 1px 1px 0 0 #d8d8d8;
+        border: solid 1px rgba(51, 50, 50, 0.8);
+    }
+}
+@mixin formLabel {
+    font-size: 15px;
+    color: rgba(51, 50, 50, 0.8);
+}
+@mixin selectIcon {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-size: 15px;
+    background-position: calc(100% - 8px) 50%;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    background-image: $selectIcon;
+    padding: 4px 23px 4px 10px;
+    &:focus {
+        outline: none;
+        border-color: none;
+        box-shadow: none;
+    }
+}
