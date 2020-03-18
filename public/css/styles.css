@@ -27,24 +27,24 @@ button {
 }
 
 a {
-  color: #333232;
+  color: #57565b;
 }
 
 a:hover {
-  color: #333232;
+  color: #57565b;
   cursor: pointer;
   text-decoration: none;
 }
 
 a:focus {
-  color: #333232;
+  color: #57565b;
   text-decoration: none;
 }
 
 .btn-primary {
-  background-color: #333232;
+  background-color: #57565b;
   border-radius: 0;
-  border: 1px solid #333232;
+  border: 1px solid #57565b;
 }
 
 .btn {
@@ -53,8 +53,8 @@ a:focus {
 
 .btn:hover {
   background-color: #fff;
-  color: #333232;
-  border: 1px solid #333232;
+  color: #57565b;
+  border: 1px solid #57565b;
 }
 
 .btn:focus {
@@ -65,9 +65,9 @@ a:focus {
 .btn:not(:disabled):not(.disabled):active {
   -webkit-box-shadow: none;
           box-shadow: none;
-  background-color: #333232;
+  background-color: #57565b;
   background-color: #fff;
-  color: #333232;
+  color: #57565b;
 }
 
 .btn:not(:disabled):not(.disabled).active:focus, .btn:not(:disabled):not(.disabled):active:focus, .show > .btn.dropdown-toggle:focus {
@@ -76,7 +76,7 @@ a:focus {
 }
 
 .btn:not(:disabled):not(.disabled).active, .btn:not(:disabled):not(.disabled):active, .show > .btn.dropdown-toggle {
-  border-color: #333232;
+  border-color: #57565b;
 }
 
 select {
@@ -231,7 +231,7 @@ form select::-ms-expand {
 }
 
 body {
-  background-color: #fff;
+  background-color: #f6f6f6;
 }
 
 p {
@@ -342,15 +342,15 @@ a:hover {
 }
 
 .view-rates-btn:hover .icon-chevron-down {
-  background-color: #333232;
+  background-color: #57565b;
 }
 
 .view-rates-btn:hover .icon-chevron-up {
-  background-color: #333232;
+  background-color: #57565b;
 }
 
 .select-rate-btn:hover .icon-chevron-right {
-  background-color: #333232;
+  background-color: #57565b;
 }
 
 .icon-search-white {
@@ -370,13 +370,36 @@ a:hover {
 }
 
 .btn-primary {
-  background-color: #333232;
-  border-radius: 25px;
-  font-weight: 500;
+  display: inline-block;
   font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: #f0f0f0;
+  background-color: #57565b;
+  border-radius: 2px;
+  border: 2px solid #57565b;
+  padding: 12px 20px;
+  -webkit-box-shadow: inset 0px 0px 0px 1px #fff;
+          box-shadow: inset 0px 0px 0px 1px #fff;
   text-transform: uppercase;
-  height: 50px;
-  padding: 0 15px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.btn-primary:hover, .btn-primary:active {
+  color: #f0f0f0;
+  cursor: pointer;
+  background-color: rgba(87, 86, 91, 0.8);
+  border: 2px solid rgba(87, 86, 91, 0.8);
+  -webkit-box-shadow: inset 0px 0px 0px 1px #fff;
+          box-shadow: inset 0px 0px 0px 1px #fff;
+}
+
+.btn-primary:focus {
+  background-color: #424146;
+  border: 2px solid #424146;
+  color: #f0f0f0;
+  -webkit-box-shadow: inset 0px 0px 0px 1px #fff;
+          box-shadow: inset 0px 0px 0px 1px #fff;
 }
 
 .btn-secondary {
@@ -458,7 +481,7 @@ input[type=checkbox]:checked + span.custom-check:after {
   -webkit-animation: form-zoom .5s ease-in-out;
           animation: form-zoom .5s ease-in-out;
   padding: 2px 0px;
-  background: #333232;
+  background: #57565b;
   position: absolute;
   left: 0;
   top: 0;
@@ -490,7 +513,7 @@ input[type=checkbox]:checked + span.custom-check:after {
 }
 
 #mobile-hotel-info {
-  background-color: #333232;
+  background-color: #57565b;
   padding: 14px 0;
 }
 
@@ -517,7 +540,7 @@ input[type=checkbox]:checked + span.custom-check:after {
 }
 
 #progress-steps .active {
-  color: #333232;
+  color: #57565b;
   font-weight: 500;
 }
 
@@ -547,7 +570,7 @@ input[type=checkbox]:checked + span.custom-check:after {
 
 #progress-steps .progress-steps-mobile h3 {
   font-size: 18px;
-  color: #333232;
+  color: #57565b;
   text-transform: uppercase;
 }
 
@@ -557,12 +580,12 @@ input[type=checkbox]:checked + span.custom-check:after {
 }
 
 #booking-summary {
-  background-color: #f2f2f2;
+  background-color: #fff;
 }
 
 @media screen and (min-width: 992px) {
   #booking-summary {
-    background-color: #f2f2f2;
+    background-color: #fff;
   }
 }
 
@@ -579,7 +602,7 @@ input[type=checkbox]:checked + span.custom-check:after {
 
 .booking-summary-heading h2 {
   font-size: 15px;
-  color: #333232;
+  color: #57565b;
   text-transform: uppercase;
 }
 
@@ -743,7 +766,7 @@ input[type=checkbox]:checked + span.custom-check:after {
 
 .room-content .price-after-decimal {
   font-size: 18px;
-  color: #333232;
+  color: #57565b;
 }
 
 .room-content .view-rates-btn img {
@@ -774,7 +797,7 @@ input[type=checkbox]:checked + span.custom-check:after {
 
 .room-content .main-price-curreny {
   font-size: 18px;
-  color: #333232;
+  color: #57565b;
 }
 
 .room-wrapper .room-image {
@@ -858,7 +881,7 @@ input[type=checkbox]:checked + span.custom-check:after {
 }
 
 .rates-wrapper .select-rate-btn:hover span {
-  color: #333232;
+  color: #57565b;
 }
 
 .rates-wrapper .rate-description {
@@ -957,7 +980,7 @@ input[type=checkbox]:checked + span.custom-check:after {
 }
 
 #banner {
-  background-color: #333232;
+  background-color: #57565b;
   color: #fff;
   padding: 20px 0 27px 0;
   position: relative;
@@ -1029,7 +1052,7 @@ input[type=checkbox]:checked + span.custom-check:after {
 .addon-with-checkboxes-wrapper .addon-content h4 {
   font-size: 22px;
   font-weight: 500;
-  color: #333232;
+  color: #57565b;
   font-weight: 500;
 }
 
@@ -1095,7 +1118,7 @@ input[type=checkbox]:checked + span.custom-check:after {
 .addon-with-checkbox-wrapper .addon-content h4 {
   font-size: 22px;
   font-weight: 500;
-  color: #333232;
+  color: #57565b;
   font-weight: 500;
 }
 
@@ -1159,7 +1182,7 @@ input[type=checkbox]:checked + span.custom-check:after {
 .addon-with-dropdown-wrapper .addon-content h4 {
   font-size: 22px;
   font-weight: 500;
-  color: #333232;
+  color: #57565b;
   font-weight: 500;
 }
 
@@ -1624,7 +1647,7 @@ input[type=checkbox]:checked + span.custom-check:after {
   z-index: 1000 !important;
   top: 0;
   left: 0;
-  background-color: #333232;
+  background-color: #57565b;
   overflow-x: hidden;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -1703,7 +1726,7 @@ input[type=checkbox]:checked + span.custom-check:after {
   z-index: 1;
   top: 0;
   right: 0;
-  background-color: #333232;
+  background-color: #57565b;
   overflow-x: hidden;
   -webkit-transition: 0.5s;
   transition: 0.5s;

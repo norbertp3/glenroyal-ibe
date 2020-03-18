@@ -31,11 +31,11 @@
     margin-bottom: 10px;
 }
 @mixin bookingSummaryBackground {
-    background-color: #f2f2f2;
+    background-color: $bookingSummaryBackgroundColor;
     // box-shadow: inset 1px 1px 0 0 #d8d8d8;
     // border: 1px solid red;
     @include mQ(992px) {
-        background-color: #f2f2f2;
+        background-color: $bookingSummaryBackgroundColor;
         // border: 1px solid brown;
     }
 }
@@ -47,13 +47,32 @@
     // background-color: ;
 }
 @mixin btnPrimary {
-    background-color: #333232;
-    border-radius: 25px;
-    font-weight: 500;
+    display: inline-block;
     font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #f0f0f0;
+    // height: 50px;
+    background-color: #57565b;
+    border-radius: 2px;
+    border: 2px solid #57565b;
+    padding: 12px 20px;
+    box-shadow:inset 0px 0px 0px 1px #fff;
     text-transform: uppercase;
-    height: 50px;
-    padding: 0 15px;
+    font-family: $textFont;
+    &:hover, &:active {
+        color: #f0f0f0;
+        cursor: pointer;
+        background-color: rgba(87, 86, 91, 0.8);
+        border: 2px solid rgba(87, 86, 91, 0.8);
+        box-shadow:inset 0px 0px 0px 1px #fff;
+    }
+    &:focus {
+        background-color: #424146;
+        border: 2px solid #424146;
+        color: #f0f0f0;
+        box-shadow:inset 0px 0px 0px 1px #fff;
+    }
 }
 @mixin btnSecondary {
     background-color: inherit;
