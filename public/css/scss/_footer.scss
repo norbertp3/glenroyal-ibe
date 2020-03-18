@@ -1,75 +1,72 @@
 footer {
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    @include mQ(992px) {
-        max-width: 1480px;
-        padding: 0 60px 0 60px;
-        margin-top: 40px;
+    ul {
+        list-style-type:none;
+        li {
+            display: inline-block;
+        }
     }
     @include mQmax (991px) {
         text-align: center;
     }
-    .container {
-        padding: 0;
-        padding: 28px 0 14px 0;
-        @include mQ(992px) {
-            padding: 25px 0 10px 0;
-        }
+    a {
+        color: rgba(87, 86, 91, 0.85);
+        font-size: 16px;
+        line-height: 26px;
+        font-family: $textFont;
     }
-    .footer-links {
-        ul {
-            column-count: 1;
-            @include mQ(767px) {
-                column-count: 3;
-            }
-            font-size: 14px;
-        }
+}
+ul.footer-nav {
+    @include mQmax (991px) {
+        columns: 2;
+        display: block;
         li {
-            list-style: none;
-            margin-bottom: 11px;
-        }
-
-    }
-    .logo {
-        @include mQmax (991px) {
-            margin-bottom: 28px;
-        }
-    }
-    .footer-social-media {
-        li {
-            display: inline-block;
-        }
-        .fa {
-            background: #333;
-            height: 40px;
-            width: 40px;
-            border-radius: 50px;
-            color: #fff;
-            position: relative;
-            font-size: 16px;
-            padding-top: 10px;
-            border: 2px solid #333;
-            &:hover {
-                color: #333;
-                background: #fff;
-            }
-            &.fa-instagram {
-                font-size: 20px;
-                padding-top: 8px;
-            }
+            display: block;
+            padding-bottom: 15px;
         }
     }
 }
-.copy-rights {
-    p {
-        font-size: 12px!important;
-        line-height: 22px;
-        color: $primaryFontColor;
+.footer-links {
+    padding: 50px 0 30px 0;
+    a {
+        padding: 0 10px;
     }
-    padding: 10px;
-    @include mQ(992px) {
-        padding: 10px 0;
+}
+
+.footer-social-links {
+    .fa {
+        color: #abaaad;
+        font-size: 20px;
+        padding: 0 3px;
+        @include mQmax (991px) {
+            margin-top: 25px;
+        }
     }
-    background-color: #EDEDED;
+}
+.footer-devider {
+    border-bottom: 1px solid #f6f6f6;
+    padding-top: 20px;
+}
+.footer-sub-links {
+    margin: 20px 0 60px 0;
+    @include mQ {
+        margin: 20px 0;
+    }
+    ul {
+        columns: 1;
+        li {
+            &:after {
+                content: "\2022";
+                padding: 0 5px 0 10px;
+                color: #abaaad;
+            }
+            display: inline;
+            &:last-child:after {
+                content: '';
+            }
+        }
+    }
+    a {
+        font-size: 14px;
+        color: #abaaad;
+    }
 }

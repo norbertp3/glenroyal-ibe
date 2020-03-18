@@ -23,74 +23,60 @@
 <body>
 
   <header>
-
-    <!-- Mobile Nav -->
-    <div class="d-lg-none">
-      <nav class="navbar navbar-expand-xl navbar-light">
-        <div class="mobile-nav-top w-100 d-flex justify-content-between align-items-center">
-          <a href="#"><img src="/public/images/redworth_logo-1.png" class="logo"></a>
-          <form action="" method="get" id="currencyConverter" class="dropdown-currency">
-            <input type="hidden" name="redirect">
-            <select id="currency-options" class="price-select ml-0" name="currencyCode" onchange="">
-              <option value="EUR">€ EUR</option>
-              <option value="GBP">£ GBP</option>
-              <option value="USD">$ USD</option>
-            </select>
-          </form>
-          <!-- <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button> -->
-          <div class="three">
-            <a href="javascript:;" data-toggle="collapse" data-target="#navbarCollapse">
-              <div class="hamburger" id="hamburger-6">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-              </div>
-            </a>
-          </div>
+    <div class="main-nav position-relative d-none d-lg-block">
+        <div class="top-main-nav text-center">
+            <img src="public/images/logo-stars-placeholder.png" alt="">
+            <a href="#" class="book-btn-nav position-absolute">BOOK YOUR STAY</a>
         </div>
-
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <div class="navbar-nav">
-            <a href="#" class="nav-item nav-link active nav-book-now">Book a Room</a>
-            <a href="https://www.redworthhalldurham.co.uk/rooms/" class="nav-item nav-link">Rooms</a>
-            <a href="https://www.redworthhalldurham.co.uk/spa/" class="nav-item nav-link">Retreat Spa</a>
-            <a href="https://www.redworthhalldurham.co.uk/weddings/" class="nav-item nav-link">Weddings</a>
-            <a href="https://www.redworthhalldurham.co.uk/meetings-and-events/" class="nav-item nav-link">Meeting &
-              Events</a>
-            <a href="https://www.redworthhalldurham.co.uk/restaurant/" class="nav-item nav-link">Restaurant</a>
-            <a href="https://www.redworthhalldurham.co.uk/offers/" class="nav-item nav-link">Offers & What's On</a>
-            <a href="https://www.redworthhalldurham.co.uk/contact-us/" class="nav-item nav-link">Contact</a>
-            <a href="https://shops.giftvoucherbrilliance.co.uk/pages/redworth_hall/Home"
-              class="nav-item nav-link mb-5">Gift Vouchers</a>
-          </div>
+        <div class="container-fluid">
+            <div class="links-main-nav d-flex justify-content-between">
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+            </div>
         </div>
-      </nav>
     </div>
-    <!-- End Mobile Nav -->
 
-    <!-- Desktop Nav -->
-    <div class="d-none d-lg-block">
-      <div class="header-container d-flex justify-content-between align-items-center">
-        <a href="#"><img src="/public/images/redworth_logo-1.png" class="logo"></a>
-        <div class="main-nav">
-          <ul class="mt-auto mb-auto">
-            <li><a href="https://www.redworthhalldurham.co.uk/rooms/">Rooms</a></li>
-            <li><a href="https://www.redworthhalldurham.co.uk/spa/">Retreat Spa</a></li>
-            <li><a href="https://www.redworthhalldurham.co.uk/weddings/">Weedings</a></li>
-            <li><a href="https://www.redworthhalldurham.co.uk/meetings-and-events/">Meetings and Events</a></li>
-            <li><a href="https://www.redworthhalldurham.co.uk/restaurant/">Restaurant</a></li>
-            <li><a href="https://www.redworthhalldurham.co.uk/offers/">Offers & What's On</a></li>
-            <li><a href="https://www.redworthhalldurham.co.uk/contact-us/">Contact</a></li>
-            <li><a href="https://shops.giftvoucherbrilliance.co.uk/pages/redworth_hall/Home">Gift Vouchers</a></li>
-          </ul>
-        </div>
-        <a href="#"><button type="button" class="btn btn-primary float-right">Book a room</button></a>
-      </div>
+    <div class="mini-nav fixed-top d-flex justify-content-between align-items-center navbar-hide">
+        <img src="public/images/icons/icon-hamburger.svg" onclick="openNav()" >
+        <img src="public/images/logo-mark-grey.png">
+        <a href="#" class="book-btn-nav d-none d-lg-block">BOOK YOUR STAY</a>
     </div>
-    <!-- End Desktop Nav -->
-  </header>
+</header>
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+        <img src="public/images/icons/close-x.svg" alt="">
+    </a>
+    <div class="side-nav-links text-center">
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+    <div class="d-flex justify-content-center">
+        <a href=""><i class="fa fa-facebook"></i></a>
+        <a href=""><i class="fa fa-instagram"></i></a>
+        <a href=""><i class="fa fa-twitter"></i></a>
+    </div>
+</div>
 
   <section id="banner" class="d-none d-lg-block">
     <div class="container">
@@ -562,47 +548,53 @@
 
   </div>
 
-  <footer>
-    <div class="container devider-top-desktop devider-top-mobile">
-      <div class="row">
-        <div class="col-12 col-lg-12 col-xl-3 text-center text-xl-left mb-3 mb-xl-0">
-          <a href="#"><img src="/public/images/redworth_logo-1.png" class="logo"></a>
-        </div>
-        <div class="col-12 col-lg-8 col-xl-6 mb-2 mb-xl-0">
-          <div class="footer-links">
-            <ul>
-              <li><a href="https://shops.giftvoucherbrilliance.co.uk/pages/redworth_hall/Home">Gift Vouchers</a></li>
-              <li><a href="https://www.redworthhalldurham.co.uk/offers/">Special Offers</a></li>
-              <li><a href="https://www.redworthhalldurham.co.uk/faqs/">FAQs</a></li>
-              <li><a href="https://www.redworthhalldurham.co.uk/contact-us/">Contact Us</a></li>
-              <li><a
-                  href="https://www.thecairncollection.co.uk/?_ga=2.167210235.47086315.1581520921-683091198.1579273141">The
-                  Cairn Collection</a></li>
-              <li><a href="https://www.cairnhotelgroup.com/">The Cairn Group</a></li>
-              <li><a href="https://www.redworthhalldurham.co.uk/terms-conditions/">Terms & Conditions</a></li>
-              <li><a href="https://www.redworthhalldurham.co.uk/privacy-policy/">Privacy Policy</a></li>
-              <li><a href="https://www.redworthhalldurham.co.uk/sitemap/">Sitemap</a></li>
-            </ul>
+  
+<!-- Footer -->
+<footer>
+  <div class="container-fluid">
+      <div class="footer-links">
+          <div class="d-lg-flex justify-content-between align-items-center">
+              <a href="#"><img src="public/images/logo-stars-placeholder.png" alt=""></a>
+              <ul class="footer-nav">
+                  <li><a href="#">aaa</a></li>
+                  <li><a href="#">bbb</a></li>
+                  <li><a href="#">ccc</a></li>
+                  <li><a href="#">ddd</a></li>
+                  <li><a href="#">eee</a></li>
+              </ul>
+              <ul class="footer-social-links">
+                  <li><a href=""><i class="fa fa-facebook"></i></a></li></a>
+                  <li><a href=""><i class="fa fa-instagram"></i></li></a>
+                  <li><a href=""><i class="fa fa-twitter"></i></li></a>
+              </ul>
           </div>
-        </div>
-        <div class="col-12 col-lg-4 col-xl-3">
-          <div class="footer-social-media text-center float-lg-right">
-            <ul>
-              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-              <li class="mx-3"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-            </ul>
-          </div>
-        </div>
       </div>
-    </div>
-
-  </footer>
-  <div class="copy-rights">
-    <div class="container">
-      <p>&copy; All rights reserved | Redworth Hall 2020</p>
-    </div>
+      <div class="footer-contact">
+          <div class="row align-items-end">
+              <div class="col-12 col-lg-6 order-1 order-lg-0">
+                  <p>Glenroyal Hotel & Leisure Club, Straffan Road, Maynooth, W23 C2V1, Co. Kildare</p>
+              </div>
+              <div class="col-12 col-lg-6 text-lg-right order-0 order-lg-1 pb-4 pb-lg-0">
+                  <p class="pb-2 pb-lg-0">+353 (0) 1 629 0909</p>
+                  <p>info@glenroyal.ie / reservations@glenroyal.ie</p>
+              </div>
+          </div>
+      </div>
   </div>
+  <div class="footer-devider d-none d-lg-block"></div>
+  <div class="container-fluid">
+      <div class="footer-sub-links text-center">
+          <ul>
+              <li><a href="#">Cookie Policy</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+          </ul>
+      </div>
+  </div>
+</footer>
 
   <!-- Modals -->
 <!-- Info Modal -->

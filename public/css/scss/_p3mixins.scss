@@ -106,3 +106,128 @@
         box-shadow: none;
     }
 }
+
+
+// From CMS
+.btn-cta {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #f0f0f0;
+    height: 50px;
+    background-color: #57565b;
+    border-radius: 2px;
+    border: 2px solid #57565b;
+    padding: 15px 20px;
+    box-shadow:inset 0px 0px 0px 1px #fff;
+    text-transform: uppercase;
+    font-family: $textFont;
+    &:hover, &:active {
+        color: #f0f0f0;
+        cursor: pointer;
+        background-color: rgba(87, 86, 91, 0.8);
+        border: 2px solid rgba(87, 86, 91, 0.8);
+    }
+    &:focus {
+        background-color: #424146;
+        border: 2px solid #424146;
+        color: #f0f0f0;
+    }
+}
+.newsletter-btn {
+    background-color: rgba(240, 240, 240, 0.2);
+    border: solid 2px rgba(240, 240, 240, 0.2);
+}
+
+@mixin h2 {
+    font-size: 30px;
+    color: #c0bfc2;
+    padding-bottom: 20px;
+    @include mQ (992px) {
+        font-size: 45px;
+    }
+    @include mQ (1200px) {
+        font-size: 60px;
+    }
+}
+@mixin h2-standard {
+    font-family: $headingFont;
+    font-size: 24px;
+    color: #57565b;
+    font-weight: 400;
+    @include mQ (992px) {
+        font-size: 32px;
+    }
+}
+@mixin span-standard {
+    font-family: $headingFont;
+    font-size: 15px;
+    font-style: italic;
+    color: rgba(87, 86, 91, 0.6);
+    margin-bottom: 15px;
+    display: block;
+    @include mQ (992px) {
+        font-size: 16px;
+    }
+}
+
+@mixin standardSlider {
+    .standard-slider {
+        .slider-item {
+          height: 238px;
+          background-size: cover;
+          background-position: center;
+          @include mQ (992px) {
+            height: 600px;
+          }
+          @include mQ (1500px) {
+            height: 713px;
+          }
+        }
+        .slick-dots {
+            bottom: 10px;
+        }
+    }
+}
+
+
+// Gallery
+
+.galleryContent { display: -webkit-box; display: -ms-flexbox; display: flex; flex-wrap: wrap; justify-content: space-between }
+
+.galleryContent figure { margin-bottom: 30px; width: 100%; height: 100% }
+.galleryContent figure img { display: block; object-fit: cover }
+.galleryContent figure {
+	margin-bottom: 30px;
+}
+.galleryContent figure a {
+    display:block;height: 0;
+	padding-bottom: 47%;
+	position: relative;
+    overflow: hidden;
+}
+.galleryContent [class*="--fourth"] a { padding-bottom:99%}
+.galleryContent figure img {
+	display: block;
+	position: absolute;
+	top: -1000px;
+	bottom: -1000px;
+	margin: auto;
+	left: -1000px;
+	right: -1000px;
+	height: 100%;
+	min-width: 100%;
+	max-width: none;
+}
+@include mQ (768px) {
+    .galleryContent *[class*='--half'] { width: 48.685% }
+    .galleryContent *[class*='--fourth'] { width: 23.071% }
+}
+@include mQmax (767px) {
+    .galleryContent { margin: 0 0 20px }
+    .galleryContent figure { margin-bottom: 10px }
+    .galleryContent *[class*='--half'] { width: 100% }
+    .galleryContent *[class*='--fourth'] { width: 48.5% }
+    .galleryContent figure img { width: 100%;}
+}
