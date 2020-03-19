@@ -48,7 +48,7 @@ a {
 .icon-chevron-down {
     -webkit-mask-image: url(../../../public/images/icons/p3/icon-chevron-white-down.svg);
     mask-image: url(../../../public/images/icons/p3/icon-chevron-white-down.svg);
-    background-color: white;
+    // background-color: white;
     height: 16px;
     width: 16px;
     display: inline-block;
@@ -59,7 +59,7 @@ a {
 .icon-chevron-up {
     -webkit-mask-image: url(../../../public/images/icons/p3/icon-chevron-white-up.svg);
     mask-image: url(../../../public/images/icons/p3/icon-chevron-white-up.svg);
-    background-color: white;
+    // background-color: white;
     height: 16px;
     width: 16px;
     display: inline-block;
@@ -124,27 +124,27 @@ a {
 // Deviders
 .devider-top-desktop {
     @include mQmin (992px) {
-        border-top: 1px solid #d8d8d8;
+        border-top: 1px solid $deviderColor;
     }
 }
 .devider-top-mobile{
     @include mQmax (991px) {
-        border-top: 1px solid #d8d8d8;
+        border-top: 1px solid $deviderColor;
     }
 }
 .devider-bottom-desktop {
     @include mQmin (992px) {
-        border-bottom: 1px solid #d8d8d8;
+        border-bottom: 1px solid $deviderColor;
     }
 }
 .devider-bottom-mobile {
     @include mQmax (991px) {
-        border-bottom: 1px solid #d8d8d8;
+        border-bottom: 1px solid $deviderColor;
     }
 }
 .devider-top-bottom {
-    border-top: 1px solid #d8d8d8;
-    border-bottom: 1px solid #d8d8d8;
+    border-top: 1px solid $deviderColor;
+    border-bottom: 1px solid $deviderColor;
 }
 
 // Checkboxes
@@ -200,6 +200,7 @@ input[type=checkbox]:checked+span.custom-check:after {
         font-size: 15px;
         color: #fff;
         font-family: $textFont;
+        text-decoration: none;
         &:focus {
             text-decoration: none;
         }
@@ -352,8 +353,7 @@ input[type=checkbox]:checked+span.custom-check:after {
         }
     }
     h2 {
-        font-size: 30px;
-        line-height: 1;
+        @include priceTag;
         text-align: right;
     }
     .price-section {
@@ -385,6 +385,8 @@ input[type=checkbox]:checked+span.custom-check:after {
     .price-after-decimal {
         font-size: 18px;
         color: $primaryColor;
+        font-family: $textFont;
+        font-style: normal;
     }
     .view-rates-btn {
         img {
@@ -411,6 +413,8 @@ input[type=checkbox]:checked+span.custom-check:after {
     .main-price-curreny {
         font-size: 18px;
         color: $primaryColor;
+        font-family: $textFont;
+        font-style: normal;
     }
 }
 
@@ -568,7 +572,6 @@ input[type=checkbox]:checked+span.custom-check:after {
         font-size: 16px;
         margin-bottom: 50px;
         color: rgba(255, 255, 255, 0.8);
-        font-size: 16px;
     }
     @include mQ(992px) {
         margin-bottom: 40px;
@@ -945,9 +948,6 @@ input[type=checkbox]:checked+span.custom-check:after {
             }
         }
     }
-    .btn-primary {
-        
-    }
 }
 .confirmation-content-box {
     margin-bottom: 30px;
@@ -1057,4 +1057,10 @@ input[type=checkbox]:checked+span.custom-check:after {
         }
     }
 }
-
+.icon-info-white, .icon-search-white {
+    position: relative;
+    top: 3px;
+}
+.booking-summary-heading h2 {
+    font-family: $textFont;
+}

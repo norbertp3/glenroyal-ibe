@@ -3,14 +3,16 @@ $headingFont: 'Gelasio', ;
 $textFont: 'Montserrat', sans-serif;
 
 // Colours
-$primaryFontColor: #333232;
+$primaryFontColor: #57565b;
 $primaryColor: #57565b;
 $secondaryColor: #fff;
 $pageBg: #f6f6f6;
-$bookingSummaryBackgroundColor: #fff;
+$bookingSummaryBackgroundColor: rgba(204, 204, 205, 0.7);
+$bookingSummaryBackgroundColorDesktop: #fff;
 $cardBackgroundColor: #fff;
 $modalDescription2Background: #f2f2f2;
 $modalBackgroundColour: #fff;
+$deviderColor: rgba(87, 86, 91, 0.3);
 
 // Icons
 $selectIcon: url(../../public/images/icons/p3/icon-chevron-dark-down.svg);

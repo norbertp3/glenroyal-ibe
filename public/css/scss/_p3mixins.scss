@@ -1,16 +1,31 @@
 @mixin bodyText {
+    font-family: $textFont;
     font-size: 15px;
-    line-height: 26px;
-    color: rgba(51, 50, 50, 0.8);
+    line-height: 24px;
+    color: rgba(87, 86, 91, 0.8);
+    @include mQ (992px) {
+        font-size: 16px;
+        line-height: 24px;
+    }
 }
 @mixin smallText {
-    color: rgba(51, 50, 50, 0.5);
-    font-size: 13px;
+    font-family: $headingFont;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 14px;
+    color: rgba(87, 86, 91, 0.6);
+    @include mQ(992px) {
+        font-size: 16px;
+        line-height: 18px;
+    }
 }
 @mixin sectionHeading {
-    font-size: 22px;
-    color: #333232;
-    margin-right: 10px;
+    font-family: $headingFont;
+    font-size: 20px;
+    color: #57565b;
+    @include mQ(992px) {
+        font-size: 22px;
+    }
 }
 @mixin bodyLink {
     color: $primaryFontColor;
@@ -21,28 +36,37 @@
 }
 @mixin rateName {
     color: $primaryFontColor;
+    font-size: 15px;
+    @include mQ (992px) {
+        font-size: 16px;
+        line-height: 24px;
+    }
     &:hover {
         text-decoration: none;
     }
 }
 @mixin cardHeading {
+    font-family: $textFont;
     font-size: 17px;
-    color: #333232;
+    color: #57565b;
     margin-bottom: 10px;
+    @include mQ (992px) {
+        line-height: 30px;
+    }
 }
 @mixin bookingSummaryBackground {
     background-color: $bookingSummaryBackgroundColor;
     // box-shadow: inset 1px 1px 0 0 #d8d8d8;
     // border: 1px solid red;
     @include mQ(992px) {
-        background-color: $bookingSummaryBackgroundColor;
+        background-color: $bookingSummaryBackgroundColorDesktop;
         // border: 1px solid brown;
     }
 }
 @mixin cardStyle {
-    box-shadow: inset 0px 0px 0px 1px #d8d8d8;
+    // box-shadow: inset 0px 0px 0px 1px #d8d8d8;
     margin-bottom: 30px;
-    background-color: $cardBackgroundColor;
+    background-color: $secondaryColor;
     // border: ;
     // background-color: ;
 }
@@ -61,7 +85,7 @@
     text-transform: uppercase;
     font-family: $textFont;
     &:hover, &:active {
-        color: #f0f0f0;
+        color: #f0f0f0!important;
         cursor: pointer;
         background-color: rgba(87, 86, 91, 0.8);
         border: 2px solid rgba(87, 86, 91, 0.8);
@@ -124,6 +148,13 @@
         border-color: none;
         box-shadow: none;
     }
+}
+@mixin priceTag {
+    font-family: $textFont;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 30px;
+    color: $primaryFontColor;
 }
 
 
