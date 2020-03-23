@@ -223,3 +223,32 @@ a {
         background-size: 10px;
     }
 }
+.room-content {
+    .room-ribbon {
+        left: 0;
+        span {
+            background-color: #c20b32;
+            border-bottom-right-radius: 10px;
+            left:0;
+            top: 15px;
+            padding: 5px 10px 5px 5px;
+            font-family: $textFont;
+            font-style: normal;
+        }
+    }
+}
+.rates-wrapper {
+    .rate-ribbon {
+        left: 0;
+        span {
+            background-color: #6abb91;
+            left: -30px;
+            top: -7px;
+            padding: 5px 10px 5px 5px;
+            font-family: $textFont;
+            font-style: normal;
+            border-bottom-right-radius: 10px;
+        }
+    }
+}
+

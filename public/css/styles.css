@@ -299,9 +299,8 @@ a:hover {
 
 .icon-chevron-right {
   -webkit-mask-image: url(../../../public/images/icons/p3/icon-chevron-white-right.svg);
-  mask-image: url(../../../public/images/icons/p3/icon-chevron-white-right.svg);
-  background-color: white;
-  height: 19px;
+  background: url(../../../public/images/icons/p3/icon-chevron-white-right.svg);
+  height: 16px;
   width: 16px;
   display: inline-block;
   background-repeat: no-repeat;
@@ -311,7 +310,7 @@ a:hover {
 
 .icon-chevron-down {
   -webkit-mask-image: url(../../../public/images/icons/p3/icon-chevron-white-down.svg);
-  mask-image: url(../../../public/images/icons/p3/icon-chevron-white-down.svg);
+  background: url(../../../public/images/icons/p3/icon-chevron-white-down.svg);
   height: 16px;
   width: 16px;
   display: inline-block;
@@ -322,7 +321,7 @@ a:hover {
 
 .icon-chevron-up {
   -webkit-mask-image: url(../../../public/images/icons/p3/icon-chevron-white-up.svg);
-  mask-image: url(../../../public/images/icons/p3/icon-chevron-white-up.svg);
+  background: url(../../../public/images/icons/p3/icon-chevron-white-up.svg);
   height: 16px;
   width: 16px;
   display: inline-block;
@@ -333,7 +332,7 @@ a:hover {
 
 .icon-progress-step-separator {
   -webkit-mask-image: url(../../../public/images/icons/p3/icon-chevron-white-right.svg);
-  mask-image: url(../../../public/images/icons/p3/icon-chevron-white-right.svg);
+  background: url(../../../public/images/icons/p3/icon-chevron-white-right.svg);
   background-color: black;
   height: 19px;
   width: 24px;
@@ -388,7 +387,7 @@ a:hover {
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 2px;
-  color: #f0f0f0;
+  color: #f6f6f6;
   background-color: #57565b;
   border-radius: 2px;
   border: 2px solid #57565b;
@@ -400,7 +399,7 @@ a:hover {
 }
 
 .btn-primary:hover, .btn-primary:active {
-  color: #f0f0f0 !important;
+  color: #f6f6f6 !important;
   cursor: pointer;
   background-color: rgba(87, 86, 91, 0.8);
   border: 2px solid rgba(87, 86, 91, 0.8);
@@ -722,7 +721,6 @@ input[type=checkbox]:checked + span.custom-check:after {
 
 .room-content {
   padding: 20px 10px 20px 10px;
-  position: relative;
 }
 
 @media screen and (min-width: 992px) {
@@ -847,6 +845,10 @@ input[type=checkbox]:checked + span.custom-check:after {
   font-style: normal;
 }
 
+.room-wrapper {
+  position: relative;
+}
+
 .room-wrapper .room-image {
   height: 184px;
   width: 100%;
@@ -935,18 +937,13 @@ input[type=checkbox]:checked + span.custom-check:after {
 
 .rates-wrapper .select-rate-btn span {
   font-size: 16px;
-  color: #fff;
+  color: #f6f6f6;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
 }
 
-.rates-wrapper .select-rate-btn .fa {
-  font-size: 14px;
-  padding-bottom: 2px;
-  top: -3px;
-  position: relative;
-}
-
-.rates-wrapper .select-rate-btn:hover span {
-  color: #57565b;
+.rates-wrapper .select-rate-btn span:hover {
+  color: #f6f6f6;
 }
 
 .rates-wrapper .rate-description {
@@ -2417,7 +2414,7 @@ p {
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 2px;
-  color: #f0f0f0;
+  color: #f6f6f6;
   background-color: #57565b;
   border-radius: 2px;
   border: 2px solid #57565b;
@@ -2433,7 +2430,7 @@ p {
 }
 
 .hotel-info-buttons .btn:hover, .hotel-info-buttons .btn:active {
-  color: #f0f0f0 !important;
+  color: #f6f6f6 !important;
   cursor: pointer;
   background-color: rgba(87, 86, 91, 0.8);
   border: 2px solid rgba(87, 86, 91, 0.8);
@@ -2646,5 +2643,33 @@ a {
   background-color: #f6f6f6;
   background-image: url(http://127.0.0.1:5500/public/css/../../public/images/icons/p3/dropdown-arrows.svg);
   background-size: 10px;
+}
+
+.room-content .room-ribbon {
+  left: 0;
+}
+
+.room-content .room-ribbon span {
+  background-color: #c20b32;
+  border-bottom-right-radius: 10px;
+  left: 0;
+  top: 15px;
+  padding: 5px 10px 5px 5px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+}
+
+.rates-wrapper .rate-ribbon {
+  left: 0;
+}
+
+.rates-wrapper .rate-ribbon span {
+  background-color: #6abb91;
+  left: -30px;
+  top: -7px;
+  padding: 5px 10px 5px 5px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  border-bottom-right-radius: 10px;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -36,9 +36,8 @@ a {
 }
 .icon-chevron-right {
     -webkit-mask-image: url(../../../public/images/icons/p3/icon-chevron-white-right.svg);
-    mask-image: url(../../../public/images/icons/p3/icon-chevron-white-right.svg);
-    background-color: white;
-    height: 19px;
+    background: url(../../../public/images/icons/p3/icon-chevron-white-right.svg);
+    height: 16px;
     width: 16px;
     display: inline-block;
     background-repeat: no-repeat;
@@ -47,8 +46,7 @@ a {
 }
 .icon-chevron-down {
     -webkit-mask-image: url(../../../public/images/icons/p3/icon-chevron-white-down.svg);
-    mask-image: url(../../../public/images/icons/p3/icon-chevron-white-down.svg);
-    // background-color: white;
+    background: url(../../../public/images/icons/p3/icon-chevron-white-down.svg);
     height: 16px;
     width: 16px;
     display: inline-block;
@@ -58,8 +56,7 @@ a {
 }
 .icon-chevron-up {
     -webkit-mask-image: url(../../../public/images/icons/p3/icon-chevron-white-up.svg);
-    mask-image: url(../../../public/images/icons/p3/icon-chevron-white-up.svg);
-    // background-color: white;
+    background: url(../../../public/images/icons/p3/icon-chevron-white-up.svg);
     height: 16px;
     width: 16px;
     display: inline-block;
@@ -69,7 +66,7 @@ a {
 }
 .icon-progress-step-separator {
     -webkit-mask-image: url(../../../public/images/icons/p3/icon-chevron-white-right.svg);
-    mask-image: url(../../../public/images/icons/p3/icon-chevron-white-right.svg);
+    background: url(../../../public/images/icons/p3/icon-chevron-white-right.svg);
     background-color: black;
     height: 19px;
     width: 24px;
@@ -341,7 +338,7 @@ input[type=checkbox]:checked+span.custom-check:after {
 }
 .room-content {
     padding: 20px 10px 20px 10px;
-    position: relative;
+    // position: relative;
     @include mQ (992px) {
         padding: 30px;
     }
@@ -418,23 +415,26 @@ input[type=checkbox]:checked+span.custom-check:after {
     }
 }
 
-.room-wrapper .room-image {
-    height: 184px;
-    width: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+.room-wrapper {
     position: relative;
-    @include mQ(992px) {
-        width: 300px;
-    }
-    .icon-open-gallery {
-        bottom: 10px;
-        left: auto;
-        right: 10px;
+    .room-image {
+        height: 184px;
+        width: 100%;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        @include mQ(992px) {
+            width: 300px;
+        }
+        .icon-open-gallery {
+            bottom: 10px;
+            left: auto;
+            right: 10px;
+        }
     }
 }
 
@@ -467,16 +467,12 @@ input[type=checkbox]:checked+span.custom-check:after {
         font-size: 22px;
         span {
             font-size: 16px;
-            color: #fff;
-        }
-        .fa {
-            font-size:14px;
-            padding-bottom: 2px;
-            top: -3px;
-            position: relative;
-        }
-        &:hover span {
-            color: $primaryColor;
+            color: $secondaryFontColor;
+            font-family: $textFont;
+            font-style: normal;
+            &:hover {
+                color: $secondaryFontColor;
+            }
         }
     }
     .rate-description {
