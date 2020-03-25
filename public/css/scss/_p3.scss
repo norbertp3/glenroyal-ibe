@@ -17,7 +17,7 @@ a {
     left: 10px;
 }
 .icon-info {
-    background: url("../../../public/images/icons/p3/icon-info-dark-default.svg");
+    background: $iconInfoDarkDefault;
     height: 16px;
     width: 16px;
     display: inline-block;
@@ -26,7 +26,7 @@ a {
     background-size: cover;
 }
 .icon-info-white {
-    background: url("../../../public/images/icons/p3/icon-info-light-default.svg");
+    background: $iconInfoLightDefault;
     height: 16px;
     width: 16px;
     display: inline-block;
@@ -35,8 +35,8 @@ a {
     background-size: cover;
 }
 .icon-chevron-right {
-    -webkit-mask-image: url(../../../public/images/icons/p3/icon-chevron-white-right.svg);
-    background: url(../../../public/images/icons/p3/icon-chevron-white-right.svg);
+    -webkit-mask-image: $iconBtnPrimaryRight;
+    background: $iconBtnPrimaryRight;
     height: 16px;
     width: 16px;
     display: inline-block;
@@ -45,8 +45,8 @@ a {
     background-size: cover;
 }
 .icon-chevron-down {
-    -webkit-mask-image: url(../../../public/images/icons/p3/icon-chevron-white-down.svg);
-    background: url(../../../public/images/icons/p3/icon-chevron-white-down.svg);
+    -webkit-mask-image: $iconBtnPrimaryDown;
+    background: $iconBtnPrimaryDown;
     height: 16px;
     width: 16px;
     display: inline-block;
@@ -55,8 +55,8 @@ a {
     background-size: cover;
 }
 .icon-chevron-up {
-    -webkit-mask-image: url(../../../public/images/icons/p3/icon-chevron-white-up.svg);
-    background: url(../../../public/images/icons/p3/icon-chevron-white-up.svg);
+    -webkit-mask-image: $iconBtnPrimaryUp;
+    background: $iconBtnPrimaryUp;
     height: 16px;
     width: 16px;
     display: inline-block;
@@ -65,8 +65,8 @@ a {
     background-size: cover;
 }
 .icon-progress-step-separator {
-    -webkit-mask-image: url(../../../public/images/icons/p3/icon-chevron-white-right.svg);
-    background: url(../../../public/images/icons/p3/icon-chevron-white-right.svg);
+    -webkit-mask-image: $iconProgressDefault;
+    background: $iconProgressDefault;
     background-color: black;
     height: 19px;
     width: 24px;
@@ -76,8 +76,8 @@ a {
     background-size: cover;
 }
 .icon-progress-step-separator-complete {
-    -webkit-mask-image: url(../../../public/images/icons/p3/icon-chevron-white-right.svg);
-    mask-image: url(../../../public/images/icons/p3/icon-chevron-white-right.svg);
+    -webkit-mask-image: $iconProgressComplete;
+    mask-image: $iconProgressComplete;
     background-color: #6abb91;
     height: 19px;
     width: 24px;
@@ -86,17 +86,17 @@ a {
     background-position: center;
     background-size: cover;
 }
-.view-rates-btn:hover .icon-chevron-down {
-    background-color: $primaryColor;
-}
-.view-rates-btn:hover .icon-chevron-up {
-    background-color: $primaryColor;
-}
-.select-rate-btn:hover .icon-chevron-right {
-    background-color: $primaryColor;
-}
+// .view-rates-btn:hover .icon-chevron-down {
+//     background-color: $primaryColor;
+// }
+// .view-rates-btn:hover .icon-chevron-up {
+//     background-color: $primaryColor;
+// }
+// .select-rate-btn:hover .icon-chevron-right {
+//     background-color: $primaryColor;
+// }
 .icon-search-white {
-    background: url("../../../public/images/icons/p3/icon-new-search.svg");
+    background: $iconSearchAgain;
     height: 16px;
     width: 16px;
     display: inline-block;
@@ -184,8 +184,8 @@ input[type=checkbox]:checked+span.custom-check:after {
     padding-left: 0;
 }
 
-// Input, Select
-.form-group input {
+// Input, Select, TextArea
+.form-group input, .form-group textarea {
     @include inputSelect;
 }
 
@@ -267,7 +267,7 @@ input[type=checkbox]:checked+span.custom-check:after {
 }
 .booking-summary-data {
     // background-color: $bookingSummaryBackgroundColor;
-    padding: 0 8px;
+    padding: 0 10px;
     p {
         width: 50%;
     }
@@ -344,6 +344,10 @@ input[type=checkbox]:checked+span.custom-check:after {
     }
     h3 {
         @include cardHeading;
+        margin-bottom: 20px;
+        @include mQ(992px) {
+            margin-bottom: 25px;
+        }
         @include mQmax (992px) {
             text-indent: -24px;
             padding-left: 24px;
@@ -386,9 +390,12 @@ input[type=checkbox]:checked+span.custom-check:after {
         font-style: normal;
     }
     .view-rates-btn {
-        img {
-            height: 14px;
-            width: 14px;
+        @include mQmax (991px) {
+            padding: 12px 8px;
+        }
+        i {
+            top: 3px;
+            position: relative;
         }
     }
     .room-ribbon {
@@ -412,6 +419,14 @@ input[type=checkbox]:checked+span.custom-check:after {
         color: $primaryColor;
         font-family: $textFont;
         font-style: normal;
+    }
+    .room-facilities {
+        div {
+            margin-right: 20px;
+        }
+        img {
+            margin-right: 10px;
+        }
     }
 }
 
@@ -464,6 +479,7 @@ input[type=checkbox]:checked+span.custom-check:after {
         @include smallText;
     }
     .select-rate-btn {
+        padding: 7px 10px;
         font-size: 22px;
         span {
             font-size: 16px;
@@ -476,9 +492,13 @@ input[type=checkbox]:checked+span.custom-check:after {
         }
     }
     .rate-description {
+        margin: 16px 0 20px 16px;
         ul {
             list-style-position: inside;
             margin-bottom: 15px;
+            line-height: 26px;
+            text-indent: -20px;
+            margin-left: 20px;
         }
         display: none;
         @include mQ(992px) {
@@ -512,6 +532,10 @@ input[type=checkbox]:checked+span.custom-check:after {
                 border-top: none;
                 padding-top: 0;
             }
+        }
+        .icon-info {
+            position: relative;
+            top: 3px;
         }
     }
     .rate-ribbon {
@@ -582,6 +606,7 @@ input[type=checkbox]:checked+span.custom-check:after {
     span {
         font-size: 14px;
         color: rgba(51, 50, 50, 0.5);
+        margin-left: 10px;
     }
 }
 .addon-heading-row {
@@ -606,10 +631,7 @@ input[type=checkbox]:checked+span.custom-check:after {
             margin-bottom: 20px;
         }
         h4 {
-            font-size: 22px;
-            font-weight: 500;
-            color: $primaryColor;
-            font-weight: 500;
+            @include addonPriceTag;
         }
         span {
             @include smallText;
@@ -654,10 +676,7 @@ input[type=checkbox]:checked+span.custom-check:after {
             margin-bottom: 20px;
         }
         h4 {
-            font-size: 22px;
-            font-weight: 500;
-            color: $primaryColor;
-            font-weight: 500;
+            @include addonPriceTag;
         }
         span {
             @include smallText;
@@ -701,10 +720,7 @@ input[type=checkbox]:checked+span.custom-check:after {
             margin-bottom: 20px;
         }
         h4 {
-            font-size: 22px;
-            font-weight: 500;
-            color: $primaryColor;
-            font-weight: 500;
+            @include addonPriceTag;
         }
         span {
             @include smallText;
@@ -727,6 +743,10 @@ input[type=checkbox]:checked+span.custom-check:after {
                 float: right;
             }
         }
+        select {
+            @include select;
+            width: 70px!important;
+        }
     }
 }
 .addon-content {
@@ -738,12 +758,30 @@ input[type=checkbox]:checked+span.custom-check:after {
             top: -3px;
         }
         .icon-info {
-            zoom: 1.4;
             height: 18px;
             width: 18px;
         }
     }
 }
+.price-currency-decimal {
+    span {
+        font-family: $textFont!important;
+        color: $primaryColor!important;
+        font-style: normal!important;
+    }
+}
+.addons-total-details {
+    font-family: $textFont;
+    .price-currency-decimal {
+        span {
+            @include priceSpan;
+        }
+    }
+    button {
+        width: 100%!important;
+    }
+}
+
 // Booker details
 .booker-details-wrapper, .guest-details-wrapper, .payment-details-wrapper {
     padding: 20px 10px;
@@ -826,7 +864,7 @@ input[type=checkbox]:checked+span.custom-check:after {
     }
 }
 // Payment Summary Box
-.payment-summery-extra {
+.payment-summary-extra {
     margin-bottom: 30px;
     .payment-summary-box {
         border-radius: 2px;
@@ -945,6 +983,12 @@ input[type=checkbox]:checked+span.custom-check:after {
         }
     }
 }
+.icon-expand {
+    @include iconExpand;
+}
+.icon-collapse {
+    @include iconCollapse;
+}
 .confirmation-content-box {
     margin-bottom: 30px;
     .box-content {
@@ -1059,4 +1103,7 @@ input[type=checkbox]:checked+span.custom-check:after {
 }
 .booking-summary-heading h2 {
     font-family: $textFont;
+}
+.special-request-input {
+    display: none;
 }

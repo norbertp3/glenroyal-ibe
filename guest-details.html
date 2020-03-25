@@ -23,93 +23,104 @@
 <body>
 
   <header>
-
-    <!-- Mobile Nav -->
-    <div class="d-lg-none">
-      <nav class="navbar navbar-expand-xl navbar-light">
-        <div class="mobile-nav-top w-100 d-flex justify-content-between align-items-center">
-          <a href="#"><img src="/public/images/redworth_logo-1.png" class="logo"></a>
-          <form action="" method="get" id="currencyConverter" class="dropdown-currency">
-            <input type="hidden" name="redirect">
-            <select id="currency-options" class="price-select ml-0" name="currencyCode" onchange="">
-              <option value="EUR">€ EUR</option>
-              <option value="GBP">£ GBP</option>
-              <option value="USD">$ USD</option>
-            </select>
-          </form>
-          <!-- <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button> -->
-          <div class="three">
-            <a href="javascript:;" data-toggle="collapse" data-target="#navbarCollapse">
-              <div class="hamburger" id="hamburger-6">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-              </div>
-            </a>
-          </div>
+    <div class="main-nav position-relative d-none d-lg-block">
+        <div class="top-main-nav text-center">
+            <img src="public/images/logo-stars-placeholder.png" alt="">
+            <a href="#" class="book-btn-nav position-absolute">BOOK YOUR STAY</a>
         </div>
-
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <div class="navbar-nav">
-            <a href="#" class="nav-item nav-link active nav-book-now">Book a Room</a>
-            <a href="https://www.redworthhalldurham.co.uk/rooms/" class="nav-item nav-link">Rooms</a>
-            <a href="https://www.redworthhalldurham.co.uk/spa/" class="nav-item nav-link">Retreat Spa</a>
-            <a href="https://www.redworthhalldurham.co.uk/weddings/" class="nav-item nav-link">Weddings</a>
-            <a href="https://www.redworthhalldurham.co.uk/meetings-and-events/" class="nav-item nav-link">Meeting &
-              Events</a>
-            <a href="https://www.redworthhalldurham.co.uk/restaurant/" class="nav-item nav-link">Restaurant</a>
-            <a href="https://www.redworthhalldurham.co.uk/offers/" class="nav-item nav-link">Offers & What's On</a>
-            <a href="https://www.redworthhalldurham.co.uk/contact-us/" class="nav-item nav-link">Contact</a>
-            <a href="https://shops.giftvoucherbrilliance.co.uk/pages/redworth_hall/Home"
-              class="nav-item nav-link mb-5">Gift Vouchers</a>
-          </div>
+        <div class="container-fluid">
+            <div class="links-main-nav d-flex justify-content-between">
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+            </div>
         </div>
-      </nav>
     </div>
-    <!-- End Mobile Nav -->
 
-    <!-- Desktop Nav -->
-    <div class="d-none d-lg-block">
-      <div class="header-container d-flex justify-content-between align-items-center">
-        <a href="#"><img src="/public/images/redworth_logo-1.png" class="logo"></a>
-        <div class="main-nav">
-          <ul class="mt-auto mb-auto">
-            <li><a href="https://www.redworthhalldurham.co.uk/rooms/">Rooms</a></li>
-            <li><a href="https://www.redworthhalldurham.co.uk/spa/">Retreat Spa</a></li>
-            <li><a href="https://www.redworthhalldurham.co.uk/weddings/">Weedings</a></li>
-            <li><a href="https://www.redworthhalldurham.co.uk/meetings-and-events/">Meetings and Events</a></li>
-            <li><a href="https://www.redworthhalldurham.co.uk/restaurant/">Restaurant</a></li>
-            <li><a href="https://www.redworthhalldurham.co.uk/offers/">Offers & What's On</a></li>
-            <li><a href="https://www.redworthhalldurham.co.uk/contact-us/">Contact</a></li>
-            <li><a href="https://shops.giftvoucherbrilliance.co.uk/pages/redworth_hall/Home">Gift Vouchers</a></li>
-          </ul>
-        </div>
-        <a href="#"><button type="button" class="btn btn-primary float-right">Book a room</button></a>
-      </div>
+    <div class="mini-nav d-flex justify-content-between align-items-center d-lg-none">
+        <img src="public/images/icons/icon-hamburger.svg" onclick="openNav()" >
+        <img src="public/images/logo-mark-grey.png">
+        <a href="#" class="book-btn-nav d-none d-lg-block">BOOK YOUR STAY</a>
     </div>
-    <!-- End Desktop Nav -->
-  </header>
+</header>
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+        <img src="public/images/icons/close-x.svg" alt="">
+    </a>
+    <div class="side-nav-links text-center">
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+    <div class="d-flex justify-content-center">
+        <a href=""><i class="fa fa-facebook"></i></a>
+        <a href=""><i class="fa fa-instagram"></i></a>
+        <a href=""><i class="fa fa-twitter"></i></a>
+    </div>
+</div>
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+        <img src="public/images/icons/close-x.svg" alt="">
+    </a>
+    <div class="side-nav-links text-center">
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+    <div class="d-flex justify-content-center">
+        <a href=""><i class="fa fa-facebook"></i></a>
+        <a href=""><i class="fa fa-instagram"></i></a>
+        <a href=""><i class="fa fa-twitter"></i></a>
+    </div>
+</div>
 
   <!-- Main Banner -->
   <section id="banner" class="d-none d-lg-block">
-    <div class="container">
+    <div class="container-fluid">
       <h1>The Redworth Hall Hotel</h1>
       <p>Surtees Rd, Newton Aycliffe DL5 6NL, UK</p>
       <!-- HOTEL INFO BUTTONS P3B -->
       <div class="hotel-info-buttons d-none d-lg-flex">
-        <a href="#"><button class="btn">Hotel Info</button></a>
+        <a href="#" data-toggle="modal" data-target="#modalTabs"><button class="btn">Hotel Info</button></a>
         <a href="#"><button class="btn">Map</button></a>
         <a href="#"><button class="btn">Gallery</button></a>
       </div>
       <!-- END HOTEL INFO BUTTONS P3B -->
     </div>
-    <div class="container-fluid">
+    <div class="container-fluid px-0">
       <div class="row">
         <div class="col-6"></div>
         <div class="col-6">
-          <a href="javascript:;"><div class="hotel-gallery">
+          <a href="#"><div class="hotel-gallery">
             <img src="public/images/icons/p3/icon-open-gallery.svg" class="icon-open-gallery">
           </div></a>
         </div>
@@ -127,7 +138,7 @@
   <!-- END Mobile Hotel Info P3B -->
 
   <!-- IBE -->
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-12 col-lg-4 pr-20 px-10">
         <!-- Booking Summary P3B -->
@@ -136,8 +147,8 @@
           <div class="booking-summary-heading d-flex justify-content-between align-items-center">
             <h2>My Booking</h2>
             <span class="d-lg-none">Nov 30 - Dec 02</span>
-            <button class="btn btn-btn-secondary edit-search-btn d-none d-lg-block">Edit</button>
-            <a href="javascript:;" class="open-booking-summary d-lg-none"><i class="icon-chevron-down"></i></a>
+            <button class="btn btn-secondary edit-search-btn d-none d-lg-block">Edit</button>
+            <a href="javascript:;" class="open-booking-summary d-lg-none trigger-rotate"><i class="icon-expand"></i></a>
           </div>
           <!-- END Booking Summary Heading -->
 
@@ -181,8 +192,8 @@
               <div class="booking-summary-room-row d-flex devider-top-mobile">
                 <img src="public/images/summary-img-1.jpg">
                 <div class="booking-summary-room-heading w-100">
-                  <p>Standard Twin Room</p>
-                  <p>£97.50</p>
+                  <p class="booking-summary-room-name">Standard Twin Room</p>
+                  <p class="booking-summary-room-price">£97.50</p>
                   <div class="booking-summary-room-row-expanded my-2">
                     <!-- Start Rate details -->
                     <p>Bed & Breakfast - Flexible</p>
@@ -198,7 +209,7 @@
                   </div>
                 </div>
                 <div class="d-flex">
-                  <a href="javascript:;" class="open-booking-summary-room-details"><i class="icon-chevron-down"></i></a>
+                  <a href="javascript:;" class="open-booking-summary-room-details trigger-rotate"><i class="icon-expand"></i></a>
                 </div>
               </div>
               <!-- END Room Details Row -->
@@ -206,8 +217,8 @@
               <div class="booking-summary-room-row d-flex devider-top-mobile devider-top-desktop">
                 <img src="public/images/summary-img-1.jpg">
                 <div class="booking-summary-room-heading w-100">
-                  <p>Standard Twin Room</p>
-                  <p>£97.50</p>
+                  <p class="booking-summary-room-name">Standard Twin Room</p>
+                  <p class="booking-summary-room-price">£97.50</p>
                   <div class="booking-summary-room-row-expanded my-2">
                     <p>Bed & Breakfast - Flexible</p>
                     <ul class="my-2">
@@ -219,7 +230,7 @@
                   </div>
                 </div>
                 <div class="d-flex">
-                  <a href="javascript:;" class="open-booking-summary-room-details"><i class="icon-chevron-down"></i></a>
+                  <a href="javascript:;" class="open-booking-summary-room-details trigger-rotate"><i class="icon-expand"></i></a>
                 </div>
               </div>
               <!-- END Room Details Row-->
@@ -227,24 +238,26 @@
               <div class="booking-summary-total-wrapper">
                 <!-- Booking Summary Total -->
                 <div class="booking-row devider-top-bottom" style="padding: 20px 0;">
-                  <div class="booking-data d-flex">
+                  <div class="booking-data d-flex justify-content-between">
                     <h2>Your Total</h2>
                     <h2>£80.10</h2>
                   </div>
                 </div>
                 <div class="booking-row" style="padding-top: 20px;">
-                  <div class="booking-data d-flex">
+                  <div class="booking-data d-flex justify-content-between">
                     <p>Due Now</p>
                     <p>£0.00</p>
                   </div>
                 </div>
                 <div class="booking-row" style="padding-bottom: 20px;">
-                  <div class="booking-data d-flex">
+                  <div class="booking-data d-flex justify-content-between">
                     <p>Pay On Arrival</p>
                     <p>£0.00</p>
                   </div>
                 </div>
+              </div>
                 <!-- End Booking Summary Total -->
+              
                 <!-- Start Cancel Message -->
                 <div class="booking-row devider-top-mobile devider-top-desktop" style="padding-top: 20px;">
                   <div class="booking-data d-flex">
@@ -259,22 +272,22 @@
                   </div>
                 </div>
                 <!-- End Loyalty Message-->
-              </div>
               <!-- END Booking Summary Total -->
             <!-- END Room Details P3B VAR LOOP -->
           </div>
           </div>
         </section>
+        <!-- End Booking Summary P3B -->
       </div>
       <div class="col-12 col-lg-8 pl-20 px-10">
         <!-- Progress Steps -->
         <section id="progress-steps">
           <!-- Progress Steps Mobile -->
           <div class="progress-steps-mobile d-flex d-lg-none align-items-center">
-            <img src="public/images/icons/progress-wheel-5-of-5.svg">
+            <img src="public/images/icons/p3/icon-progress-3-of-3.svg" alt="">
             <div>
-              <h3>Your Details</h3>
-              <span>You're on the last step!</span>
+              <h3>Choose Room 1 of 2</h3>
+              <span>Next : Choose Room 2</span>
             </div>
           </div>
           <!-- End Progress Steps Mobile -->
@@ -282,15 +295,11 @@
           <!-- Progress Steps Desktop -->
           <div class="pregress-steps-desktop text-center d-none d-lg-flex justify-content-between devider-bottom-desktop">
             <div class="d-flex align-items-center">
-              <p class="step-complete">Choose room 1</p>
-              <i class="icon-progress-step-separator-complete"></i>
-              <p class="step-complete">Choose room 2</p>
-              <i class="icon-progress-step-separator-complete"></i>
-              <p class="step-complete">Extras Room 1</p>
-              <i class="icon-progress-step-separator-complete"></i>
-              <p class="step-complete">Extras Room 2</p>
+              <p>Choose your room</p>
               <i class="icon-progress-step-separator"></i>
-              <p>Your Details</p>
+              <p>Choose your extras</p>
+              <i class="icon-progress-step-separator"></i>
+              <p class="active">Your Details</p>
             </div>
             <form action="" method="get" id="currencyConverter" class="dropdown-currency">
               <input type="hidden" name="redirect">
@@ -349,11 +358,17 @@
                 Please provide a valid state.
               </div>
             </div>
-            <div class="form-group col-sm-12 checkbox-group mb-0">
+            <!-- <div class="form-group col-sm-12 checkbox-group mb-0">
               <label class="d-flex mb-0">
                 <input type="checkbox" name="newsletter"> <span class="custom-check"></span>Send me
                 special
                 offers by email.</label>
+            </div> -->
+            <div class="col-12">
+              <a href="#">Add Special Request</a>
+            </div>
+            <div class="form-group col-12 mt-3 special-request-input">
+              <textarea class="form-control" id="" rows="3"></textarea>
             </div>
           </div>
         </section>
@@ -407,7 +422,7 @@
         <h2>Payment Details</h2>
       </div>
 
-      <section class="d-lg-none payment-summery-extra">
+      <section class="d-lg-none payment-summary-extra">
         <div class="payment-summary-box">
           <div class="row">
               <div class="col-4">
@@ -435,9 +450,9 @@
           <div class="form-group col-12 col-lg-6">
             <label class="w-100">Card number*
               <ul>
-                  <li><img src="public/images/icons/p3/card-master.svg"></li>
-                  <li><img src="public/images/icons/p3/card-visa.svg"></li>
-                  <li><img src="public/images/icons/p3/card-amex.svg"></li>
+                  <li><img src="public/images/icons/p3/icon-card-mastercard.svg"></li>
+                  <li><img src="public/images/icons/p3/icon-card-visa.svg"></li>
+                  <li><img src="public/images/icons/p3/icon-card-amex.svg"></li>
               </ul>
             </label>
             <input type="text" class="form-control" placeholder="" name="" required="">
@@ -464,6 +479,48 @@
               data-original-title="The three or four digit code on the back of your card.">
             </i>
           </div>
+          <div class="form-group col-12 col-sm-6">
+            <label>Street Address*</label>
+            <input type="text" class="form-control" placeholder="" name="" required="">
+            <div class="invalid-feedback">
+              Please provide a valid state.
+            </div>
+          </div>
+          <div class="form-group col-12 col-sm-6">
+            <label>Town*</label>
+            <input type="text" class="form-control" placeholder="" name="" required="">
+            <div class="invalid-feedback">
+              Please provide a valid state.
+            </div>
+          </div>
+          <div class="form-group col-12 col-sm-6">
+            <label>City*</label>
+            <input type="text" class="form-control" placeholder="" name="" required="">
+            <div class="invalid-feedback">
+              Please provide a valid state.
+            </div>
+          </div>
+          <div class="form-group col-12 col-sm-6">
+            <label>Country*</label>
+            <input type="text" class="form-control" placeholder="" name="" required="">
+            <div class="invalid-feedback">
+              Please provide a valid state.
+            </div>
+          </div>
+          <div class="form-group col-12 col-sm-6">
+            <label>Eircode*</label>
+            <input type="text" class="form-control" placeholder="" name="" required="">
+            <div class="invalid-feedback">
+              Please provide a valid state.
+            </div>
+          </div>
+          <div class="col-12">
+            <a href="#">Add Company Name</a>
+          </div>
+          <div class="form-group col-6 mt-3 special-request-input">
+            <label>Company Name</label>
+            <input type="text" class="form-control" placeholder="" name="" required="">
+          </div>
           <div class="col-12 mt-3 mb-4">
             <label class="d-flex">
               <input type="checkbox" name=""><span class="custom-check"></span><p>I agree to the&nbsp;<a href="#">Terms & Conditions</a>&nbsp;&&nbsp;<a href="#">Privacy Policy</a>.</p></label>
@@ -481,46 +538,51 @@
 
   </div>
   <footer>
-    <div class="container devider-top-desktop devider-top-mobile">
-      <div class="row">
-        <div class="col-12 col-lg-12 col-xl-3 text-center text-xl-left mb-3 mb-xl-0">
-          <a href="#"><img src="/public/images/redworth_logo-1.png" class="logo"></a>
+    <div class="devider-top-desktop devider-top-mobile"></div>
+    <div class="container-fluid">
+        <div class="footer-links">
+            <div class="d-lg-flex justify-content-between align-items-center">
+                <a href="#"><img src="public/images/logo-stars-placeholder.png" alt=""></a>
+                <ul class="footer-nav">
+                    <li><a href="#">aaa</a></li>
+                    <li><a href="#">bbb</a></li>
+                    <li><a href="#">ccc</a></li>
+                    <li><a href="#">ddd</a></li>
+                    <li><a href="#">eee</a></li>
+                </ul>
+                <ul class="footer-social-links">
+                    <li><a href=""><i class="fa fa-facebook"></i></a></li></a>
+                    <li><a href=""><i class="fa fa-instagram"></i></li></a>
+                    <li><a href=""><i class="fa fa-twitter"></i></li></a>
+                </ul>
+            </div>
         </div>
-        <div class="col-12 col-lg-8 col-xl-6 mb-2 mb-xl-0">
-          <div class="footer-links">
-            <ul>
-              <li><a href="https://shops.giftvoucherbrilliance.co.uk/pages/redworth_hall/Home">Gift Vouchers</a></li>
-              <li><a href="https://www.redworthhalldurham.co.uk/offers/">Special Offers</a></li>
-              <li><a href="https://www.redworthhalldurham.co.uk/faqs/">FAQs</a></li>
-              <li><a href="https://www.redworthhalldurham.co.uk/contact-us/">Contact Us</a></li>
-              <li><a
-                  href="https://www.thecairncollection.co.uk/?_ga=2.167210235.47086315.1581520921-683091198.1579273141">The
-                  Cairn Collection</a></li>
-              <li><a href="https://www.cairnhotelgroup.com/">The Cairn Group</a></li>
-              <li><a href="https://www.redworthhalldurham.co.uk/terms-conditions/">Terms & Conditions</a></li>
-              <li><a href="https://www.redworthhalldurham.co.uk/privacy-policy/">Privacy Policy</a></li>
-              <li><a href="https://www.redworthhalldurham.co.uk/sitemap/">Sitemap</a></li>
-            </ul>
-          </div>
+        <div class="footer-contact">
+            <div class="row align-items-end">
+                <div class="col-12 col-lg-6 order-1 order-lg-0">
+                    <p>Glenroyal Hotel & Leisure Club, Straffan Road, Maynooth, W23 C2V1, Co. Kildare</p>
+                </div>
+                <div class="col-12 col-lg-6 text-lg-right order-0 order-lg-1 pb-4 pb-lg-0">
+                    <p class="pb-2 pb-lg-0">+353 (0) 1 629 0909</p>
+                    <p>info@glenroyal.ie / reservations@glenroyal.ie</p>
+                </div>
+            </div>
         </div>
-        <div class="col-12 col-lg-4 col-xl-3">
-          <div class="footer-social-media text-center float-lg-right">
-            <ul>
-              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-              <li class="mx-3"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
     </div>
-
+    <div class="footer-devider d-none d-lg-block"></div>
+    <div class="container-fluid">
+        <div class="footer-sub-links text-center">
+            <ul>
+                <li><a href="#">Cookie Policy</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+            </ul>
+        </div>
+    </div>
   </footer>
-  <div class="copy-rights">
-    <div class="container">
-      <p>&copy; All rights reserved | Redworth Hall 2020</p>
-    </div>
-  </div>
     
 
     

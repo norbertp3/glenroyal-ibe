@@ -5,7 +5,7 @@
     color: rgba(87, 86, 91, 0.8);
     @include mQ (992px) {
         font-size: 16px;
-        line-height: 24px;
+        line-height: 26px;
     }
 }
 @mixin smallText {
@@ -84,7 +84,7 @@
     box-shadow:inset 0px 0px 0px 1px #fff;
     text-transform: uppercase;
     font-family: $textFont;
-    &:hover, &:active {
+    &:hover {
         color: #f6f6f6!important;
         cursor: pointer;
         background-color: rgba(87, 86, 91, 0.8);
@@ -92,10 +92,19 @@
         box-shadow:inset 0px 0px 0px 1px #fff;
 
     }
+    &:active {
+        color: #f6f6f6!important;
+        cursor: pointer;
+        background-color: rgba(87, 86, 91, 0.8)!important;
+        border: 2px solid rgba(87, 86, 91, 0.8)!important;
+        box-shadow:inset 0px 0px 0px 1px #fff!important;
+
+    }
     &:focus {
-        background-color: #424146;
-        border: 2px solid #424146;
+        background-color: rgba(87, 86, 91, 0.8);
+        border: 2px solid rgba(87, 86, 91, 0.8);
         color: #f0f0f0;
+        cursor: pointer;
         box-shadow:inset 0px 0px 0px 1px #fff;
     }
 }
@@ -131,8 +140,8 @@
     }
 }
 @mixin formLabel {
-    font-size: 15px;
-    color: rgba(51, 50, 50, 0.8);
+    font-size: 16px;
+    color: rgba(87, 86, 91, 0.8);
 }
 @mixin selectIcon {
     -webkit-appearance: none;
@@ -156,6 +165,40 @@
     font-weight: 500;
     line-height: 30px;
     color: $primaryFontColor;
+}
+@mixin priceSpan {
+    font-family: $textFont;
+    color: $primaryFontColor;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 500;
+}
+@mixin addonPriceTag {
+    font-family: $textFont;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 22px;
+    color: $primaryFontColor;
+}
+@mixin iconExpand {
+    -webkit-mask-image: $iconExpand!important;
+    background: $iconExpand!important;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+@mixin iconCollapse {
+    -webkit-mask-image: $iconCollapse!important;
+    background: $iconCollapse!important;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 
@@ -241,44 +284,9 @@
         }
     }
 }
-
-
-// Gallery
-
-.galleryContent { display: -webkit-box; display: -ms-flexbox; display: flex; flex-wrap: wrap; justify-content: space-between }
-
-.galleryContent figure { margin-bottom: 30px; width: 100%; height: 100% }
-.galleryContent figure img { display: block; object-fit: cover }
-.galleryContent figure {
-	margin-bottom: 30px;
-}
-.galleryContent figure a {
-    display:block;height: 0;
-	padding-bottom: 47%;
-	position: relative;
-    overflow: hidden;
-}
-.galleryContent [class*="--fourth"] a { padding-bottom:99%}
-.galleryContent figure img {
-	display: block;
-	position: absolute;
-	top: -1000px;
-	bottom: -1000px;
-	margin: auto;
-	left: -1000px;
-	right: -1000px;
-	height: 100%;
-	min-width: 100%;
-	max-width: none;
-}
-@include mQ (768px) {
-    .galleryContent *[class*='--half'] { width: 48.685% }
-    .galleryContent *[class*='--fourth'] { width: 23.071% }
-}
-@include mQmax (767px) {
-    .galleryContent { margin: 0 0 20px }
-    .galleryContent figure { margin-bottom: 10px }
-    .galleryContent *[class*='--half'] { width: 100% }
-    .galleryContent *[class*='--fourth'] { width: 48.5% }
-    .galleryContent figure img { width: 100%;}
+@mixin select {
+    box-shadow: inset 1px 1px 0 0 #d8d8d8;
+    background-color: #f2f2f2;
+    border: solid 1px transparent;
+    background-image: $selectIcon;
 }

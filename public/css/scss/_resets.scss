@@ -30,6 +30,7 @@ a {
         color: $primaryColor;
         text-decoration: none;
     }
+    line-height: 1;
 }
 
 // Bootstrap buttons reset
@@ -71,8 +72,8 @@ select {
     background-size: 15px;
     background-position: calc(100% - 8px) 50%;
     background-repeat: no-repeat;
-    background-color: #fff;
-    background-image: $selectIcon;
+    // background-color: #fff;
+    // background-image: $selectIcon;
     padding: 4px 23px 4px 10px;
     &:focus {
         outline: none;

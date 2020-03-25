@@ -19,6 +19,7 @@ $('.open-booking-summary-room-details').click(function(){
 // .Fa rotate P3B
 $('.trigger-rotate').click(function(){
   $(this).find('.fa').toggleClass('rotate180');
+  $(this).find('i').toggleClass('rotate180');
 });
 
 // View Rates P3B

@@ -28,6 +28,7 @@ button {
 
 a {
   color: #57565b;
+  line-height: 1;
 }
 
 a:hover {
@@ -86,8 +87,6 @@ select {
   background-size: 15px;
   background-position: calc(100% - 8px) 50%;
   background-repeat: no-repeat;
-  background-color: #fff;
-  background-image: url(../../public/images/icons/p3/icon-chevron-dark-down.svg);
   padding: 4px 23px 4px 10px;
 }
 
@@ -151,85 +150,6 @@ form select::-ms-expand {
   border: solid 2px rgba(240, 240, 240, 0.2);
 }
 
-.galleryContent {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.galleryContent figure {
-  margin-bottom: 30px;
-  width: 100%;
-  height: 100%;
-}
-
-.galleryContent figure img {
-  display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.galleryContent figure {
-  margin-bottom: 30px;
-}
-
-.galleryContent figure a {
-  display: block;
-  height: 0;
-  padding-bottom: 47%;
-  position: relative;
-  overflow: hidden;
-}
-
-.galleryContent [class*="--fourth"] a {
-  padding-bottom: 99%;
-}
-
-.galleryContent figure img {
-  display: block;
-  position: absolute;
-  top: -1000px;
-  bottom: -1000px;
-  margin: auto;
-  left: -1000px;
-  right: -1000px;
-  height: 100%;
-  min-width: 100%;
-  max-width: none;
-}
-
-@media screen and (min-width: 768px) {
-  .galleryContent *[class*='--half'] {
-    width: 48.685%;
-  }
-  .galleryContent *[class*='--fourth'] {
-    width: 23.071%;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .galleryContent {
-    margin: 0 0 20px;
-  }
-  .galleryContent figure {
-    margin-bottom: 10px;
-  }
-  .galleryContent *[class*='--half'] {
-    width: 100%;
-  }
-  .galleryContent *[class*='--fourth'] {
-    width: 48.5%;
-  }
-  .galleryContent figure img {
-    width: 100%;
-  }
-}
-
 body {
   background-color: #f6f6f6;
 }
@@ -244,7 +164,7 @@ p {
 @media screen and (min-width: 992px) {
   p {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 26px;
   }
 }
 
@@ -258,7 +178,7 @@ ul, ol {
 @media screen and (min-width: 992px) {
   ul, ol {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 26px;
   }
 }
 
@@ -278,7 +198,7 @@ a:hover {
 }
 
 .icon-info {
-  background: url("../../../public/images/icons/p3/icon-info-dark-default.svg");
+  background: url(../../public/images/icons/p3/icon-info-dark-default.svg);
   height: 16px;
   width: 16px;
   display: inline-block;
@@ -288,7 +208,7 @@ a:hover {
 }
 
 .icon-info-white {
-  background: url("../../../public/images/icons/p3/icon-info-light-default.svg");
+  background: url(../../public/images/icons/p3/icon-info-light-default.svg);
   height: 16px;
   width: 16px;
   display: inline-block;
@@ -298,8 +218,8 @@ a:hover {
 }
 
 .icon-chevron-right {
-  -webkit-mask-image: url(../../../public/images/icons/p3/icon-chevron-white-right.svg);
-  background: url(../../../public/images/icons/p3/icon-chevron-white-right.svg);
+  -webkit-mask-image: url(../../../public/images/icons/p3/icon-btn-primary-right.svg);
+  background: url(../../../public/images/icons/p3/icon-btn-primary-right.svg);
   height: 16px;
   width: 16px;
   display: inline-block;
@@ -309,8 +229,8 @@ a:hover {
 }
 
 .icon-chevron-down {
-  -webkit-mask-image: url(../../../public/images/icons/p3/icon-chevron-white-down.svg);
-  background: url(../../../public/images/icons/p3/icon-chevron-white-down.svg);
+  -webkit-mask-image: url(../../../public/images/icons/p3/icon-btn-primary-down.svg);
+  background: url(../../../public/images/icons/p3/icon-btn-primary-down.svg);
   height: 16px;
   width: 16px;
   display: inline-block;
@@ -320,8 +240,8 @@ a:hover {
 }
 
 .icon-chevron-up {
-  -webkit-mask-image: url(../../../public/images/icons/p3/icon-chevron-white-up.svg);
-  background: url(../../../public/images/icons/p3/icon-chevron-white-up.svg);
+  -webkit-mask-image: url(../../../public/images/icons/p3/icon-btn-primary-up.svg);
+  background: url(../../../public/images/icons/p3/icon-btn-primary-up.svg);
   height: 16px;
   width: 16px;
   display: inline-block;
@@ -331,8 +251,8 @@ a:hover {
 }
 
 .icon-progress-step-separator {
-  -webkit-mask-image: url(../../../public/images/icons/p3/icon-chevron-white-right.svg);
-  background: url(../../../public/images/icons/p3/icon-chevron-white-right.svg);
+  -webkit-mask-image: url(../../public/images/icons/p3/icon-progress-default.svg);
+  background: url(../../public/images/icons/p3/icon-progress-default.svg);
   background-color: black;
   height: 19px;
   width: 24px;
@@ -343,8 +263,8 @@ a:hover {
 }
 
 .icon-progress-step-separator-complete {
-  -webkit-mask-image: url(../../../public/images/icons/p3/icon-chevron-white-right.svg);
-  mask-image: url(../../../public/images/icons/p3/icon-chevron-white-right.svg);
+  -webkit-mask-image: url(../../public/images/icons/p3/icon-progress-complete.svg);
+  mask-image: url(../../public/images/icons/p3/icon-progress-complete.svg);
   background-color: #6abb91;
   height: 19px;
   width: 24px;
@@ -354,20 +274,8 @@ a:hover {
   background-size: cover;
 }
 
-.view-rates-btn:hover .icon-chevron-down {
-  background-color: #57565b;
-}
-
-.view-rates-btn:hover .icon-chevron-up {
-  background-color: #57565b;
-}
-
-.select-rate-btn:hover .icon-chevron-right {
-  background-color: #57565b;
-}
-
 .icon-search-white {
-  background: url("../../../public/images/icons/p3/icon-new-search.svg");
+  background: url(../../../public/images/icons/p3/icon-search-again.svg);
   height: 16px;
   width: 16px;
   display: inline-block;
@@ -398,7 +306,7 @@ a:hover {
   font-family: "Montserrat", sans-serif;
 }
 
-.btn-primary:hover, .btn-primary:active {
+.btn-primary:hover {
   color: #f6f6f6 !important;
   cursor: pointer;
   background-color: rgba(87, 86, 91, 0.8);
@@ -407,10 +315,20 @@ a:hover {
           box-shadow: inset 0px 0px 0px 1px #fff;
 }
 
+.btn-primary:active {
+  color: #f6f6f6 !important;
+  cursor: pointer;
+  background-color: rgba(87, 86, 91, 0.8) !important;
+  border: 2px solid rgba(87, 86, 91, 0.8) !important;
+  -webkit-box-shadow: inset 0px 0px 0px 1px #fff !important;
+          box-shadow: inset 0px 0px 0px 1px #fff !important;
+}
+
 .btn-primary:focus {
-  background-color: #424146;
-  border: 2px solid #424146;
+  background-color: rgba(87, 86, 91, 0.8);
+  border: 2px solid rgba(87, 86, 91, 0.8);
   color: #f0f0f0;
+  cursor: pointer;
   -webkit-box-shadow: inset 0px 0px 0px 1px #fff;
           box-shadow: inset 0px 0px 0px 1px #fff;
 }
@@ -510,7 +428,7 @@ input[type=checkbox]:checked + span.custom-check:after {
   padding-left: 0;
 }
 
-.form-group input {
+.form-group input, .form-group textarea {
   -webkit-box-shadow: inset 1px 1px 0 0 #d8d8d8;
           box-shadow: inset 1px 1px 0 0 #d8d8d8;
   background-color: #f2f2f2;
@@ -519,7 +437,7 @@ input[type=checkbox]:checked + span.custom-check:after {
   border: solid 1px transparent;
 }
 
-.form-group input:focus {
+.form-group input:focus, .form-group textarea:focus {
   -webkit-box-shadow: inset 1px 1px 0 0 #d8d8d8;
           box-shadow: inset 1px 1px 0 0 #d8d8d8;
   border: solid 1px rgba(51, 50, 50, 0.8);
@@ -637,7 +555,7 @@ input[type=checkbox]:checked + span.custom-check:after {
 }
 
 .booking-summary-data {
-  padding: 0 8px;
+  padding: 0 10px;
 }
 
 .booking-summary-data p {
@@ -734,11 +652,18 @@ input[type=checkbox]:checked + span.custom-check:after {
   font-size: 17px;
   color: #57565b;
   margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 @media screen and (min-width: 992px) {
   .room-content h3 {
     line-height: 30px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .room-content h3 {
+    margin-bottom: 25px;
   }
 }
 
@@ -812,9 +737,15 @@ input[type=checkbox]:checked + span.custom-check:after {
   font-style: normal;
 }
 
-.room-content .view-rates-btn img {
-  height: 14px;
-  width: 14px;
+@media screen and (max-width: 991px) {
+  .room-content .view-rates-btn {
+    padding: 12px 8px;
+  }
+}
+
+.room-content .view-rates-btn i {
+  top: 3px;
+  position: relative;
 }
 
 .room-content .room-ribbon {
@@ -843,6 +774,14 @@ input[type=checkbox]:checked + span.custom-check:after {
   color: #57565b;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
+}
+
+.room-content .room-facilities div {
+  margin-right: 20px;
+}
+
+.room-content .room-facilities img {
+  margin-right: 10px;
 }
 
 .room-wrapper {
@@ -932,6 +871,7 @@ input[type=checkbox]:checked + span.custom-check:after {
 }
 
 .rates-wrapper .select-rate-btn {
+  padding: 7px 10px;
   font-size: 22px;
 }
 
@@ -947,12 +887,16 @@ input[type=checkbox]:checked + span.custom-check:after {
 }
 
 .rates-wrapper .rate-description {
+  margin: 16px 0 20px 16px;
   display: none;
 }
 
 .rates-wrapper .rate-description ul {
   list-style-position: inside;
   margin-bottom: 15px;
+  line-height: 26px;
+  text-indent: -20px;
+  margin-left: 20px;
 }
 
 @media screen and (min-width: 992px) {
@@ -996,6 +940,11 @@ input[type=checkbox]:checked + span.custom-check:after {
     border-top: none;
     padding-top: 0;
   }
+}
+
+.rates-wrapper .rate-container .icon-info {
+  position: relative;
+  top: 3px;
 }
 
 .rates-wrapper .rate-ribbon {
@@ -1082,6 +1031,7 @@ input[type=checkbox]:checked + span.custom-check:after {
 .addon-heading span {
   font-size: 14px;
   color: rgba(51, 50, 50, 0.5);
+  margin-left: 10px;
 }
 
 .addon-heading-row {
@@ -1124,10 +1074,11 @@ input[type=checkbox]:checked + span.custom-check:after {
 }
 
 .addon-with-checkboxes-wrapper .addon-content h4 {
+  font-family: "Montserrat", sans-serif;
   font-size: 22px;
   font-weight: 500;
+  line-height: 22px;
   color: #57565b;
-  font-weight: 500;
 }
 
 .addon-with-checkboxes-wrapper .addon-content span {
@@ -1207,10 +1158,11 @@ input[type=checkbox]:checked + span.custom-check:after {
 }
 
 .addon-with-checkbox-wrapper .addon-content h4 {
+  font-family: "Montserrat", sans-serif;
   font-size: 22px;
   font-weight: 500;
+  line-height: 22px;
   color: #57565b;
-  font-weight: 500;
 }
 
 .addon-with-checkbox-wrapper .addon-content span {
@@ -1288,10 +1240,11 @@ input[type=checkbox]:checked + span.custom-check:after {
 }
 
 .addon-with-dropdown-wrapper .addon-content h4 {
+  font-family: "Montserrat", sans-serif;
   font-size: 22px;
   font-weight: 500;
+  line-height: 22px;
   color: #57565b;
-  font-weight: 500;
 }
 
 .addon-with-dropdown-wrapper .addon-content span {
@@ -1333,6 +1286,15 @@ input[type=checkbox]:checked + span.custom-check:after {
   }
 }
 
+.addon-with-dropdown-wrapper .addon-content select {
+  -webkit-box-shadow: inset 1px 1px 0 0 #d8d8d8;
+          box-shadow: inset 1px 1px 0 0 #d8d8d8;
+  background-color: #f2f2f2;
+  border: solid 1px transparent;
+  background-image: url(../../public/images/icons/p3/icon-btn-next-period.svg);
+  width: 70px !important;
+}
+
 @media screen and (max-width: 991px) {
   .addon-content {
     position: relative;
@@ -1343,10 +1305,31 @@ input[type=checkbox]:checked + span.custom-check:after {
     top: -3px;
   }
   .addon-content .icon-info {
-    zoom: 1.4;
     height: 18px;
     width: 18px;
   }
+}
+
+.price-currency-decimal span {
+  font-family: "Montserrat", sans-serif !important;
+  color: #57565b !important;
+  font-style: normal !important;
+}
+
+.addons-total-details {
+  font-family: "Montserrat", sans-serif;
+}
+
+.addons-total-details .price-currency-decimal span {
+  font-family: "Montserrat", sans-serif;
+  color: #57565b;
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.addons-total-details button {
+  width: 100% !important;
 }
 
 .booker-details-wrapper, .guest-details-wrapper, .payment-details-wrapper {
@@ -1376,8 +1359,8 @@ input[type=checkbox]:checked + span.custom-check:after {
 }
 
 .booker-details-wrapper label, .guest-details-wrapper label, .payment-details-wrapper label {
-  font-size: 15px;
-  color: rgba(51, 50, 50, 0.8);
+  font-size: 16px;
+  color: rgba(87, 86, 91, 0.8);
 }
 
 .booker-details-wrapper p, .guest-details-wrapper p, .payment-details-wrapper p {
@@ -1422,7 +1405,7 @@ input[type=checkbox]:checked + span.custom-check:after {
   background-position: calc(100% - 8px) 50%;
   background-repeat: no-repeat;
   background-color: #fff;
-  background-image: url(../../public/images/icons/p3/icon-chevron-dark-down.svg);
+  background-image: url(../../public/images/icons/p3/icon-btn-next-period.svg);
   padding: 4px 23px 4px 10px;
   width: 80px !important;
 }
@@ -1498,11 +1481,11 @@ input[type=checkbox]:checked + span.custom-check:after {
   text-decoration: underline;
 }
 
-.payment-summery-extra {
+.payment-summary-extra {
   margin-bottom: 30px;
 }
 
-.payment-summery-extra .payment-summary-box {
+.payment-summary-extra .payment-summary-box {
   border-radius: 2px;
   background-color: #333232;
   text-align: center;
@@ -1510,29 +1493,29 @@ input[type=checkbox]:checked + span.custom-check:after {
   margin-bottom: 20px;
 }
 
-.payment-summery-extra .payment-summary-box h4 {
+.payment-summary-extra .payment-summary-box h4 {
   color: #ffffff;
   font-weight: 500;
   font-size: 17px;
 }
 
-.payment-summery-extra .payment-summary-box p {
+.payment-summary-extra .payment-summary-box p {
   color: rgba(255, 255, 255, 0.7);
   font-size: 13px;
   line-height: 1;
   margin-bottom: 10px;
 }
 
-.payment-summery-extra .payment-summary-box .box-middle {
+.payment-summary-extra .payment-summary-box .box-middle {
   border-left: 1px solid rgba(255, 255, 255, 0.2);
   border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.payment-summery-extra ul {
+.payment-summary-extra ul {
   list-style-position: inside;
 }
 
-.payment-summery-extra li {
+.payment-summary-extra li {
   text-indent: -20px;
   margin-left: 20px;
 }
@@ -1559,7 +1542,7 @@ input[type=checkbox]:checked + span.custom-check:after {
   display: block;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(../../public/images/icons/p3/icon-Confirmation.svg);
+  background-image: url(../../public/images/icons/p3/icon-confirmation.svg);
   height: 40px;
   width: 40px;
   background-size: cover;
@@ -1643,6 +1626,28 @@ input[type=checkbox]:checked + span.custom-check:after {
   .conf-card .booking-summary-rooms-section .booking-summary-room-heading {
     padding-left: 10px;
   }
+}
+
+.icon-expand {
+  -webkit-mask-image: url(../../../public/images/icons/p3/icon-expand.svg) !important;
+  background: url(../../../public/images/icons/p3/icon-expand.svg) !important;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.icon-collapse {
+  -webkit-mask-image: url(../../../public/images/icons/p3/icon-collapse.svg) !important;
+  background: url(../../../public/images/icons/p3/icon-collapse.svg) !important;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .confirmation-content-box {
@@ -1784,6 +1789,10 @@ input[type=checkbox]:checked + span.custom-check:after {
 
 .booking-summary-heading h2 {
   font-family: "Montserrat", sans-serif;
+}
+
+.special-request-input {
+  display: none;
 }
 
 .sidenav {
@@ -2258,6 +2267,10 @@ input[type=checkbox]:checked + span.custom-check:after {
      object-fit: cover;
 }
 
+footer {
+  margin-top: 40px;
+}
+
 footer ul {
   list-style-type: none;
 }
@@ -2377,7 +2390,7 @@ p {
 @media screen and (min-width: 992px) {
   p {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 26px;
   }
 }
 
@@ -2387,7 +2400,7 @@ p {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1600px) {
   .container-fluid {
     padding: 0 10vw;
   }
@@ -2429,7 +2442,7 @@ p {
   height: 50px;
 }
 
-.hotel-info-buttons .btn:hover, .hotel-info-buttons .btn:active {
+.hotel-info-buttons .btn:hover {
   color: #f6f6f6 !important;
   cursor: pointer;
   background-color: rgba(87, 86, 91, 0.8);
@@ -2438,10 +2451,20 @@ p {
           box-shadow: inset 0px 0px 0px 1px #fff;
 }
 
+.hotel-info-buttons .btn:active {
+  color: #f6f6f6 !important;
+  cursor: pointer;
+  background-color: rgba(87, 86, 91, 0.8) !important;
+  border: 2px solid rgba(87, 86, 91, 0.8) !important;
+  -webkit-box-shadow: inset 0px 0px 0px 1px #fff !important;
+          box-shadow: inset 0px 0px 0px 1px #fff !important;
+}
+
 .hotel-info-buttons .btn:focus {
-  background-color: #424146;
-  border: 2px solid #424146;
+  background-color: rgba(87, 86, 91, 0.8);
+  border: 2px solid rgba(87, 86, 91, 0.8);
   color: #f0f0f0;
+  cursor: pointer;
   -webkit-box-shadow: inset 0px 0px 0px 1px #fff;
           box-shadow: inset 0px 0px 0px 1px #fff;
 }
@@ -2489,6 +2512,7 @@ p {
   margin-bottom: 15px;
   width: 100%;
   max-width: 186px;
+  padding: 12px 10px;
 }
 
 .desktop-sign-up img {
@@ -2559,17 +2583,8 @@ p {
 }
 
 a {
-  font-size: 15px;
-  line-height: 24px;
   color: rgba(87, 86, 91, 0.8);
   text-decoration: underline;
-}
-
-@media screen and (min-width: 992px) {
-  a {
-    font-size: 16px;
-    line-height: 26px;
-  }
 }
 
 .booking-summary-heading {
@@ -2671,5 +2686,54 @@ a {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   border-bottom-right-radius: 10px;
+}
+
+.rates-wrapper .mobile-rate-free-cancel {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 991px) {
+  .addons-total-row button {
+    width: 100%;
+  }
+  .addons-total-row .addons-total-details {
+    text-align: right !important;
+  }
+}
+
+.addons-total-row .addons-total-details {
+  color: rgba(87, 86, 91, 0.8);
+  line-height: 1.3;
+}
+
+@media screen and (max-width: 991px) {
+  .addon-content .icon-info {
+    height: 24px;
+    width: 24px;
+  }
+}
+
+p.booking-summary-room-name {
+  color: #57565b;
+}
+
+.booking-summary-data h2 {
+  color: #57565b;
+}
+
+.booking-summary-total-wrapper p:nth-child(even) {
+  text-align: right !important;
+}
+
+.payment-summary-extra .payment-summary-box p {
+  font-family: "Gelasio";
+  font-style: italic;
+}
+
+.confirmation-content-box h3 {
+  font-family: "Gelasio";
+  font-size: 22px;
 }
 /*# sourceMappingURL=styles.css.map */
