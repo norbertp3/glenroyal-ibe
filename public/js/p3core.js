@@ -32,6 +32,9 @@ $('.view-rates-btn').click(function(){
 $('.rate-name').click(function(){
   $(this).closest('.rate-container').find('.rate-description').slideToggle();
 });
+$('.expand-special-request').click(function(){
+  $(this).closest('section').find('.special-request-input').slideToggle();
+});
 $(".view-rates-btn").click(function(){
   $(".icon-chevron-down").toggleClass("icon-chevron-up");
 });
