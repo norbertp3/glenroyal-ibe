@@ -306,3 +306,14 @@ p.booking-summary-room-name {
         border-radius: 2px;
     }
 }
+.skip-btn {
+    @include mQmax (991px) {
+        width: 100%;
+    }
+}
+.continue-btn {
+    @include mQmax (991px) {
+        width: 100%;
+        margin-top: 20px;
+    }
+}

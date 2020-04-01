@@ -330,8 +330,8 @@ input[type=checkbox]:checked+span.custom-check:after {
 }
 .px-10 {
     @include mQmax (991px) {
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 

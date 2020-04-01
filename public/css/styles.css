@@ -643,8 +643,8 @@ input[type=checkbox]:checked + span.custom-check:after {
 
 @media screen and (max-width: 991px) {
   .px-10 {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
@@ -3136,6 +3136,19 @@ p.booking-summary-room-name {
 @media screen and (min-width: 992px) {
   .modal-body {
     border-radius: 2px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .skip-btn {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .continue-btn {
+    width: 100%;
+    margin-top: 20px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
