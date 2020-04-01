@@ -52,13 +52,23 @@ p {
         margin-bottom: 37px;
     }
 }
-
 .hotel-info-buttons .btn {
-    @include btnPrimary;
-    background-color: rgba(240, 240, 240, 0.2);
+    box-shadow: inset 0px 0px 0px 1px #fff;
     border: solid 2px rgba(240, 240, 240, 0.2);
-    padding: 8px 20px;
+    height: 40px;
+    margin-right: 20px;
+    background-color: rgba(240, 240, 240, 0.2);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px 20px;
+    font-family: "Montserrat", sans-serif;
     height: 50px;
+    &:hover {
+        background-color: #f6f6f6;
+        color: #57565b;
+        border: solid 2px #f6f6f6!important;
+    }
 }
 .hotel-gallery {
     background: linear-gradient(104deg, rgba(51, 50, 50, 0.5), rgba(26, 25, 25, 0) 85%,rgba(26, 26, 26, 0) 81%, rgba(0, 0, 0, 0)), url("https://www.ahstatic.com/photos/9399_ho_00_p_1024x768.jpg") no-repeat center center;
@@ -160,7 +170,6 @@ p {
 
 a {
     color: rgba(87, 86, 91, 0.8);
-    text-decoration: underline;
 }
 .booking-summary-heading {
     color: $primaryFontColor;
@@ -291,4 +300,9 @@ p.booking-summary-room-name {
 .confirmation-content-box h3 {
     font-family: $headingFont;
     font-size: 22px;
+}
+.modal-body {
+    @include mQ (992px) {
+        border-radius: 2px;
+    }
 }

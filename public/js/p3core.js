@@ -8,6 +8,7 @@ if ($(window).width() < 991) {
   $('.rate-name').click(function(){
     $(this).closest('.rate-container').find('.rate-description').detach().insertAfter($(this).closest('.rate-container').find('.rate-name'));
   });
+  $(".room-slider").detach().insertAfter(".room-modal-header");
 }
 
 // Booking Summary Room Details
@@ -40,11 +41,38 @@ $(".view-rates-btn").click(function(){
 });
 
 // Slick slider single Item
-$('.single-item').slick({
+$('.standard-slider').slick({
   arrows: true,
   autoplay: true
 });
+
+// Modal Gallery
+$('.gallery-slider').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  infinite: true,
+  arrows: true,
+  autoplay: false,
+  asNavFor: '.slider-nav'
+});
+$('.slider-nav').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  infinite: true,
+  asNavFor: '.gallery-slider',
+  dots: false,
+  centerMode: false,
+  arrows: false,
+  focusOnSelect: true
+});
+
 // Init tooltip
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
+
+$('.hotel-info-buttons [data-toggle="tab"]').on('click', function () {
+  $('#modalTabs').modal('toggle');
+  $('#modalTabs').find('[data-toggle="tab"]').removeClass('active');
+  $('.nav-tab-' + $(this).attr('href').replace('#', '')).addClass('active');
+});

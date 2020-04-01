@@ -42,6 +42,10 @@ a:focus {
   text-decoration: none;
 }
 
+ul {
+  list-style-position: inside;
+}
+
 .btn-primary {
   background-color: #57565b;
   border-radius: 0;
@@ -113,6 +117,10 @@ select:focus {
 
 form select::-ms-expand {
   display: none;
+}
+
+.modal-header {
+  border-bottom: none;
 }
 
 .btn-cta {
@@ -340,7 +348,7 @@ a:hover {
   font-size: 14px;
   text-transform: uppercase;
   height: 50px;
-  padding: 0 15px;
+  padding: 13px 15px;
 }
 
 @media screen and (min-width: 992px) {
@@ -395,6 +403,7 @@ span.custom-check:focus {
 
 span.custom-check, span.custom-radio {
   width: 20px;
+  min-width: 20px;
   height: 20px;
   vertical-align: middle;
   cursor: pointer;
@@ -460,15 +469,21 @@ input[type=checkbox]:checked + span.custom-check:after {
 }
 
 .hotel-info-buttons .btn {
-  border: 1px solid rgba(131, 111, 111, 0.8);
+  border: solid 2px rgba(240, 240, 240, 0.2);
   height: 40px;
   margin-right: 20px;
-  background-color: inherit;
+  background-color: rgba(240, 240, 240, 0.2);
   color: #fff;
   font-size: 14px;
   font-weight: 500;
-  padding-left: 20;
-  padding-right: 20;
+  padding: 12px 20px;
+  font-family: "Montserrat", sans-serif;
+  height: 50px;
+}
+
+.hotel-info-buttons .btn a {
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
 }
 
 #progress-steps .active {
@@ -737,13 +752,24 @@ input[type=checkbox]:checked + span.custom-check:after {
   font-style: normal;
 }
 
+.room-content .room-right-side {
+  position: relative;
+  min-width: 190px;
+}
+
+.room-content .room-right-side .view-rates-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
 @media screen and (max-width: 991px) {
-  .room-content .view-rates-btn {
+  .room-content .room-right-side .view-rates-btn {
     padding: 12px 8px;
   }
 }
 
-.room-content .view-rates-btn i {
+.room-content .room-right-side .view-rates-btn i {
   top: 3px;
   position: relative;
 }
@@ -782,6 +808,33 @@ input[type=checkbox]:checked + span.custom-check:after {
 
 .room-content .room-facilities img {
   margin-right: 10px;
+}
+
+@media screen and (max-width: 991px) {
+  .room-content .room-left-side {
+    padding-bottom: 20px;
+  }
+}
+
+.room-content .room-left-side ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.room-content .room-left-side li {
+  display: inline-block;
+  color: rgba(87, 86, 91, 0.6);
+  padding: 10px 30px 10px 0px;
+  text-decoration: none;
+  font-family: "Gelasio";
+  font-style: italic;
+  float: left;
+}
+
+.room-content .room-left-side li img {
+  margin-right: 5px;
 }
 
 .room-wrapper {
@@ -974,7 +1027,7 @@ input[type=checkbox]:checked + span.custom-check:after {
 }
 
 .slick-prev:before {
-  content: url(../../../public/images/icons/p3/icon-chevron-white-left.svg);
+  content: url(../../../public/images/icons/p3/icon-gallery-arrow-left.svg);
 }
 
 .slick-next {
@@ -983,7 +1036,7 @@ input[type=checkbox]:checked + span.custom-check:after {
 }
 
 .slick-next:before {
-  content: url(../../../public/images/icons/p3/icon-chevron-white-right.svg);
+  content: url(../../../public/images/icons/p3/icon-gallery-arrow-right.svg);
 }
 
 .strike-through {
@@ -1481,6 +1534,10 @@ input[type=checkbox]:checked + span.custom-check:after {
   text-decoration: underline;
 }
 
+.payment-details-wrapper a.btn {
+  text-decoration: none;
+}
+
 .payment-summary-extra {
   margin-bottom: 30px;
 }
@@ -1629,7 +1686,6 @@ input[type=checkbox]:checked + span.custom-check:after {
 }
 
 .icon-expand {
-  -webkit-mask-image: url(../../../public/images/icons/p3/icon-expand.svg) !important;
   background: url(../../../public/images/icons/p3/icon-expand.svg) !important;
   height: 30px;
   width: 30px;
@@ -1640,7 +1696,6 @@ input[type=checkbox]:checked + span.custom-check:after {
 }
 
 .icon-collapse {
-  -webkit-mask-image: url(../../../public/images/icons/p3/icon-collapse.svg) !important;
   background: url(../../../public/images/icons/p3/icon-collapse.svg) !important;
   height: 30px;
   width: 30px;
@@ -1687,6 +1742,33 @@ input[type=checkbox]:checked + span.custom-check:after {
   margin-bottom: 20px;
 }
 
+.modal .icon-close {
+  background: url(../../../public/images/icons/p3/icon-close-dark-default.svg) !important;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.modal .icon-close:hover {
+  background: url(../../../public/images/icons/p3/icon-close-dark-hover.svg) !important;
+}
+
+@media screen and (min-width: 992px) {
+  .modal .icon-close {
+    background-image: url(../../../public/images/icons/p3/icon-close-light-default.svg) !important;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .modal .icon-close:hover {
+    background: url(../../../public/images/icons/p3/icon-close-light-hover.svg) !important;
+  }
+}
+
 @media screen and (max-width: 991px) {
   .modal-full-width .modal-dialog {
     margin: 0;
@@ -1698,29 +1780,105 @@ input[type=checkbox]:checked + span.custom-check:after {
     min-height: 100%;
   }
   .modal-full-width .modal-body {
-    padding: 0 !important;
-    background: transparent;
+    background: #fff;
   }
 }
 
-.modal-full-width .modal-body {
+.modal-body {
+  background: transparent;
+}
+
+.modal-body .modal-room-content {
   padding: 0;
 }
 
-.modal-full-width .modal-dialog {
+.modal-body .modal-room-content .room-facilities span {
+  font-family: "Gelasio";
+  font-size: 14px;
+  font-style: italic;
+  line-height: 14px;
+  color: rgba(87, 86, 91, 0.6);
+}
+
+@media screen and (min-width: 992px) {
+  .modal-body .modal-room-content .room-facilities span {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.modal-body .modal-room-content .room-facilities img {
+  margin-right: 10px;
+}
+
+.modal-body .modal-room-content .room-facilities .div {
+  margin-bottom: 15px;
+}
+
+.modal-body h2 {
+  font-family: "Gelasio";
+  font-size: 20px;
+  color: #57565b;
+  font-family: "Gelasio";
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 992px) {
+  .modal-body h2 {
+    font-size: 22px;
+  }
+}
+
+.modal-body p {
+  margin: 20px 0;
+}
+
+.modal-body .rates-wrapper {
+  display: block;
+  padding: 0;
+}
+
+.modal-body {
+  padding: 0;
+}
+
+.modal-dialog {
   max-width: 945px !important;
 }
 
-.modal-full-width .modal-content {
+.modal-content {
   background-color: transparent;
+  border: none;
 }
 
-.modal-full-width .tab-content {
-  padding: 20px 20px;
+.tab-content {
   background: #fff;
 }
 
-.modal-full-width .tab-content .modal-heading h2 {
+.tab-content .info-tab {
+  padding: 20px 10px;
+}
+
+@media screen and (min-width: 992px) {
+  .tab-content .info-tab {
+    padding: 30px;
+  }
+}
+
+.tab-content .gallery-tab {
+  margin: 10px 0;
+  background: #fff;
+  height: 100%;
+}
+
+@media screen and (min-width: 992px) {
+  .tab-content .gallery-tab {
+    padding: 30px;
+    margin: 0;
+  }
+}
+
+.tab-content .modal-heading h2 {
   font-family: "Gelasio";
   font-size: 20px;
   color: #57565b;
@@ -1728,58 +1886,323 @@ input[type=checkbox]:checked + span.custom-check:after {
 }
 
 @media screen and (min-width: 992px) {
-  .modal-full-width .tab-content .modal-heading h2 {
+  .tab-content .modal-heading h2 {
     font-size: 22px;
   }
 }
 
-.modal-full-width .tab-content p {
+.tab-content p {
   margin-bottom: 30px;
 }
 
-.modal-full-width .tab-content .tab-property-details p {
+.tab-content .tab-property-details p {
   margin-bottom: 17px;
+  margin-top: 0;
 }
 
-.modal-full-width .tab-content .hotel-info-img {
+.tab-content .hotel-info-img {
   margin-bottom: 20px;
 }
 
-.modal-full-width .tab-content .description-2 {
-  padding: 20px;
-  background-color: #f2f2f2;
-}
-
-.modal-full-width .tab-content .description-2 h2 {
-  color: #57565b;
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 30px;
-}
-
-.modal-full-width .tab-content .description-2 ul {
-  margin-left: 20px;
-  line-height: 26px;
-}
-
-.modal-full-width .nav-tabs {
-  border-bottom: none;
-  background: transparent;
-}
-
-.modal-full-width .nav-tabs a {
-  padding: 0px 16px;
-  background-color: #f2f2f2;
-}
-
-@media screen and (min-width: 992px) {
-  .modal-full-width .nav-tabs a {
-    margin-right: 5px;
+@media screen and (max-width: 991px) {
+  .tab-content .hotel-info-wrapper {
+    padding: 0 20px;
   }
 }
 
-.modal-full-width .nav-tabs li {
-  height: auto;
+.tab-content .description-2 {
+  padding: 20px;
+  background-color: #f6f6f6;
+}
+
+.tab-content .description-2 h2 {
+  color: #57565b;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.tab-content .description-2 ul {
+  margin-left: 0;
+  line-height: 24px;
+}
+
+@media screen and (min-width: 992px) {
+  .tab-content .description-2 ul {
+    line-height: 26px;
+  }
+}
+
+.tab-content .description-2 ul li {
+  text-indent: -22px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.tab-content .gallery-slider .hotel-image {
+  height: 184px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+@media screen and (min-width: 992px) {
+  .tab-content .gallery-slider .hotel-image {
+    height: 498px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .tab-content .slider-nav {
+    display: none;
+  }
+}
+
+.tab-content .slider-nav .hotel-nav-image {
+  height: 50px;
+  width: 90px !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  margin: 20px 20px 0 0;
+  display: inline-block;
+}
+
+.nav-tabs {
+  border-bottom: none;
+  background: #f2f2f2;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f0f0f0), color-stop(92%, #f2f2f2), to(#cccccd));
+  background-image: linear-gradient(to bottom, #f0f0f0, #f2f2f2 92%, #cccccd);
+}
+
+@media screen and (min-width: 992px) {
+  .nav-tabs {
+    background: transparent;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .nav-tabs .gallery-tab {
+    border-right: 1px solid #d8d8d8;
+    border-left: 1px solid #d8d8d8;
+  }
+}
+
+.nav-tabs a {
+  padding: 17px 10px;
+  background-color: #f2f2f2;
+  height: 50px;
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(91%, transparent), color-stop(92%, #f2f2f2), to(#cccccd));
+  background-image: linear-gradient(to bottom, transparent, transparent 91%, #f2f2f2 92%, #cccccd);
+}
+
+@media screen and (min-width: 992px) {
+  .nav-tabs a {
+    margin-right: 5px;
+    border-top-left-radius: 5px !important;
+    border-top-right-radius: 5px !important;
+    padding: 17px 15px;
+    background-image: none;
+  }
+}
+
+.nav-tabs .active {
+  background-color: #fff;
+  color: rgba(51, 50, 50, 0.8);
+  background-image: none;
+}
+
+.nav-tabs .close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  opacity: 1;
+}
+
+@media screen and (min-width: 992px) {
+  .nav-tabs .close {
+    right: 0;
+  }
+}
+
+.standard-modal .modal-content {
+  border: none;
+}
+
+@media screen and (min-width: 992px) {
+  .standard-modal .standard-slider {
+    margin-bottom: 30px;
+  }
+}
+
+.standard-modal .standard-slider .room-image {
+  height: 184px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+@media screen and (min-width: 992px) {
+  .standard-modal .standard-slider .room-image {
+    height: 498px;
+  }
+}
+
+.standard-modal .modal-header {
+  background-color: #f6f6f6;
+}
+
+.standard-modal .modal-header .close {
+  padding: 9px;
+}
+
+@media screen and (min-width: 992px) {
+  .standard-modal .modal-header .close {
+    padding: 0 0 20px 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .standard-modal .modal-header {
+    background-color: transparent;
+  }
+}
+
+.standard-modal .modal-body {
+  background-color: #fff;
+  padding: 20px;
+}
+
+@media screen and (min-width: 992px) {
+  .standard-modal .modal-body {
+    padding: 30px;
+  }
+}
+
+.standard-modal .modal-body .modal-room-content {
+  padding: 0;
+}
+
+.standard-modal .modal-body .modal-room-content h2 {
+  font-family: "Gelasio";
+  font-size: 20px;
+  color: #57565b;
+  font-family: "Gelasio";
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 992px) {
+  .standard-modal .modal-body .modal-room-content h2 {
+    font-size: 22px;
+  }
+}
+
+.standard-modal .modal-body .modal-room-content .room-facilities span {
+  font-family: "Gelasio";
+  font-size: 14px;
+  font-style: italic;
+  line-height: 14px;
+  color: rgba(87, 86, 91, 0.6);
+}
+
+@media screen and (min-width: 992px) {
+  .standard-modal .modal-body .modal-room-content .room-facilities span {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.standard-modal .modal-body .modal-room-content .room-facilities img {
+  margin-right: 10px;
+}
+
+.standard-modal .modal-body .modal-room-content .room-facilities div {
+  margin-bottom: 15px;
+  margin-right: 20px;
+}
+
+.standard-modal .modal-body .modal-room-content p {
+  margin: 20px 0;
+}
+
+.standard-modal .modal-body .rates-wrapper {
+  display: block;
+  padding: 0;
+}
+
+.standard-modal .close {
+  opacity: 1;
+}
+
+@media screen and (min-width: 992px) {
+  .room-modal ul.room-modal-list {
+    -webkit-columns: 2;
+            columns: 2;
+  }
+}
+
+.terms-modal {
+  text-align: center;
+}
+
+.addon-modal img {
+  width: 100%;
+  height: 209px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (min-width: 992px) {
+  .addon-modal img {
+    max-width: 428px;
+    height: 280px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .addon-modal .addon-modal-content {
+    margin-left: 30px;
+  }
+}
+
+.signup-modal img {
+  min-width: 315px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.signup-modal .signup-modal-content {
+  padding: 20px;
+}
+
+@media screen and (min-width: 992px) {
+  .signup-modal .signup-modal-content {
+    padding: 30px;
+  }
+}
+
+.signup-modal label {
+  font-size: 16px;
+  color: rgba(87, 86, 91, 0.8);
+}
+
+@media screen and (max-width: 991px) {
+  .sign-up-thanks .btn {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .sign-up-thanks {
+    text-align: center;
+  }
 }
 
 .icon-info-white, .icon-search-white {
@@ -2144,7 +2567,7 @@ input[type=checkbox]:checked + span.custom-check:after {
 .main-nav .links-main-nav {
   font-family: "Gelasio";
   font-style: italic;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .main-nav .links-main-nav a {
@@ -2423,50 +2846,24 @@ p {
 }
 
 .hotel-info-buttons .btn {
-  display: inline-block;
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 2px;
-  color: #f6f6f6;
-  background-color: #57565b;
-  border-radius: 2px;
-  border: 2px solid #57565b;
-  padding: 12px 20px;
   -webkit-box-shadow: inset 0px 0px 0px 1px #fff;
           box-shadow: inset 0px 0px 0px 1px #fff;
-  text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
-  background-color: rgba(240, 240, 240, 0.2);
   border: solid 2px rgba(240, 240, 240, 0.2);
-  padding: 8px 20px;
+  height: 40px;
+  margin-right: 20px;
+  background-color: rgba(240, 240, 240, 0.2);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px 20px;
+  font-family: "Montserrat", sans-serif;
   height: 50px;
 }
 
 .hotel-info-buttons .btn:hover {
-  color: #f6f6f6 !important;
-  cursor: pointer;
-  background-color: rgba(87, 86, 91, 0.8);
-  border: 2px solid rgba(87, 86, 91, 0.8);
-  -webkit-box-shadow: inset 0px 0px 0px 1px #fff;
-          box-shadow: inset 0px 0px 0px 1px #fff;
-}
-
-.hotel-info-buttons .btn:active {
-  color: #f6f6f6 !important;
-  cursor: pointer;
-  background-color: rgba(87, 86, 91, 0.8) !important;
-  border: 2px solid rgba(87, 86, 91, 0.8) !important;
-  -webkit-box-shadow: inset 0px 0px 0px 1px #fff !important;
-          box-shadow: inset 0px 0px 0px 1px #fff !important;
-}
-
-.hotel-info-buttons .btn:focus {
-  background-color: rgba(87, 86, 91, 0.8);
-  border: 2px solid rgba(87, 86, 91, 0.8);
-  color: #f0f0f0;
-  cursor: pointer;
-  -webkit-box-shadow: inset 0px 0px 0px 1px #fff;
-          box-shadow: inset 0px 0px 0px 1px #fff;
+  background-color: #f6f6f6;
+  color: #57565b;
+  border: solid 2px #f6f6f6 !important;
 }
 
 .hotel-gallery {
@@ -2584,7 +2981,6 @@ p {
 
 a {
   color: rgba(87, 86, 91, 0.8);
-  text-decoration: underline;
 }
 
 .booking-summary-heading {
@@ -2735,5 +3131,11 @@ p.booking-summary-room-name {
 .confirmation-content-box h3 {
   font-family: "Gelasio";
   font-size: 22px;
+}
+
+@media screen and (min-width: 992px) {
+  .modal-body {
+    border-radius: 2px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

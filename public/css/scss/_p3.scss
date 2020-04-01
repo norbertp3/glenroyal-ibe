@@ -86,6 +86,7 @@ a {
     background-position: center;
     background-size: cover;
 }
+
 // .view-rates-btn:hover .icon-chevron-down {
 //     background-color: $primaryColor;
 // }
@@ -155,6 +156,7 @@ span.custom-check {
 }
 span.custom-check, span.custom-radio {
     width: 20px;
+    min-width: 20px;
     height: 20px;
     vertical-align: middle;
     cursor: pointer;
@@ -207,6 +209,9 @@ input[type=checkbox]:checked+span.custom-check:after {
 // Hotel Info Buttons
 .hotel-info-buttons .btn {
     @include hotelInfoBtn;
+    a {
+        text-decoration-line: none;
+    }
 }
 
 // Progress Steps
@@ -389,13 +394,20 @@ input[type=checkbox]:checked+span.custom-check:after {
         font-family: $textFont;
         font-style: normal;
     }
-    .view-rates-btn {
-        @include mQmax (991px) {
-            padding: 12px 8px;
-        }
-        i {
-            top: 3px;
-            position: relative;
+    .room-right-side {
+        position: relative;
+        min-width: 190px;
+        .view-rates-btn {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            @include mQmax (991px) {
+                padding: 12px 8px;
+            }
+            i {
+                top: 3px;
+                position: relative;
+            }
         }
     }
     .room-ribbon {
@@ -426,6 +438,29 @@ input[type=checkbox]:checked+span.custom-check:after {
         }
         img {
             margin-right: 10px;
+        }
+    }
+    .room-left-side {
+        @include mQmax (991px) {
+            padding-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        li {
+            display: inline-block;
+            color: rgba(87, 86, 91, 0.6);
+            padding: 10px 30px 10px 0px;
+            text-decoration: none;
+            font-family: $headingFont;
+            font-style: italic;
+            float: left;
+            img {
+                margin-right: 5px;
+            }
         }
     }
 }
@@ -561,14 +596,14 @@ input[type=checkbox]:checked+span.custom-check:after {
     z-index: 100;
     left: 5px;
     &:before {
-        content: url(../../../public/images/icons/p3/icon-chevron-white-left.svg);
+        content: $iconGalleryArrowLeft;
     }
 }
 .slick-next {
     z-index: 100;
     right: 5px;
     &:before {
-        content: url(../../../public/images/icons/p3/icon-chevron-white-right.svg);
+        content: $iconGalleryArrowRight;
     }
 }
 .strike-through {
@@ -862,6 +897,9 @@ input[type=checkbox]:checked+span.custom-check:after {
     a {
         text-decoration: underline;
     }
+    a.btn {
+        text-decoration: none;
+    }
 }
 // Payment Summary Box
 .payment-summary-extra {
@@ -1016,6 +1054,18 @@ input[type=checkbox]:checked+span.custom-check:after {
 }
 
 // Modals
+.modal {
+    .icon-close {
+        @include iconClose;
+        @include mQ(992px) {
+            background-image: $iconCloseLightDefault!important;
+            transition: 0.3s;
+            &:hover {
+                background: $iconCloseLightHover!important;
+            }
+        }
+    }
+}
 .modal-full-width {
 
     // Mobile Full Width Styling
@@ -1030,73 +1080,320 @@ input[type=checkbox]:checked+span.custom-check:after {
             min-height: 100%;
         }
         .modal-body {
-            padding: 0!important;
-            background: transparent;
+            background: #fff;
+        }
+
+    }
+}
+
+.modal-body {
+    background: transparent;
+    .modal-room-content {
+        padding: 0;
+        .room-facilities {
+            span {
+                @include smallText;
+            }
+            img {
+                margin-right: 10px;
+            }
+            .div {
+                margin-bottom: 15px;
+            }
         }
     }
-    // End Full Width Styling
+    h2 {
+        @include sectionHeading;
+        font-family: $headingFont;
+        margin-bottom: 20px;
+    }
 
-    .modal-body {
+    p {
+        margin: 20px 0;
+    }
+    .rates-wrapper {
+        display: block;
         padding: 0;
     }
-    .modal-dialog {
-        max-width: 945px!important;
+}
+// End Full Width Styling
+
+.modal-body {
+    padding: 0;
+}
+.modal-dialog {
+    max-width: 945px!important;
+}
+.modal-content {
+    background-color: transparent;
+    border: none;
+}
+
+.tab-content {
+    .info-tab {
+        padding: 20px 10px;
+        @include mQ(992px){
+            padding: 30px;
+        }
     }
-    .modal-content {
-        background-color: transparent;
-    }
-    .tab-content {
-        padding: 20px 20px;
+    .gallery-tab {
+        margin: 10px 0;
         background: $modalBackgroundColour;
-        .modal-heading {
-            h2 {
-                @include sectionHeading;
-                margin-bottom: 20px;
-            }
+        // display: inline-block;
+        height: 100%;
+        @include mQ (992px) {
+            padding: 30px;
+            margin:0;
         }
-        p {
-            margin-bottom: 30px;
-        }
-        .tab-property-details {
-            p {
-                margin-bottom: 17px;
-            }
-        }
-        .hotel-info-img {
+    }
+    background: $modalBackgroundColour;
+    .modal-heading {
+        h2 {
+            @include sectionHeading;
             margin-bottom: 20px;
         }
-        .description-2 {
-            padding: 20px;
-            background-color: $modalDescription2Background;
-            h2 {
-                color: $primaryFontColor;
-                font-size: 22px;
-                font-weight: 600;
-                margin-bottom: 30px;
-            }
-            ul {
-                margin-left: 20px;
+    }
+    p {
+        margin-bottom: 30px;
+    }
+    .tab-property-details {
+        p {
+            margin-bottom: 17px;
+            margin-top: 0;
+        }
+    }
+    .hotel-info-img {
+        margin-bottom: 20px;
+    }
+    .hotel-info-wrapper {
+        @include mQmax (991px) {
+            padding: 0 20px;
+        }
+    }
+    .description-2 {
+        padding: 20px;
+        background-color: $modalDescription2Background;
+        h2 {
+            color: $primaryFontColor;
+            font-size: 22px;
+            // font-weight: 600;
+            margin-bottom: 20px;
+        }
+        ul {
+            margin-left: 0;
+            line-height: 24px;
+            @include mQ(992px) {
                 line-height: 26px;
             }
-        } 
-    }
-    .nav-tabs {
-        border-bottom: none;
-        background: transparent;
-        
-        a {
-            padding: 0px 16px;
-            background-color: #f2f2f2;
-            @include mQ(992px) {
-                margin-right: 5px;
-                // padding: 12px 15px;
+            li {
+                text-indent: -22px;
+                margin-left: 20px;
+                margin-bottom: 10px;
             }
         }
-        li {
-            height: auto;
+    } 
+    .gallery-slider {
+        .hotel-image {
+            height: 184px;
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            @include mQ (992px) {
+                height: 498px;
+            }
+        }
+    }
+    .slider-nav {
+        @include mQmax(991px) {
+            display: none;
+        }
+        .hotel-nav-image {
+            height: 50px;
+            width: 90px!important;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            margin: 20px 20px 0 0;
+            display: inline-block;
+        }
+    }
+
+}
+.nav-tabs {
+    border-bottom: none;
+    background: #f2f2f2;
+    background-image: linear-gradient(to bottom, #f0f0f0, #f2f2f2 92%, #cccccd);
+    @include mQ (992px) {
+        background: transparent;
+    }
+    .gallery-tab {
+        @include mQmax (991px) {
+            border-right: 1px solid #d8d8d8;
+            border-left: 1px solid #d8d8d8;
+        }
+    }
+    a {
+        padding: 17px 10px;
+        background-color: #f2f2f2;
+        height: 50px;
+        display: block;
+        font-size: 14px;
+        font-weight: 500;
+        background-image: linear-gradient(to bottom, transparent, transparent 91%, #f2f2f2 92%, #cccccd);
+        @include mQ(992px) {
+            margin-right: 5px;
+            border-top-left-radius: 5px!important;
+            border-top-right-radius: 5px!important;
+            padding: 17px 15px;
+            background-image: none;
+
+        }
+    }
+    .active {
+        background-color: #fff;
+        color: rgba(51, 50, 50, 0.8);
+        background-image: none;
+
+    }
+    .close {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        opacity: 1;
+        @include mQ(992px) {
+            right: 0;
         }
     }
 }
+
+.standard-modal {
+    .modal-content {
+        border: none;
+    }
+    .standard-slider {
+        @include mQ (992px) {
+            margin-bottom: 30px;
+        }
+        .room-image {
+            height: 184px;
+            width: 100%;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            @include mQ (992px) {
+                height: 498px;
+            }
+        }
+    }
+    .modal-header {
+        background-color: #f6f6f6;
+        .close {
+            padding: 9px;
+            @include mQ(992px) {
+                padding: 0 0 20px 0;
+            }
+        }
+        @include mQ (992px) {
+            background-color: transparent;
+        }
+    }
+    .modal-body {
+        background-color: #fff;
+        padding: 20px;
+        @include mQ(992px) {
+            padding: 30px;
+        }
+        .modal-room-content {
+            padding: 0;
+            h2 {
+                @include sectionHeading;
+                font-family: $headingFont;
+                margin-bottom: 20px;
+            }
+            .room-facilities {
+                span {
+                    @include smallText;
+                }
+                img {
+                    margin-right: 10px;
+                }
+                div {
+                    margin-bottom: 15px;
+                    margin-right: 20px;
+                }
+            }
+            p {
+                margin: 20px 0;
+            }
+        }
+        .rates-wrapper {
+            display: block;
+            padding: 0;
+        }
+    }
+    .close {
+        opacity: 1;
+    }
+}
+.room-modal {
+    ul.room-modal-list {
+        @include mQ (992px) {
+            columns: 2;
+        }
+    }
+}
+.terms-modal {
+    text-align: center;
+}
+.addon-modal {
+    img {
+        width: 100%;
+        height: 209px;
+        object-fit: cover;
+        @include mQ(992px) {
+            max-width: 428px;
+            height: 280px;
+        }
+    }
+    .addon-modal-content {
+        @include mQ(992px) {
+            margin-left: 30px;
+        }
+    }
+} 
+.signup-modal {
+    img {
+        min-width: 315px;
+        object-fit: cover;
+    }
+    .signup-modal-content {
+        padding: 20px;
+        @include mQ (992px) {
+            padding: 30px;
+        }
+    }
+    label {
+        @include formLabel;
+    }
+} 
+.sign-up-thanks {
+    @include mQmax (991px) {
+        .btn {
+            width: 100%;
+        }
+    }
+    @include mQ (992px) {
+        text-align: center;
+    }
+}
+
 .icon-info-white, .icon-search-white {
     position: relative;
     top: 3px;
@@ -1107,3 +1404,5 @@ input[type=checkbox]:checked+span.custom-check:after {
 .special-request-input {
     display: none;
 }
+
+

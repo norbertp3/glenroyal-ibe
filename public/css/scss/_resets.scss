@@ -33,6 +33,10 @@ a {
     line-height: 1;
 }
 
+ul {
+    list-style-position: inside;
+}
+
 // Bootstrap buttons reset
 
 .btn-primary {
@@ -94,3 +98,6 @@ select {
 }
 
 form select::-ms-expand { display: none; }
+.modal-header {
+    border-bottom: none;
+}

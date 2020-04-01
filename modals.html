@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HOME PAGE</title>
+
+
+
+    <!-- Vendors -->
+    <link rel="stylesheet" href="public/bootstrap-4.0.0/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="public/css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="public/css/slick-theme.css"/>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/vue-airbnb-style-datepicker@2.1.0/dist/vue-airbnb-style-datepicker.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="public/css/styles.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Gelasio|Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <header>
+    <div class="main-nav position-relative d-none d-lg-block">
+        <div class="top-main-nav text-center">
+            <img src="public/images/logo-stars-placeholder.png" alt="">
+            <a href="#" class="book-btn-nav position-absolute">BOOK YOUR STAY</a>
+        </div>
+        <div class="container-fluid">
+            <div class="links-main-nav d-flex justify-content-between">
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="mini-nav d-flex justify-content-between align-items-center d-lg-none">
+        <img src="public/images/icons/icon-hamburger.svg" onclick="openNav()" >
+        <img src="public/images/logo-mark-grey.png">
+        <a href="#" class="book-btn-nav d-none d-lg-block">BOOK YOUR STAY</a>
+    </div>
+</header>
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+        <img src="public/images/icons/close-x.svg" alt="">
+    </a>
+    <div class="side-nav-links text-center">
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+    <div class="d-flex justify-content-center">
+        <a href=""><i class="fa fa-facebook"></i></a>
+        <a href=""><i class="fa fa-instagram"></i></a>
+        <a href=""><i class="fa fa-twitter"></i></a>
+    </div>
+</div>
+
+  <section id="banner" class="d-none d-lg-block">
+    <div class="container-fluid">
+      <h1>The Redworth Hall Hotel</h1>
+      <p>Surtees Rd, Newton Aycliffe DL5 6NL, UK</p>
+      <!-- HOTEL INFO BUTTONS P3B -->
+      <div class="hotel-info-buttons d-none d-lg-flex">
+        <a href="#infoTab" data-toggle="tab" class="btn">Hotel Info</a>
+        <a href="#mapTab" data-toggle="tab" class="btn">Map</a>
+        <a href="#galleryTab" data-toggle="tab" class="btn">Gallery</a>
+      </div>
+      <!-- END HOTEL INFO BUTTONS P3B -->
+    </div>
+    <div class="container-fluid px-0">
+      <div class="row">
+        <div class="col-6"></div>
+        <div class="col-6">
+          <a href="#"><div class="hotel-gallery">
+            <img src="public/images/icons/p3/icon-open-gallery.svg" class="icon-open-gallery">
+          </div></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Hotel Info P3B -->
+  <section id="mobile-hotel-info" class="d-lg-none">
+    <div class="container d-flex justify-content-between">
+      <a href="#" data-toggle="modal" data-target="#modalTabs"><i class="icon-info-white"></i> Hotel Info</a>
+      <a href="#"><i class="icon-search-white"></i> New Search</a>
+    </div>
+  </section>
+  <!-- END Mobile Hotel Info P3B -->
+
+  <!-- IBE -->
+  <div class="container-fluid">
+
+    <!-- Room Modal -->
+    <a href="#" class="btn" data-toggle="modal" data-target="#roomModal">Room Modal</a>
+
+    <!-- Room Modal -->
+    <div class="modal fade modal-full-width standard-modal display-block room-modal" id="roomModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header room-modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <i class="icon-close"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-room-content">
+              <h2>Double Room</h2>
+              <div class="room-facilities d-block d-lg-flex">
+                <div><img src="public/images/icons/p3/icon-sleeps-3.svg" alt=""><span>Sleeps 3</span></div>
+                <div><img src="public/images/icons/p3/icon-room-size.svg" alt=""><span>18m2</span></div>
+                <div><img src="public/images/icons/p3/icon-beds.svg" alt=""><span>1 Double, 1 Single, 1 Sofabed</span></div>
+              </div>
+              <p>Providing a luxurious, comfortable bedroom for guests to unwind and relax in is our mission at the Glenroyal Hotel. Providing guests with all the home comforts for the most peaceful nights sleep, you can be sure to be fully rested after a stay at The Glenroyal Hotel.</p>
+              <div class="standard-slider room-slider">
+                <div class="room-image" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(4,3,62,0) 20%, rgba(9,9,121,0) 50%, rgba(4,115,191,0) 80%, rgba(0,0,0,0.3) 100%), url('../../public/images/room-image.png')";>
+                </div>
+                <div class="room-image" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(4,3,62,0) 20%, rgba(9,9,121,0) 50%, rgba(4,115,191,0) 80%, rgba(0,0,0,0.3) 100%), url('../../public/images/room-image.png')";>
+                </div>
+                <div class="room-image" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(4,3,62,0) 20%, rgba(9,9,121,0) 50%, rgba(4,115,191,0) 80%, rgba(0,0,0,0.3) 100%), url('../../public/images/room-image.png')";>
+              </div>
+            </div>
+              <ul class="room-modal-list">
+                <li>Tea & Coffee Facilities</li>
+                <li>Tea & Coffee Facilities</li>
+                <li>Tea & Coffee Facilities</li>
+                <li>Tea & Coffee Facilities</li>
+                <li>Tea & Coffee Facilities</li>
+                <li>Tea & Coffee Facilities</li>
+              </ul>
+            </div>
+            <div class="rates-wrapper">
+              <!-- Single Rate Container LOOP -->
+              <div class="rate-container">
+                <div class="d-block d-lg-flex justify-content-between align-items-center">
+                  <h3 class="rate-name"><a href="javascript:;"><i class="icon-info d-inline-block d-lg-none mr-1"></i> Room Only - Pay Now,
+                    Non-refundable <i class="icon-info d-none d-lg-inline-block ml-lg-3"></i></a></h3>
+                  <div class="text-right d-flex justify-content-end select-rate">
+                    <div class="d-flex align-items-end">
+                      <span class="mb-3">1 night</span>
+                      <span class="ml-2 mb-3 strike-through">€77.50</span>
+                    </div>
+                    <div class="text-center ml-3">
+                      <span class="mobile-rate-free-cancel d-block d-lg-none">Free Cancellation</span>
+                      <a href="#" class="btn btn-primary select-rate-btn"><span class="">€ </span>67<span class="price-after-decimal">.50</span> <i
+                          class="icon-chevron-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="rate-description mt-lg-0">
+                  <ul>
+                    <li>Book now, pay on arrival 111111111111</li>
+                    <li>Cancel for free by 2pm Tue, 29 Nov</li>
+                  </ul>
+                  <p>For when your plans are open to change, stay flexible! Enjoy a full English breakfast included in
+                    this rate. </p>
+                </div>
+              </div>
+              <!-- End Single Rate LOOP-->
+  
+              <div class="rate-container">
+                <div class="rate-ribbon">
+                  <!-- <img src="public/images/icons/p3/ribbons/cancel-ribbon.svg" alt=""> -->
+                  <span>Free Cancellation</span>
+                </div>
+                <div class="d-block d-lg-flex justify-content-between align-items-center">
+                  <h3 class="rate-name"><a href="javascript:;"><i class="icon-info d-inline-block d-lg-none mr-1"></i> Room Only - Pay Now,
+                    Non-refundable <i class="icon-info d-none d-lg-inline-block ml-lg-3"></i></a></h3>
+                  <div class="text-right d-flex justify-content-end select-rate">
+                    <div class="d-flex align-items-end">
+                      <span class="mb-3">1 night</span>
+                      <span class="ml-2 mb-3 strike-through">€77.50</span>
+                    </div>
+                    <div class="text-center ml-3">
+                      <span class="mobile-rate-free-cancel d-block d-lg-none">Free Cancellation</span>
+                      <a href="#" class="btn btn-primary select-rate-btn"><span class="">€ </span>67<span class="price-after-decimal">.50</span> <i
+                          class="icon-chevron-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="rate-description ml-3 mt-3 mt-lg-0">
+                  <ul>
+                    <li>Book now, pay on arrival 2222222</li>
+                    <li>Cancel for free by 2pm Tue, 29 Nov</li>
+                  </ul>
+                  <p>For when your plans are open to change, stay flexible! Enjoy a full English breakfast included in
+                    this rate. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Terms Modal -->
+    <a href="#" class="btn" data-toggle="modal" data-target="#termsModal">Terms Modal</a>
+
+    <div class="modal fade modal-full-width standard-modal display-block terms-modal" id="termsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <i class="icon-close"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h2>Terms & Conditions</h2>
+            <p>Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae. Donec sagittis faucibus lacus eget blandit. Mauris vitae ultricies metus, at condimentum nulla. Donec quis ornare lacus. Etiam gravida mollis tortor quis porttitor.Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendu.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Addon Info Modal -->
+    <a href="#" class="btn" data-toggle="modal" data-target="#addonModal">Addons Modal</a>
+
+    <div class="modal fade modal-full-width standard-modal display-block addon-modal" id="addonModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <i class="icon-close"></i>
+            </button>
+          </div>
+          <img src="public/images/addon-image-large.jpg" alt="" class="d-lg-none">
+          <div class="modal-body">
+            <div class="d-lg-flex">
+              <img src="public/images/addon-image-large.jpg" alt="" class="d-none d-lg-block">
+              <div class="addon-modal-content">
+                <h2>Terms & Conditions</h2>
+                <p>Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae. Donec sagittis faucibus lacus eget blandit. Mauris vitae ultricies metus, at condimentum nulla. Donec quis ornare lacus. Etiam gravida mollis tortor quis porttitor.Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendu.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <a href="#" class="btn" data-toggle="modal" data-target="#signupModal">Sign Up Modal</a>
+
+    <div class="modal fade modal-full-width standard-modal display-block signup-modal" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <i class="icon-close"></i>
+            </button>
+          </div>
+            <div class="modal-body d-flex p-0">
+            <img src="public/images/img-join.jpg" alt="" class="d-none d-lg-block">
+              <div class="signup-modal-content">
+                <h2>Sign Up for 10% Off</h2>
+                <p>Join our loyalty club today to get 10% off your booking, today and every time you book online! It's free to join, and you'll receive your discount straight away.</p>
+                <form action="">
+                  <div class="row">
+                    <div class="form-group col-12 col-sm-6">
+                      <label>First Name</label>
+                      <input type="text" class="form-control is-invalid" placeholder="" name="" required="">
+                      <div class="invalid-feedback">
+                        Please provide a valid state.
+                      </div>
+                    </div>
+                    <div class="form-group col-12 col-sm-6">
+                      <label>Last Name</label>
+                      <input type="text" class="form-control is-valid" placeholder="" name="" required="">
+                      <div class="invalid-feedback">
+                        Please provide a valid state.
+                      </div>
+                    </div>
+                    <div class="form-group col-12 col-sm-6">
+                      <label>Email Address</label>
+                      <input type="text" class="form-control" placeholder="" name="" required="">
+                      <div class="invalid-feedback">
+                        Please provide a valid state.
+                      </div>
+                    </div>
+                    <div class="form-group col-12 col-sm-6">
+                      <label>Password</label>
+                      <input type="text" class="form-control" placeholder="" name="" required="">
+                      <div class="invalid-feedback">
+                        Please provide a valid state.
+                      </div>
+                    </div>
+                    <div class="col-12 mt-3 mb-4">
+                      <label class="d-flex">
+                        <input type="checkbox" name=""><span class="custom-check"></span><p class="m-0">I agree to the&nbsp;<a href="#">Terms & Conditions</a>&nbsp;&&nbsp;<a href="#">Privacy Policy</a>.</p></label>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <a href="#" class="btn btn-primary w-100">Join Now</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="modal-body sign-up-thanks">
+              <h2>Terms & Conditions</h2>
+              <p>Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae. Donec sagittis faucibus lacus eget blandit. Mauris vitae ultricies metus, at condimentum nulla. Donec quis ornare lacus. Etiam gravida mollis tortor quis porttitor.Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendu.</p>
+              <a href="#" class="btn btn-primary">Continue Booking</a>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- Info Modal -->
+<!-- Info Modal -->
+<div class="modal fade modal-tabs modal-full-width" id="modalTabs" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <!-- <div class="modal-header text-right">
+        <a href="#" data-dismiss="modal" aria-label="Close" style="color: #a54b89;">Close <span
+            aria-hidden="true">&times;</span></a>
+      </div> -->
+      <div class="modal-body">
+        <div role="tabpanel">
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="info-tab">
+              <a href="#infoTab" role="tab" data-toggle="tab" class="active nav-tab-infoTab">Info</a>
+            </li>
+            <li role="presentation" class="map-tab">
+              <a href="#mapTab" role="tab" data-toggle="tab" class="nav-tab-mapTab">Map</a>
+            </li>
+            <li  class="gallery-tab">
+              <a href="#galleryTab" role="tab" data-toggle="tab" class="nav-tab-galleryTab">Gallery</a>
+            </li>
+            <!-- <li role="presentation" class="reviews-tab">
+              <a href="#reviewsList" aria-controls="browseTab" role="tab" data-toggle="tab">Reviews</a>
+            </li> -->
+            <!-- <a href="#" data-dismiss="modal" aria-label="Close" style="color: #a54b89;" class="">Close <span
+            aria-hidden="true">&times;</span></a> -->
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <i class="icon-close"></i>
+            </button>
+          </ul>
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <!-- Tab Info -->
+            <div role="tabpanel" class="tab-pane active info-tab" id="infoTab">
+
+              <div class="modal-heading">
+                <h2>Glenroyal Hotel & Leisure Club</h2>
+              </div>
+              <div class="row">
+                <div class="col-12 col-lg-6 hotel-info-wrapper">
+                  <img src="public/images/img-hotel-info.jpg" alt="" class="d-none d-lg-block hotel-info-img">
+                  <p>Redworth Hall is a stunning 17th century Jacobean Manor House situated in the blissful tranquility of its own 26 acres of landscaped grounds. Part of The Cairn Collection, our signature four-star hotel is home to 143 bedrooms, The Retreat fitness and beauty rooms as well as a number of function rooms hosting up to 250 guests, making it the perfect destination for business or pleasure.</p>
+                  <div class="tab-property-details">
+                    <div class="row">
+                        <div class="col-1"><img src="public/images/icons/p3/icon-contact-address.svg"></div>
+                        <div class="col-10">
+                            <p>The Redworth Hall Hotel, Surtees Rd, Newton Aycliffe DL5 6NL, UK</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"><img src="public/images/icons/p3/icon-contact-phone.svg"></div>
+                        <div class="col-10">
+                            <p>+441388770600</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"><img src="public/images/icons/p3/icon-contact-email.svg"></div>
+                        <div class="col-10">
+                            <p>reservations@redworthhalldurham.co.uk</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                  <div class="description-2">
+                    <h2>Hotel Features</h2>
+                    <ul>
+                      <li>Free high speed WiFi in your room and all public areas</li>
+                      <li>Spa with jacuzzi, steam room, sauna, relaxation rooms, and extensive array of treatments available</li>
+                      <li>14m heated indoor pool</li>
+                      <li>Free high speed WiFi in your room and all public areas</li>
+                      <li>Spa with jacuzzi, steam room, sauna, relaxation rooms, and extensive array of treatments available</li>
+                      <li>14m heated indoor pool</li>
+                      <li>Free high speed WiFi in your room and all public areas</li>
+                      <li>Spa with jacuzzi, steam room, sauna, relaxation rooms, and extensive array of treatments available</li>
+                      <li>14m heated indoor pool</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div role="tabpanel" class="tab-pane gallery-tab" id="galleryTab">
+              <div class="gallery-slider slider">
+                  <div class="hotel-image" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(4,3,62,0) 20%, rgba(9,9,121,0) 50%, rgba(4,115,191,0) 80%, rgba(0,0,0,0.3) 100%), url('../../public/images/room-image.png')";>
+                  </div>
+                  <div class="hotel-image" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(4,3,62,0) 20%, rgba(9,9,121,0) 50%, rgba(4,115,191,0) 80%, rgba(0,0,0,0.3) 100%), url('../../public/images/room-image.png')";>
+                  </div>
+                  <div class="hotel-image" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(4,3,62,0) 20%, rgba(9,9,121,0) 50%, rgba(4,115,191,0) 80%, rgba(0,0,0,0.3) 100%), url('../../public/images/room-image.png')";>
+                  </div>
+                  <div class="hotel-image" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(4,3,62,0) 20%, rgba(9,9,121,0) 50%, rgba(4,115,191,0) 80%, rgba(0,0,0,0.3) 100%), url('../../public/images/room-image.png')";>
+                  </div>
+                  <div class="hotel-image" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(4,3,62,0) 20%, rgba(9,9,121,0) 50%, rgba(4,115,191,0) 80%, rgba(0,0,0,0.3) 100%), url('../../public/images/room-image.png')";>
+                  </div>
+                  <div class="hotel-image" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(4,3,62,0) 20%, rgba(9,9,121,0) 50%, rgba(4,115,191,0) 80%, rgba(0,0,0,0.3) 100%), url('../../public/images/room-image.png')";>
+                  </div>
+              </div>
+              <div class="slider slider-nav">
+                <div class="hotel-nav-image" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(4,3,62,0) 20%, rgba(9,9,121,0) 50%, rgba(4,115,191,0) 80%, rgba(0,0,0,0.3) 100%), url('../../public/images/room-image.png')";>
+                </div>
+                <div class="hotel-nav-image" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(4,3,62,0) 20%, rgba(9,9,121,0) 50%, rgba(4,115,191,0) 80%, rgba(0,0,0,0.3) 100%), url('../../public/images/room-image.png')";>
+                </div>
+                <div class="hotel-nav-image" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(4,3,62,0) 20%, rgba(9,9,121,0) 50%, rgba(4,115,191,0) 80%, rgba(0,0,0,0.3) 100%), url('../../public/images/room-image.png')";>
+                </div>
+                <div class="hotel-nav-image" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(4,3,62,0) 20%, rgba(9,9,121,0) 50%, rgba(4,115,191,0) 80%, rgba(0,0,0,0.3) 100%), url('../../public/images/room-image.png')";>
+                </div>
+                <div class="hotel-nav-image" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(4,3,62,0) 20%, rgba(9,9,121,0) 50%, rgba(4,115,191,0) 80%, rgba(0,0,0,0.3) 100%), url('../../public/images/room-image.png')";>
+                </div>
+                <div class="hotel-nav-image" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(4,3,62,0) 20%, rgba(9,9,121,0) 50%, rgba(4,115,191,0) 80%, rgba(0,0,0,0.3) 100%), url('../../public/images/room-image.png')";>
+                </div>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="mapTab">
+              <div class="tab-map-cover">
+                <div id="googleMap" style="width: 100%; height: 400px; position: relative; overflow: hidden;"></div>
+                <!-- <section class="directions-tabs">
+                  <div class="row">
+                    <div class="col-12 col-md-6">
+                      <div class="custom-tab">
+                        <div class="custom-tab-head">
+                          <h4>Getting here from the airport <i class="fa fa-angle-down" style="float: right"></i></h4>
+                        </div>
+                        <div class="custom-tab-body">
+                          <p>Best Option: Take the 747 Bus from Dublin Airport to the City Centre. The 747 Bus stops on
+                            Lower O’Connell Street which is 4 minute walk, along Henry Street then onto Jervis
+                            Apartments Dublin City.
+                            <br>
+                            The bus departs from outside the arrivals hall every 15 minutes. Tickets are €7 per adult
+                            and the journey can take between 20 to 30 minutes depending on traffic.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="custom-tab">
+                        <div class="custom-tab-head">
+                          <h4>Getting here from the airport <i class="fa fa-angle-down" style="float: right"></i></h4>
+                        </div>
+                        <div class="custom-tab-body">
+                          <p>Best Option: Take the 747 Bus from Dublin Airport to the City Centre. The 747 Bus stops on
+                            Lower O’Connell Street which is 4 minute walk, along Henry Street then onto Jervis
+                            Apartments Dublin City.
+                            <br>
+                            The bus departs from outside the arrivals hall every 15 minutes. Tickets are €7 per adult
+                            and the journey can take between 20 to 30 minutes depending on traffic.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="custom-tab">
+                        <div class="custom-tab-head">
+                          <h4>Getting here from the airport <i class="fa fa-angle-down" style="float: right"></i></h4>
+                        </div>
+                        <div class="custom-tab-body">
+                          <p>Best Option: Take the 747 Bus from Dublin Airport to the City Centre. The 747 Bus stops on
+                            Lower O’Connell Street which is 4 minute walk, along Henry Street then onto Jervis
+                            Apartments Dublin City.
+                            <br>
+                            The bus departs from outside the arrivals hall every 15 minutes. Tickets are €7 per adult
+                            and the journey can take between 20 to 30 minutes depending on traffic.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="custom-tab">
+                        <div class="custom-tab-head">
+                          <h4>Getting here from the airport <i class="fa fa-angle-down" style="float: right"></i></h4>
+                        </div>
+                        <div class="custom-tab-body">
+                          <p>Best Option: Take the 747 Bus from Dublin Airport to the City Centre. The 747 Bus stops on
+                            Lower O’Connell Street which is 4 minute walk, along Henry Street then onto Jervis
+                            Apartments Dublin City.
+                            <br>
+                            The bus departs from outside the arrivals hall every 15 minutes. Tickets are €7 per adult
+                            and the journey can take between 20 to 30 minutes depending on traffic.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section> -->
+              </div>
+            </div>
+            <!-- <div role="tabpanel" class="tab-pane" id="reviewsList">PLUGIN</div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  </div>
+
+  
+<!-- Footer -->
+
+<footer>
+  <div class="devider-top-desktop devider-top-mobile"></div>
+  <div class="container-fluid">
+      <div class="footer-links">
+          <div class="d-lg-flex justify-content-between align-items-center">
+              <a href="#"><img src="public/images/logo-stars-placeholder.png" alt=""></a>
+              <ul class="footer-nav">
+                  <li><a href="#">aaa</a></li>
+                  <li><a href="#">bbb</a></li>
+                  <li><a href="#">ccc</a></li>
+                  <li><a href="#">ddd</a></li>
+                  <li><a href="#">eee</a></li>
+              </ul>
+              <ul class="footer-social-links">
+                  <li><a href=""><i class="fa fa-facebook"></i></a></li></a>
+                  <li><a href=""><i class="fa fa-instagram"></i></li></a>
+                  <li><a href=""><i class="fa fa-twitter"></i></li></a>
+              </ul>
+          </div>
+      </div>
+      <div class="footer-contact">
+          <div class="row align-items-end">
+              <div class="col-12 col-lg-6 order-1 order-lg-0">
+                  <p>Glenroyal Hotel & Leisure Club, Straffan Road, Maynooth, W23 C2V1, Co. Kildare</p>
+              </div>
+              <div class="col-12 col-lg-6 text-lg-right order-0 order-lg-1 pb-4 pb-lg-0">
+                  <p class="pb-2 pb-lg-0">+353 (0) 1 629 0909</p>
+                  <p>info@glenroyal.ie / reservations@glenroyal.ie</p>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="footer-devider d-none d-lg-block"></div>
+  <div class="container-fluid">
+      <div class="footer-sub-links text-center">
+          <ul>
+              <li><a href="#">Cookie Policy</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+          </ul>
+      </div>
+  </div>
+</footer>
+
+    
+    <!-- JS Files -->
+
+    <!-- jQuery -->
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    
+    <!-- Slick -->
+    <script type="text/javascript" src="public/js/slick.min.js"></script>
+
+    <!-- Multi Select -->
+    <script type="text/javascript" src="public/js/popper.js"></script>
+    <script type="text/javascript" src="public/js/bootstrap-multiselect.js"></script>
+
+    <!-- Prefixfree -->
+    <script type="text/javascript" src="public/js/prefixfree.min.js"></script>
+    <script type="text/javascript" src="public/js/prefixfree.dynamic-dom.min.js"></script>
+    <script type="text/javascript" src="public/js/prefixfree.viewport-units.js"></script>
+    <script type="text/javascript" src="public/js/prefixfree.jquery.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-airbnb-style-datepicker@2.1.0/dist/no-dep/vue-airbnb-style-datepicker.min.js"></script>
+
+    <script>
+            // define options (optional)
+            var datepickerOptions = {
+              sundayFirst: true
+            }
+            // install plugin
+            Vue.use(window.AirbnbStyleDatepicker, datepickerOptions)
+        
+            var app = new Vue({
+              el: '#app',
+              data: {
+                date1: '',
+                date2: ''
+              }
+            })
+          </script>
+    
+    <!-- Custom -->
+    <script src="public/js/p3core.js"></script>
+    <script src="public/js/custom.js"></script>
+
+</body>
+</html>

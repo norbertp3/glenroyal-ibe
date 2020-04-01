@@ -87,9 +87,9 @@
       <p>Surtees Rd, Newton Aycliffe DL5 6NL, UK</p>
       <!-- HOTEL INFO BUTTONS P3B -->
       <div class="hotel-info-buttons d-none d-lg-flex">
-        <a href="#" data-toggle="modal" data-target="#modalTabs"><button class="btn">Hotel Info</button></a>
-        <a href="#"><button class="btn">Map</button></a>
-        <a href="#"><button class="btn">Gallery</button></a>
+        <a href="#" data-toggle="modal" data-target="#modalTabs" class="btn">Hotel Info</a>
+        <a href="#" class="btn">Map</a>
+        <a href="#" class="btn">Gallery</a>
       </div>
       <!-- END HOTEL INFO BUTTONS P3B -->
     </div>
@@ -124,7 +124,7 @@
           <div class="booking-summary-heading d-flex justify-content-between align-items-center">
             <h2>My Booking</h2>
             <span class="d-lg-none">Nov 30 - Dec 02</span>
-            <button class="btn btn-secondary edit-search-btn d-none d-lg-block">Edit</button>
+            <a href="#" class="btn btn-secondary edit-search-btn d-none d-lg-block">Edit</a>
             <a href="javascript:;" class="open-booking-summary d-lg-none trigger-rotate"><i class="icon-expand"></i></a>
           </div>
           <div class="booking-summary-data">
@@ -215,7 +215,7 @@
         <section class="card-style room-with-rates-wrapper">
           <div class="room-wrapper d-lg-flex">
              <!-- Mobile Room Slider LOOP-->
-              <div class="single-item d-lg-none">
+              <div class="standard-slider d-lg-none">
                   <div class="room-image" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(4,3,62,0) 20%, rgba(9,9,121,0) 50%, rgba(4,115,191,0) 80%, rgba(0,0,0,0.3) 100%), url('../../public/images/room-image.png')";>
                   </div>
                   <div class="room-image" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(4,3,62,0) 20%, rgba(9,9,121,0) 50%, rgba(4,115,191,0) 80%, rgba(0,0,0,0.3) 100%), url('../../public/images/room-image.png')";>
@@ -244,11 +244,16 @@
                   <a href="#">
                     <h3><i class="icon-info d-inline-block d-lg-none mr-1"></i> Standard Single Room <i class="icon-info d-none d-lg-inline-block ml-1"></i></h3>
                   </a>
-                  <div class="room-facilities d-none d-lg-block">
-                    <div><img src="public/images/icons/p3/icon-sleeps-3.svg" alt=""><span>Sleeps 3</span></div>
-                    <div><img src="public/images/icons/p3/icon-room-size.svg" alt=""><span>18m2</span></div>
-                    <div><img src="public/images/icons/p3/icon-beds.svg" alt=""><span>1 Double, 1 Single, 1 Sofabed</span></div>
-                  </div>
+                  <!-- <div class="room-facilities d-none d-lg-flex">
+                    <div class="align"><img src="public/images/icons/p3/icon-sleeps-3.svg" alt=""><span>Sleeps 3</span></div>
+                    <div class="align"><img src="public/images/icons/p3/icon-room-size.svg" alt=""><span>18m2</span></div>
+                    <div class="align"><img src="public/images/icons/p3/icon-beds.svg" alt=""><span>1 Double, 1 Single, 1 Sofabed</span></div>
+                  </div> -->
+                  <ul class="d-none d-lg-block">
+                    <li><img src="public/images/icons/p3/icon-sleeps-3.svg" alt="">Sleeps 3</li>
+                    <li><img src="public/images/icons/p3/icon-room-size.svg" alt="">18m2</li>
+                    <li><img src="public/images/icons/p3/icon-beds.svg" alt="">Double & Single Bed</li>
+                  </ul>
                 </div>
                 <div class="d-flex justify-content-between align-items-end d-lg-block room-right-side">
                   <div class="price-section">
@@ -277,8 +282,8 @@
                   </div>
                   <div class="text-center ml-3">
                     <span class="mobile-rate-free-cancel d-block d-lg-none">Free Cancellation</span>
-                    <button class="btn btn-primary select-rate-btn"><span class="">€ </span>67<span class="price-after-decimal">.50</span> <i
-                        class="icon-chevron-right"></i></button>
+                    <a href="#" class="btn btn-primary select-rate-btn"><span class="">€ </span>67<span class="price-after-decimal">.50</span> <i
+                        class="icon-chevron-right"></i></a>
                   </div>
                 </div>
               </div>
@@ -308,8 +313,8 @@
                   </div>
                   <div class="text-center ml-3">
                     <span class="mobile-rate-free-cancel d-block d-lg-none">Free Cancellation</span>
-                    <button class="btn btn-primary select-rate-btn"><span class="">€ </span>67<span class="price-after-decimal">.50</span> <i
-                        class="icon-chevron-right"></i></button>
+                    <a href="#" class="btn btn-primary select-rate-btn"><span class="">€ </span>67<span class="price-after-decimal">.50</span> <i
+                        class="icon-chevron-right"></i></a>
                   </div>
                 </div>
               </div>
@@ -380,200 +385,6 @@
       </div>
   </div>
 </footer>
-
-  <!-- Modals -->
-<!-- Info Modal -->
-<div class="modal fade modal-tabs modal-full-width" id="modalTabs" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-  aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <!-- <div class="modal-header text-right">
-        <a href="#" data-dismiss="modal" aria-label="Close" style="color: #a54b89;">Close <span
-            aria-hidden="true">&times;</span></a>
-      </div> -->
-      <div class="modal-body">
-        <div role="tabpanel">
-          <!-- Nav tabs -->
-          <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation" class="info-tab">
-              <a href="#infoTab" aria-controls="uploadTab" role="tab" data-toggle="tab" class="active">Info</a>
-            </li>
-            <li role="presentation" class="gallery-tab">
-              <a href="#galleryTab" aria-controls="browseTab" role="tab" data-toggle="tab">Gallery</a>
-            </li>
-            <li role="presentation" class="map-tab">
-              <a href="#mapTab" aria-controls="browseTab" role="tab" data-toggle="tab">Map</a>
-            </li>
-            <!-- <li role="presentation" class="reviews-tab">
-              <a href="#reviewsList" aria-controls="browseTab" role="tab" data-toggle="tab">Reviews</a>
-            </li> -->
-            <!-- <a href="#" data-dismiss="modal" aria-label="Close" style="color: #a54b89;" class="">Close <span
-            aria-hidden="true">&times;</span></a> -->
-          </ul>
-
-
-          <!-- Tab panes -->
-          <div class="tab-content">
-            <!-- Tab Info -->
-            <div role="tabpanel" class="tab-pane active" id="infoTab">
-
-              <div class="modal-heading">
-                <h2>THE REDWORTH HALL HOTEL</h2>
-              </div>
-              <div class="row">
-                <div class="col-12 col-lg-6">
-                  <img src="public/images/img-hotel-info.jpg" alt="" class="d-none d-lg-block hotel-info-img">
-                  <p>Redworth Hall is a stunning 17th century Jacobean Manor House situated in the blissful tranquility of its own 26 acres of landscaped grounds. Part of The Cairn Collection, our signature four-star hotel is home to 143 bedrooms, The Retreat fitness and beauty rooms as well as a number of function rooms hosting up to 250 guests, making it the perfect destination for business or pleasure.</p>
-                  <div class="tab-property-details">
-                    <div class="row">
-                        <div class="col-1"><img src="public/images/svg/location.svg"></div>
-                        <div class="col-10">
-                            <p>The Redworth Hall Hotel, Surtees Rd, Newton Aycliffe DL5 6NL, UK</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-1"><img src="public/images/svg/contact.svg"></div>
-                        <div class="col-10">
-                            <p>+441388770600</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-1"><img src="public/images/svg/email.svg"></div>
-                        <div class="col-10">
-                            <p>reservations@redworthhalldurham.co.uk</p>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <div class="col-12 col-lg-6">
-                  <div class="description-2">
-                    <h2>Hotel Features</h2>
-                    <ul>
-                      <li>Free high speed WiFi in your room and all public areas</li>
-                      <li>Spa with jacuzzi, steam room, sauna, relaxation rooms, and extensive array of treatments available</li>
-                      <li>14m heated indoor pool</li>
-                      <li>Free high speed WiFi in your room and all public areas</li>
-                      <li>Spa with jacuzzi, steam room, sauna, relaxation rooms, and extensive array of treatments available</li>
-                      <li>14m heated indoor pool</li>
-                      <li>Free high speed WiFi in your room and all public areas</li>
-                      <li>Spa with jacuzzi, steam room, sauna, relaxation rooms, and extensive array of treatments available</li>
-                      <li>14m heated indoor pool</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div role="tabpanel" class="tab-pane" id="galleryTab">
-              <section class=" slider slider-for">
-                <div>
-                  <img src="public/images/apartment.jpg" alt="">
-                </div>
-                <div>
-                  <img src="public/images/apartment.jpg" alt="" style="">
-                </div>
-                <div>
-                  <img src="public/images/apartment.jpg" alt="" style="">
-                </div>
-                <div>
-                  <img src="public/images/apartment.jpg" alt="" style="">
-                </div>
-              </section>
-              <div class="slider-nav mt-3">
-                <div>
-                  <img src="public/images/apartment.jpg" alt="">
-                </div>
-                <div>
-                  <img src="public/images/apartment.jpg" alt="" style="">
-                </div>
-                <div>
-                  <img src="public/images/apartment.jpg" alt="" style="">
-                </div>
-                <div>
-                  <img src="public/images/apartment.jpg" alt="" style="">
-                </div>
-              </div>
-            </div>
-            <div role="tabpanel" class="tab-pane" id="mapTab">
-              <div class="tab-map-cover">
-                <div id="googleMap" style="width: 100%; height: 400px; position: relative; overflow: hidden;"></div>
-                <!-- <section class="directions-tabs">
-                  <div class="row">
-                    <div class="col-12 col-md-6">
-                      <div class="custom-tab">
-                        <div class="custom-tab-head">
-                          <h4>Getting here from the airport <i class="fa fa-angle-down" style="float: right"></i></h4>
-                        </div>
-                        <div class="custom-tab-body">
-                          <p>Best Option: Take the 747 Bus from Dublin Airport to the City Centre. The 747 Bus stops on
-                            Lower O’Connell Street which is 4 minute walk, along Henry Street then onto Jervis
-                            Apartments Dublin City.
-                            <br>
-                            The bus departs from outside the arrivals hall every 15 minutes. Tickets are €7 per adult
-                            and the journey can take between 20 to 30 minutes depending on traffic.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                      <div class="custom-tab">
-                        <div class="custom-tab-head">
-                          <h4>Getting here from the airport <i class="fa fa-angle-down" style="float: right"></i></h4>
-                        </div>
-                        <div class="custom-tab-body">
-                          <p>Best Option: Take the 747 Bus from Dublin Airport to the City Centre. The 747 Bus stops on
-                            Lower O’Connell Street which is 4 minute walk, along Henry Street then onto Jervis
-                            Apartments Dublin City.
-                            <br>
-                            The bus departs from outside the arrivals hall every 15 minutes. Tickets are €7 per adult
-                            and the journey can take between 20 to 30 minutes depending on traffic.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                      <div class="custom-tab">
-                        <div class="custom-tab-head">
-                          <h4>Getting here from the airport <i class="fa fa-angle-down" style="float: right"></i></h4>
-                        </div>
-                        <div class="custom-tab-body">
-                          <p>Best Option: Take the 747 Bus from Dublin Airport to the City Centre. The 747 Bus stops on
-                            Lower O’Connell Street which is 4 minute walk, along Henry Street then onto Jervis
-                            Apartments Dublin City.
-                            <br>
-                            The bus departs from outside the arrivals hall every 15 minutes. Tickets are €7 per adult
-                            and the journey can take between 20 to 30 minutes depending on traffic.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                      <div class="custom-tab">
-                        <div class="custom-tab-head">
-                          <h4>Getting here from the airport <i class="fa fa-angle-down" style="float: right"></i></h4>
-                        </div>
-                        <div class="custom-tab-body">
-                          <p>Best Option: Take the 747 Bus from Dublin Airport to the City Centre. The 747 Bus stops on
-                            Lower O’Connell Street which is 4 minute walk, along Henry Street then onto Jervis
-                            Apartments Dublin City.
-                            <br>
-                            The bus departs from outside the arrivals hall every 15 minutes. Tickets are €7 per adult
-                            and the journey can take between 20 to 30 minutes depending on traffic.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </section> -->
-              </div>
-            </div>
-            <!-- <div role="tabpanel" class="tab-pane" id="reviewsList">PLUGIN</div> -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
     
     <!-- JS Files -->
