@@ -1,234 +1,275 @@
 .sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1000!important;
-    top: 0;
-    left: 0;
-    background-color: $primaryColor;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 65px;
-    max-width: 500px;
-    @include mQ(992px) {
-      padding-top: 80px;
-    }
-    a {
-      padding: 15px 0;
-      text-decoration: none;
-      font-size: 25px;
-      color: #abaaad;
-      display: block;
-      transition: 0.3s;
-      &:hover {
-        color: #f1f1f1;
-      }
-    }
-    .closebtn {
-      position: absolute;
-      top: 0;
-      left: 25px;
-      font-size: 36px;
-      // margin-left: 50px;
-      @include mQ(992px) {
-        left: 40px;
-        top: 5px;
-      }
-    }
-    .side-nav-links {
-      padding: 0 20px;
-      @include mQ(992px) {
-        padding: 0 40px;
-      }
-      a {
-        border-top: 1px solid rgba(240, 240, 240, 0.4);
-        font-family: $textFont;
-        font-size: 14px;
-        font-weight: 500;
-        letter-spacing: 1px;
-        color: #fff;
-        text-transform: uppercase;
-        &:last-child {
-          border-bottom: 1px solid rgba(240, 240, 240, 0.4);
-        }
-      }
-    }
-    .fa {
-      padding: 0 7px;
-      font-size: 20px; 
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1000!important;
+  top: 0;
+  left: 0;
+  background-color: $primaryColor;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 65px;
+  max-width: 500px;
+  @include mQ(992px) {
+    padding-top: 80px;
+  }
+  a {
+    padding: 18px 0;
+    text-decoration: none;
+    font-size: 25px;
+    color: #abaaad;
+    display: block;
+    transition: 0.3s;
+    &:hover {
+      color: #f1f1f1;
     }
   }
+  .closebtn {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    font-size: 36px;
+    // margin-left: 50px;
+    @include mQ(992px) {
+      left: 40px;
+      top: 5px;
+    }
+  }
+  .side-nav-links {
+    padding: 0 20px;
+    @include mQ(992px) {
+      padding: 0 40px;
+    }
+    a {
+      border-top: 1px solid rgba(240, 240, 240, 0.4);
+      font-family: $textFont;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      color: #fff;
+      text-transform: uppercase;
+      &:last-child {
+        border-bottom: 1px solid rgba(240, 240, 240, 0.4);
+      }
+    }
+  }
+  .fa {
+    padding: 0 7px;
+    font-size: 20px; 
+  }
+}
 
 .booking-widget {
-    z-index: 999!important;
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
+  z-index: 999!important;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: $primaryColor;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 65px;
+  max-width: 500px;
+  @include mQ(992px) {
+    padding-top: 80px;
+  }
+  a {
+    padding: 15px 0;
+    text-decoration: none;
+    font-size: 25px;
+    color: #abaaad;
+    display: block;
+    transition: 0.3s;
+    &:hover {
+      color: #f1f1f1;
+    }
+  }
+  .closebtn {
+    position: absolute;
     top: 0;
-    right: 0;
-    background-color: $primaryColor;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 65px;
-    max-width: 500px;
+    right: 20px;
+    font-size: 36px;
+    // margin-left: 50px;
     @include mQ(992px) {
-      padding-top: 80px;
+      right: 40px;
+      top: 5px;
     }
-    a {
-      padding: 15px 0;
-      text-decoration: none;
-      font-size: 25px;
-      color: #abaaad;
-      display: block;
-      transition: 0.3s;
-      &:hover {
-        color: #f1f1f1;
-      }
+  }
+  h2 {
+    text-align: center;
+    font-size: 35px;
+    color: #f0f0f0;
+    font-weight: 400;
+    font-family: $headingFont;
+    margin-bottom: 60px;
+  }
+  .widget-form {
+    padding: 20px;
+    @include mQ (992px) {
+      padding: 20px 40px;
     }
-    .closebtn {
-      position: absolute;
-      top: 0;
-      right: 20px;
-      font-size: 36px;
-      // margin-left: 50px;
-      @include mQ(992px) {
-        right: 40px;
-        top: 5px;
-      }
-    }
-    h2 {
-      text-align: center;
-      font-size: 35px;
-      color: #f0f0f0;
-      font-weight: 400;
-      font-family: $headingFont;
-      margin-bottom: 60px;
-    }
-    .widget-form {
-      padding: 20px;
-      @include mQ (992px) {
-        padding: 20px 40px;
-      }
-      .form-control {
-        // background: transparent;
-        color: #fff;
-        padding: 0;
-        border-bottom: solid 2px #fff;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        -webkit-appearance: none;
-        background-size: 15px;
-        background-position: calc(100% - 8px) 50%;
-        background-repeat: no-repeat;
-        background-color: #57565b;
+    .form-control {
+      // background: transparent;
+      color: #fff;
+      padding: 0;
+      border-bottom: solid 2px #fff;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      background-size: 15px;
+      background-position: calc(100% - 8px) 50%;
+      background-repeat: no-repeat;
+      background-color: #57565b;
 
-        &:hover {
-            cursor: pointer;
-        }
-        option {
-          background-color: #57565b;
-        }
-        &::placeholder {
-          color: #f6f6f6;
-          font-size: 15px;
-          line-height: 24px;
-        }
+      &:hover {
+          cursor: pointer;
       }
-      select {
-        background-image: url(../../../../public/images/icons/arrrow-dropdown-light.png)!important;
+      option {
+        background-color: #57565b;
       }
-      .booking-widget-datepicker {
-        .form-control {
-          background-image: url(../../../../public/images/icons/calendar-light.png)!important;
-        }
+      &::placeholder {
+        color: #f6f6f6;
+        font-size: 15px;
+        line-height: 24px;
+      }
+    }
+    select {
+      background-image: url(../../../../public/images/icons/arrrow-dropdown-light.png)!important;
+    }
+    .booking-widget-datepicker {
+      .form-control {
+        background-image: url(../../../../public/images/icons/calendar-light.png)!important;
+      }
+    }
+    .form-group {
+      margin-bottom: 40px;
+      @include mQ (992px) {
+        margin-bottom: 60px;
+      }
+    }
+    .promo-code {
+      a {
+        font-size: 18px;
+        font-style: italic;
+        font-family: $textFont;
+        color: #fff;
       }
       .form-group {
-        margin-bottom: 40px;
-        @include mQ (992px) {
-          margin-bottom: 60px;
-        }
+        display: none;
       }
-      .promo-code {
-        a {
-          font-size: 18px;
-          font-style: italic;
-          font-family: $textFont;
-          color: #fff;
-        }
-        .form-group {
-          display: none;
-        }
+    }
+    .btn-cta {
+      background-color: rgba(240, 240, 240, 0.2);
+      border: solid 2px rgba(240, 240, 240, 0.2);
+    }
+    .free-drink {
+      padding: 20px 0;
+      margin-top: 30px;
+      @include mQ (992px) {
+        margin-top: 50px;
       }
-      .btn-cta {
-        background-color: rgba(240, 240, 240, 0.2);
-        border: solid 2px rgba(240, 240, 240, 0.2);
+      border-top: solid 1px #fff;
+      border-bottom: solid 1px #fff;
+      p {
+        color: #fff;
+        margin-left: 10px;
+        font-size: 16px;
+        line-height: 26px;
       }
-      .free-drink {
-        padding: 20px 0;
-        margin-top: 30px;
-        @include mQ (992px) {
-          margin-top: 50px;
-        }
-        border-top: solid 1px #fff;
-        border-bottom: solid 1px #fff;
+    }
+    .guest-quantity {
+      position: relative;
+      p {
+        color: #fff;
+        width: 100px;
+      }
+      .total-guests {
+        border-bottom: solid 2px #fff;
+        margin-bottom: 20px;
         p {
-          color: #fff;
-          margin-left: 10px;
-          font-size: 16px;
-          line-height: 26px;
-        }
-      }
-      .guest-quantity {
-        p {
-          color: #fff;
-          width: 100px;
-        }
-        .total-guests {
-          border-bottom: solid 2px #fff;
-          margin-bottom: 20px;
-          p {
-            width: auto;
-            padding-bottom: 5px;
-            &:after {
-              content: "\2022";
-              padding: 0 10px;
-              color: #abaaad;
-            }
-            &:last-child:after {
-              content: '';
-            }
+          width: auto;
+          padding-bottom: 5px;
+          &:after {
+            content: "\2022";
+            padding: 0 10px;
+            color: #abaaad;
           }
-          &:hover {
-            cursor: pointer;
+          &:last-child:after {
+            content: '';
           }
         }
-        button {
-          text-align: center;
-          height: 45px;
-          width: 45px;
-          border: 1px solid #fff;
-          color: #fff;
-          border-radius: 2px;
-          background-color: rgba(240, 240, 240, 0.2);
+        &:hover {
+          cursor: pointer;
         }
-        .guest-info {
-          margin: 20px 0;
+      }
+      button {
+        text-align: center;
+        height: 45px;
+        width: 45px;
+        border: 1px solid #57565b;
+        color: #57565b;
+        border-radius: 2px;
+        background-color: #f0f0f0;
+      }
+      .guest-info {
+        .room-number {
+          margin: 30px 0 40px 0;
+          &::after {
+            background-color: rgba(87, 86, 91, 0.2);
+            content: "";
+            display: inline-block;
+            height: 1px;
+            position: relative;
+            vertical-align: middle;
+            width: 160px;
+            left: 10%;
+            @include mQ (500px) {
+              width: 280px;
+            }
+          }
         }
-        span {
-          // margin: 0 20px;
-          text-align: center;
-          width: 50px;
-          color: #fff;
-          font-family: $textFont;
+        .align {
+          padding: 0 0 0 30px;
         }
-        // .guest-widget-buttons {
-        //   display: none;
-        // }
+      }
+      span {
+        // margin: 0 20px;
+        text-align: center;
+        width: 50px;
+        color: #57565b;
+        font-family: $textFont;
+      }
+      .guest-widget-buttons {
+        display: none;
+        position: absolute;
+        padding: 30px 20px 24px 20px;
+        background: #f0f0f0;
+        width: 100%;
+        margin-bottom: 30px;
+        &:before {
+          content:'';
+          position: absolute;
+          top: -10px;
+          left: 0px;
+          right: 0;
+          margin-left: 20px;
+          width: 0;
+          height: 0;
+          border-bottom: solid 10px #f0f0f0;
+          border-left: solid 10px transparent;
+          border-right: solid 10px transparent;
+        }
+        p{
+          color: #57565b;
+          width: 100%;
+        }
       }
     }
   }
-  
+}
+
 
 .mini-nav {
     padding: 9px 15px;
@@ -239,135 +280,163 @@
     @include mQ (992px) {
       padding: 14px 30px; 
     }
+    .mini-nav-align {
+      @include mQ (760px) {
+        width: 160px;
+      }
+      img {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
 }
 
 
 .navbar-hide {
-  @include mQ (992px){
-    top: -61px;
-  }
+@include mQ (992px){
+  top: -64px;
+}
 }
 
 .book-btn-nav {
-  // padding-bottom: 5px;
-  border-bottom: 1px solid #ccc;      
-  font-size: 16px;
-  font-weight: 500;
-  font-family: $textFont;
-  padding-bottom: 5px;
-  text-decoration: none;
-  a {
-    color: #57565b;
-    letter-spacing: 1px;
-  }
+right: 50px;
+top: 50px;
+font-family: $textFont;
+font-size: 16px;
+font-weight: 400;
+letter-spacing: 1px;
+color: #57565b;
+border-bottom: 1px solid #ccc;
+padding-bottom: 10px; 
 }
 
 .main-nav {
-  background: #fff;
-  .top-main-nav {
-    padding: 20px 0;
-    box-shadow: 0 2px 4px 0 rgba(87, 86, 91, 0.1);
-    .book-btn-nav {
-      right: 50px;
-      top: 40px;
+.top-main-nav {
+  padding: 20px 0;
+  box-shadow: 0 2px 4px 0 rgba(87, 86, 91, 0.1);
+
+}
+.links-main-nav {
+  font-family: $headingFont;
+  font-style: italic;
+  font-size: 16px;
+  a {
+    position: relative;
+    padding: 15px 4px;
+    color: rgba(87, 86, 91, 0.8);
+    @include mQmax(1200px) {
+      padding: 15px 5px;
     }
-  }
-  .links-main-nav {
-    font-family: $headingFont;
-    font-style: italic;
-    font-size: 16px;
-    a {
-      padding: 15px 4px;
-      color: rgba(87, 86, 91, 0.8);
-      text-decoration: none;
-      @include mQmax(1200px) {
-        padding: 15px 5px;
+    &:hover {
+      color: #57565b;
+      &::after {
+        border-bottom: 2px solid #57565b;
+        bottom: 7px;
+        content: " ";
+        left: 50%;
+        margin-left: -5px;
+        position: absolute;
+        width: 10px;
       }
     }
   }
+  .active {
+    color: #57565b;
+    &::after {
+      border-bottom: 2px solid #57565b;
+      bottom: 7px;
+      content: " ";
+      left: 50%;
+      margin-left: -5px;
+      position: absolute;
+      width: 10px;
+    }
+  }
+}
 }
 
 .home-banner {
-  .banner-item {
-    height: 487px;
-    background-size: cover;
-    background-position: center;
+.banner-item {
+  height: 487px;
+  background-size: cover;
+  background-position: center;
+  @include mQ (992px) {
+    height: 660px;
+  }
+}
+.banner-box-content {
+  border: solid 1px #ffffff;
+  background-color: rgba(33, 32, 37, 0.1);
+  margin-top: 114px;
+  max-width: 1014px;
+  margin: auto;
+  padding: 60px 30px;
+  color: #fff;
+  h2 {
+    font-family: $headingFont;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 26px;
     @include mQ (992px) {
-      height: 660px;
+      font-size: 32px;
     }
   }
-  .banner-box-content {
-    border: solid 1px #ffffff;
-    background-color: rgba(33, 32, 37, 0.1);
-    margin-top: 114px;
-    max-width: 1014px;
-    margin: auto;
-    padding: 60px 30px;
-    color: #fff;
-    h2 {
-      font-family: $headingFont;
-      font-weight: 400;
-      font-size: 24px;
-      line-height: 26px;
-      @include mQ (992px) {
-        font-size: 32px;
-      }
-    }
-    .divider {
-      border-bottom: 1px solid #ccc;
-      display: block;
-      width: 100px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 20px;
-      margin-bottom: 20px;
-      @include mQ (992px) {
-        margin-top: 30px;
-        margin-bottom: 30px;
-      }
-    }
-  }
-  .banner-box-wrapper {
-    margin: 114px 20px 0 20px;
-    @include mQ(992px) {
-      margin: 185px 20px 0 20px;
-    }
-  }
-  .btn {
-    background: transparent;
-    border-radius: 2px;
-    border: solid 2px #ffffff;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 500;
-    letter-spacing: 2px;
-    &:active {
-      background-color: transparent!important;
-      border: 2px solid #fff!important;
-      color: #fff!important;
-    }
-    &:focus {
-      background-color: transparent!important;
-      border: 2px solid #fff!important;
-      color: #fff!important;
+  .divider {
+    border-bottom: 1px solid #ccc;
+    display: block;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    @include mQ (992px) {
+      margin-top: 30px;
+      margin-bottom: 30px;
     }
   }
 }
-.banner-logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -46px;
-  margin-left: -100px;
-  height: 92px;
-  width: 200px;
+.banner-box-wrapper {
+  margin: 114px 20px 0 20px;
   @include mQ(992px) {
-    height: 180px;
-    width: 393px;
-    margin-top: -90px;
-    margin-left: -196px;
+    margin: 185px 20px 0 20px;
   }
-  img {
-    object-fit: cover
+}
+.btn {
+  background: transparent;
+  border-radius: 2px;
+  border: solid 2px #ffffff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  &:active {
+    background-color: transparent!important;
+    border: 2px solid #fff!important;
+    color: #fff!important;
   }
+  &:focus {
+    background-color: transparent!important;
+    border: 2px solid #fff!important;
+    color: #fff!important;
+  }
+}
+}
+.banner-logo {
+position: absolute;
+top: 50%;
+left: 50%;
+margin-top: -46px;
+margin-left: -100px;
+height: 92px;
+width: 200px;
+@include mQ(992px) {
+  height: 180px;
+  width: 393px;
+  margin-top: -90px;
+  margin-left: -196px;
+}
+img {
+  object-fit: cover
+}
 }

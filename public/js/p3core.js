@@ -39,6 +39,9 @@ $('.expand-special-request').click(function(){
 $(".view-rates-btn").click(function(){
   $(".icon-chevron-down").toggleClass("icon-chevron-up");
 });
+$(".plus-minus-icons").click(function(){
+  $(".icon-plus-circle").toggleClass("icon-minus-circle");
+});
 
 // Slick slider single Item
 $('.standard-slider').slick({

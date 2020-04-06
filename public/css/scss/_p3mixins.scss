@@ -47,6 +47,7 @@
 }
 @mixin cardHeading {
     font-family: $textFont;
+    font-weight: 400;
     font-size: 17px;
     color: #57565b;
     margin-bottom: 10px;
@@ -69,6 +70,9 @@
     background-color: $secondaryColor;
     // border: ;
     // background-color: ;
+    @include mQ(992px) {
+        margin-bottom: 40px;
+    }
 }
 @mixin btnPrimary {
     display: inline-block;
@@ -80,8 +84,8 @@
     background-color: #57565b;
     border-radius: 2px;
     border: 2px solid #57565b;
-    padding: 12px 20px;
-    box-shadow:inset 0px 0px 0px 1px #fff;
+    padding: 13px 20px;
+    box-shadow:inset 0px 0px 0px 1px #f0f0f0;
     text-transform: uppercase;
     font-family: $textFont;
     &:hover {
@@ -89,7 +93,7 @@
         cursor: pointer;
         background-color: rgba(87, 86, 91, 0.8);
         border: 2px solid rgba(87, 86, 91, 0.8);
-        box-shadow:inset 0px 0px 0px 1px #fff;
+        box-shadow:inset 0px 0px 0px 1px #f0f0f0;
 
     }
     &:active {
@@ -97,7 +101,7 @@
         cursor: pointer;
         background-color: rgba(87, 86, 91, 0.8)!important;
         border: 2px solid rgba(87, 86, 91, 0.8)!important;
-        box-shadow:inset 0px 0px 0px 1px #fff!important;
+        box-shadow:inset 0px 0px 0px 1px #f0f0f0!important;
 
     }
     &:focus {
@@ -105,7 +109,7 @@
         border: 2px solid rgba(87, 86, 91, 0.8);
         color: #f0f0f0;
         cursor: pointer;
-        box-shadow:inset 0px 0px 0px 1px #fff;
+        box-shadow:inset 0px 0px 0px 1px #f0f0f0;
     }
 }
 @mixin btnSecondary {

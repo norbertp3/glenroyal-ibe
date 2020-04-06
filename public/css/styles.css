@@ -307,9 +307,9 @@ a:hover {
   background-color: #57565b;
   border-radius: 2px;
   border: 2px solid #57565b;
-  padding: 12px 20px;
-  -webkit-box-shadow: inset 0px 0px 0px 1px #fff;
-          box-shadow: inset 0px 0px 0px 1px #fff;
+  padding: 13px 20px;
+  -webkit-box-shadow: inset 0px 0px 0px 1px #f0f0f0;
+          box-shadow: inset 0px 0px 0px 1px #f0f0f0;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
 }
@@ -319,8 +319,8 @@ a:hover {
   cursor: pointer;
   background-color: rgba(87, 86, 91, 0.8);
   border: 2px solid rgba(87, 86, 91, 0.8);
-  -webkit-box-shadow: inset 0px 0px 0px 1px #fff;
-          box-shadow: inset 0px 0px 0px 1px #fff;
+  -webkit-box-shadow: inset 0px 0px 0px 1px #f0f0f0;
+          box-shadow: inset 0px 0px 0px 1px #f0f0f0;
 }
 
 .btn-primary:active {
@@ -328,8 +328,8 @@ a:hover {
   cursor: pointer;
   background-color: rgba(87, 86, 91, 0.8) !important;
   border: 2px solid rgba(87, 86, 91, 0.8) !important;
-  -webkit-box-shadow: inset 0px 0px 0px 1px #fff !important;
-          box-shadow: inset 0px 0px 0px 1px #fff !important;
+  -webkit-box-shadow: inset 0px 0px 0px 1px #f0f0f0 !important;
+          box-shadow: inset 0px 0px 0px 1px #f0f0f0 !important;
 }
 
 .btn-primary:focus {
@@ -337,8 +337,8 @@ a:hover {
   border: 2px solid rgba(87, 86, 91, 0.8);
   color: #f0f0f0;
   cursor: pointer;
-  -webkit-box-shadow: inset 0px 0px 0px 1px #fff;
-          box-shadow: inset 0px 0px 0px 1px #fff;
+  -webkit-box-shadow: inset 0px 0px 0px 1px #f0f0f0;
+          box-shadow: inset 0px 0px 0px 1px #f0f0f0;
 }
 
 .btn-secondary {
@@ -479,6 +479,8 @@ input[type=checkbox]:checked + span.custom-check:after {
   padding: 12px 20px;
   font-family: "Montserrat", sans-serif;
   height: 50px;
+  letter-spacing: 2px;
+  border-radius: 2px;
 }
 
 .hotel-info-buttons .btn a {
@@ -641,6 +643,12 @@ input[type=checkbox]:checked + span.custom-check:after {
   background-color: #fff;
 }
 
+@media screen and (min-width: 992px) {
+  .card-style {
+    margin-bottom: 40px;
+  }
+}
+
 @media screen and (max-width: 991px) {
   .px-10 {
     padding-left: 10px;
@@ -664,6 +672,7 @@ input[type=checkbox]:checked + span.custom-check:after {
 
 .room-content h3 {
   font-family: "Montserrat", sans-serif;
+  font-weight: 400;
   font-size: 17px;
   color: #57565b;
   margin-bottom: 10px;
@@ -968,6 +977,14 @@ input[type=checkbox]:checked + span.custom-check:after {
   color: #6abb91;
   font-size: 12px;
   font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.rates-wrapper .mobile-rate-urgency {
+  color: #a51448;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 5px;
 }
 
 .rates-wrapper .rate-container {
@@ -1111,6 +1128,7 @@ input[type=checkbox]:checked + span.custom-check:after {
 
 .addon-with-checkboxes-wrapper .addon-content h3 {
   font-family: "Montserrat", sans-serif;
+  font-weight: 400;
   font-size: 17px;
   color: #57565b;
   margin-bottom: 10px;
@@ -1195,6 +1213,7 @@ input[type=checkbox]:checked + span.custom-check:after {
 
 .addon-with-checkbox-wrapper .addon-content h3 {
   font-family: "Montserrat", sans-serif;
+  font-weight: 400;
   font-size: 17px;
   color: #57565b;
   margin-bottom: 10px;
@@ -1277,6 +1296,7 @@ input[type=checkbox]:checked + span.custom-check:after {
 
 .addon-with-dropdown-wrapper .addon-content h3 {
   font-family: "Montserrat", sans-serif;
+  font-weight: 400;
   font-size: 17px;
   color: #57565b;
   margin-bottom: 10px;
@@ -1429,6 +1449,7 @@ input[type=checkbox]:checked + span.custom-check:after {
 .booker-details-wrapper h3, .guest-details-wrapper h3, .payment-details-wrapper h3 {
   margin-bottom: 16px;
   font-family: "Montserrat", sans-serif;
+  font-weight: 400;
   font-size: 17px;
   color: #57565b;
   margin-bottom: 10px;
@@ -2240,7 +2261,7 @@ input[type=checkbox]:checked + span.custom-check:after {
 }
 
 .sidenav a {
-  padding: 15px 0;
+  padding: 18px 0;
   text-decoration: none;
   font-size: 25px;
   color: #abaaad;
@@ -2464,6 +2485,10 @@ input[type=checkbox]:checked + span.custom-check:after {
   line-height: 26px;
 }
 
+.booking-widget .widget-form .guest-quantity {
+  position: relative;
+}
+
 .booking-widget .widget-form .guest-quantity p {
   color: #fff;
   width: 100px;
@@ -2497,21 +2522,70 @@ input[type=checkbox]:checked + span.custom-check:after {
   text-align: center;
   height: 45px;
   width: 45px;
-  border: 1px solid #fff;
-  color: #fff;
+  border: 1px solid #57565b;
+  color: #57565b;
   border-radius: 2px;
-  background-color: rgba(240, 240, 240, 0.2);
+  background-color: #f0f0f0;
 }
 
-.booking-widget .widget-form .guest-quantity .guest-info {
-  margin: 20px 0;
+.booking-widget .widget-form .guest-quantity .guest-info .room-number {
+  margin: 30px 0 40px 0;
+}
+
+.booking-widget .widget-form .guest-quantity .guest-info .room-number::after {
+  background-color: rgba(87, 86, 91, 0.2);
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 160px;
+  left: 10%;
+}
+
+@media screen and (min-width: 500px) {
+  .booking-widget .widget-form .guest-quantity .guest-info .room-number::after {
+    width: 280px;
+  }
+}
+
+.booking-widget .widget-form .guest-quantity .guest-info .align {
+  padding: 0 0 0 30px;
 }
 
 .booking-widget .widget-form .guest-quantity span {
   text-align: center;
   width: 50px;
-  color: #fff;
+  color: #57565b;
   font-family: "Montserrat", sans-serif;
+}
+
+.booking-widget .widget-form .guest-quantity .guest-widget-buttons {
+  display: none;
+  position: absolute;
+  padding: 30px 20px 24px 20px;
+  background: #f0f0f0;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.booking-widget .widget-form .guest-quantity .guest-widget-buttons:before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 0px;
+  right: 0;
+  margin-left: 20px;
+  width: 0;
+  height: 0;
+  border-bottom: solid 10px #f0f0f0;
+  border-left: solid 10px transparent;
+  border-right: solid 10px transparent;
+}
+
+.booking-widget .widget-form .guest-quantity .guest-widget-buttons p {
+  color: #57565b;
+  width: 100%;
 }
 
 .mini-nav {
@@ -2529,39 +2603,38 @@ input[type=checkbox]:checked + span.custom-check:after {
   }
 }
 
+@media screen and (min-width: 760px) {
+  .mini-nav .mini-nav-align {
+    width: 160px;
+  }
+}
+
+.mini-nav .mini-nav-align img:hover {
+  cursor: pointer;
+}
+
 @media screen and (min-width: 992px) {
   .navbar-hide {
-    top: -61px;
+    top: -64px;
   }
 }
 
 .book-btn-nav {
-  border-bottom: 1px solid #ccc;
-  font-size: 16px;
-  font-weight: 500;
+  right: 50px;
+  top: 50px;
   font-family: "Montserrat", sans-serif;
-  padding-bottom: 5px;
-  text-decoration: none;
-}
-
-.book-btn-nav a {
-  color: #57565b;
+  font-size: 16px;
+  font-weight: 400;
   letter-spacing: 1px;
-}
-
-.main-nav {
-  background: #fff;
+  color: #57565b;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
 }
 
 .main-nav .top-main-nav {
   padding: 20px 0;
   -webkit-box-shadow: 0 2px 4px 0 rgba(87, 86, 91, 0.1);
           box-shadow: 0 2px 4px 0 rgba(87, 86, 91, 0.1);
-}
-
-.main-nav .top-main-nav .book-btn-nav {
-  right: 50px;
-  top: 40px;
 }
 
 .main-nav .links-main-nav {
@@ -2571,15 +2644,43 @@ input[type=checkbox]:checked + span.custom-check:after {
 }
 
 .main-nav .links-main-nav a {
+  position: relative;
   padding: 15px 4px;
   color: rgba(87, 86, 91, 0.8);
-  text-decoration: none;
 }
 
 @media screen and (max-width: 1200px) {
   .main-nav .links-main-nav a {
     padding: 15px 5px;
   }
+}
+
+.main-nav .links-main-nav a:hover {
+  color: #57565b;
+}
+
+.main-nav .links-main-nav a:hover::after {
+  border-bottom: 2px solid #57565b;
+  bottom: 7px;
+  content: " ";
+  left: 50%;
+  margin-left: -5px;
+  position: absolute;
+  width: 10px;
+}
+
+.main-nav .links-main-nav .active {
+  color: #57565b;
+}
+
+.main-nav .links-main-nav .active::after {
+  border-bottom: 2px solid #57565b;
+  bottom: 7px;
+  content: " ";
+  left: 50%;
+  margin-left: -5px;
+  position: absolute;
+  width: 10px;
 }
 
 .home-banner .banner-item {
@@ -2846,8 +2947,6 @@ p {
 }
 
 .hotel-info-buttons .btn {
-  -webkit-box-shadow: inset 0px 0px 0px 1px #fff;
-          box-shadow: inset 0px 0px 0px 1px #fff;
   border: solid 2px rgba(240, 240, 240, 0.2);
   height: 40px;
   margin-right: 20px;
@@ -2858,6 +2957,7 @@ p {
   padding: 12px 20px;
   font-family: "Montserrat", sans-serif;
   height: 50px;
+  text-transform: uppercase;
 }
 
 .hotel-info-buttons .btn:hover {
@@ -2888,8 +2988,9 @@ p {
 
 .desktop-sign-up h2 {
   font-size: 20px;
-  text-transform: uppercase;
   margin-bottom: 10px;
+  font-family: "Montserrat", sans-serif;
+  color: #57565b;
 }
 
 @media screen and (min-width: 1200px) {
@@ -2899,10 +3000,18 @@ p {
 }
 
 .desktop-sign-up p {
+  font-family: "Montserrat", sans-serif;
   font-size: 15px;
-  line-height: 1.73;
-  color: rgba(51, 50, 50, 0.8);
+  line-height: 24px;
+  color: rgba(87, 86, 91, 0.8);
   margin-bottom: 15px;
+}
+
+@media screen and (min-width: 992px) {
+  .desktop-sign-up p {
+    font-size: 16px;
+    line-height: 26px;
+  }
 }
 
 .desktop-sign-up .btn {
@@ -2948,6 +3057,12 @@ p {
   #booking-summary .booking-summary-heading h2 {
     font-family: "Gelasio";
     font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #booking-summary .booking-summary-heading {
+    padding: 8.5px 10px;
   }
 }
 
@@ -3082,12 +3197,35 @@ a {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   border-bottom-right-radius: 10px;
+  font-weight: 400;
 }
 
 .rates-wrapper .mobile-rate-free-cancel {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 500;
+}
+
+.rates-wrapper .mobile-rate-urgency {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.rates-wrapper .rate-name {
+  font-weight: 400;
+}
+
+.rates-wrapper .rate-description {
+  margin: 20px 0 20px 16px;
+}
+
+.rates-wrapper .rate-description li {
+  margin-bottom: 5px;
+}
+
+.rates-wrapper .select-rate-btn {
+  letter-spacing: 0;
 }
 
 @media screen and (max-width: 991px) {
@@ -3150,5 +3288,54 @@ p.booking-summary-room-name {
     width: 100%;
     margin-top: 20px;
   }
+}
+
+@media screen and (min-width: 992px) {
+  .room-wrapper .room-image {
+    height: 100%;
+    min-height: 210px;
+  }
+}
+
+a.expand-special-request {
+  text-decoration: none;
+}
+
+.icon-plus-circle {
+  background: url(../../public/images/icons/p3/icon-add-default.svg);
+  height: 24px;
+  width: 24px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-right: 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.icon-plus-circle:hover {
+  background: url(../../public/images/icons/p3/icon-add-hover.svg);
+}
+
+.icon-minus-circle {
+  background: url(../../public/images/icons/p3/icon-remove-default.svg);
+  height: 24px;
+  width: 24px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-right: 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.icon-minus-circle:hover {
+  background: url(../../public/images/icons/p3/icon-remove-hover.svg);
+}
+
+.expand-special-request i {
+  margin-top: 0;
 }
 /*# sourceMappingURL=styles.css.map */

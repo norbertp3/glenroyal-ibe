@@ -212,6 +212,8 @@ input[type=checkbox]:checked+span.custom-check:after {
     a {
         text-decoration-line: none;
     }
+    letter-spacing: 2px;
+    border-radius: 2px;
 }
 
 // Progress Steps
@@ -549,6 +551,13 @@ input[type=checkbox]:checked+span.custom-check:after {
         color: #6abb91;
         font-size: 12px;
         font-weight: 500;
+        margin-bottom: 5px;
+    }
+    .mobile-rate-urgency {
+        color: #a51448;
+        font-size: 12px;
+        font-weight: 500;
+        margin-bottom: 5px;
     }
     .rate-container {
         padding-bottom: 20px;
