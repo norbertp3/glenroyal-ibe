@@ -1,10 +1,13 @@
-// Mobile detach P3B
-if ($(window).width() < 991) {
+// Booking Summary Mobile and iPad
+if ($(window).width() < 1200) {
   $("#booking-summary").detach().insertAfter("#mobile-hotel-info");
   $('.open-booking-summary').click(function(){
     $('.booking-summary-data').slideToggle();
     $(this).find('.icon-chevron-down').toggleClass("icon-chevron-up");
   });
+}
+// Mobile detach P3B
+if ($(window).width() < 991) {
   $('.rate-name').click(function(){
     $(this).closest('.rate-container').find('.rate-description').detach().insertAfter($(this).closest('.rate-container').find('.rate-name'));
   });
@@ -12,7 +15,7 @@ if ($(window).width() < 991) {
 }
 
 // Booking Summary Room Details
-$('.open-booking-summary-room-details').click(function(){
+$('.booking-summary-room-row').click(function(){
   $(this).closest('.booking-summary-room-row').find('.booking-summary-room-row-expanded').slideToggle();
   $(this).find('.icon-chevron-down').toggleClass("icon-chevron-up");
 });

@@ -212,7 +212,7 @@ a:hover {
   display: inline-block;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
 .icon-info-white {
@@ -222,44 +222,40 @@ a:hover {
   display: inline-block;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
 .icon-chevron-right {
-  -webkit-mask-image: url(../../../public/images/icons/p3/icon-btn-primary-right.svg);
   background: url(../../../public/images/icons/p3/icon-btn-primary-right.svg);
   height: 16px;
   width: 16px;
   display: inline-block;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
 .icon-chevron-down {
-  -webkit-mask-image: url(../../../public/images/icons/p3/icon-btn-primary-down.svg);
   background: url(../../../public/images/icons/p3/icon-btn-primary-down.svg);
   height: 16px;
   width: 16px;
   display: inline-block;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
 .icon-chevron-up {
-  -webkit-mask-image: url(../../../public/images/icons/p3/icon-btn-primary-up.svg);
   background: url(../../../public/images/icons/p3/icon-btn-primary-up.svg);
   height: 16px;
   width: 16px;
   display: inline-block;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
 .icon-progress-step-separator {
-  -webkit-mask-image: url(../../public/images/icons/p3/icon-progress-default.svg);
   background: url(../../public/images/icons/p3/icon-progress-default.svg);
   background-color: black;
   height: 19px;
@@ -267,19 +263,19 @@ a:hover {
   display: inline-block;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
 .icon-progress-step-separator-complete {
   -webkit-mask-image: url(../../public/images/icons/p3/icon-progress-complete.svg);
-  mask-image: url(../../public/images/icons/p3/icon-progress-complete.svg);
+          mask-image: url(../../public/images/icons/p3/icon-progress-complete.svg);
   background-color: #6abb91;
   height: 19px;
   width: 24px;
   display: inline-block;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
 .icon-search-white {
@@ -380,6 +376,18 @@ a:hover {
   border-bottom: 1px solid rgba(87, 86, 91, 0.3);
 }
 
+@media screen and (min-width: 1200px) {
+  .pr-custom {
+    padding-right: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .pl-custom {
+    padding-left: 20px;
+  }
+}
+
 .checkbox-group input {
   height: auto;
 }
@@ -390,15 +398,33 @@ span.custom-check {
   -webkit-box-shadow: inset 1px 1px 0 0 #d8d8d8;
           box-shadow: inset 1px 1px 0 0 #d8d8d8;
   background-color: #f2f2f2;
-  color: rgba(51, 50, 50, 0.8);
+  color: rgba(87, 86, 91, 0.8);
   font-size: 16px;
   border: solid 1px transparent;
+  height: 50px;
+  font-family: "Montserrat", sans-serif;
 }
 
 span.custom-check:focus {
   -webkit-box-shadow: inset 1px 1px 0 0 #d8d8d8;
           box-shadow: inset 1px 1px 0 0 #d8d8d8;
   border: solid 1px rgba(51, 50, 50, 0.8);
+}
+
+span.custom-check::-webkit-input-placeholder {
+  color: rgba(51, 50, 50, 0.4);
+}
+
+span.custom-check:-ms-input-placeholder {
+  color: rgba(51, 50, 50, 0.4);
+}
+
+span.custom-check::-ms-input-placeholder {
+  color: rgba(51, 50, 50, 0.4);
+}
+
+span.custom-check::placeholder {
+  color: rgba(51, 50, 50, 0.4);
 }
 
 span.custom-check, span.custom-radio {
@@ -441,15 +467,33 @@ input[type=checkbox]:checked + span.custom-check:after {
   -webkit-box-shadow: inset 1px 1px 0 0 #d8d8d8;
           box-shadow: inset 1px 1px 0 0 #d8d8d8;
   background-color: #f2f2f2;
-  color: rgba(51, 50, 50, 0.8);
+  color: rgba(87, 86, 91, 0.8);
   font-size: 16px;
   border: solid 1px transparent;
+  height: 50px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .form-group input:focus, .form-group textarea:focus {
   -webkit-box-shadow: inset 1px 1px 0 0 #d8d8d8;
           box-shadow: inset 1px 1px 0 0 #d8d8d8;
   border: solid 1px rgba(51, 50, 50, 0.8);
+}
+
+.form-group input::-webkit-input-placeholder, .form-group textarea::-webkit-input-placeholder {
+  color: rgba(51, 50, 50, 0.4);
+}
+
+.form-group input:-ms-input-placeholder, .form-group textarea:-ms-input-placeholder {
+  color: rgba(51, 50, 50, 0.4);
+}
+
+.form-group input::-ms-input-placeholder, .form-group textarea::-ms-input-placeholder {
+  color: rgba(51, 50, 50, 0.4);
+}
+
+.form-group input::placeholder, .form-group textarea::placeholder {
+  color: rgba(51, 50, 50, 0.4);
 }
 
 #mobile-hotel-info {
@@ -542,7 +586,7 @@ input[type=checkbox]:checked + span.custom-check:after {
   background-color: rgba(204, 204, 205, 0.7);
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   #booking-summary {
     background-color: #fff;
   }
@@ -553,7 +597,7 @@ input[type=checkbox]:checked + span.custom-check:after {
   font-family: "Gelasio";
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   .booking-summary-heading {
     padding: 30px 30px 20px 30px;
   }
@@ -563,11 +607,12 @@ input[type=checkbox]:checked + span.custom-check:after {
   font-size: 15px;
   color: #57565b;
   text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   .booking-summary-heading h2 {
-    font-size: 22px;
+    font-size: 25px;
   }
 }
 
@@ -583,13 +628,13 @@ input[type=checkbox]:checked + span.custom-check:after {
   padding: 10px 0;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   .booking-summary-data {
     padding: 0 30px;
   }
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1200px) {
   .booking-summary-data {
     display: none;
   }
@@ -597,6 +642,7 @@ input[type=checkbox]:checked + span.custom-check:after {
 
 .booking-summary-data h2 {
   font-size: 22px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .booking-summary-rooms-section p {
@@ -627,6 +673,10 @@ input[type=checkbox]:checked + span.custom-check:after {
 
 .booking-summary-rooms-section .booking-summary-room-row {
   padding: 20px 0;
+}
+
+.booking-summary-rooms-section .booking-summary-room-row:hover {
+  cursor: pointer;
 }
 
 .booking-summary-rooms-section .booking-summary-room-row-expanded {
@@ -664,7 +714,13 @@ input[type=checkbox]:checked + span.custom-check:after {
   padding: 20px 10px 20px 10px;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
+  .room-content {
+    padding: 30px 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .room-content {
     padding: 30px;
   }
@@ -747,7 +803,7 @@ input[type=checkbox]:checked + span.custom-check:after {
   margin-right: 10px;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 767px) {
   .room-content .from-spam {
     position: absolute;
     top: -15px;
@@ -859,9 +915,16 @@ input[type=checkbox]:checked + span.custom-check:after {
   position: relative;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   .room-wrapper .room-image {
-    width: 300px;
+    min-width: 270px;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .room-wrapper .room-image {
+    min-width: 300px;
   }
 }
 
@@ -1065,7 +1128,6 @@ input[type=checkbox]:checked + span.custom-check:after {
   color: #fff;
   padding: 20px 0 27px 0;
   position: relative;
-  margin-bottom: 30px;
 }
 
 #banner h1 {
@@ -1080,7 +1142,7 @@ input[type=checkbox]:checked + span.custom-check:after {
   color: rgba(255, 255, 255, 0.8);
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   #banner {
     margin-bottom: 40px;
   }
@@ -1102,6 +1164,7 @@ input[type=checkbox]:checked + span.custom-check:after {
   font-size: 14px;
   color: rgba(51, 50, 50, 0.5);
   margin-left: 10px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .addon-heading-row {
@@ -1171,6 +1234,7 @@ input[type=checkbox]:checked + span.custom-check:after {
   font-size: 14px;
   color: rgba(51, 50, 50, 0.8);
   text-align: right;
+  font-family: "Montserrat", sans-serif;
 }
 
 @media screen and (max-width: 991px) {
@@ -1186,7 +1250,13 @@ input[type=checkbox]:checked + span.custom-check:after {
 }
 
 .addon-with-checkboxes-wrapper .addon-content .form-check {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 992px) {
+  .addon-with-checkboxes-wrapper .addon-content .form-check {
+    margin-bottom: 10px;
+  }
 }
 
 .addon-with-checkboxes-wrapper .addon-content .form-check:last-child {
@@ -1363,9 +1433,36 @@ input[type=checkbox]:checked + span.custom-check:after {
   -webkit-box-shadow: inset 1px 1px 0 0 #d8d8d8;
           box-shadow: inset 1px 1px 0 0 #d8d8d8;
   background-color: #f2f2f2;
+  color: rgba(87, 86, 91, 0.8);
+  font-size: 16px;
   border: solid 1px transparent;
+  height: 50px;
+  font-family: "Montserrat", sans-serif;
   background-image: url(../../public/images/icons/p3/icon-btn-next-period.svg);
   width: 70px !important;
+  height: 50px !important;
+}
+
+.addon-with-dropdown-wrapper .addon-content select:focus {
+  -webkit-box-shadow: inset 1px 1px 0 0 #d8d8d8;
+          box-shadow: inset 1px 1px 0 0 #d8d8d8;
+  border: solid 1px rgba(51, 50, 50, 0.8);
+}
+
+.addon-with-dropdown-wrapper .addon-content select::-webkit-input-placeholder {
+  color: rgba(51, 50, 50, 0.4);
+}
+
+.addon-with-dropdown-wrapper .addon-content select:-ms-input-placeholder {
+  color: rgba(51, 50, 50, 0.4);
+}
+
+.addon-with-dropdown-wrapper .addon-content select::-ms-input-placeholder {
+  color: rgba(51, 50, 50, 0.4);
+}
+
+.addon-with-dropdown-wrapper .addon-content select::placeholder {
+  color: rgba(51, 50, 50, 0.4);
 }
 
 @media screen and (max-width: 991px) {
@@ -1419,9 +1516,11 @@ input[type=checkbox]:checked + span.custom-check:after {
   -webkit-box-shadow: inset 1px 1px 0 0 #d8d8d8;
           box-shadow: inset 1px 1px 0 0 #d8d8d8;
   background-color: #f2f2f2;
-  color: rgba(51, 50, 50, 0.8);
+  color: rgba(87, 86, 91, 0.8);
   font-size: 16px;
   border: solid 1px transparent;
+  height: 50px;
+  font-family: "Montserrat", sans-serif;
   border-radius: 0;
 }
 
@@ -1431,9 +1530,32 @@ input[type=checkbox]:checked + span.custom-check:after {
   border: solid 1px rgba(51, 50, 50, 0.8);
 }
 
+.booker-details-wrapper .custom-select::-webkit-input-placeholder, .guest-details-wrapper .custom-select::-webkit-input-placeholder, .payment-details-wrapper .custom-select::-webkit-input-placeholder {
+  color: rgba(51, 50, 50, 0.4);
+}
+
+.booker-details-wrapper .custom-select:-ms-input-placeholder, .guest-details-wrapper .custom-select:-ms-input-placeholder, .payment-details-wrapper .custom-select:-ms-input-placeholder {
+  color: rgba(51, 50, 50, 0.4);
+}
+
+.booker-details-wrapper .custom-select::-ms-input-placeholder, .guest-details-wrapper .custom-select::-ms-input-placeholder, .payment-details-wrapper .custom-select::-ms-input-placeholder {
+  color: rgba(51, 50, 50, 0.4);
+}
+
+.booker-details-wrapper .custom-select::placeholder, .guest-details-wrapper .custom-select::placeholder, .payment-details-wrapper .custom-select::placeholder {
+  color: rgba(51, 50, 50, 0.4);
+}
+
 .booker-details-wrapper label, .guest-details-wrapper label, .payment-details-wrapper label {
-  font-size: 16px;
+  font-size: 15px;
   color: rgba(87, 86, 91, 0.8);
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 992px) {
+  .booker-details-wrapper label, .guest-details-wrapper label, .payment-details-wrapper label {
+    font-size: 16px;
+  }
 }
 
 .booker-details-wrapper p, .guest-details-wrapper p, .payment-details-wrapper p {
@@ -1491,6 +1613,10 @@ input[type=checkbox]:checked + span.custom-check:after {
           box-shadow: none;
 }
 
+.booker-details-wrapper .form-group, .guest-details-wrapper .form-group, .payment-details-wrapper .form-group {
+  margin-bottom: 20px;
+}
+
 .guest-details-wrapper {
   padding: 20px 10px;
 }
@@ -1522,8 +1648,9 @@ input[type=checkbox]:checked + span.custom-check:after {
 }
 
 .payment-details-wrapper i {
-  font-size: 20px;
-  margin-top: 40px;
+  margin-top: 35px;
+  height: 24px;
+  width: 24px;
 }
 
 .payment-details-wrapper ul {
@@ -1640,6 +1767,7 @@ input[type=checkbox]:checked + span.custom-check:after {
   margin: 10px 0;
   font-size: 20px;
   color: #57565b;
+  font-family: "Montserrat", sans-serif;
 }
 
 .conf-card .booking-summary-data {
@@ -1658,6 +1786,7 @@ input[type=checkbox]:checked + span.custom-check:after {
 
 .conf-card .booking-summary-data h2 {
   font-size: 22px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .conf-card .booking-summary-rooms-section p {
@@ -2210,8 +2339,15 @@ input[type=checkbox]:checked + span.custom-check:after {
 }
 
 .signup-modal label {
-  font-size: 16px;
+  font-size: 15px;
   color: rgba(87, 86, 91, 0.8);
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 992px) {
+  .signup-modal label {
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -2229,10 +2365,6 @@ input[type=checkbox]:checked + span.custom-check:after {
 .icon-info-white, .icon-search-white {
   position: relative;
   top: 3px;
-}
-
-.booking-summary-heading h2 {
-  font-family: "Montserrat", sans-serif;
 }
 
 .special-request-input {
@@ -2918,13 +3050,13 @@ p {
   }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 750px) {
   .container-fluid {
-    padding: 0 3vw;
+    padding: 0 2vw;
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .container-fluid {
     padding: 0 10vw;
   }
@@ -2973,6 +3105,7 @@ p {
   position: absolute;
   top: -211px;
   right: 0;
+  background-size: cover;
 }
 
 .desktop-sign-up {
@@ -3051,19 +3184,18 @@ p {
 #booking-summary .booking-summary-heading h2 {
   text-transform: capitalize;
   font-size: 16px;
+  font-family: "Montserrat", sans-serif;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   #booking-summary .booking-summary-heading h2 {
-    font-family: "Gelasio";
     font-size: 25px;
   }
 }
 
-@media screen and (max-width: 992px) {
-  #booking-summary .booking-summary-heading {
-    padding: 8.5px 10px;
-  }
+#booking-summary .booking-summary-heading span {
+  font-family: "Gelasio";
+  font-style: italic;
 }
 
 #booking-summary .btn-secondary {
@@ -3094,6 +3226,13 @@ p {
   text-align: right;
 }
 
+@media screen and (min-width: 1200px) {
+  .booking-summary-table {
+    border-top: 1px solid rgba(87, 86, 91, 0.3);
+    border-bottom: 1px solid rgba(87, 86, 91, 0.3);
+  }
+}
+
 a {
   color: rgba(87, 86, 91, 0.8);
 }
@@ -3112,6 +3251,12 @@ a {
   font-weight: 500;
   padding-bottom: 30px;
   margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  #progress-steps .pregress-steps-desktop {
+    padding: 30px 0;
+  }
 }
 
 #progress-steps .pregress-steps-desktop p, #progress-steps .pregress-steps-desktop i {
@@ -3179,7 +3324,7 @@ a {
   background-color: #c20b32;
   border-bottom-right-radius: 10px;
   left: 0;
-  top: 14px;
+  top: 13px;
   padding: 5px 10px 5px 5px;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
@@ -3290,15 +3435,29 @@ p.booking-summary-room-name {
   }
 }
 
-@media screen and (min-width: 992px) {
-  .room-wrapper .room-image {
-    height: 100%;
-    min-height: 210px;
-  }
-}
-
 a.expand-special-request {
   text-decoration: none;
+}
+
+.payment-details-wrapper .expand-special-request {
+  margin-bottom: 15px;
+}
+
+.expand-special-request {
+  vertical-align: middle;
+  margin-top: 12px;
+}
+
+.expand-special-request i {
+  margin-top: 0;
+}
+
+.expand-special-request:hover .icon-plus-circle {
+  background: url(../../public/images/icons/p3/icon-add-hover.svg);
+}
+
+.expand-special-request:hover .icon-minus-circle {
+  background: url(../../public/images/icons/p3/icon-remove-hover.svg);
 }
 
 .icon-plus-circle {
@@ -3308,7 +3467,7 @@ a.expand-special-request {
   display: inline-block;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: 100% 100%;
   margin-right: 10px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -3325,7 +3484,7 @@ a.expand-special-request {
   display: inline-block;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: 100% 100%;
   margin-right: 10px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -3335,7 +3494,16 @@ a.expand-special-request {
   background: url(../../public/images/icons/p3/icon-remove-hover.svg);
 }
 
-.expand-special-request i {
-  margin-top: 0;
+.price-currency-decimal {
+  color: #57565b;
+}
+
+.terms-confirmation p {
+  color: rgba(87, 86, 91, 0.8);
+}
+
+sup {
+  vertical-align: baseline;
+  font-size: smaller;
 }
 /*# sourceMappingURL=styles.css.map */

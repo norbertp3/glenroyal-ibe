@@ -10,7 +10,8 @@ ul, ol {
 a {
     @include bodyLink;
 }
-// Gallery Icon
+
+// Icons
 .icon-open-gallery {
     position: absolute;
     bottom: 10px;
@@ -23,7 +24,7 @@ a {
     display: inline-block;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: 100% 100%;
 }
 .icon-info-white {
     background: $iconInfoLightDefault;
@@ -32,40 +33,36 @@ a {
     display: inline-block;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: 100% 100%;
 }
 .icon-chevron-right {
-    -webkit-mask-image: $iconBtnPrimaryRight;
     background: $iconBtnPrimaryRight;
     height: 16px;
     width: 16px;
     display: inline-block;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: 100% 100%;
 }
 .icon-chevron-down {
-    -webkit-mask-image: $iconBtnPrimaryDown;
     background: $iconBtnPrimaryDown;
     height: 16px;
     width: 16px;
     display: inline-block;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: 100% 100%;
 }
 .icon-chevron-up {
-    -webkit-mask-image: $iconBtnPrimaryUp;
     background: $iconBtnPrimaryUp;
     height: 16px;
     width: 16px;
     display: inline-block;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: 100% 100%;
 }
 .icon-progress-step-separator {
-    -webkit-mask-image: $iconProgressDefault;
     background: $iconProgressDefault;
     background-color: black;
     height: 19px;
@@ -73,10 +70,9 @@ a {
     display: inline-block;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: 100% 100%;
 }
 .icon-progress-step-separator-complete {
-    -webkit-mask-image: $iconProgressComplete;
     mask-image: $iconProgressComplete;
     background-color: #6abb91;
     height: 19px;
@@ -84,7 +80,7 @@ a {
     display: inline-block;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: 100% 100%;
 }
 
 // .view-rates-btn:hover .icon-chevron-down {
@@ -145,6 +141,18 @@ a {
     border-bottom: 1px solid $deviderColor;
 }
 
+// Paddings Custom Grid
+.pr-custom {
+    @include mQ(1200px) {
+        padding-right: 20px;
+    }
+}
+.pl-custom {
+    @include mQ(1200px) {
+        padding-left: 20px;
+    }
+}
+
 // Checkboxes
 .checkbox-group input {
     height: auto;
@@ -152,7 +160,7 @@ a {
 span.custom-check {
     margin-right: 10px;
     border-radius: 0;
-    @include inputSelect;
+    @include formStyleElements;
 }
 span.custom-check, span.custom-radio {
     width: 20px;
@@ -188,7 +196,7 @@ input[type=checkbox]:checked+span.custom-check:after {
 
 // Input, Select, TextArea
 .form-group input, .form-group textarea {
-    @include inputSelect;
+    @include formStyleElements;
 }
 
 // Mobile Hotel Info
@@ -258,17 +266,17 @@ input[type=checkbox]:checked+span.custom-check:after {
 }
 .booking-summary-heading {
     padding: 10px;
-    // background-color: $bookingSummaryBackgroundColor;
     font-family: $headingFont;
-    @include mQ (992px) {
+    @include mQ (1200px) {
         padding: 30px 30px 20px 30px;
     }
     h2 {
         font-size: 15px;
         color: $primaryColor;
         text-transform: uppercase;
-        @include mQ (992px) {
-            font-size: 22px;
+        font-family: $textFont;
+        @include mQ (1200px) {
+            font-size: 25px;
         }
     }
 }
@@ -281,14 +289,15 @@ input[type=checkbox]:checked+span.custom-check:after {
     .booking-row {
         padding: 10px 0;
     }
-    @include mQ(992px) {
+    @include mQ(1200px) {
         padding: 0 30px;
     }
-    @include mQmax(991px) {
+    @include mQmax(1200px) {
         display: none;
     }
     h2 {
-        font-size: 22px;   
+        font-size: 22px;
+        font-family: $textFont;
     }
 }
 .booking-summary-rooms-section {
@@ -314,6 +323,9 @@ input[type=checkbox]:checked+span.custom-check:after {
     }
     .booking-summary-room-row {
         padding: 20px 0;
+        &:hover {
+            cursor: pointer;
+        }
     }
     .booking-summary-room-row-expanded
     {
@@ -346,7 +358,10 @@ input[type=checkbox]:checked+span.custom-check:after {
 .room-content {
     padding: 20px 10px 20px 10px;
     // position: relative;
-    @include mQ (992px) {
+    @include mQ (768px) {
+        padding: 30px 20px;
+    }
+    @include mQ (1200px) {
         padding: 30px;
     }
     h3 {
@@ -385,7 +400,7 @@ input[type=checkbox]:checked+span.custom-check:after {
     }
     .from-spam {
         margin-right: 10px;
-        @include mQmax (991px) {
+        @include mQmax (767px) {
             position: absolute;
             top: -15px;
         }
@@ -479,8 +494,12 @@ input[type=checkbox]:checked+span.custom-check:after {
         background-repeat: no-repeat;
         background-position: center;
         position: relative;
-        @include mQ(992px) {
-            width: 300px;
+        @include mQ(768px) {
+            min-width: 270px;
+            height: 100%;
+        }
+        @include mQ(1200px) {
+            min-width: 300px;
         }
         .icon-open-gallery {
             bottom: 10px;
@@ -626,7 +645,7 @@ input[type=checkbox]:checked+span.custom-check:after {
     color: #fff;
     padding: 20px 0 27px 0;
     position: relative;
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
     h1 {
         font-size: 20px;
         margin-top: 19px;
@@ -637,7 +656,7 @@ input[type=checkbox]:checked+span.custom-check:after {
         margin-bottom: 50px;
         color: rgba(255, 255, 255, 0.8);
     }
-    @include mQ(992px) {
+    @include mQ(1200px) {
         margin-bottom: 40px;
     }
 }
@@ -651,6 +670,7 @@ input[type=checkbox]:checked+span.custom-check:after {
         font-size: 14px;
         color: rgba(51, 50, 50, 0.5);
         margin-left: 10px;
+        font-family: $textFont;
     }
 }
 .addon-heading-row {
@@ -684,6 +704,7 @@ input[type=checkbox]:checked+span.custom-check:after {
             font-size: 14px;
             color: rgba(51, 50, 50, 0.8);
             text-align: right;
+            font-family: $textFont;
         }
         .addon-price {
             @include mQmax (991px) {
@@ -694,7 +715,10 @@ input[type=checkbox]:checked+span.custom-check:after {
             }
         }
         .form-check {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            @include mQ(992px) {
+                margin-bottom: 10px;
+            }
             &:last-child {
                 margin-bottom: 0;
             }
@@ -788,8 +812,10 @@ input[type=checkbox]:checked+span.custom-check:after {
             }
         }
         select {
-            @include select;
+            @include formStyleElements;
+            background-image: $selectIcon;
             width: 70px!important;
+            height: 50px!important;
         }
     }
 }
@@ -833,7 +859,7 @@ input[type=checkbox]:checked+span.custom-check:after {
         padding: 20px 40px 40px 40px;
     }
     .custom-select {
-        @include inputSelect;
+        @include formStyleElements;
         border-radius: 0;
     }
     label {
@@ -859,6 +885,9 @@ input[type=checkbox]:checked+span.custom-check:after {
         @include selectIcon;
         width: 80px!important;
     }
+    .form-group {
+        margin-bottom: 20px;
+    }
 }
 .guest-details-wrapper {
     padding: 20px 10px;
@@ -878,9 +907,11 @@ input[type=checkbox]:checked+span.custom-check:after {
     }
 }
 .payment-details-wrapper {
+
     i {
-        font-size: 20px;
-        margin-top: 40px;
+        margin-top: 35px;
+        height: 24px;
+        width: 24px;
     }
     ul {
         margin: 0;
@@ -975,6 +1006,7 @@ input[type=checkbox]:checked+span.custom-check:after {
         margin: 10px 0;
         font-size: 20px;
         color: $primaryFontColor;
+        font-family: $textFont;
     }
     .booking-summary-data {
         padding: 0;
@@ -987,7 +1019,8 @@ input[type=checkbox]:checked+span.custom-check:after {
             padding: 10px 0;
         }
         h2 {
-            font-size: 22px;   
+            font-size: 22px;
+            font-family: $textFont;
         }
     }
     .booking-summary-rooms-section {
@@ -1406,9 +1439,6 @@ input[type=checkbox]:checked+span.custom-check:after {
 .icon-info-white, .icon-search-white {
     position: relative;
     top: 3px;
-}
-.booking-summary-heading h2 {
-    font-family: $textFont;
 }
 .special-request-input {
     display: none;

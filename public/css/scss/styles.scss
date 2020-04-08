@@ -31,10 +31,10 @@ p {
 
 // container
 .container-fluid {
-  @include mQ (992px) {
-      padding: 0 3vw;
+  @include mQ (750px) {
+      padding: 0 2vw;
   }
-  @include mQ (1600px) {
+  @include mQ (1200px) {
       padding: 0 10vw;
   }
 }
@@ -77,6 +77,7 @@ p {
     position: absolute;
     top: -211px;
     right: 0;
+    background-size: cover;
 }
 .desktop-sign-up {
     background-color: $bookingSummaryBackgroundColorDesktop;
@@ -136,15 +137,15 @@ p {
         h2 {
             text-transform: capitalize;
             font-size: 16px;
-            @include mQ (992px) {
-                font-family: $headingFont;
+            font-family: $textFont;
+            @include mQ (1200px) {
                 font-size: 25px;
             }
         }
-        @include mQmax (992px) {
-            padding: 8.5px 10px;
+        span {
+            font-family: $headingFont;
+            font-style: italic;
         }
-        
     }
     .btn-secondary {
         border-radius: 2px;
@@ -169,6 +170,10 @@ p {
     p:nth-child(even) {
         text-align: right;
     }
+    @include mQ (1200px) {
+        border-top: 1px solid rgba(87, 86, 91, 0.3);
+        border-bottom: 1px solid rgba(87, 86, 91, 0.3);
+    }
 }
 
 a {
@@ -188,6 +193,9 @@ a {
         font-weight: 500;
         padding-bottom: 30px;
         margin-bottom: 20px;
+        @include mQ (768px, 1200px) {
+            padding: 30px 0;
+        }
         p, i {
             margin-right: 10px;
             font-family: $headingFont;
@@ -237,7 +245,7 @@ a {
             background-color: #c20b32;
             border-bottom-right-radius: 10px;
             left:0;
-            top: 14px;
+            top: 13px;
             padding: 5px 10px 5px 5px;
             font-family: $textFont;
             font-style: normal;
@@ -339,15 +347,31 @@ p.booking-summary-room-name {
         margin-top: 20px;
     }
 }
-@media screen and (min-width: 992px) {
-    .room-wrapper .room-image {
-        height: 100%;
-        min-height: 210px;
-    }
-}
 
 a.expand-special-request {
     text-decoration: none;
+}
+
+.payment-details-wrapper {
+    .expand-special-request {
+        margin-bottom: 15px;
+    }
+}
+
+.expand-special-request {
+    vertical-align: middle;
+    margin-top: 12px;
+    i {
+        margin-top: 0;
+    }
+    &:hover {
+        .icon-plus-circle {
+            background: url(../../public/images/icons/p3/icon-add-hover.svg);
+        }
+        .icon-minus-circle {
+            background: url(../../public/images/icons/p3/icon-remove-hover.svg);
+        }
+    }
 }
 
 .icon-plus-circle {
@@ -357,7 +381,7 @@ a.expand-special-request {
     display: inline-block;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: 100% 100%;
     margin-right: 10px;
     transition: 0.5s;
     &:hover {
@@ -371,13 +395,23 @@ a.expand-special-request {
     display: inline-block;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: 100% 100%;
     margin-right: 10px;
     transition: 0.5s;
     &:hover {
         background: url(../../public/images/icons/p3/icon-remove-hover.svg);
     }
 }
-.expand-special-request i {
-    margin-top: 0;
+
+.price-currency-decimal {
+    color: #57565b;
+}
+.terms-confirmation {
+    p {
+        color: rgba(87, 86, 91, 0.8);
+    }
+}
+sup {
+    vertical-align: baseline;
+    font-size: smaller;
 }
