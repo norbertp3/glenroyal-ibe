@@ -1969,7 +1969,6 @@ input[type=checkbox]:checked + span.custom-check:after {
   font-family: "Gelasio";
   font-size: 20px;
   color: #57565b;
-  font-family: "Gelasio";
   margin-bottom: 20px;
 }
 
@@ -2295,6 +2294,19 @@ input[type=checkbox]:checked + span.custom-check:after {
   .room-modal ul.room-modal-list {
     -webkit-columns: 2;
             columns: 2;
+  }
+}
+
+.room-modal .standard-slider img {
+  width: 100%;
+  height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .room-modal .standard-slider img {
+    height: 498px;
   }
 }
 
@@ -2763,10 +2775,15 @@ input[type=checkbox]:checked + span.custom-check:after {
   padding-bottom: 10px;
 }
 
-.main-nav .top-main-nav {
-  padding: 20px 0;
+.main-nav {
   -webkit-box-shadow: 0 2px 4px 0 rgba(87, 86, 91, 0.1);
           box-shadow: 0 2px 4px 0 rgba(87, 86, 91, 0.1);
+  background-color: #fff;
+}
+
+.main-nav .top-main-nav {
+  padding: 20px 0;
+  border-bottom: 2px solid #e2e2e2;
 }
 
 .main-nav .links-main-nav {
@@ -3190,6 +3207,7 @@ p {
 @media screen and (min-width: 1200px) {
   #booking-summary .booking-summary-heading h2 {
     font-size: 25px;
+    font-family: "Gelasio";
   }
 }
 
@@ -3235,10 +3253,6 @@ p {
 
 a {
   color: rgba(87, 86, 91, 0.8);
-}
-
-.booking-summary-heading {
-  color: #57565b;
 }
 
 #progress-steps .active {

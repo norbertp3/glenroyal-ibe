@@ -312,11 +312,12 @@ padding-bottom: 10px;
 }
 
 .main-nav {
-.top-main-nav {
-  padding: 20px 0;
   box-shadow: 0 2px 4px 0 rgba(87, 86, 91, 0.1);
-
-}
+  background-color: #fff;
+  .top-main-nav {
+    padding: 20px 0;
+    border-bottom: 2px solid #e2e2e2;
+  }
 .links-main-nav {
   font-family: $headingFont;
   font-style: italic;

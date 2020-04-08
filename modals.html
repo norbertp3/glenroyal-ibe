@@ -12,8 +12,6 @@
     <link rel="stylesheet" href="public/bootstrap-4.0.0/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="public/css/slick.css"/>
     <link rel="stylesheet" type="text/css" href="public/css/slick-theme.css"/>
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/vue-airbnb-style-datepicker@2.1.0/dist/vue-airbnb-style-datepicker.min.css">
     <!-- Main CSS -->
     <link rel="stylesheet" href="public/css/styles.css">
@@ -97,7 +95,7 @@
       <div class="row">
         <div class="col-6"></div>
         <div class="col-6">
-          <a href="#"><div class="hotel-gallery">
+          <a href="#galleryTab" data-toggle="tab"><div class="hotel-gallery">
             <img src="public/images/icons/p3/icon-open-gallery.svg" class="icon-open-gallery">
           </div></a>
         </div>
@@ -139,12 +137,9 @@
               </div>
               <p>Providing a luxurious, comfortable bedroom for guests to unwind and relax in is our mission at the Glenroyal Hotel. Providing guests with all the home comforts for the most peaceful nights sleep, you can be sure to be fully rested after a stay at The Glenroyal Hotel.</p>
               <div class="standard-slider room-slider">
-                <div class="room-image" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(4,3,62,0) 20%, rgba(9,9,121,0) 50%, rgba(4,115,191,0) 80%, rgba(0,0,0,0.3) 100%), url('../../public/images/room-image.png')";>
-                </div>
-                <div class="room-image" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(4,3,62,0) 20%, rgba(9,9,121,0) 50%, rgba(4,115,191,0) 80%, rgba(0,0,0,0.3) 100%), url('../../public/images/room-image.png')";>
-                </div>
-                <div class="room-image" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(4,3,62,0) 20%, rgba(9,9,121,0) 50%, rgba(4,115,191,0) 80%, rgba(0,0,0,0.3) 100%), url('../../public/images/room-image.png')";>
-              </div>
+                <img data-src="public/images/room-image.png" class="lazyload" alt="">
+                <img data-src="public/images/room-image.png" class="lazyload" alt="">
+                <img data-src="public/images/room-image.png" class="lazyload" alt="">
             </div>
               <ul class="room-modal-list">
                 <li>Tea & Coffee Facilities</li>
@@ -598,6 +593,9 @@
     <script type="text/javascript" src="public/js/prefixfree.dynamic-dom.min.js"></script>
     <script type="text/javascript" src="public/js/prefixfree.viewport-units.js"></script>
     <script type="text/javascript" src="public/js/prefixfree.jquery.js"></script>
+
+    <!-- Lazy Load -->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.1.0/dist/lazyload.min.js"></script>
 
     <!-- Bootstrap -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"

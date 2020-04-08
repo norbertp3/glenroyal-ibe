@@ -1,9 +1,9 @@
 // Booking Summary Mobile and iPad
 if ($(window).width() < 1200) {
   $("#booking-summary").detach().insertAfter("#mobile-hotel-info");
-  $('.open-booking-summary').click(function(){
+  $('.booking-summary-heading').click(function(){
     $('.booking-summary-data').slideToggle();
-    $(this).find('.icon-chevron-down').toggleClass("icon-chevron-up");
+    $(this).find('.icon-expand').toggleClass("rotate180");
   });
 }
 // Mobile detach P3B
@@ -17,7 +17,6 @@ if ($(window).width() < 991) {
 // Booking Summary Room Details
 $('.booking-summary-room-row').click(function(){
   $(this).closest('.booking-summary-room-row').find('.booking-summary-room-row-expanded').slideToggle();
-  $(this).find('.icon-chevron-down').toggleClass("icon-chevron-up");
 });
 
 // .Fa rotate P3B
@@ -77,8 +76,32 @@ $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
 
-$('.hotel-info-buttons [data-toggle="tab"]').on('click', function () {
+$('[data-toggle="tab"]').on('click', function () {
   $('#modalTabs').modal('toggle');
   $('#modalTabs').find('[data-toggle="tab"]').removeClass('active');
   $('.nav-tab-' + $(this).attr('href').replace('#', '')).addClass('active');
+});
+
+// Modal loading images
+
+document.addEventListener('DOMContentLoaded', function () {
+
+  if (typeof LazyLoad != 'function') {
+      return;
+  }
+
+  var lazyLoadInstance = new LazyLoad({
+      elements_selector: '.lazyload'
+  });
+
+  $('.modal').on('shown.bs.modal', function () {
+      /**
+       * sometimes the images in the room modals don't load
+       * this will force any that haven't loaded in
+       */
+      $(this).find('[data-src]').each(function (index, element) {
+          $(element).attr('src', $(element).data('src') );
+          $(element).removeAttr('data-src');
+      });
+  });
 });

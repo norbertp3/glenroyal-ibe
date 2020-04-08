@@ -140,12 +140,14 @@ p {
             font-family: $textFont;
             @include mQ (1200px) {
                 font-size: 25px;
+                font-family: $headingFont;
             }
         }
         span {
             font-family: $headingFont;
             font-style: italic;
         }
+
     }
     .btn-secondary {
         border-radius: 2px;
@@ -179,9 +181,7 @@ p {
 a {
     color: rgba(87, 86, 91, 0.8);
 }
-.booking-summary-heading {
-    color: $primaryFontColor;
-}
+
 // Progress Steps
 #progress-steps {
     .active {
