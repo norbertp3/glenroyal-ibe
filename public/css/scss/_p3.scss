@@ -1012,6 +1012,9 @@ input[type=checkbox]:checked+span.custom-check:after {
         color: $primaryFontColor;
         font-family: $textFont;
     }
+    .booking-summary-table {
+        border-top: none;
+    }
     .booking-summary-data {
         padding: 0;
         display: block;
@@ -1043,7 +1046,8 @@ input[type=checkbox]:checked+span.custom-check:after {
             li {
                 text-indent: -22px;
                 margin-left: 22px;
-                font-weight: 400;        
+                font-weight: 400;
+                margin-bottom: 5px;      
             }
         }
         .booking-summary-room-row p {
@@ -1055,6 +1059,7 @@ input[type=checkbox]:checked+span.custom-check:after {
         .booking-summary-room-row-expanded
         {
             display: block;
+            margin: 20px 0 20px 16px !important;
         }
         p.booking-summary-room-name {
             color: $primaryFontColor;

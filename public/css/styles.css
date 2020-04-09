@@ -1773,6 +1773,10 @@ input[type=checkbox]:checked + span.custom-check:after {
   font-family: "Montserrat", sans-serif;
 }
 
+.conf-card .booking-summary-table {
+  border-top: none;
+}
+
 .conf-card .booking-summary-data {
   padding: 0;
   display: block;
@@ -1813,6 +1817,7 @@ input[type=checkbox]:checked + span.custom-check:after {
   text-indent: -22px;
   margin-left: 22px;
   font-weight: 400;
+  margin-bottom: 5px;
 }
 
 .conf-card .booking-summary-rooms-section .booking-summary-room-row p {
@@ -1825,6 +1830,7 @@ input[type=checkbox]:checked + span.custom-check:after {
 
 .conf-card .booking-summary-rooms-section .booking-summary-room-row-expanded {
   display: block;
+  margin: 20px 0 20px 16px !important;
 }
 
 .conf-card .booking-summary-rooms-section p.booking-summary-room-name {
@@ -3222,6 +3228,15 @@ p {
 #booking-summary .booking-summary-heading span {
   font-family: "Gelasio";
   font-style: italic;
+  font-size: 14px;
+  color: #57565b;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  #booking-summary .booking-summary-heading {
+    padding: 10px 2vw;
+  }
 }
 
 #booking-summary .btn-secondary {
@@ -3336,6 +3351,12 @@ a {
   background-color: #f6f6f6;
   background-image: url(http://127.0.0.1:5500/public/css/../../public/images/icons/p3/dropdown-arrows.svg);
   background-size: 10px;
+}
+
+.mini-nav #currencyConverter select {
+  background-color: #fff;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .room-content .room-ribbon {
@@ -3529,5 +3550,9 @@ a.expand-special-request {
 sup {
   vertical-align: baseline;
   font-size: smaller;
+}
+
+.payment-summary-extra .payment-summary-box {
+  background-color: #57565b;
 }
 /*# sourceMappingURL=styles.css.map */

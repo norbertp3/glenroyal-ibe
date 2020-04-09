@@ -49,8 +49,16 @@
     </div>
 
     <div class="mini-nav d-flex d-lg-none justify-content-between align-items-center navbar-hide">
-        <div class="mini-nav-align">
+        <div class="mini-nav-align d-flex">
             <img src="public/images/icons/icon-hamburger.svg" onclick="openNav()">
+            <form action="" method="get" id="currencyConverter" class="dropdown-currency ml-3">
+              <input type="hidden" name="redirect">
+              <select id="currency-options" class="price-select" name="currencyCode" onchange="">
+                  <option value="EUR">€ EUR</option>
+                  <option value="GBP">£ GBP</option>
+                  <option value="USD">$ USD</option>
+              </select>
+            </form>
         </div>
         <a href="#"><img src="public/images/logo-mark-grey.png"></a>
         <!-- <a href="#" class="book-btn-nav d-none d-md-block" onclick="openWidget()">BOOK YOUR STAY</a> -->
@@ -107,7 +115,7 @@
     </div>
 </div>
 
-  <section id="banner" class="d-none d-lg-block">
+  <section id="banner" class="d-none d-xl-block">
     <div class="container-fluid">
       <h1>The Redworth Hall Hotel</h1>
       <p>Surtees Rd, Newton Aycliffe DL5 6NL, UK</p>
@@ -132,7 +140,7 @@
   </section>
 
   <!-- Mobile Hotel Info P3B -->
-  <section id="mobile-hotel-info" class="d-lg-none">
+  <section id="mobile-hotel-info" class="d-xl-none">
     <div class="container-fluid d-flex justify-content-between">
       <a href="#" data-toggle="modal" data-target="#modalTabs"><i class="icon-info-white"></i> Hotel Info</a>
       <a href="#"><i class="icon-search-white"></i> New Search</a>
@@ -148,10 +156,12 @@
         <section id="booking-summary">
           <!-- Booking Summary Heading -->
           <div class="booking-summary-heading d-flex justify-content-between align-items-center">
-            <h2>My Booking</h2>
-            <span class="d-xl-none">Nov 30 - Dec 02</span>
+            <div class="d-flex">
+              <h2>My Booking</h2>
+              <span class="d-xl-none">Nov 30 - Dec 02</span>
+            </div>
             <a href="#" class="btn btn-secondary edit-search-btn d-none d-xl-block">Edit</a>
-            <div class="d-xl-none">
+            <div class="d-xl-none" style="height: 30px">
               <i class="icon-expand"></i>
             </div>
           </div>

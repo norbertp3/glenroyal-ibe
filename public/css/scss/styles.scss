@@ -146,8 +146,14 @@ p {
         span {
             font-family: $headingFont;
             font-style: italic;
+            font-size: 14px;
+            color: #57565b;
+            margin-left: 10px;
         }
-
+        @include mQmax (1200px) {
+            padding: 10px 2vw;
+        }
+        
     }
     .btn-secondary {
         border-radius: 2px;
@@ -236,6 +242,15 @@ a {
         background-color: $pageBg;
         background-image: url(http://127.0.0.1:5500/public/css/../../public/images/icons/p3/dropdown-arrows.svg);
         background-size: 10px;
+    }
+}
+.mini-nav {
+    #currencyConverter {
+        select {
+            background-color: #fff;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
     }
 }
 .room-content {
@@ -416,4 +431,7 @@ a.expand-special-request {
 sup {
     vertical-align: baseline;
     font-size: smaller;
+}
+.payment-summary-extra .payment-summary-box {
+    background-color: #57565b;
 }
