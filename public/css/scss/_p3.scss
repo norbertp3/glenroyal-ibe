@@ -1456,5 +1456,7 @@ input[type=checkbox]:checked+span.custom-check:after {
 .special-request-input {
     display: none;
 }
-
+.invalid-feedback {
+    font-family: $textFont;
+}
 
