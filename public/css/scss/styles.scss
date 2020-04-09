@@ -34,7 +34,7 @@ p {
   @include mQ (750px) {
       padding: 0 2vw;
   }
-  @include mQ (1200px) {
+  @include mQ (1600px) {
       padding: 0 10vw;
   }
 }

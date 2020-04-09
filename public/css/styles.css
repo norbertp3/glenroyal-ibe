@@ -3075,7 +3075,7 @@ p {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1600px) {
   .container-fluid {
     padding: 0 10vw;
   }
