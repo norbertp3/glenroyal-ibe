@@ -138,7 +138,8 @@
 @mixin formLabel {
     font-size: 15px;
     color: rgba(87, 86, 91, 0.8);
-    margin-bottom: 0;
+    margin-bottom: 5px;
+    font-family: $textFont;
     @include mQ(992px) {
         font-size: 16px;
     }

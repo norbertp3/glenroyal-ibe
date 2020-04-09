@@ -1551,7 +1551,8 @@ input[type=checkbox]:checked + span.custom-check:after {
 .booker-details-wrapper label, .guest-details-wrapper label, .payment-details-wrapper label {
   font-size: 15px;
   color: rgba(87, 86, 91, 0.8);
-  margin-bottom: 0;
+  margin-bottom: 5px;
+  font-family: "Montserrat", sans-serif;
 }
 
 @media screen and (min-width: 992px) {
@@ -2355,7 +2356,8 @@ input[type=checkbox]:checked + span.custom-check:after {
 .signup-modal label {
   font-size: 15px;
   color: rgba(87, 86, 91, 0.8);
-  margin-bottom: 0;
+  margin-bottom: 5px;
+  font-family: "Montserrat", sans-serif;
 }
 
 @media screen and (min-width: 992px) {
