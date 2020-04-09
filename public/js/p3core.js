@@ -76,7 +76,7 @@ $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
 
-$('[data-toggle="tab"]').on('click', function () {
+$('.hotel-info-buttons [data-toggle="tab"]').on('click', function () {
   $('#modalTabs').modal('toggle');
   $('#modalTabs').find('[data-toggle="tab"]').removeClass('active');
   $('.nav-tab-' + $(this).attr('href').replace('#', '')).addClass('active');

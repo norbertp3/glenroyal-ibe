@@ -167,7 +167,7 @@
             <div class="booking-summary-rooms-section">
               <!-- START Room Details Row-->
               <div class="booking-summary-room-row d-flex devider-top-mobile trigger-rotate">
-                <img src="public/images/summary-img-1.jpg">
+                <img data-src="public/images/summary-img-1.jpg" class="lazyload">
                 <div class="booking-summary-room-heading w-100">
                   <p class="booking-summary-room-name">Standard Twin Room</p>
                   <p class="booking-summary-room-price">£97.50</p>
@@ -192,7 +192,7 @@
               <!-- END Room Details Row -->
               <!-- START Room Details Row-->
               <div class="booking-summary-room-row d-flex devider-top-mobile devider-top-desktop trigger-rotate">
-                <img src="public/images/summary-img-1.jpg">
+                <img data-src="public/images/summary-img-1.jpg" class="lazyload">
                 <div class="booking-summary-room-heading w-100">
                   <p class="booking-summary-room-name">Standard Twin Room</p>
                   <p class="booking-summary-room-price">£97.50</p>
@@ -306,7 +306,7 @@
 
         <!-- START Addons Cards P3B LOOP -->
         <section class="card-style addon-with-checkboxes-wrapper d-lg-flex">
-          <img src="public/images/img-extra.jpg" alt="addon img" class="d-none d-lg-block">
+          <img data-src="public/images/img-extra.jpg" alt="addon img" class="d-none d-lg-block lazyload">
           <div class="row addon-content">
             <div class="col-12 col-lg-5">
               <h3 class="mr-5">Breakfast Buffet</h3>
@@ -337,7 +337,7 @@
         </section>
 
         <section class="card-style addon-with-checkbox-wrapper d-lg-flex">
-          <img src="public/images/img-extra.jpg" alt="addon img" class="d-none d-lg-block">
+          <img data-src="public/images/img-extra.jpg" alt="addon img" class="d-none d-lg-block lazyload">
           <div class="row addon-content">
             <div class="col-12 col-lg-5">
               <h3 class="mr-5">Dinner</h3>
@@ -360,7 +360,7 @@
         </section>
 
         <section class="card-style addon-with-dropdown-wrapper d-lg-flex">
-          <a href="#"><img src="public/images/img-extra.jpg" alt="addon img" class="d-none d-lg-block"></a>
+          <a href="#"><img data-src="public/images/img-extra.jpg" alt="addon img" class="d-none d-lg-block lazyload"></a>
           <div class="row addon-content ">
             <div class="col-12 col-lg-5">
               <h3 class="mr-5">Dinner <a href="#"><i class="icon-info ml-1"></i></a> </h3 class="mr-5">
@@ -473,6 +473,9 @@
     <script type="text/javascript" src="public/js/prefixfree.dynamic-dom.min.js"></script>
     <script type="text/javascript" src="public/js/prefixfree.viewport-units.js"></script>
     <script type="text/javascript" src="public/js/prefixfree.jquery.js"></script>
+    
+    <!-- Lazyload -->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.1.0/dist/lazyload.min.js"></script>
 
     <!-- Bootstrap -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"

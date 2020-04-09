@@ -165,7 +165,7 @@
 
               <!-- START Room Details Row-->
               <div class="booking-summary-room-row d-flex devider-top-mobile">
-                <img src="public/images/summary-img-1.jpg">
+                <img data-src="public/images/summary-img-1.jpg" class="lazyload">
                 <div class="booking-summary-room-heading w-100">
                   <p class="booking-summary-room-name">Standard Twin Room</p>
                   <p>£97.50</p>
@@ -192,7 +192,7 @@
 
               <!-- START Room Details Row-->
               <div class="booking-summary-room-row d-flex devider-top-mobile devider-top-desktop">
-                <img src="public/images/summary-img-1.jpg">
+                <img data-src="public/images/summary-img-1.jpg" class="lazyload">
                 <div class="booking-summary-room-heading w-100">
                   <p class="booking-summary-room-name">Standard Twin Room</p>
                   <p>£97.50</p>
@@ -265,7 +265,7 @@
       <div class="col-12 col-lg-4 pl-custom px-10">
         <!-- Start Confirmation Content Boxes -->
         <section class="card-style confirmation-content-box">
-          <a href="#"><img src="/public/images/img-dining.jpg"></a>
+          <a href="#"><img data-src="/public/images/img-dining.jpg" class="lazyload"></a>
           <div class="box-content text-center">
             <h3>Dine with Us</h3>
             <p>Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elit. </p>
@@ -274,7 +274,7 @@
         </section>
 
         <section class="card-style confirmation-content-box">
-          <a href="#"><img src="/public/images/img-spa.jpg"></a>
+          <a href="#"><img data-src="/public/images/img-spa.jpg" class="lazyload"></a>
           <div class="box-content text-center">
             <h3>Treat Yourself</h3>
             <p>Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis.</p>
@@ -354,6 +354,9 @@
     <script type="text/javascript" src="public/js/prefixfree.dynamic-dom.min.js"></script>
     <script type="text/javascript" src="public/js/prefixfree.viewport-units.js"></script>
     <script type="text/javascript" src="public/js/prefixfree.jquery.js"></script>
+
+    <!-- Lazyload -->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.1.0/dist/lazyload.min.js"></script>
 
     <!-- Bootstrap -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"

@@ -249,6 +249,7 @@ a {
             padding: 5px 10px 5px 5px;
             font-family: $textFont;
             font-style: normal;
+            font-weight: 400;
         }
     }
 }
@@ -280,9 +281,9 @@ a {
         font-weight: 400;
     }
     .rate-description {
-        margin: 20px 0 20px 16px;
+        margin: 20px 0 20px 16px!important;
         li {
-            margin-bottom: 5px;
+            margin-bottom: 5px!important;
         }
     }
     .select-rate-btn {

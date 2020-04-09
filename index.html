@@ -192,8 +192,8 @@
         </section>
 
         <div class="desktop-sign-up d-none d-xl-block d-xl-flex mb-4">
-          <img src="/public/images/img-join.jpg" class="d-none d-xl-block">
-          <img src="/public/images/img-join-landscape.png" class="d-xl-none mb-3" height="200px" width="100%">
+          <img data-src="/public/images/img-join.jpg" class="lazyload d-none d-xl-block">
+          <img data-src="/public/images/img-join-landscape.png" class="lazyload d-xl-none mb-3" height="200px" width="100%">
           <div class="desktop-sign-up-content">
             <h2>Sign up for 10% off</h2>
             <p>Join our loyalty club for free for special discounted rates. It only takes a minute!</p>
@@ -256,7 +256,7 @@
               <!-- Desktop Img -->
               <div class="d-none d-md-block">
                 <a href="javascript:;">
-                  <div class="room-image" style="background-image: linear-gradient(122deg, rgba(0, 0, 0, 0), rgba(26, 26, 26, 0) 81%, rgba(26, 25, 25, 0) 85%, rgba(51, 50, 50, 0.5)) ,url('../../public/images/room-image.png')";>
+                  <div class="room-image" style="background-image: linear-gradient(122deg, rgba(0, 0, 0, 0), rgba(26, 26, 26, 0) 81%, rgba(26, 25, 25, 0) 85%, rgba(51, 50, 50, 0.5)) , url('../../public/images/room-image.png')";>
                     <img src="public/images/icons/p3/icon-open-gallery.svg" class="icon-open-gallery">
                   </div>
                 </a>
@@ -429,6 +429,9 @@
     <script type="text/javascript" src="public/js/prefixfree.dynamic-dom.min.js"></script>
     <script type="text/javascript" src="public/js/prefixfree.viewport-units.js"></script>
     <script type="text/javascript" src="public/js/prefixfree.jquery.js"></script>
+
+    <!-- Lazyload -->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.1.0/dist/lazyload.min.js"></script>
 
     <!-- Bootstrap -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"

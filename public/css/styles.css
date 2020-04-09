@@ -925,6 +925,7 @@ input[type=checkbox]:checked + span.custom-check:after {
 @media screen and (min-width: 1200px) {
   .room-wrapper .room-image {
     min-width: 300px;
+    min-height: 210px;
   }
 }
 
@@ -960,6 +961,7 @@ input[type=checkbox]:checked + span.custom-check:after {
 
 .rates-wrapper h3 a {
   color: #57565b;
+  font-family: "Montserrat", sans-serif;
   font-size: 15px;
 }
 
@@ -3342,6 +3344,7 @@ a {
   padding: 5px 10px 5px 5px;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
+  font-weight: 400;
 }
 
 .rates-wrapper .rate-ribbon {
@@ -3376,11 +3379,11 @@ a {
 }
 
 .rates-wrapper .rate-description {
-  margin: 20px 0 20px 16px;
+  margin: 20px 0 20px 16px !important;
 }
 
 .rates-wrapper .rate-description li {
-  margin-bottom: 5px;
+  margin-bottom: 5px !important;
 }
 
 .rates-wrapper .select-rate-btn {

@@ -500,6 +500,7 @@ input[type=checkbox]:checked+span.custom-check:after {
         }
         @include mQ(1200px) {
             min-width: 300px;
+            min-height: 210px;
         }
         .icon-open-gallery {
             bottom: 10px;
@@ -617,6 +618,9 @@ input[type=checkbox]:checked+span.custom-check:after {
             display: none;
         }
     }
+    // .rate-name {
+    //     font-family: $textFont;
+    // }
 }
 
 // Slick
