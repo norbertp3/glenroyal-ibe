@@ -230,9 +230,8 @@ a {
     }
 }
 .icon-progress-step-separator {
-    background-color: rgba(87, 86, 91, 0.6);
-    -webkit-mask-image: url(../../../public/images/icons/icon-progress-default.svg);
-    mask-image: url(../../../public/images/icons/icon-progress-default.svg);
+    background-color: inherit;
+    background-image: url(../../../public/images/icons/p3/icon-progress-default.svg);
 }
 #currencyConverter {
     select {
@@ -240,7 +239,7 @@ a {
         font-size: 13px;
         color: rgba(51, 50, 50, 0.5);
         background-color: $pageBg;
-        background-image: url(http://127.0.0.1:5500/public/css/../../public/images/icons/p3/dropdown-arrows.svg);
+        background-image: url(../../../public/images/icons/p3/dropdown-arrows.svg);
         background-size: 10px;
     }
 }
