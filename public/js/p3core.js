@@ -45,32 +45,6 @@ $(".plus-minus-icons").click(function(){
   $(".icon-plus-circle").toggleClass("icon-minus-circle");
 });
 
-// Slick slider single Item
-$('.standard-slider').slick({
-  arrows: true,
-  autoplay: true
-});
-
-// Modal Gallery
-$('.gallery-slider').slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  infinite: true,
-  arrows: true,
-  autoplay: false,
-  asNavFor: '.slider-nav'
-});
-$('.slider-nav').slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  infinite: true,
-  asNavFor: '.gallery-slider',
-  dots: false,
-  centerMode: false,
-  arrows: false,
-  focusOnSelect: true
-});
-
 // Init tooltip
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
@@ -82,26 +56,85 @@ $('.hotel-info-buttons [data-toggle="tab"]').on('click', function () {
   $('.nav-tab-' + $(this).attr('href').replace('#', '')).addClass('active');
 });
 
-// Modal loading images
+$('.hotel-gallery').on('click', function () {
+  $('#modalTabs').modal('toggle');
+  $('#modalTabs').find('[data-toggle="tab"]').removeClass('active');
+  $('.nav-tab-' + $(this).attr('href').replace('#', '')).addClass('active');
+});
 
+// Lazy Load
 document.addEventListener('DOMContentLoaded', function () {
-
   if (typeof LazyLoad != 'function') {
       return;
   }
-
   var lazyLoadInstance = new LazyLoad({
       elements_selector: '.lazyload'
   });
-
-  $('.modal').on('shown.bs.modal', function () {
-      /**
-       * sometimes the images in the room modals don't load
-       * this will force any that haven't loaded in
-       */
-      $(this).find('[data-src]').each(function (index, element) {
-          $(element).attr('src', $(element).data('src') );
-          $(element).removeAttr('data-src');
-      });
-  });
 });
+
+// Spinner
+$('.loading-spinner').click(function () {
+  $(this).append('<i class="fa fa-spinner fa-spin ml-2"></i>');
+});
+
+// Booking Widget
+  $('.promo-code-link').on('click', function (e) {
+    e.preventDefault();
+    $(this).next('.form-group').slideToggle();
+  });
+  $('#guest-widget').on('click', function () {
+    $('.guest-widget-buttons').show();
+  });
+  
+  // Sliders
+  $('.standard-slider').slick({
+    arrows: true,
+    autoplay: true
+  });
+
+  // Slick Initialize Modal
+  function initSlickSlider() {
+    setTimeout( function() {
+      // Slick slider single Item
+      $('.room-modal-slider').slick({
+        arrows: true,
+        autoplay: true
+      });
+  
+      // Modal Gallery
+      $('.gallery-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        arrows: true,
+        autoplay: false,
+        asNavFor: '.slider-nav'
+      });
+  
+      $('.slider-nav').slick({
+        // slidesToShow: 15,
+        slidesToScroll: 1,
+        infinite: false,
+        asNavFor: '.gallery-slider',
+        dots: false,
+        centerMode: true,
+        arrows: false,
+        vertical: false,
+        focusOnSelect: true
+      });
+    }, 500);
+  }
+
+  $('.btn').click(function(){
+    $('.modal-body').on('shown.bs.modal', function () {
+        initSlickSlider();
+    });
+  });
+  $('.initSlick').click(function(){
+    initSlickSlider();
+  });
+  $('.gallery-tab').click(function(){
+      initSlickSlider();
+  });
+
+  

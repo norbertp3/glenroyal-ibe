@@ -1244,14 +1244,11 @@ input[type=checkbox]:checked+span.custom-check:after {
         }
     } 
     .gallery-slider {
-        .hotel-image {
+        img {
             height: 184px;
             width: 100%;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            position: relative;
-            @include mQ (992px) {
+            object-fit: cover;
+            @include mQ (500px) {
                 height: 498px;
             }
         }
@@ -1260,15 +1257,25 @@ input[type=checkbox]:checked+span.custom-check:after {
         @include mQmax(991px) {
             display: none;
         }
-        .hotel-nav-image {
+        img {
             height: 50px;
             width: 90px!important;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            position: relative;
-            margin: 20px 20px 0 0;
+            object-fit: cover;
             display: inline-block;
+            margin-top: 10px;
+            margin-right: 10px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .slick-list {
+            padding: 0!important;
+            .slick-track {
+                margin-left: 0!important;
+                margin-right: 0!important;
+                transform: none!important;
+                max-width: 885px!important;
+            }
         }
     }
 
@@ -1324,20 +1331,14 @@ input[type=checkbox]:checked+span.custom-check:after {
     .modal-content {
         border: none;
     }
-    .standard-slider {
+    .room-modal-slider {
         @include mQ (992px) {
             margin-bottom: 30px;
         }
-        .room-image {
+        img {
             height: 184px;
             width: 100%;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            position: relative;
+            object-fit: cover;
             @include mQ (992px) {
                 height: 498px;
             }
@@ -1465,3 +1466,10 @@ input[type=checkbox]:checked+span.custom-check:after {
     font-family: $textFont;
 }
 
+.loading-spinner {
+    .fa {
+        height: auto;
+        width: auto;
+        margin: 0;
+    }
+}

@@ -87,7 +87,7 @@
       <div class="hotel-info-buttons d-none d-lg-flex">
         <a href="#infoTab" data-toggle="tab" class="btn">Hotel Info</a>
         <a href="#mapTab" data-toggle="tab" class="btn">Map</a>
-        <a href="#galleryTab" data-toggle="tab" class="btn">Gallery</a>
+        <a href="#galleryTab" data-toggle="tab" class="btn initSlick">Gallery</a>
       </div>
       <!-- END HOTEL INFO BUTTONS P3B -->
     </div>
@@ -95,7 +95,7 @@
       <div class="row">
         <div class="col-6"></div>
         <div class="col-6">
-          <a href="#galleryTab" data-toggle="tab"><div class="hotel-gallery">
+          <a href="#galleryTab" data-toggle="tab" class="initSlick"><div class="hotel-gallery">
             <img src="public/images/icons/p3/icon-open-gallery.svg" class="icon-open-gallery">
           </div></a>
         </div>
@@ -116,9 +116,7 @@
   <div class="container-fluid">
 
     <!-- Room Modal -->
-    <a href="#" class="btn" data-toggle="modal" data-target="#roomModal">Room Modal</a>
-
-    <!-- Room Modal -->
+    <a href="#" class="btn initSlick" data-toggle="modal" data-target="#roomModal">Room Modal</a>
     <div class="modal fade modal-full-width standard-modal display-block room-modal" id="roomModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -132,11 +130,11 @@
               <h2>Double Room</h2>
               <div class="room-facilities d-block d-lg-flex">
                 <div><img src="public/images/icons/p3/icon-sleeps-3.svg" alt=""><span>Sleeps 3</span></div>
-                <div><img src="public/images/icons/p3/icon-room-size.svg" alt=""><span>18m2</span></div>
+                <div><img src="public/images/icons/p3/icon-room-size.svg" alt=""><span>18m<sup>2</sup></span></div>
                 <div><img src="public/images/icons/p3/icon-beds.svg" alt=""><span>1 Double, 1 Single, 1 Sofabed</span></div>
               </div>
               <p>Providing a luxurious, comfortable bedroom for guests to unwind and relax in is our mission at the Glenroyal Hotel. Providing guests with all the home comforts for the most peaceful nights sleep, you can be sure to be fully rested after a stay at The Glenroyal Hotel.</p>
-              <div class="standard-slider room-slider">
+              <div class="room-modal-slider room-slider">
                 <img data-src="public/images/room-image.png" class="lazyload" alt="">
                 <img data-src="public/images/img-hotel-info.jpg" class="lazyload" alt="">
                 <img data-src="public/images/map-corporate.png" class="lazyload" alt="">
@@ -216,7 +214,6 @@
 
     <!-- Terms Modal -->
     <a href="#" class="btn" data-toggle="modal" data-target="#termsModal">Terms Modal</a>
-
     <div class="modal fade modal-full-width standard-modal display-block terms-modal" id="termsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -235,7 +232,6 @@
 
     <!-- Addon Info Modal -->
     <a href="#" class="btn" data-toggle="modal" data-target="#addonModal">Addons Modal</a>
-
     <div class="modal fade modal-full-width standard-modal display-block addon-modal" id="addonModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -260,7 +256,6 @@
 
     <!-- Sign Up Modal -->
     <a href="#" class="btn" data-toggle="modal" data-target="#signupModal">Sign Up Modal</a>
-
     <div class="modal fade modal-full-width standard-modal display-block signup-modal" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -339,7 +334,7 @@
                 <li role="presentation" class="map-tab">
                   <a href="#mapTab" role="tab" data-toggle="tab" class="nav-tab-mapTab">Map</a>
                 </li>
-                <li  class="gallery-tab">
+                <li class="gallery-tab">
                   <a href="#galleryTab" role="tab" data-toggle="tab" class="nav-tab-galleryTab">Gallery</a>
                 </li>
                 <!-- <li role="presentation" class="reviews-tab">
@@ -405,32 +400,22 @@
                 
                 <div role="tabpanel" class="tab-pane gallery-tab" id="galleryTab">
                   <div class="gallery-slider slider">
-                      <div class="hotel-image" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(4,3,62,0) 20%, rgba(9,9,121,0) 50%, rgba(4,115,191,0) 80%, rgba(0,0,0,0.3) 100%), url('../../public/images/room-image.png')";>
-                      </div>
-                      <div class="hotel-image" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(4,3,62,0) 20%, rgba(9,9,121,0) 50%, rgba(4,115,191,0) 80%, rgba(0,0,0,0.3) 100%), url('../../public/images/room-image.png')";>
-                      </div>
-                      <div class="hotel-image" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(4,3,62,0) 20%, rgba(9,9,121,0) 50%, rgba(4,115,191,0) 80%, rgba(0,0,0,0.3) 100%), url('../../public/images/room-image.png')";>
-                      </div>
-                      <div class="hotel-image" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(4,3,62,0) 20%, rgba(9,9,121,0) 50%, rgba(4,115,191,0) 80%, rgba(0,0,0,0.3) 100%), url('../../public/images/room-image.png')";>
-                      </div>
-                      <div class="hotel-image" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(4,3,62,0) 20%, rgba(9,9,121,0) 50%, rgba(4,115,191,0) 80%, rgba(0,0,0,0.3) 100%), url('../../public/images/room-image.png')";>
-                      </div>
-                      <div class="hotel-image" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(4,3,62,0) 20%, rgba(9,9,121,0) 50%, rgba(4,115,191,0) 80%, rgba(0,0,0,0.3) 100%), url('../../public/images/room-image.png')";>
-                      </div>
+                    <img data-src="public/images/room-image.png" class="lazyload" alt="">
+                    <img data-src="public/images/img-hotel-info.jpg" class="lazyload" alt="">
+                    <img data-src="public/images/map-corporate.png" class="lazyload" alt="">
+                    <img data-src="public/images/room-image.png" class="lazyload" alt="">
+                    <img data-src="public/images/img-hotel-info.jpg" class="lazyload" alt="">
+                    <img data-src="public/images/map-corporate.png" class="lazyload" alt="">
+
                   </div>
                   <div class="slider slider-nav">
-                    <div class="hotel-nav-image" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(4,3,62,0) 20%, rgba(9,9,121,0) 50%, rgba(4,115,191,0) 80%, rgba(0,0,0,0.3) 100%), url('../../public/images/room-image.png')";>
-                    </div>
-                    <div class="hotel-nav-image" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(4,3,62,0) 20%, rgba(9,9,121,0) 50%, rgba(4,115,191,0) 80%, rgba(0,0,0,0.3) 100%), url('../../public/images/room-image.png')";>
-                    </div>
-                    <div class="hotel-nav-image" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(4,3,62,0) 20%, rgba(9,9,121,0) 50%, rgba(4,115,191,0) 80%, rgba(0,0,0,0.3) 100%), url('../../public/images/room-image.png')";>
-                    </div>
-                    <div class="hotel-nav-image" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(4,3,62,0) 20%, rgba(9,9,121,0) 50%, rgba(4,115,191,0) 80%, rgba(0,0,0,0.3) 100%), url('../../public/images/room-image.png')";>
-                    </div>
-                    <div class="hotel-nav-image" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(4,3,62,0) 20%, rgba(9,9,121,0) 50%, rgba(4,115,191,0) 80%, rgba(0,0,0,0.3) 100%), url('../../public/images/room-image.png')";>
-                    </div>
-                    <div class="hotel-nav-image" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(4,3,62,0) 20%, rgba(9,9,121,0) 50%, rgba(4,115,191,0) 80%, rgba(0,0,0,0.3) 100%), url('../../public/images/room-image.png')";>
-                    </div>
+                    <img data-src="public/images/room-image.png" class="lazyload" alt="">
+                    <img data-src="public/images/img-hotel-info.jpg" class="lazyload" alt="">
+                    <img data-src="public/images/map-corporate.png" class="lazyload" alt="">
+                    <img data-src="public/images/room-image.png" class="lazyload" alt="">
+                    <img data-src="public/images/img-hotel-info.jpg" class="lazyload" alt="">
+                    <img data-src="public/images/map-corporate.png" class="lazyload" alt="">
+
                   </div>
                 </div>
                 <div role="tabpanel" class="tab-pane" id="mapTab">

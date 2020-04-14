@@ -26,6 +26,10 @@ button {
   margin-bottom: 0;
 }
 
+button:focus {
+  outline: none;
+}
+
 a {
   color: #57565b;
   line-height: 1;
@@ -121,41 +125,6 @@ form select::-ms-expand {
 
 .modal-header {
   border-bottom: none;
-}
-
-.btn-cta {
-  display: inline-block;
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: 2px;
-  color: #f0f0f0;
-  height: 50px;
-  background-color: #57565b;
-  border-radius: 2px;
-  border: 2px solid #57565b;
-  padding: 15px 20px;
-  -webkit-box-shadow: inset 0px 0px 0px 1px #fff;
-          box-shadow: inset 0px 0px 0px 1px #fff;
-  text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
-}
-
-.btn-cta:hover, .btn-cta:active {
-  color: #f0f0f0;
-  cursor: pointer;
-  background-color: rgba(87, 86, 91, 0.8);
-  border: 2px solid rgba(87, 86, 91, 0.8);
-}
-
-.btn-cta:focus {
-  background-color: #424146;
-  border: 2px solid #424146;
-  color: #f0f0f0;
-}
-
-.newsletter-btn {
-  background-color: rgba(240, 240, 240, 0.2);
-  border: solid 2px rgba(240, 240, 240, 0.2);
 }
 
 body {
@@ -343,8 +312,7 @@ a:hover {
   font-weight: 500;
   font-size: 14px;
   text-transform: uppercase;
-  height: 50px;
-  padding: 13px 15px;
+  padding: 14px 15px;
 }
 
 @media screen and (min-width: 992px) {
@@ -2096,17 +2064,15 @@ input[type=checkbox]:checked + span.custom-check:after {
   margin-bottom: 10px;
 }
 
-.tab-content .gallery-slider .hotel-image {
+.tab-content .gallery-slider img {
   height: 184px;
   width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-@media screen and (min-width: 992px) {
-  .tab-content .gallery-slider .hotel-image {
+@media screen and (min-width: 500px) {
+  .tab-content .gallery-slider img {
     height: 498px;
   }
 }
@@ -2117,15 +2083,30 @@ input[type=checkbox]:checked + span.custom-check:after {
   }
 }
 
-.tab-content .slider-nav .hotel-nav-image {
+.tab-content .slider-nav img {
   height: 50px;
   width: 90px !important;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: relative;
-  margin: 20px 20px 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: inline-block;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.tab-content .slider-nav img:hover {
+  cursor: pointer;
+}
+
+.tab-content .slider-nav .slick-list {
+  padding: 0 !important;
+}
+
+.tab-content .slider-nav .slick-list .slick-track {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  -webkit-transform: none !important;
+          transform: none !important;
+  max-width: 885px !important;
 }
 
 .nav-tabs {
@@ -2193,22 +2174,20 @@ input[type=checkbox]:checked + span.custom-check:after {
 }
 
 @media screen and (min-width: 992px) {
-  .standard-modal .standard-slider {
+  .standard-modal .room-modal-slider {
     margin-bottom: 30px;
   }
 }
 
-.standard-modal .standard-slider .room-image {
+.standard-modal .room-modal-slider img {
   height: 184px;
   width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media screen and (min-width: 992px) {
-  .standard-modal .standard-slider .room-image {
+  .standard-modal .room-modal-slider img {
     height: 498px;
   }
 }
@@ -2397,6 +2376,12 @@ input[type=checkbox]:checked + span.custom-check:after {
   font-family: "Montserrat", sans-serif;
 }
 
+.loading-spinner .fa {
+  height: auto;
+  width: auto;
+  margin: 0;
+}
+
 .sidenav {
   height: 100%;
   width: 0;
@@ -2408,7 +2393,7 @@ input[type=checkbox]:checked + span.custom-check:after {
   overflow-x: hidden;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  padding-top: 65px;
+  padding-top: 80px;
   max-width: 500px;
 }
 
@@ -2555,6 +2540,7 @@ input[type=checkbox]:checked + span.custom-check:after {
   background-position: calc(100% - 8px) 50%;
   background-repeat: no-repeat;
   background-color: #57565b;
+  font-family: "Montserrat", sans-serif;
 }
 
 .booking-widget .widget-form .form-control:hover {
@@ -2597,6 +2583,20 @@ input[type=checkbox]:checked + span.custom-check:after {
   background-image: url(../../../../public/images/icons/calendar-light.png) !important;
 }
 
+.booking-widget .widget-form .booking-widget-datepicker .asd__wrapper {
+  right: 0 !important;
+  top: 121px !important;
+  left: 20px !important;
+}
+
+@media screen and (min-width: 991px) {
+  .booking-widget .widget-form .booking-widget-datepicker .asd__wrapper {
+    right: 0 !important;
+    top: 240px !important;
+    left: 40px !important;
+  }
+}
+
 .booking-widget .widget-form .form-group {
   margin-bottom: 40px;
 }
@@ -2621,6 +2621,14 @@ input[type=checkbox]:checked + span.custom-check:after {
 .booking-widget .widget-form .btn-cta {
   background-color: rgba(240, 240, 240, 0.2);
   border: solid 2px rgba(240, 240, 240, 0.2);
+  font-weight: 500;
+}
+
+.booking-widget .widget-form .btn-cta:hover {
+  cursor: pointer;
+  background-color: #f6f6f6;
+  border: solid 2px #f6f6f6;
+  color: #57565b !important;
 }
 
 .booking-widget .widget-form .free-drink {
@@ -2679,11 +2687,16 @@ input[type=checkbox]:checked + span.custom-check:after {
 .booking-widget .widget-form .guest-quantity button {
   text-align: center;
   height: 45px;
-  width: 45px;
-  border: 1px solid #57565b;
+  min-width: 45px;
+  border: solid 1px #57565b;
   color: #57565b;
   border-radius: 2px;
-  background-color: #f0f0f0;
+  background-color: rgba(255, 255, 255, 0);
+  font-size: 18px;
+}
+
+.booking-widget .widget-form .guest-quantity button:hover {
+  cursor: pointer;
 }
 
 .booking-widget .widget-form .guest-quantity .guest-info .room-number {
@@ -2708,7 +2721,18 @@ input[type=checkbox]:checked + span.custom-check:after {
 }
 
 .booking-widget .widget-form .guest-quantity .guest-info .align {
-  padding: 0 0 0 30px;
+  padding: 0 0 0 20px;
+}
+
+@media screen and (min-width: 500px) {
+  .booking-widget .widget-form .guest-quantity .guest-info .align {
+    padding: 0 0 0 30px;
+  }
+}
+
+.booking-widget .widget-form .guest-quantity .guest-info .age {
+  font-size: 18px;
+  color: #abaaad;
 }
 
 .booking-widget .widget-form .guest-quantity span {
@@ -2721,10 +2745,23 @@ input[type=checkbox]:checked + span.custom-check:after {
 .booking-widget .widget-form .guest-quantity .guest-widget-buttons {
   display: none;
   position: absolute;
-  padding: 30px 20px 24px 20px;
+  padding: 30px 15px 24px 15px;
   background: #f0f0f0;
   width: 100%;
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 992px) {
+  .booking-widget .widget-form .guest-quantity .guest-widget-buttons {
+    padding: 30px 20px 24px 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .booking-widget .widget-form .guest-quantity .guest-widget-buttons {
+    margin-left: -20px;
+    width: 100vw;
+  }
 }
 
 .booking-widget .widget-form .guest-quantity .guest-widget-buttons:before {
@@ -2744,6 +2781,34 @@ input[type=checkbox]:checked + span.custom-check:after {
 .booking-widget .widget-form .guest-quantity .guest-widget-buttons p {
   color: #57565b;
   width: 100%;
+}
+
+.booking-widget .widget-form .guest-quantity .guest-widget-buttons .apply-btn {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #f6f6f6;
+  background-color: #57565b;
+  border-radius: 2px;
+  border: 2px solid #57565b;
+  padding: 13.5px 20px;
+  -webkit-box-shadow: inset 0px 0px 0px 1px #cccccd;
+  box-shadow: inset 0px 0px 0px 1px #cccccd;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  width: auto;
+  height: 50px;
+  padding: 0 20px;
+  margin-top: 30px;
+  float: right;
+  font-weight: 500;
+}
+
+.booking-widget .widget-form .guest-quantity .guest-widget-buttons .apply-btn:hover {
+  cursor: pointer;
+  background-color: rgba(87, 86, 91, 0.8);
+  border: 2px solid rgba(87, 86, 91, 0.8);
 }
 
 .mini-nav {
@@ -3117,7 +3182,7 @@ p {
   color: #fff;
   font-size: 14px;
   font-weight: 500;
-  padding: 12px 20px;
+  padding: 15px 20px;
   font-family: "Montserrat", sans-serif;
   height: 50px;
   text-transform: uppercase;

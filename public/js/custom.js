@@ -73,8 +73,6 @@ $( document ).ready(function() {
       e.preventDefault();
       $(this).next('.form-group').slideToggle();
   });
-
-
   $('#testp1').on('click', function () {
       alert('aaaa');
       $('.guest-widget-buttons').slideToggle();

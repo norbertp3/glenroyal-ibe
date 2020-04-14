@@ -8,7 +8,7 @@
   background-color: $primaryColor;
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 65px;
+  padding-top: 80px;
   max-width: 500px;
   @include mQ(992px) {
     padding-top: 80px;
@@ -122,7 +122,7 @@
       background-position: calc(100% - 8px) 50%;
       background-repeat: no-repeat;
       background-color: #57565b;
-
+      font-family: $textFont;
       &:hover {
           cursor: pointer;
       }
@@ -141,6 +141,16 @@
     .booking-widget-datepicker {
       .form-control {
         background-image: url(../../../../public/images/icons/calendar-light.png)!important;
+      }
+      .asd__wrapper {
+        right: 0!important;
+        top: 121px!important;
+        left: 20px!important;
+        @include mQ (991px) {
+          right: 0!important;
+          top: 240px!important;
+          left: 40px!important;
+        }
       }
     }
     .form-group {
@@ -163,6 +173,13 @@
     .btn-cta {
       background-color: rgba(240, 240, 240, 0.2);
       border: solid 2px rgba(240, 240, 240, 0.2);
+      font-weight: 500;
+      &:hover {
+        cursor: pointer;
+        background-color: #f6f6f6;
+        border: solid 2px #f6f6f6;
+        color: #57565b!important;
+      }
     }
     .free-drink {
       padding: 20px 0;
@@ -207,11 +224,15 @@
       button {
         text-align: center;
         height: 45px;
-        width: 45px;
-        border: 1px solid #57565b;
+        min-width: 45px;
+        border: solid 1px #57565b;
         color: #57565b;
         border-radius: 2px;
-        background-color: #f0f0f0;
+        background-color: rgba(255, 255, 255, 0);
+        font-size: 18px;
+        &:hover {
+          cursor: pointer;
+        }
       }
       .guest-info {
         .room-number {
@@ -231,7 +252,14 @@
           }
         }
         .align {
-          padding: 0 0 0 30px;
+          padding: 0 0 0 20px;
+          @include mQ (500px) {
+            padding: 0 0 0 30px;
+          }
+        }
+        .age {
+          font-size: 18px;
+          color: #abaaad;
         }
       }
       span {
@@ -244,10 +272,17 @@
       .guest-widget-buttons {
         display: none;
         position: absolute;
-        padding: 30px 20px 24px 20px;
+        padding: 30px 15px 24px 15px;
+        @include mQ (992px) {
+          padding: 30px 20px 24px 20px;
+        }
         background: #f0f0f0;
         width: 100%;
         margin-bottom: 30px;
+        @include mQmax (500px) {
+          margin-left: -20px;
+          width: 100vw;
+        }
         &:before {
           content:'';
           position: absolute;
@@ -265,10 +300,36 @@
           color: #57565b;
           width: 100%;
         }
+          .apply-btn {
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 2px;
+            color: #f6f6f6;
+            background-color: #57565b;
+            border-radius: 2px;
+            border: 2px solid #57565b;
+            padding: 13.5px 20px;
+            -webkit-box-shadow: inset 0px 0px 0px 1px #cccccd;
+            box-shadow: inset 0px 0px 0px 1px #cccccd;
+            text-transform: uppercase;
+            font-family: "Montserrat", sans-serif;
+            width: auto;
+            height: 50px;
+            padding: 0 20px;
+            margin-top: 30px;
+            float: right;
+            font-weight: 500;
+            &:hover {
+              cursor: pointer;
+              background-color: rgba(87, 86, 91, 0.8);
+              border: 2px solid rgba(87, 86, 91, 0.8);
+            }
+          }
+        }
       }
     }
   }
-}
 
 
 .mini-nav {

@@ -315,7 +315,7 @@
                   </div>
                   <div class="text-center ml-3">
                     <span class="mobile-rate-free-cancel d-block d-lg-none">Free Cancellation</span>
-                    <a href="#" class="btn btn-primary select-rate-btn"><span class="">€ </span>67<span class="price-after-decimal">.50</span> <i
+                    <a href="#" class="btn btn-primary select-rate-btn loading-spinner"><span class="">€ </span>67<span class="price-after-decimal">.50</span> <i
                         class="icon-chevron-right"></i></a>
                   </div>
                 </div>
@@ -418,6 +418,123 @@
   </div>
 </footer>
 
+<div id="booking-widget" class="booking-widget">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeWidget()">
+      <img src="public/images/icons/close-x.svg" alt="">
+  </a>
+  <div class="widget-form">
+      <h2 class="d-none d-lg-block">Book Your Stay</h2>
+
+      <form action="">
+          <div class="form-group">
+              <div class="booking-widget-datepicker">
+                  <input class="form-control" type="text" id="trigger-single" :value="formatDates(arrivalDate)" placeholder="Select date" readonly>
+                  <input type="hidden" name="arrival" :value="arrivalDate">
+                  <airbnb-style-datepicker
+                          :trigger-element-id="'trigger-single'"
+                          :mode= "'single'"
+                          :date-one="arrivalDate"
+                          :months-to-show="1"
+                          @date-one-selected="dateSelected"
+                  ></airbnb-style-datepicker>
+              </div>
+          </div>
+          <div class="form-group">
+              <select class="form-control" id="exampleFormControlSelect1">
+                  <option>1 Night</option>
+                  <option>2 Nights</option>
+                  <option>3 Nights</option>
+                  <option>4 Nights</option>
+                  <option>5 Nights</option>
+              </select>
+          </div>
+
+          <div class="guest-quantity" id="guest-widget" v-for="room in rooms">
+              <div class="d-flex total-guests roll" v-on:click="isHidden = !isHidden">
+                  <p>{{totalRooms}} room</p>
+                  <p>{{totalPeople}} people</p>
+              </div>
+
+              <div class="guest-widget-buttons" v-if="!isHidden">
+                  <div class="d-flex align-items-center justify-content-between">
+                      <p>How many rooms?</p>
+                      <div class="d-flex align-items-center justify-content-between w-50">
+                          <button type="button" @click="room.quantity -= 1">-</button>
+                              <span v-model.number="room.quantity">{{room.quantity}}</span>
+                          <button type="button" @click="room.quantity += 1">+</button>
+                      </div>
+                  </div>
+                  <div class="guest-info" v-if="room.quantity >= 4">
+                      <p class="room-number">Room {{room.quantity}}</p>
+                      <div class="align">
+                          <div class="d-flex align-items-center mb-3" v-for="person in people">
+                              <p>{{person.name}}</p>
+                              <div class="d-flex align-items-center justify-content-between w-50">
+                                  <button type="button" @click="person.quantity -= 1">-</button>
+                                      <span>{{person.quantity}}</span>
+                                  <button type="button" @click="person.quantity += 1">+</button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="guest-info" v-if="room.quantity >= 3">
+                      <p class="room-number">Room {{room.quantity}}</p>
+                      <div class="align">
+                          <div class="d-flex align-items-center mb-3" v-for="person in people">
+                              <p>{{person.name}}</p>
+                              <div class="d-flex align-items-center justify-content-between w-50">
+                                  <button type="button" @click="person.quantity -= 1">-</button>
+                                      <span>{{person.quantity}}</span>
+                                  <button type="button" @click="person.quantity += 1">+</button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="guest-info" v-if="room.quantity >= 2">
+                      <p class="room-number">Room {{room.quantity}}</p>
+                      <div class="align">
+                          <div class="d-flex align-items-center mb-3" v-for="person in people">
+                              <p>{{person.name}}</p>
+                              <div class="d-flex align-items-center justify-content-between w-50">
+                                  <button type="button" @click="person.quantity -= 1">-</button>
+                                      <span>{{person.quantity}}</span>
+                                  <button type="button" @click="person.quantity += 1">+</button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="guest-info" v-if="room.quantity >= 1">
+                      <p class="room-number">Room {{room.quantity}}</p>
+                      <div class="align">
+                          <div class="d-flex align-items-center my-3" v-for="person in people">
+                              <p>{{person.name}}</p>
+                              <div class="d-flex align-items-center justify-content-between w-50">
+                                  <button type="button" @click="person.quantity -= 1">-</button>
+                                      <span>{{person.quantity}}</span>
+                                  <button type="button" @click="person.quantity += 1">+</button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <button type="button" class="apply-btn" v-on:click="isHidden = true">Apply</button>
+              </div>
+          </div>
+
+          <div class="promo-code">
+              <a href="javascript:;" class="promo-code-link">Add a code +</a>
+              <div class="form-group">
+                  <input type="email" class="form-control" placeholder="Type your code...">
+              </div>
+          </div>
+          <button type="submit" class="btn-cta w-100 loading-spinner">Search</button>
+      </form>
+      <div class="d-flex align-items-center free-drink">
+          <img src="public/images/icons/icon-free-drink.svg">
+          <p>Book online with us and get a free drink at or hot beverage at the Arkle Bar & Restaurant!</p>
+      </div>
+  </div>
+</div>
+
     
     <!-- JS Files -->
 
@@ -452,22 +569,146 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/vue-airbnb-style-datepicker@2.1.0/dist/no-dep/vue-airbnb-style-datepicker.min.js"></script>
 
+    <!-- Vue Datepicker -->
     <script>
-            // define options (optional)
-            var datepickerOptions = {
-              sundayFirst: true
-            }
-            // install plugin
-            Vue.use(window.AirbnbStyleDatepicker, datepickerOptions)
-        
-            var app = new Vue({
-              el: '#app',
-              data: {
-                date1: '',
-                date2: ''
+
+      window.datePickerMixin = {
+          data: {
+              dateFormat: '',
+              arrivalDate: ''
+          },
+          methods: {
+              dateSelected: function(date) {
+                  this.arrivalDate = date;
+              },
+
+              getDateSuffix: function(d) {
+                  if (d > 3 && d < 21) return 'th';
+                  switch (d % 10) {
+                      case 1:  return "st";
+                      case 2:  return "nd";
+                      case 3:  return "rd";
+                      default: return "th";
+                  }
+              },
+
+              formatDates: function(date) {
+                  var daysShort = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+                  var shortMonthNames = [
+                      'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',
+                  ];
+
+                  var date = new Date(date);
+
+                  return daysShort[date.getUTCDay()] + ' ' + date.getUTCDate() + this.getDateSuffix(date.getUTCDate()) + ' ' + shortMonthNames[date.getUTCMonth()];
               }
-            })
-          </script>
+          }
+      }
+
+      window.initDatePicker = function(arrivalDate) {
+          var datePickers = document.querySelectorAll('.date-picker');
+          if ( ! datePickers || ! datePickers.length) {
+              return;
+          }
+
+          // define options (optional)
+          var datepickerOptions = {
+              sundayFirst: true,
+              colors: {
+                  selected: '#57565b',
+                  inRange: '#66e2da',
+                  selectedText: '#fff',
+                  text: '#565a5c',
+                  inRangeBorder: '#33dacd',
+                  disabled: '#fff',
+                  hoveredInRange: '#67f6ee'
+              },
+          }
+          // install plugin
+          Vue.use(window.AirbnbStyleDatepicker, datepickerOptions);
+
+          datePickers.forEach(function (element) {
+              new Vue({
+                  el: element,
+                  mixins: [window.datePickerMixin],
+                  mounted: function () {
+
+                      if (arrivalDate) {
+                          this.arrivalDate = arrivalDate;
+                      } else {
+                          this.arrivalDate = new Date();
+                      }
+                  }
+              });
+          });
+      }
+      initDatePicker('2020-03-20');
+
+
+      window.initDatePickerBW = function(arrivalDate) {
+          var datePickers = document.querySelectorAll('.booking-widget-datepicker');
+          if ( ! datePickers || ! datePickers.length) {
+              return;
+          }
+
+          // define options (optional)
+          var datepickerOptions = {
+              sundayFirst: true,
+              colors: {
+                  selected: '#57565b',
+                  inRange: '#66e2da',
+                  selectedText: '#fff',
+                  text: '#565a5c',
+                  inRangeBorder: '#33dacd',
+                  disabled: '#fff',
+                  hoveredInRange: '#67f6ee'
+              },
+          }
+          // install plugin
+          Vue.use(window.AirbnbStyleDatepicker, datepickerOptions);
+
+          datePickers.forEach(function (element) {
+              new Vue({
+                  el: element,
+                  mixins: [window.datePickerMixin],
+                  mounted: function () {
+
+                      if (arrivalDate) {
+                          this.arrivalDate = arrivalDate;
+                      } else {
+                          this.arrivalDate = new Date();
+                      }
+                  }
+              });
+          });
+      }
+      initDatePickerBW('2020-03-20');
+
+  
+  </script>
+
+    <script>
+      new Vue({
+          el: '#guest-widget',
+          data: {
+              rooms: [{"id":1,"quantity":1,"name":"Room"}],
+              people: [{"id":1,"quantity":1,"name":"Adult"},{"id":2,"quantity":0,"name":"Children"},{"id":3,"quantity":0,"name":"Infant"}],
+              isHidden: true
+          },
+          computed: {
+              totalRooms () {
+                  return this.rooms.reduce((sum, room) => {
+                      return sum + room.quantity
+                  }, 0)
+              },
+              totalPeople () {
+                  return this.people.reduce((sum, people) => {
+                      return sum + people.quantity
+                  }, 0)
+              }
+          }
+      })
+    </script>
     
     <!-- Custom -->
     <script src="public/js/p3core.js"></script>
