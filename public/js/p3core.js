@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // Spinner
-$('.loading-spinner').click(function () {
+$('.loading-spinner').one('click', function () {
   $(this).append('<i class="fa fa-spinner fa-spin ml-2"></i>');
 });
 
