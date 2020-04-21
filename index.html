@@ -449,7 +449,8 @@
               </select>
           </div>
 
-          <div class="guest-quantity" id="guest-widget" v-for="room in rooms">
+          <div id="guest-widget">
+            <div class="guest-quantity"  v-for="room in rooms">
               <div class="d-flex total-guests roll" v-on:click="isHidden = !isHidden">
                   <p>{{totalRooms}} room</p>
                   <p>{{totalPeople}} people</p>
@@ -460,7 +461,7 @@
                           <p>How many rooms?</p>
                           <div class="d-flex align-items-center justify-content-between w-50">
                               <button type="button" @click="room.quantity -= 1" :disabled="room.quantity == 1">-</button>
-                                  <span v-model.number="room.quantity">{{room.quantity}}</span>
+                                  <span>{{room.quantity}}</span>
                               <button type="button" @click="room.quantity += 1">+</button>
                           </div>
                       </div>
@@ -525,7 +526,9 @@
                       <button type="button" class="apply-btn" v-on:click="isHidden = true">Apply</button>
                   </div>
               </div>
+            </div>
           </div>
+
           <div class="promo-code">
               <a href="javascript:;" class="promo-code-link">Add a code +</a>
               <div class="form-group">
@@ -568,10 +571,10 @@
 
     
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="https://unpkg.com/vue-airbnb-style-datepicker@2.1.0/dist/no-dep/vue-airbnb-style-datepicker.min.js"></script>
+    <!-- <script src="https://unpkg.com/vue-airbnb-style-datepicker@2.1.0/dist/no-dep/vue-airbnb-style-datepicker.min.js"></script> -->
 
     <!-- Vue Datepicker -->
-    <script>
+    <!-- <script>
 
       window.datePickerMixin = {
           data: {
@@ -686,7 +689,7 @@
       initDatePickerBW('2020-03-20');
 
   
-  </script>
+  </script> -->
 
     <script>
       new Vue({
