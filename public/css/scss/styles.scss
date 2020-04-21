@@ -437,6 +437,7 @@ sup {
 
 .search-rates {
     .booking-widget-search-rates {
+      margin-top: 10px;
         margin-left: auto;
         margin-right: auto;
         // z-index: 999!important;
@@ -660,33 +661,34 @@ sup {
               font-family: $textFont;
             }
             .guest-widget-buttons {
-            //   @include mQmax (500px) {
-            //     position: static;
-            //     top: 0;
-            //     left: 0;
-            //     width: 100%;
-            //     height: 100%;
-            //     z-index: 1;
-            //     background-color: rgba(0,0,0,0.5);
-            //   }
-              .guest-widget-buttons-container {
+              // height: 100%;
+              // @include mQmax (500px) {
+              //   position: static;
+              //   top: 0;
+              //   left: 0;
+              //   width: 100%;
+              //   height: 100%;
+              //   z-index: 1;
+              //   background-color: rgba(0,0,0,0.5);
+              // }
+              }
+            .guest-widget-buttons-container {
                 scroll-behavior: smooth;
                 display: none;
-                position: absolute;
-                padding: 20px 15px;
+                position: relative;
+                padding: 20px 15px 80px 15px;
+                // overflow-y: auto;
                 @include mQ (992px) {
-                  padding: 30px 20px 24px 20px;
+                  padding: 30px 20px 100px 20px;
                 }
                 background: #fff;
                 width: 100%;
                 margin-bottom: 30px;
                 @include mQmax (500px) {
-                  // margin-left: -20px;
+                  margin-left: -20px;
                   bottom: 0;
                   width: 100vw;
                   margin-bottom: 0;
-                  height: 70vh;
-                  overflow-y: auto;
                 }
                 &:before {
                   content:'';
@@ -697,7 +699,7 @@ sup {
                   margin-left: 20px;
                   width: 0;
                   height: 0;
-                  border-bottom: solid 10px #f0f0f0;
+                  border-bottom: solid 10px #fff;
                   border-left: solid 10px transparent;
                   border-right: solid 10px transparent;
                 }
@@ -740,7 +742,6 @@ sup {
                     }
                   }
                 }
-              }
             }
           }
         }

@@ -3668,6 +3668,7 @@ sup {
 }
 
 .search-rates .booking-widget-search-rates {
+  margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
   height: 100%;
@@ -3963,33 +3964,32 @@ sup {
   font-family: "Montserrat", sans-serif;
 }
 
-.search-rates .booking-widget-search-rates .widget-form .guest-quantity .guest-widget-buttons .guest-widget-buttons-container {
+.search-rates .booking-widget-search-rates .widget-form .guest-quantity .guest-widget-buttons-container {
   scroll-behavior: smooth;
   display: none;
-  position: absolute;
-  padding: 20px 15px;
+  position: relative;
+  padding: 20px 15px 80px 15px;
   background: #fff;
   width: 100%;
   margin-bottom: 30px;
 }
 
 @media screen and (min-width: 992px) {
-  .search-rates .booking-widget-search-rates .widget-form .guest-quantity .guest-widget-buttons .guest-widget-buttons-container {
-    padding: 30px 20px 24px 20px;
+  .search-rates .booking-widget-search-rates .widget-form .guest-quantity .guest-widget-buttons-container {
+    padding: 30px 20px 100px 20px;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .search-rates .booking-widget-search-rates .widget-form .guest-quantity .guest-widget-buttons .guest-widget-buttons-container {
+  .search-rates .booking-widget-search-rates .widget-form .guest-quantity .guest-widget-buttons-container {
+    margin-left: -20px;
     bottom: 0;
     width: 100vw;
     margin-bottom: 0;
-    height: 70vh;
-    overflow-y: auto;
   }
 }
 
-.search-rates .booking-widget-search-rates .widget-form .guest-quantity .guest-widget-buttons .guest-widget-buttons-container:before {
+.search-rates .booking-widget-search-rates .widget-form .guest-quantity .guest-widget-buttons-container:before {
   content: '';
   position: absolute;
   top: -10px;
@@ -3998,21 +3998,21 @@ sup {
   margin-left: 20px;
   width: 0;
   height: 0;
-  border-bottom: solid 10px #f0f0f0;
+  border-bottom: solid 10px #fff;
   border-left: solid 10px transparent;
   border-right: solid 10px transparent;
 }
 
-.search-rates .booking-widget-search-rates .widget-form .guest-quantity .guest-widget-buttons .guest-widget-buttons-container p {
+.search-rates .booking-widget-search-rates .widget-form .guest-quantity .guest-widget-buttons-container p {
   color: #57565b;
   width: 100%;
 }
 
-.search-rates .booking-widget-search-rates .widget-form .guest-quantity .guest-widget-buttons .guest-widget-buttons-container .person-age span {
+.search-rates .booking-widget-search-rates .widget-form .guest-quantity .guest-widget-buttons-container .person-age span {
   color: #abaaad;
 }
 
-.search-rates .booking-widget-search-rates .widget-form .guest-quantity .guest-widget-buttons .guest-widget-buttons-container .apply-btn {
+.search-rates .booking-widget-search-rates .widget-form .guest-quantity .guest-widget-buttons-container .apply-btn {
   display: inline-block;
   font-size: 16px;
   font-weight: 400;
@@ -4035,12 +4035,12 @@ sup {
 }
 
 @media screen and (min-width: 992px) {
-  .search-rates .booking-widget-search-rates .widget-form .guest-quantity .guest-widget-buttons .guest-widget-buttons-container .apply-btn {
+  .search-rates .booking-widget-search-rates .widget-form .guest-quantity .guest-widget-buttons-container .apply-btn {
     margin-top: 30px;
   }
 }
 
-.search-rates .booking-widget-search-rates .widget-form .guest-quantity .guest-widget-buttons .guest-widget-buttons-container .apply-btn:hover {
+.search-rates .booking-widget-search-rates .widget-form .guest-quantity .guest-widget-buttons-container .apply-btn:hover {
   cursor: pointer;
   background-color: rgba(87, 86, 91, 0.8);
   border: 2px solid rgba(87, 86, 91, 0.8);
