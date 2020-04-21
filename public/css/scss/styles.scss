@@ -434,3 +434,314 @@ sup {
 .payment-summary-extra .payment-summary-box {
     background-color: #57565b;
 }
+
+.search-rates {
+    .booking-widget-search-rates {
+        margin-left: auto;
+        margin-right: auto;
+        // z-index: 999!important;
+        height: 100%;
+        width: 100%;
+        // position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: $primaryColor;
+        // overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 0;
+        max-width: 500px;
+
+        @include mQmax (500px) {
+          overflow-y: hidden;
+        }
+        input {
+          box-shadow: none;
+          border: none;
+          &:active, &:focus {
+            box-shadow: none;
+            border: none;
+          }
+        }
+        a {
+          padding: 15px 0;
+          text-decoration: none;
+          font-size: 25px;
+          color: #abaaad;
+          display: block;
+          transition: 0.3s;
+          &:hover {
+            color: #f1f1f1;
+          }
+        }
+        .closebtn {
+          position: absolute;
+          top: 0;
+          right: 20px;
+          font-size: 36px;
+          // margin-left: 50px;
+          @include mQ(992px) {
+            right: 40px;
+            top: 5px;
+          }
+        }
+        h2 {
+          text-align: center;
+          font-size: 35px;
+          color: #f0f0f0;
+          font-weight: 400;
+          font-family: $headingFont;
+          margin-bottom: 60px;
+        }
+        .widget-form {
+          padding: 20px;
+          @include mQ (992px) {
+            padding: 20px 40px;
+          }
+          .form-control {
+            // background: transparent;
+            color: #fff;
+            padding: 0;
+            border-bottom: solid 2px #fff;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            background-size: 15px;
+            background-position: calc(100% - 8px) 50%;
+            background-repeat: no-repeat;
+            background-color: #57565b;
+            font-family: $textFont;
+            &:hover {
+                cursor: pointer;
+            }
+            option {
+              background-color: #57565b;
+            }
+            &::placeholder {
+              color: #f6f6f6;
+              font-size: 15px;
+              line-height: 24px;
+            }
+          }
+          select {
+            background-image: url(../../../../public/images/icons/arrrow-dropdown-light.png)!important;
+          }
+          .booking-widget-datepicker {
+            .form-control {
+              background-image: url(../../../../public/images/icons/calendar-light.png)!important;
+            }
+            .asd__wrapper {
+              right: 0!important;
+              top: 121px!important;
+              left: 20px!important;
+              @include mQ (991px) {
+                right: 0!important;
+                top: 240px!important;
+                left: 40px!important;
+              }
+            }
+          }
+          .form-group {
+            margin-bottom: 40px;
+            @include mQ (992px) {
+              margin-bottom: 60px;
+            }
+          }
+          .promo-code {
+            a {
+              font-size: 18px;
+              font-style: italic;
+              font-family: $textFont;
+              color: #fff;
+            }
+            .form-group {
+              display: none;
+            }
+          }
+          .btn-cta {
+            background-color: rgba(240, 240, 240, 0.2);
+            border: solid 2px rgba(240, 240, 240, 0.2);
+            font-weight: 500;
+            &:hover {
+              cursor: pointer;
+              background-color: #f6f6f6;
+              border: solid 2px #f6f6f6;
+              color: #57565b!important;
+            }
+          }
+          .free-drink {
+            padding: 20px 0;
+            margin-top: 30px;
+            @include mQ (992px) {
+              margin-top: 50px;
+            }
+            border-top: solid 1px #fff;
+            border-bottom: solid 1px #fff;
+            p {
+              color: #fff;
+              margin-left: 10px;
+              font-size: 16px;
+              line-height: 26px;
+            }
+          }
+          .guest-quantity {
+            position: relative;
+            p {
+              color: #fff;
+              width: 100px;
+            }
+            .total-guests {
+              border-bottom: solid 2px #fff;
+              margin-bottom: 20px;
+              p {
+                width: auto;
+                padding-bottom: 5px;
+                &:after {
+                  content: "\2022";
+                  padding: 0 10px;
+                  color: #abaaad;
+                }
+                &:last-child:after {
+                  content: '';
+                }
+              }
+              &:hover {
+                cursor: pointer;
+              }
+            }
+            button {
+              text-align: center;
+              height: 45px;
+              min-width: 45px;
+              border: solid 1px #57565b;
+              color: #57565b;
+              border-radius: 2px;
+              background-color: rgba(255, 255, 255, 0);
+              font-size: 18px;
+              &:hover {
+                cursor: pointer;
+              }
+              &:disabled {
+                border: solid 1px #ccc;
+                color: #ccc;
+              }
+            }
+            .guest-info {
+              .room-number {
+                margin: 20px 0;
+                width: 100%;
+                text-align: left;
+                border-bottom: 1px solid rgba(87, 86, 91, 0.2);
+                line-height: .1em;
+                span {
+                  background-color: #fff;
+                  padding: 0 10px 0 0;
+                }
+                @include mQ (992px) {
+                  margin: 30px 0 40px 0;
+                }
+              }
+              .align {
+                padding: 0 0 0 20px;
+                @include mQ (500px) {
+                  padding: 0 0 0 30px;
+                }
+              }
+              .age {
+                font-size: 18px;
+                color: #abaaad;
+              }
+            }
+            span {
+              // margin: 0 20px;
+              text-align: center;
+              width: 50px;
+              color: #57565b;
+              font-family: $textFont;
+            }
+            .guest-widget-buttons {
+            //   @include mQmax (500px) {
+            //     position: static;
+            //     top: 0;
+            //     left: 0;
+            //     width: 100%;
+            //     height: 100%;
+            //     z-index: 1;
+            //     background-color: rgba(0,0,0,0.5);
+            //   }
+              .guest-widget-buttons-container {
+                scroll-behavior: smooth;
+                display: none;
+                position: absolute;
+                padding: 20px 15px;
+                @include mQ (992px) {
+                  padding: 30px 20px 24px 20px;
+                }
+                background: #fff;
+                width: 100%;
+                margin-bottom: 30px;
+                @include mQmax (500px) {
+                  // margin-left: -20px;
+                  bottom: 0;
+                  width: 100vw;
+                  margin-bottom: 0;
+                  height: 70vh;
+                  overflow-y: auto;
+                }
+                &:before {
+                  content:'';
+                  position: absolute;
+                  top: -10px;
+                  left: 0px;
+                  right: 0;
+                  margin-left: 20px;
+                  width: 0;
+                  height: 0;
+                  border-bottom: solid 10px #f0f0f0;
+                  border-left: solid 10px transparent;
+                  border-right: solid 10px transparent;
+                }
+                p{
+                  color: #57565b;
+                  width: 100%;
+                }
+                .person-age {
+                  span {
+                    color: #abaaad;
+                  }
+                }
+                  .apply-btn {
+                    display: inline-block;
+                    font-size: 16px;
+                    font-weight: 400;
+                    letter-spacing: 2px;
+                    color: #f6f6f6;
+                    background-color: #57565b;
+                    border-radius: 2px;
+                    border: 2px solid #57565b;
+                    padding: 13.5px 20px;
+                    -webkit-box-shadow: inset 0px 0px 0px 1px #cccccd;
+                    box-shadow: inset 0px 0px 0px 1px #cccccd;
+                    text-transform: uppercase;
+                    font-family: "Montserrat", sans-serif;
+                    width: auto;
+                    height: 50px;
+                    padding: 0 20px;
+                    margin-top: 10px;
+                    float: right;
+                    font-weight: 500;
+                    @include mQ (992px) {
+                      margin-top: 30px;
+                    }
+                    &:hover {
+                      cursor: pointer;
+                      background-color: rgba(87, 86, 91, 0.8);
+                      border: 2px solid rgba(87, 86, 91, 0.8);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+}

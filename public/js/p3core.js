@@ -82,9 +82,6 @@ $('.loading-spinner').one('click', function () {
     e.preventDefault();
     $(this).next('.form-group').slideToggle();
   });
-  $('#guest-widget').on('click', function () {
-    $('.guest-widget-buttons').show();
-  });
   
   // Sliders
   $('.standard-slider').slick({
