@@ -1473,3 +1473,31 @@ input[type=checkbox]:checked+span.custom-check:after {
         margin: 0;
     }
 }
+
+.form-control.validationError, .form-control.validationError:focus {
+    border: 1px solid #dc3545;
+    padding-right: calc(1.5em + .75rem);
+    background-image: $iconInValid;
+    background-repeat: no-repeat;
+    background-position: center right calc(.375em + .1875rem);
+    background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+    background-color: #fff!important;
+    &:focus {
+        background-image: none;
+        border: 1px solid #dc3545;
+    }
+}
+
+.form-control.valid {
+    border: 1px solid #28a745;
+    padding-right: calc(1.5em + .75rem);
+    background-image: $iconValid;
+    background-repeat: no-repeat;
+    background-position: center right calc(.375em + .1875rem);
+    background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+    background-color: #fff!important;
+    &:focus {
+        background-image: none;
+        border: 1px solid #28a745;
+    }
+}

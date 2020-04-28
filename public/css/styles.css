@@ -2382,6 +2382,36 @@ input[type=checkbox]:checked + span.custom-check:after {
   margin: 0;
 }
 
+.form-control.validationError, .form-control.validationError:focus {
+  border: 1px solid #dc3545;
+  padding-right: calc(1.5em + .75rem);
+  background-image: url(../../../public/images/icons/p3/icon-form-invalid.svg);
+  background-repeat: no-repeat;
+  background-position: center right calc(.375em + .1875rem);
+  background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+  background-color: #fff !important;
+}
+
+.form-control.validationError:focus, .form-control.validationError:focus:focus {
+  background-image: none;
+  border: 1px solid #dc3545;
+}
+
+.form-control.valid {
+  border: 1px solid #28a745;
+  padding-right: calc(1.5em + .75rem);
+  background-image: url(../../../public/images/icons/p3/icon-form-valid.svg);
+  background-repeat: no-repeat;
+  background-position: center right calc(.375em + .1875rem);
+  background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+  background-color: #fff !important;
+}
+
+.form-control.valid:focus {
+  background-image: none;
+  border: 1px solid #28a745;
+}
+
 .sidenav {
   height: 100%;
   width: 0;
