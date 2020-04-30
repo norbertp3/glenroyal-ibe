@@ -199,6 +199,14 @@ input[type=checkbox]:checked+span.custom-check:after {
     @include formStyleElements;
 }
 
+label.validationError {
+    display: none;
+    width: 100%;
+    margin-top: .25rem;
+    font-size: 80%!important;
+    color: #dc3545!important; 
+}
+
 // Mobile Hotel Info
 #mobile-hotel-info {
     background-color: $primaryColor;
@@ -1474,7 +1482,7 @@ input[type=checkbox]:checked+span.custom-check:after {
     }
 }
 
-.form-control.validationError, .form-control.validationError:focus {
+.form-control.validationError {
     border: 1px solid #dc3545;
     padding-right: calc(1.5em + .75rem);
     background-image: $iconInValid;

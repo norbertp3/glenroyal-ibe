@@ -464,6 +464,14 @@ input[type=checkbox]:checked + span.custom-check:after {
   color: rgba(51, 50, 50, 0.4);
 }
 
+label.validationError {
+  display: none;
+  width: 100%;
+  margin-top: .25rem;
+  font-size: 80% !important;
+  color: #dc3545 !important;
+}
+
 #mobile-hotel-info {
   background-color: #57565b;
   padding: 14px 0;
@@ -2382,7 +2390,7 @@ input[type=checkbox]:checked + span.custom-check:after {
   margin: 0;
 }
 
-.form-control.validationError, .form-control.validationError:focus {
+.form-control.validationError {
   border: 1px solid #dc3545;
   padding-right: calc(1.5em + .75rem);
   background-image: url(../../../public/images/icons/p3/icon-form-invalid.svg);
@@ -2392,7 +2400,7 @@ input[type=checkbox]:checked + span.custom-check:after {
   background-color: #fff !important;
 }
 
-.form-control.validationError:focus, .form-control.validationError:focus:focus {
+.form-control.validationError:focus {
   background-image: none;
   border: 1px solid #dc3545;
 }
@@ -4074,5 +4082,10 @@ sup {
   cursor: pointer;
   background-color: rgba(87, 86, 91, 0.8);
   border: 2px solid rgba(87, 86, 91, 0.8);
+}
+
+.search-rates .booking-widget-search-rates .widget-form .error-message {
+  color: #fff;
+  padding-bottom: 20px;
 }
 /*# sourceMappingURL=styles.css.map */
