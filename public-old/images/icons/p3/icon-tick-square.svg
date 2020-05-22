@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>element/icon/tick</title>
+    <desc>Created with Sketch.</desc>
+    <g id="element/icon/tick" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M5.85213331,10.7014224 L13.3567021,3.27886423 C13.7326292,2.90704526 14.3421275,2.90704526 14.7180546,3.27886423 C15.0939818,3.6506832 15.0939818,4.25352086 14.7180546,4.62533983 L6.53280961,12.7211358 C6.15688247,13.0929547 5.54738416,13.0929547 5.17145702,12.7211358 L1.28194535,8.87412904 C0.906018216,8.50231007 0.906018216,7.89947241 1.28194535,7.52765344 C1.65787249,7.15583446 2.2673708,7.15583446 2.64329794,7.52765344 L5.85213331,10.7014224 Z" id="tick" fill="#FFFFFF" fill-rule="nonzero"></path>
+    </g>
+</svg>

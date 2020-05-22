@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HOME PAGE</title>
+    <title>Rooms and Rates</title>
 
 
 
     <!-- Vendors -->
-    <link rel="stylesheet" href="public/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="public/css/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="public/css/slick-theme.css"/>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/slick-theme.css"/>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/vue-airbnb-style-datepicker@2.1.0/dist/vue-airbnb-style-datepicker.min.css">
     <!-- Main CSS -->
-    <link rel="stylesheet" href="public/css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital@0;1&display=swap" rel="stylesheet">
@@ -27,7 +27,7 @@
   <header>
     <div class="main-nav position-relative d-none d-lg-block">
         <div class="top-main-nav text-center">
-            <a href="#"><img src="public/images/logo-stars-placeholder.png" alt=""></a>
+            <a href="#"><img src="/images/logo-stars-placeholder.png" alt=""></a>
             <a href="#" class="book-btn-nav position-absolute" onclick="openWidget()">BOOK YOUR STAY</a>
         </div>
         <div class="container-fluid">
@@ -50,7 +50,7 @@
 
     <div class="mini-nav d-flex d-lg-none justify-content-between align-items-center navbar-hide">
         <div class="mini-nav-align d-flex">
-            <img src="public/images/icons/icon-hamburger.svg" onclick="openNav()">
+            <img src="/images/icons/icon-hamburger.svg" onclick="openNav()">
             <form action="" method="get" id="currencyConverter" class="dropdown-currency ml-3">
               <input type="hidden" name="redirect">
               <select id="currency-options" class="price-select" name="currencyCode" onchange="">
@@ -60,14 +60,14 @@
               </select>
             </form>
         </div>
-        <a href="#"><img src="public/images/logo-mark-grey.png"></a>
+        <a href="#"><img src="/images/logo-mark-grey.png"></a>
         <!-- <a href="#" class="book-btn-nav d-none d-md-block" onclick="openWidget()">BOOK YOUR STAY</a> -->
     </div>
 </header>
 
 <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
-        <img src="public/images/icons/close-x.svg" alt="">
+        <img src="/images/icons/close-x.svg" alt="">
     </a>
     <div class="side-nav-links text-center">
         <a href="#">About</a>
@@ -92,7 +92,7 @@
 
 <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
-        <img src="public/images/icons/close-x.svg" alt="">
+        <img src="/images/icons/close-x.svg" alt="">
     </a>
     <div class="side-nav-links text-center">
         <a href="#">About</a>
@@ -132,7 +132,7 @@
         <div class="col-6"></div>
         <div class="col-6">
           <a href="#"><div class="hotel-gallery" style="background-image: linear-gradient(104deg, rgba(51, 50, 50, 0.5), rgba(26, 25, 25, 0) 85%,rgba(26, 26, 26, 0) 81%, rgba(0, 0, 0, 0)), url(https://www.ahstatic.com/photos/9399_ho_00_p_1024x768.jpg)">
-            <img src="public/images/icons/p3/icon-open-gallery.svg" class="icon-open-gallery">
+            <img src="/images/icons/p3/icon-open-gallery.svg" class="icon-open-gallery">
           </div></a>
         </div>
       </div>
@@ -202,8 +202,8 @@
         </section>
 
         <div class="desktop-sign-up d-none d-xl-block d-xl-flex mb-4">
-          <img data-src="/public/images/img-join.jpg" class="lazyload d-none d-xl-block">
-          <img data-src="/public/images/img-join-landscape.png" class="lazyload d-xl-none mb-3" height="200px" width="100%">
+          <img data-src="/images/img-join.jpg" class="lazyload d-none d-xl-block">
+          <img data-src="/images/img-join-landscape.png" class="lazyload d-xl-none mb-3" height="200px" width="100%">
           <div class="desktop-sign-up-content">
             <h2>Sign up for 10% off</h2>
             <p>Join our loyalty club for free for special discounted rates. It only takes a minute!</p>
@@ -217,7 +217,7 @@
         <section id="progress-steps">
           <!-- Progress Steps Mobile -->
           <div class="progress-steps-mobile d-flex d-md-none align-items-center">
-            <img src="public/images/icons/p3/icon-progress-1-of-5.svg" alt="">
+            <img src="/images/icons/p3/icon-progress-1-of-5.svg" alt="">
             <div>
               <h3>Choose Room 1 of 2</h3>
               <span>Next : Choose Room 2</span>
@@ -254,11 +254,11 @@
           <div class="room-wrapper d-md-flex">
              <!-- Mobile Room Slider LOOP-->
               <div class="standard-slider d-md-none">
-                  <div class="room-image" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(4,3,62,0) 20%, rgba(9,9,121,0) 50%, rgba(4,115,191,0) 80%, rgba(0,0,0,0.3) 100%), url('../../public/images/room-image.png')";>
+                  <div class="room-image" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(4,3,62,0) 20%, rgba(9,9,121,0) 50%, rgba(4,115,191,0) 80%, rgba(0,0,0,0.3) 100%), url('/images/room-image.png')";>
                   </div>
-                  <div class="room-image" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(4,3,62,0) 20%, rgba(9,9,121,0) 50%, rgba(4,115,191,0) 80%, rgba(0,0,0,0.3) 100%), url('../../public/images/room-image.png')";>
+                  <div class="room-image" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(4,3,62,0) 20%, rgba(9,9,121,0) 50%, rgba(4,115,191,0) 80%, rgba(0,0,0,0.3) 100%), url('/images/room-image.png')";>
                   </div>
-                  <div class="room-image" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(4,3,62,0) 20%, rgba(9,9,121,0) 50%, rgba(4,115,191,0) 80%, rgba(0,0,0,0.3) 100%), url('../../public/images/room-image.png')";>
+                  <div class="room-image" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(4,3,62,0) 20%, rgba(9,9,121,0) 50%, rgba(4,115,191,0) 80%, rgba(0,0,0,0.3) 100%), url('/images/room-image.png')";>
                   </div>
               </div>
               <!-- END Mobile Room Slider LOOP-->
@@ -266,8 +266,8 @@
               <!-- Desktop Img -->
               <div class="d-none d-md-block">
                 <a href="javascript:;">
-                  <div class="room-image" style="background-image: linear-gradient(122deg, rgba(0, 0, 0, 0), rgba(26, 26, 26, 0) 81%, rgba(26, 25, 25, 0) 85%, rgba(51, 50, 50, 0.5)) , url('../../public/images/room-image.png')";>
-                    <img src="public/images/icons/p3/icon-open-gallery.svg" class="icon-open-gallery">
+                  <div class="room-image" style="background-image: linear-gradient(122deg, rgba(0, 0, 0, 0), rgba(26, 26, 26, 0) 81%, rgba(26, 25, 25, 0) 85%, rgba(51, 50, 50, 0.5)) , url('/images/room-image.png')";>
+                    <img src="/images/icons/p3/icon-open-gallery.svg" class="icon-open-gallery">
                   </div>
                 </a>
               </div>
@@ -283,9 +283,9 @@
                     <h3><i class="icon-info d-inline-block d-md-none mr-1"></i> Standard Single Room <i class="icon-info d-none d-lg-inline-block ml-1"></i></h3>
                   </a>
                   <ul class="d-none d-md-block">
-                    <li><img src="public/images/icons/p3/icon-sleeps-3.svg" alt="">Sleeps 3</li>
-                    <li><img src="public/images/icons/p3/icon-room-size.svg" alt="">18m<sup>2</sup></li>
-                    <li><img src="public/images/icons/p3/icon-beds.svg" alt="">Double & Single Bed</li>
+                    <li><img src="/images/icons/p3/icon-sleeps-3.svg" alt="">Sleeps 3</li>
+                    <li><img src="/images/icons/p3/icon-room-size.svg" alt="">18m<sup>2</sup></li>
+                    <li><img src="/images/icons/p3/icon-beds.svg" alt="">Double & Single Bed</li>
                   </ul>
                 </div>
                 <div class="d-flex justify-content-between align-items-end d-md-block room-right-side">
@@ -376,7 +376,7 @@
   <div class="container-fluid">
       <div class="footer-links">
           <div class="d-lg-flex justify-content-between align-items-center">
-              <a href="#"><img src="public/images/logo-stars-placeholder.png" alt=""></a>
+              <a href="#"><img src="/images/logo-stars-placeholder.png" alt=""></a>
               <ul class="footer-nav">
                   <li><a href="#">aaa</a></li>
                   <li><a href="#">bbb</a></li>
@@ -420,7 +420,7 @@
 
 <div id="booking-widget" class="booking-widget">
   <a href="javascript:void(0)" class="closebtn" onclick="closeWidget()">
-      <img src="public/images/icons/close-x.svg" alt="">
+      <img src="/images/icons/close-x.svg" alt="">
   </a>
   <div class="widget-form">
       <h2 class="d-none d-lg-block">Book Your Stay</h2>
@@ -538,7 +538,7 @@
           <button type="submit" class="btn btn-primary btn-cta w-100">Search</button>
       </form>
       <div class="d-flex align-items-center free-drink">
-          <img src="public/images/icons/icon-free-drink.svg">
+          <img src="/images/icons/icon-free-drink.svg">
           <p>Book online with us and get a free drink at or hot beverage at the Arkle Bar & Restaurant!</p>
       </div>
   </div>
@@ -548,26 +548,26 @@
     <!-- JS Files -->
 
     <!-- jQuery -->
-    <script src="public/js/jquery-3.5.0.min.js"></script>
+    <script src="/js/jquery-3.5.0.min.js"></script>
     
     <!-- Slick -->
-    <script type="text/javascript" src="public/js/slick.min.js"></script>
+    <script type="text/javascript" src="/js/slick.min.js"></script>
 
     <!-- Multi Select -->
-    <script type="text/javascript" src="public/js/popper.js"></script>
-    <script type="text/javascript" src="public/js/bootstrap-multiselect.js"></script>
+    <script type="text/javascript" src="/js/popper.js"></script>
+    <script type="text/javascript" src="/js/bootstrap-multiselect.js"></script>
 
     <!-- Prefixfree -->
-    <script type="text/javascript" src="public/js/prefixfree.min.js"></script>
-    <script type="text/javascript" src="public/js/prefixfree.dynamic-dom.min.js"></script>
-    <script type="text/javascript" src="public/js/prefixfree.viewport-units.js"></script>
-    <script type="text/javascript" src="public/js/prefixfree.jquery.js"></script>
+    <script type="text/javascript" src="/js/prefixfree.min.js"></script>
+    <script type="text/javascript" src="/js/prefixfree.dynamic-dom.min.js"></script>
+    <script type="text/javascript" src="/js/prefixfree.viewport-units.js"></script>
+    <script type="text/javascript" src="/js/prefixfree.jquery.js"></script>
 
     <!-- Lazyload -->
     <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.1.0/dist/lazyload.min.js"></script>
 
     <!-- Bootstrap -->
-    <script src="public/js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
 
     
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -715,8 +715,8 @@
     </script>
     
     <!-- Custom -->
-    <script src="public/js/p3core.js"></script>
-    <script src="public/js/custom.js"></script>
+    <script src="/js/p3core.js"></script>
+    <script src="/js/custom.js"></script>
 
 </body>
 </html>

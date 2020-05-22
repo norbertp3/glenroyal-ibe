@@ -1,0 +1,259 @@
+@mixin bodyText {
+    font-family: $textFont;
+    font-size: 15px;
+    line-height: 24px;
+    color: rgba(87, 86, 91, 0.8);
+    @include mQ (992px) {
+        font-size: 16px;
+        line-height: 26px;
+    }
+}
+@mixin smallText {
+    font-family: $headingFont;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 14px;
+    color: rgba(87, 86, 91, 0.6);
+    @include mQ(992px) {
+        font-size: 16px;
+        line-height: 18px;
+    }
+}
+@mixin sectionHeading {
+    font-family: $headingFont;
+    font-size: 20px;
+    color: #57565b;
+    @include mQ(992px) {
+        font-size: 22px;
+    }
+}
+@mixin bodyLink {
+    color: $primaryFontColor;
+    &:hover {
+        color: $primaryFontColor;
+        cursor: pointer;
+    }
+}
+@mixin rateName {
+    color: $primaryFontColor;
+    font-family: $textFont;
+    font-size: 15px;
+    @include mQ (992px) {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    &:hover {
+        text-decoration: none;
+    }
+}
+@mixin cardHeading {
+    font-family: $textFont;
+    font-weight: 400;
+    font-size: 17px;
+    color: #57565b;
+    margin-bottom: 10px;
+    @include mQ (992px) {
+        line-height: 30px;
+    }
+}
+@mixin bookingSummaryBackground {
+    background-color: $bookingSummaryBackgroundColor;
+    // box-shadow: inset 1px 1px 0 0 #d8d8d8;
+    // border: 1px solid red;
+    @include mQ(1200px) {
+        background-color: $bookingSummaryBackgroundColorDesktop;
+        // border: 1px solid brown;
+    }
+}
+@mixin cardStyle {
+    // box-shadow: inset 0px 0px 0px 1px #d8d8d8;
+    margin-bottom: 30px;
+    background-color: $secondaryColor;
+    // border: ;
+    // background-color: ;
+    @include mQ(992px) {
+        margin-bottom: 40px;
+    }
+}
+@mixin btnPrimary {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #f6f6f6;
+    // height: 50px;
+    background-color: #57565b;
+    border-radius: 2px;
+    border: 2px solid #57565b;
+    padding: 13px 20px;
+    box-shadow:inset 0px 0px 0px 1px #f0f0f0;
+    text-transform: uppercase;
+    font-family: $textFont;
+    &:hover {
+        color: #f6f6f6!important;
+        cursor: pointer;
+        background-color: rgba(87, 86, 91, 0.8);
+        border: 2px solid rgba(87, 86, 91, 0.8);
+        box-shadow:inset 0px 0px 0px 1px #f0f0f0;
+
+    }
+    &:active {
+        color: #f6f6f6!important;
+        cursor: pointer;
+        background-color: rgba(87, 86, 91, 0.8)!important;
+        border: 2px solid rgba(87, 86, 91, 0.8)!important;
+        box-shadow:inset 0px 0px 0px 1px #f0f0f0!important;
+
+    }
+    &:focus {
+        background-color: rgba(87, 86, 91, 0.8);
+        border: 2px solid rgba(87, 86, 91, 0.8);
+        color: #f0f0f0;
+        cursor: pointer;
+        box-shadow:inset 0px 0px 0px 1px #f0f0f0;
+    }
+}
+@mixin btnSecondary {
+    background-color: inherit;
+    border-radius: 25px;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    // height: 50px;
+    padding: 14px 15px;
+}
+@mixin hotelInfoBtn {
+    border: solid 2px rgba(240, 240, 240, 0.2);
+    margin-right: 20px;
+    background-color: rgba(240, 240, 240, 0.2);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px 20px;
+    font-family: $textFont;
+    height: 50px;
+    text-transform: uppercase;
+    &:hover {
+        background-color: rgba(240, 240, 240, 0.2);
+        color: #ffffff;
+    }
+    &:active {
+        background-color: rgba(240, 240, 240, 0.2);
+        color: #ffffff;
+    }
+    &:focus {
+        box-shadow: none;
+        background-color: #fff;
+        color: #000;
+        border: solid 2px rgba(240, 240, 240, 0.2);
+    }
+    &:not(:disabled):not(.disabled):active {
+        box-shadow: none;
+        background-color: rgba(240, 240, 240, 0.2);
+        color: #ffffff;
+        border: solid 2px rgba(240, 240, 240, 0.2);
+    }
+    &:not(:disabled):not(.disabled).active:focus, &:not(:disabled):not(.disabled):active:focus, .show>&.dropdown-toggle:focus {
+        box-shadow: none;
+        background-color: rgba(240, 240, 240, 0.2);
+        color: #ffffff;
+        border: solid 1px rgba(255, 255, 255, 0.8);
+    }
+    &:not(:disabled):not(.disabled).active, &:not(:disabled):not(.disabled):active, .show>&.dropdown-toggle {
+        border: solid 2px rgba(240, 240, 240, 0.2);
+    }
+}
+
+@mixin formLabel {
+    font-size: 15px;
+    color: rgba(87, 86, 91, 0.8);
+    margin-bottom: 5px;
+    font-family: $textFont;
+    @include mQ(992px) {
+        font-size: 16px;
+    }
+}
+@mixin selectIcon {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-size: 15px;
+    background-position: calc(100% - 8px) 50%;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    background-image: $selectIcon;
+    padding: 4px 23px 4px 10px;
+    &:focus {
+        border-color: none;
+        box-shadow: none;
+    }
+}
+@mixin priceTag {
+    font-family: $textFont;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 30px;
+    color: $primaryFontColor;
+}
+@mixin priceSpan {
+    font-family: $textFont;
+    color: $primaryFontColor;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 500;
+}
+@mixin addonPriceTag {
+    font-family: $textFont;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 22px;
+    color: $primaryFontColor;
+}
+@mixin iconExpand {
+    background: $iconExpand!important;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+@mixin iconCollapse {
+    background: $iconCollapse!important;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+@mixin iconClose {
+    background: $iconCloseDarkDefault!important;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 0.3s;
+    &:hover {
+        background: $iconCloseDarkHover!important;
+    }
+}
+
+@mixin formStyleElements {
+    box-shadow: inset 1px 1px 0 0 #d8d8d8;
+    background-color: #f2f2f2;
+    color: rgba(87, 86, 91, 0.8);
+    font-size: 16px;
+    border: solid 1px transparent;
+    height: 50px;
+    font-family: $textFont;
+    &:focus {
+        box-shadow: inset 1px 1px 0 0 #d8d8d8;
+        border: solid 1px rgba(51, 50, 50, 0.8);
+    }
+    &::placeholder {
+        color: rgba(51, 50, 50, 0.4);
+    }
+}

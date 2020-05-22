@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+    <g fill="none">
+        <path stroke="#ABAAAD" stroke-width="2" d="M1 1H49V49H1z"/>
+        <path fill="#ABAAAD" d="M29.705 16.285c.598-.796-.518-1.74-1.23-1.04l-9.362 9.19c-.317.312-.317.818 0 1.13l9.361 9.19c.713.7 1.83-.244 1.23-1.04L23.145 25l6.56-8.715z"/>
+    </g>
+</svg>
