@@ -269,7 +269,7 @@ label.validationError {
       text-transform: uppercase;
     }
     span {
-      @include smallText;
+      @include lightText;
     }
   }
 }
@@ -409,7 +409,7 @@ label.validationError {
     right: 0;
   }
   span {
-    @include smallText;
+    @include lightText;
   }
   .from-spam {
     margin-right: 10px;
@@ -546,7 +546,7 @@ label.validationError {
     }
   }
   span {
-    @include smallText;
+    @include lightText;
   }
   .select-rate-btn {
     padding: 7px 10px;
@@ -714,7 +714,7 @@ label.validationError {
       @include addonPriceTag;
     }
     span {
-      @include smallText;
+      @include lightText;
     }
     label {
       font-size: 14px;
@@ -763,7 +763,7 @@ label.validationError {
       @include addonPriceTag;
     }
     span {
-      @include smallText;
+      @include lightText;
     }
     label {
       font-size: 14px;
@@ -807,7 +807,7 @@ label.validationError {
       @include addonPriceTag;
     }
     span {
-      @include smallText;
+      @include lightText;
     }
     label {
       font-size: 14px;
@@ -1154,7 +1154,7 @@ label.validationError {
     padding: 0;
     .room-facilities {
       span {
-        @include smallText;
+        @include lightText;
       }
       img {
         margin-right: 10px;
@@ -1384,7 +1384,7 @@ label.validationError {
       }
       .room-facilities {
         span {
-          @include smallText;
+          @include lightText;
         }
         img {
           margin-right: 10px;
@@ -1518,15 +1518,329 @@ label.validationError {
 
 // Offers
 
+.offers {
+  &--social-media-share {
+      .fa {
+          background: $primaryColor;
+          height: 30px;
+          width: 30px;
+          border-radius: 50px;
+          color: #fff;
+          position: relative;
+          font-size: 16px;
+          padding-top: 5px;
+          border: 2px solid $primaryColor;
+          margin-left: 10px;
+          &:hover {
+              color: $primaryColor;
+              background: inherit;
+          }
+      }
+      .fa-facebook {
+          padding-left: 7px;
+      }
+      .fa-twitter {
+          padding-left: 6px;
+      }
+      span {
+          @include lightText;
+      }
+  }
+}
+
+.offers-form {
+  &__heading {
+      @include sectionHeading;
+      text-align: center;
+      margin: 30px 0;
+      @include mQ(992px) {
+          margin: 50px 0;
+      }
+  }
+  &__filter {
+      @include cardStyle;
+      padding: 20px 15px;
+      @include mQ (992px) {
+          padding: 20px;
+      }
+      .form-group input, .form-group select {
+          
+          max-width: 300px;
+      }
+      .form-group {
+          select {
+              @include formStyleElements;
+              @include selectIcon;
+              max-width: 300px;
+          }
+      }
+  }
+  &__category {
+      flex-wrap: wrap;
+      label {
+        @include formLabel;
+      }
+  }
+  .btn-primary {
+      @include mQmax (991px) {
+          width: 100%;
+      }
+  }
+  &__filter-btn {
+      text-align: right;
+      color: $primaryFontColor;
+      font-weight: 600;
+      font-size: 14px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      i {
+          background: $selectIcon;
+          height: 16px;
+          width: 16px;
+          display: inline-block;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 100% 100%;
+          position: relative;
+          top: 3px
+      }
+  }
+}
+
 .offers-list {
-    &__heading {
-        @include sectionHeading;
-        color: red;
-    }
-    &__filter {
-        .form-group {
-            @include formStyleElements;
-            max-width: 300px;
-        }
-    }
+  &__article {
+      margin-bottom: 20px;
+      @include mQ (992px) {
+          margin-bottom: 50px;
+      }
+      &--description {
+          padding: 20px 15px;
+          @include mQ (992px) {
+              padding: 40px;
+          }
+          ul {
+              @include mQ (992px) {
+                  margin-left: 30px;
+              }
+              li {
+                  text-indent: -22px;
+                  margin-left: 20px;
+              }
+          }
+          p {
+              margin-bottom: 10px;
+          }
+          .btn-primary {
+              margin: 20px 0 0 0;
+              @include mQmax (575px) {
+                  width: 100%;
+                  margin: 20px 0;
+              }
+          }
+      }
+      &--offer-name {
+          @include cardHeading;
+      }
+      &--offer-available {
+          @include lightText;
+          margin: 20px 0;
+          display: block;
+      }
+      &--image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          min-height: 235px;
+          @include mQ(992px) {
+              max-width: 488px;
+          }
+      }
+  }
+}
+
+
+.offer {
+  &-details {
+  position: relative;
+  margin: 30px 0;
+  @include mQ (992px) {
+      margin: 50px 0;
+      }
+      &__image {
+          width: 100%;
+          height: 199px;
+          @include mQ(992px) {
+              height: 238px;
+          }
+      }
+      &__offer-name {
+          @include cardHeading;
+          @include mQ(992px) {
+              width: 80%;
+          }
+      }
+      &__offer-available {
+          @include lightText;
+          margin: 20px 0;
+          display: block;
+      }
+      &__content {
+          @include mQmax(991px) {
+              padding: 20px 0 30px 0;
+          }
+          ul {
+              margin-left: 4px;
+              li {
+                  text-indent: -22px;
+                  margin-left: 20px;
+              }
+          }
+      }
+      &__terms-link {
+          text-decoration: underline;
+          &:active, &:focus {
+              text-decoration: underline;
+          }
+          i {
+              background: $selectIcon;
+              height: 16px;
+              width: 16px;
+              display: inline-block;
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: 100% 100%;
+              position: relative;
+              top: 3px
+          }
+      }
+      &__terms-content {
+          display: none;
+      }
+      .offers--social-media-share {
+          @include mQ(992px) {
+              position: absolute;
+              top: 0;
+              right: 20px;
+          }
+      }
+  }
+  
+  &__search {
+      background-color: $primaryColor;
+      padding: 20px 0;
+      &--widget {
+          @include mQ(992px) {
+              display: grid;
+              grid-template-columns: 25% 1fr 1fr 1fr 20% ;
+              grid-gap: 30px;
+              .form-group {
+                  margin-bottom: 0;
+              }
+          }
+          .form-group {
+              select {
+                  @include formStyleElements;
+                  @include selectIcon;
+              }
+          }
+          .btn-offer {
+              @include offerSearchBtn;
+          }
+      }
+  }
+  &__calendar {
+      background-color: #f2f2f2;
+      @include mQ (992px) {
+          // padding: 25px 0;
+      }
+      .calendar {
+          background-color: transparent;
+      }
+      .container-fluid .calendar-rows {
+          background-color: transparent!important;
+          @include mQ (992px) {
+              padding: 0;
+          }
+      }
+      .calendar-heading-arrows {
+          font-size: 22px!important;
+          font-weight: 500;
+
+      }
+      .calendar-btn-img {
+          margin: 0 0 3px 5px!important;
+      }
+  }
+  &__banner {
+      position: fixed;
+      width: 100%;
+      z-index: 10;
+      bottom: 0;
+      background-color: #e8ecd4;
+      @include mQmax(991px) {
+          background-color: $primaryColor;
+      }
+      color: #fff;
+      &--select-departure {
+          padding: 10px 0;
+          p {
+              text-align: center;
+              font-family: $textFont;
+              font-size: 15px;
+              color: #fff;
+              @include mQ (992px) {
+                  padding: 42px 0;
+                  font-family: $headingFont;
+                  font-size: 32px;
+                  color: $primaryFontColor;
+              }
+          }
+      }
+      .confirm-block {
+          text-align: center;
+          @include mQ(992px) {
+              padding: 40px 0;
+          }
+          color: $primaryFontColor;
+          &--border {
+              @include mQmax (991px) {
+                  border-left: solid 1px #fff;
+                  text-align: right;
+              }
+              border-left: solid 1px rgba(34, 34, 34, 0.2);
+              border-right: solid 1px rgba(34, 34, 34, 0.2);
+          }
+          h3 {
+              font-family: $headingFont;
+              font-size: 32px;
+              margin-top: 20px;
+          }
+          @include mQmax (991px) {
+              h3, span {
+                  font-family: $textFont;
+                  font-size: 14px;
+                  line-height: 40px;
+                  color: #fff;
+              }
+          }
+      }
+      a.btn-primary--offer {
+          margin-top: 50px;
+          @include mQ (992px) {
+              &:hover, &:active {
+                  color: $primaryFontColor;
+              }
+          }
+          @include mQmax (991px) {
+              padding: 10px;
+              color: #fff;
+              background-color: transparent;
+              border-color: #fff;
+              width: 100%;
+              margin-bottom: 10px;
+              margin-top: 0;
+          }
+          
+      }
+  }
 }

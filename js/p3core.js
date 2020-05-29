@@ -134,4 +134,9 @@ $('.loading-spinner').one('click', function () {
       initSlickSlider();
   });
 
-  
+  $('.offers-form__filter-btn').click(function(){
+    $(this).closest('.offers-form').find('.offers-form__filter').slideToggle();
+  });
+  $('.offer-details__terms-link').click(function(){
+    $(this).closest('.offer-details__content').find('.offer-details__terms-content').slideToggle();
+  });

@@ -2,8 +2,8 @@
 @import "./resets";
 @import "./mixins";
 @import "./p3mixins";
-@import "./p3";
 @import "./laravel";
+@import "./p3";
 @import "./header";
 @import "./footer";
 
@@ -208,7 +208,7 @@ a {
       font-family: $headingFont;
     }
     span {
-      @include smallText;
+      @include lightText;
       font-style: italic;
       font-size: 13px;
     }
@@ -646,18 +646,6 @@ sup {
           color: #57565b;
           font-family: $textFont;
         }
-        .guest-widget-buttons {
-          // height: 100%;
-          // @include mQmax (500px) {
-          //   position: static;
-          //   top: 0;
-          //   left: 0;
-          //   width: 100%;
-          //   height: 100%;
-          //   z-index: 1;
-          //   background-color: rgba(0,0,0,0.5);
-          // }
-        }
         .guest-widget-buttons-container {
           scroll-behavior: smooth;
           display: none;
@@ -738,12 +726,9 @@ sup {
   padding-bottom: 20px;
 }
 
-.container .calendar-rows {
-  background-color: #d8d8d8;
-
-}
-.container {
+.container-fluid {
   .calendar {
+    background-color: transparent;
     @include mQmax(991px) {
       background-color: #d8d8d8;
     }
@@ -756,6 +741,50 @@ sup {
         background-color: rgba(87, 86, 91, 0.1);
       }
     }
-  }  
+    .calendar-rows {
+      background-color: #d8d8d8;
+      padding: 15px;
+    }
+  }
 }
- 
+.offer {
+  &__calendar {
+    background-color: #d8d8d8;
+    .calendar {
+      @include mQmax(991px) {
+        background-color: transparent;
+      }
+      &-weekday {
+        font-weight: 400;
+        color: rgba(87, 86, 91, 0.8);
+        font-size: 16px;
+      }
+    }
+  }
+  &__search {
+    &--widget{
+      .btn-offer {
+        @include hotelInfoBtn;
+        border-radius: 0;
+      }
+    }
+  }
+  &__banner {
+    background-color: #57565b;
+    h3 {
+      color: #ffffff;
+      font-family: $textFont;
+    }
+    span {
+      color: #cccccd;
+    }
+    .confirm-block--border {
+      border-left: solid 1px rgba(255, 255, 255, 0.5);
+      border-right: solid 1px rgba(255, 255, 255, 0.5);
+    }
+    a.btn-primary--offer {
+      @include hotelInfoBtn;
+      width: 100%;
+    }
+  }
+}

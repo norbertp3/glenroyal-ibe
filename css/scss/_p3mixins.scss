@@ -8,7 +8,7 @@
         line-height: 26px;
     }
 }
-@mixin smallText {
+@mixin lightText {
     font-family: $headingFont;
     font-size: 14px;
     font-style: italic;
@@ -164,6 +164,45 @@
     }
 }
 
+@mixin offerSearchBtn {
+    width: 100%;
+    background-color: rgba(51, 50, 50, 0);
+    color: #fff;
+    border-radius: 25px;
+    border: solid 1px rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+    height: 50px;
+    &:hover {
+        background-color: rgba(51, 50, 50, 0);
+        color: #ffffff;
+    }
+    &:active {
+        background-color: rgba(51, 50, 50, 0);
+        color: #ffffff;
+    }
+    &:focus {
+        box-shadow: none;
+        background-color: #fff;
+        color: #000;
+        border: solid 1px rgba(255, 255, 255, 0.8);
+    }
+    &:not(:disabled):not(.disabled):active {
+        box-shadow: none;
+        background-color: rgba(51, 50, 50, 0);
+        color: #ffffff;
+        border: solid 1px rgba(255, 255, 255, 0.8);
+    }
+    &:not(:disabled):not(.disabled).active:focus, &:not(:disabled):not(.disabled):active:focus, .show>&.dropdown-toggle:focus {
+        box-shadow: none;
+        background-color: rgba(51, 50, 50, 0);
+        color: #ffffff;
+        border: solid 1px rgba(255, 255, 255, 0.8);
+    }
+    &:not(:disabled):not(.disabled).active, &:not(:disabled):not(.disabled):active, .show>&.dropdown-toggle {
+        border-color: rgba(51, 50, 50, 0)r;
+    }
+}
+
 @mixin formLabel {
     font-size: 15px;
     color: rgba(87, 86, 91, 0.8);
@@ -180,7 +219,7 @@
     background-size: 15px;
     background-position: calc(100% - 8px) 50%;
     background-repeat: no-repeat;
-    background-color: #fff;
+    // background-color: #fff;
     background-image: $selectIcon;
     padding: 4px 23px 4px 10px;
     &:focus {
