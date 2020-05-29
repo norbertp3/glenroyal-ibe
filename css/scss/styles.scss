@@ -3,6 +3,7 @@
 @import "./mixins";
 @import "./p3mixins";
 @import "./p3";
+@import "./laravel";
 @import "./header";
 @import "./footer";
 
@@ -736,3 +737,25 @@ sup {
   color: #fff;
   padding-bottom: 20px;
 }
+
+.container .calendar-rows {
+  background-color: #d8d8d8;
+
+}
+.container {
+  .calendar {
+    @include mQmax(991px) {
+      background-color: #d8d8d8;
+    }
+    .calendar-date {
+      border-radius: 2px;
+      border: none;
+    }
+    .calendar-btn {
+      @include mQmax (991px) {
+        background-color: rgba(87, 86, 91, 0.1);
+      }
+    }
+  }  
+}
+ 

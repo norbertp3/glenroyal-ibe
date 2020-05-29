@@ -1,86 +1,87 @@
 body {
-    background-color: $pageBg;
+  background-color: $pageBg;
 }
 p {
-    @include bodyText;
+  @include bodyText;
 }
-ul, ol {
-    @include bodyText;
+ul,
+ol {
+  @include bodyText;
 }
 a {
-    @include bodyLink;
+  @include bodyLink;
 }
 
 // Icons
 .icon-open-gallery {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
 }
 .icon-info {
-    background: $iconInfoDarkDefault;
-    height: 16px;
-    width: 16px;
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100%;
+  background: $iconInfoDarkDefault;
+  height: 16px;
+  width: 16px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
 }
 .icon-info-white {
-    background: $iconInfoLightDefault;
-    height: 16px;
-    width: 16px;
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100%;
+  background: $iconInfoLightDefault;
+  height: 16px;
+  width: 16px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
 }
 .icon-chevron-right {
-    background: $iconBtnPrimaryRight;
-    height: 16px;
-    width: 16px;
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100%;
+  background: $iconBtnPrimaryRight;
+  height: 16px;
+  width: 16px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
 }
 .icon-chevron-down {
-    background: $iconBtnPrimaryDown;
-    height: 16px;
-    width: 16px;
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100%;
+  background: $iconBtnPrimaryDown;
+  height: 16px;
+  width: 16px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
 }
 .icon-chevron-up {
-    background: $iconBtnPrimaryUp;
-    height: 16px;
-    width: 16px;
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100%;
+  background: $iconBtnPrimaryUp;
+  height: 16px;
+  width: 16px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
 }
 .icon-progress-step-separator {
-    background: $iconProgressDefault;
-    background-color: black;
-    height: 19px;
-    width: 24px;
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100%;
+  background: $iconProgressDefault;
+  background-color: black;
+  height: 19px;
+  width: 24px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
 }
 .icon-progress-step-separator-complete {
-    mask-image: $iconProgressComplete;
-    background-color: #6abb91;
-    height: 19px;
-    width: 24px;
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100%;
+  mask-image: $iconProgressComplete;
+  background-color: #6abb91;
+  height: 19px;
+  width: 24px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
 }
 
 // .view-rates-btn:hover .icon-chevron-down {
@@ -93,1419 +94,1439 @@ a {
 //     background-color: $primaryColor;
 // }
 .icon-search-white {
-    background: $iconSearchAgain;
-    height: 16px;
-    width: 16px;
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-position: center;
+  background: $iconSearchAgain;
+  height: 16px;
+  width: 16px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .circle-backround {
-    background-color: #000;
-    border-radius: 25px;
-    width: 30px;
-    height: 30px;
+  background-color: #000;
+  border-radius: 25px;
+  width: 30px;
+  height: 30px;
 }
 
 // Buttons
 .btn-primary {
-    @include btnPrimary;
-  }
+  @include btnPrimary;
+}
 .btn-secondary {
-    @include btnSecondary;
+  @include btnSecondary;
 }
 
 // Deviders
 .devider-top-desktop {
-    @include mQmin (992px) {
-        border-top: 1px solid $deviderColor;
-    }
+  @include mQmin(992px) {
+    border-top: 1px solid $deviderColor;
+  }
 }
-.devider-top-mobile{
-    @include mQmax (991px) {
-        border-top: 1px solid $deviderColor;
-    }
+.devider-top-mobile {
+  @include mQmax(991px) {
+    border-top: 1px solid $deviderColor;
+  }
 }
 .devider-bottom-desktop {
-    @include mQmin (992px) {
-        border-bottom: 1px solid $deviderColor;
-    }
+  @include mQmin(992px) {
+    border-bottom: 1px solid $deviderColor;
+  }
 }
 .devider-bottom-mobile {
-    @include mQmax (991px) {
-        border-bottom: 1px solid $deviderColor;
-    }
+  @include mQmax(991px) {
+    border-bottom: 1px solid $deviderColor;
+  }
 }
 .devider-top-bottom {
-    border-top: 1px solid $deviderColor;
-    border-bottom: 1px solid $deviderColor;
+  border-top: 1px solid $deviderColor;
+  border-bottom: 1px solid $deviderColor;
 }
 
 // Paddings Custom Grid
 .pr-custom {
-    @include mQ(1200px) {
-        padding-right: 20px;
-    }
+  @include mQ(1200px) {
+    padding-right: 20px;
+  }
 }
 .pl-custom {
-    @include mQ(1200px) {
-        padding-left: 20px;
-    }
+  @include mQ(1200px) {
+    padding-left: 20px;
+  }
 }
 
 // Checkboxes
 .checkbox-group input {
-    height: auto;
+  height: auto;
 }
 span.custom-check {
-    margin-right: 10px;
-    border-radius: 0;
-    @include formStyleElements;
+  margin-right: 10px;
+  border-radius: 0;
+  @include formStyleElements;
 }
-span.custom-check, span.custom-radio {
-    width: 20px;
-    min-width: 20px;
-    height: 20px;
-    vertical-align: middle;
-    cursor: pointer;
-    display: inline-block;
-    margin-left: 0;
-    top: -2px;
-    position: relative;
+span.custom-check,
+span.custom-radio {
+  width: 20px;
+  min-width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 0;
+  top: -2px;
+  position: relative;
 }
-input[type=checkbox]:checked+span.custom-check:after {
-    content: $tickIcon;
-    color: #fff;
-    line-height: 20px;
-    text-align: center;
-    animation: form-zoom .5s ease-in-out;
-    padding: 2px 0px;
-    background: $primaryColor;
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 20px;
-    width: 20px;
+input[type="checkbox"]:checked + span.custom-check:after {
+  content: $tickIcon;
+  color: #fff;
+  line-height: 20px;
+  text-align: center;
+  animation: form-zoom 0.5s ease-in-out;
+  padding: 2px 0px;
+  background: $primaryColor;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 20px;
+  width: 20px;
 }
-.form-check input[type=checkbox], .form-check input[type=radio], label input[type=checkbox], label input[type=radio] {
-    display: none;
+.form-check input[type="checkbox"],
+.form-check input[type="radio"],
+label input[type="checkbox"],
+label input[type="radio"] {
+  display: none;
 }
 .form-check {
-    padding-left: 0;
+  padding-left: 0;
 }
 
 // Input, Select, TextArea
-.form-group input, .form-group textarea {
-    @include formStyleElements;
+.form-group input,
+.form-group textarea {
+  @include formStyleElements;
 }
 
 label.validationError {
-    display: none;
-    width: 100%;
-    margin-top: .25rem;
-    font-size: 80%!important;
-    color: #dc3545!important; 
+  display: none;
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 80% !important;
+  color: #dc3545 !important;
 }
 
 // Mobile Hotel Info
 #mobile-hotel-info {
-    background-color: $primaryColor;
-    padding: 14px 0;
-    a {
-        font-size: 15px;
-        color: #fff;
-        font-family: $textFont;
-        text-decoration: none;
-        &:focus {
-            text-decoration: none;
-        }
+  background-color: $primaryColor;
+  padding: 14px 0;
+  a {
+    font-size: 15px;
+    color: #fff;
+    font-family: $textFont;
+    text-decoration: none;
+    &:focus {
+      text-decoration: none;
     }
+  }
 }
 
 // Hotel Info Buttons
 .hotel-info-buttons .btn {
-    @include hotelInfoBtn;
-    a {
-        text-decoration-line: none;
-    }
-    letter-spacing: 2px;
-    border-radius: 2px;
+  @include hotelInfoBtn;
+  a {
+    text-decoration-line: none;
+  }
+  letter-spacing: 2px;
+  border-radius: 2px;
 }
 
 // Progress Steps
 #progress-steps {
-    .active {
-        color: $primaryColor;
-        font-weight: 500;
+  .active {
+    color: $primaryColor;
+    font-weight: 500;
+  }
+  .pregress-steps-desktop {
+    color: rgba(51, 50, 50, 0.5);
+    font-size: 14px;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    p,
+    i {
+      margin-right: 10px;
     }
-    .pregress-steps-desktop {
-        color: rgba(51, 50, 50, 0.5);
-        font-size: 14px;
-        padding-bottom: 30px;
-        margin-bottom: 20px;
-        p, i {
-            margin-right: 10px;
-        }
-        .step-complete {
-            color: #6abb91;
-            font-weight: 500;
-        }
+    .step-complete {
+      color: #6abb91;
+      font-weight: 500;
     }
-    .progress-steps-mobile {
-        margin: 30px 0;
-        img {
-            margin-right: 15px;
-        }
-        h3 {
-            font-size: 18px;
-            color: $primaryColor;
-            text-transform: uppercase;
-        }
-        span {
-            @include smallText;
-        }
+  }
+  .progress-steps-mobile {
+    margin: 30px 0;
+    img {
+      margin-right: 15px;
     }
+    h3 {
+      font-size: 18px;
+      color: $primaryColor;
+      text-transform: uppercase;
+    }
+    span {
+      @include smallText;
+    }
+  }
 }
-
 
 // Booking Summary
 #booking-summary {
-    @include bookingSummaryBackground;
+  @include bookingSummaryBackground;
 }
 .booking-summary-heading {
-    padding: 10px;
-    font-family: $headingFont;
-    @include mQ (1200px) {
-        padding: 30px 30px 20px 30px;
+  padding: 10px;
+  font-family: $headingFont;
+  @include mQ(1200px) {
+    padding: 30px 30px 20px 30px;
+  }
+  h2 {
+    font-size: 15px;
+    color: $primaryColor;
+    text-transform: uppercase;
+    font-family: $textFont;
+    @include mQ(1200px) {
+      font-size: 25px;
     }
-    h2 {
-        font-size: 15px;
-        color: $primaryColor;
-        text-transform: uppercase;
-        font-family: $textFont;
-        @include mQ (1200px) {
-            font-size: 25px;
-        }
-    }
+  }
 }
 .booking-summary-data {
-    // background-color: $bookingSummaryBackgroundColor;
-    padding: 0 10px;
-    p {
-        width: 50%;
-    }
-    .booking-row {
-        padding: 10px 0;
-    }
-    @include mQ(1200px) {
-        padding: 0 30px;
-    }
-    @include mQmax(1200px) {
-        display: none;
-    }
-    h2 {
-        font-size: 22px;
-        font-family: $textFont;
-    }
+  // background-color: $bookingSummaryBackgroundColor;
+  padding: 0 10px;
+  p {
+    width: 50%;
+  }
+  .booking-row {
+    padding: 10px 0;
+  }
+  @include mQ(1200px) {
+    padding: 0 30px;
+  }
+  @include mQmax(1200px) {
+    display: none;
+  }
+  h2 {
+    font-size: 22px;
+    font-family: $textFont;
+  }
 }
 .booking-summary-rooms-section {
-    p {
-        width: 100%;
-        text-align: left!important
+  p {
+    width: 100%;
+    text-align: left !important;
+  }
+  img {
+    height: 55px;
+    width: 90px;
+    object-fit: cover;
+  }
+  ul {
+    list-style-position: inside;
+    padding: 0 10px;
+    li {
+      text-indent: -22px;
+      margin-left: 22px;
     }
-    img {
-        height: 55px;
-        width: 90px;
-        object-fit: cover;
+  }
+  .booking-summary-room-row p {
+    padding: 0 10px;
+  }
+  .booking-summary-room-row {
+    padding: 20px 0;
+    &:hover {
+      cursor: pointer;
     }
-    ul {
-        list-style-position: inside;
-        padding: 0 10px;
-        li {
-            text-indent: -22px;
-            margin-left: 22px;        
-        }
-    }
-    .booking-summary-room-row p {
-        padding: 0 10px;
-    }
-    .booking-summary-room-row {
-        padding: 20px 0;
-        &:hover {
-            cursor: pointer;
-        }
-    }
-    .booking-summary-room-row-expanded
-    {
-        display: none;
-    }
+  }
+  .booking-summary-room-row-expanded {
+    display: none;
+  }
 }
 
 // Rotate on click
 .rotate180 {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 // Card Style
 .card-style {
-    @include cardStyle;
+  @include cardStyle;
 }
 .px-10 {
-    @include mQmax (991px) {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
+  @include mQmax(991px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 // Room with Rates Details
 .room-with-rates-wrapper {
-    a {
-        text-decoration: none;
-    }
+  a {
+    text-decoration: none;
+  }
 }
 .room-content {
-    padding: 20px 10px 20px 10px;
-    // position: relative;
-    @include mQ (768px) {
-        padding: 30px 20px;
+  padding: 20px 10px 20px 10px;
+  // position: relative;
+  @include mQ(768px) {
+    padding: 30px 20px;
+  }
+  @include mQ(1200px) {
+    padding: 30px;
+  }
+  h3 {
+    @include cardHeading;
+    margin-bottom: 20px;
+    @include mQ(992px) {
+      margin-bottom: 25px;
     }
-    @include mQ (1200px) {
-        padding: 30px;
+    @include mQmax(992px) {
+      text-indent: -24px;
+      padding-left: 24px;
     }
-    h3 {
-        @include cardHeading;
-        margin-bottom: 20px;
-        @include mQ(992px) {
-            margin-bottom: 25px;
-        }
-        @include mQmax (992px) {
-            text-indent: -24px;
-            padding-left: 24px;
-        }
+  }
+  h2 {
+    @include priceTag;
+    text-align: right;
+  }
+  .price-section {
+    position: relative;
+    @include mQ(992px) {
+      margin-bottom: 44px;
     }
-    h2 {
-        @include priceTag;
-        text-align: right;
+  }
+  .price-section .strike-through {
+    position: absolute;
+    top: -20px;
+    right: 0;
+  }
+  .price-section .num-nights {
+    position: absolute;
+    // top: -15px;
+    right: 0;
+  }
+  span {
+    @include smallText;
+  }
+  .from-spam {
+    margin-right: 10px;
+    @include mQmax(767px) {
+      position: absolute;
+      top: -15px;
     }
-    .price-section {
+  }
+  .price-after-decimal {
+    font-size: 18px;
+    color: $primaryColor;
+    font-family: $textFont;
+    font-style: normal;
+  }
+  .room-right-side {
+    position: relative;
+    min-width: 190px;
+    .view-rates-btn {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      @include mQmax(991px) {
+        padding: 12px 8px;
+      }
+      i {
+        top: 3px;
         position: relative;
-        @include mQ(992px) {
-            margin-bottom: 44px;
-        }
+      }
     }
-    .price-section .strike-through {
-        position: absolute;
-        top: -20px;
-        right: 0;
-    }
-    .price-section .num-nights {
-        position: absolute;
-        // top: -15px;
-        right: 0;
-    }
+  }
+  .room-ribbon {
+    position: absolute;
+    top: -15px;
+    right: -76px;
     span {
-        @include smallText;
+      position: relative;
+      left: -105px;
+      top: -5px;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 500;
     }
-    .from-spam {
-        margin-right: 10px;
-        @include mQmax (767px) {
-            position: absolute;
-            top: -15px;
-        }
+    @include mQmax(991px) {
+      display: none;
     }
-    .price-after-decimal {
-        font-size: 18px;
-        color: $primaryColor;
-        font-family: $textFont;
-        font-style: normal;
+  }
+  .main-price-curreny {
+    font-size: 18px;
+    color: $primaryColor;
+    font-family: $textFont;
+    font-style: normal;
+  }
+  .room-facilities {
+    div {
+      margin-right: 20px;
     }
-    .room-right-side {
-        position: relative;
-        min-width: 190px;
-        .view-rates-btn {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            @include mQmax (991px) {
-                padding: 12px 8px;
-            }
-            i {
-                top: 3px;
-                position: relative;
-            }
-        }
+    img {
+      margin-right: 10px;
     }
-    .room-ribbon {
-        position: absolute;
-        top: -15px;
-        right: -76px;
-        span {
-            position: relative;
-            left: -105px;
-            top: -5px;
-            color: #fff;
-            font-size: 12px;
-            font-weight: 500;
-        }
-        @include mQmax(991px) {
-            display: none;
-        }
+  }
+  .room-left-side {
+    @include mQmax(991px) {
+      padding-bottom: 20px;
     }
-    .main-price-curreny {
-        font-size: 18px;
-        color: $primaryColor;
-        font-family: $textFont;
-        font-style: normal;
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
     }
-    .room-facilities {
-        div {
-            margin-right: 20px;
-        }
-        img {
-            margin-right: 10px;
-        }
+    li {
+      display: inline-block;
+      color: rgba(87, 86, 91, 0.6);
+      padding: 10px 30px 10px 0px;
+      text-decoration: none;
+      font-family: $headingFont;
+      font-style: italic;
+      float: left;
+      img {
+        margin-right: 5px;
+      }
     }
-    .room-left-side {
-        @include mQmax (991px) {
-            padding-bottom: 20px;
-        }
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-        li {
-            display: inline-block;
-            color: rgba(87, 86, 91, 0.6);
-            padding: 10px 30px 10px 0px;
-            text-decoration: none;
-            font-family: $headingFont;
-            font-style: italic;
-            float: left;
-            img {
-                margin-right: 5px;
-            }
-        }
-    }
+  }
 }
 
 .room-wrapper {
+  position: relative;
+  .room-image {
+    height: 184px;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     position: relative;
-    .room-image {
-        height: 184px;
-        width: 100%;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        position: relative;
-        @include mQ(768px) {
-            min-width: 270px;
-            height: 100%;
-        }
-        @include mQ(1200px) {
-            min-width: 300px;
-            min-height: 210px;
-        }
-        .icon-open-gallery {
-            bottom: 10px;
-            left: auto;
-            right: 10px;
-        }
+    @include mQ(768px) {
+      min-width: 270px;
+      height: 100%;
     }
+    @include mQ(1200px) {
+      min-width: 300px;
+      min-height: 210px;
+    }
+    .icon-open-gallery {
+      bottom: 10px;
+      left: auto;
+      right: 10px;
+    }
+  }
 }
 
 // Rates Wrapper
 .rates-wrapper {
-    display: none;
-    padding: 0 10px 20px 10px;
+  display: none;
+  padding: 0 10px 20px 10px;
+  @include mQ(992px) {
+    padding: 30px;
+  }
+  h3 {
+    font-size: 15px;
+    padding-top: 0;
+    padding-bottom: 10px;
+    @include mQmax(1200px) {
+      text-indent: -24px;
+      padding-left: 24px;
+    }
+    a {
+      @include rateName;
+    }
     @include mQ(992px) {
-        padding: 30px;
+      padding-bottom: 0;
     }
-    h3 {
-        font-size: 15px;
-        padding-top: 0;
-        padding-bottom: 10px;
-        @include mQmax (1200px) {
-            text-indent: -24px;
-            padding-left: 24px;
-        }
-        a {
-            @include rateName;
-        }
-        @include mQ(992px) {
-            padding-bottom: 0;
-        }
-    }
+  }
+  span {
+    @include smallText;
+  }
+  .select-rate-btn {
+    padding: 7px 10px;
+    font-size: 22px;
     span {
-        @include smallText;
+      font-size: 16px;
+      color: $secondaryFontColor;
+      font-family: $textFont;
+      font-style: normal;
+      &:hover {
+        color: $secondaryFontColor;
+      }
     }
-    .select-rate-btn {
-        padding: 7px 10px;
-        font-size: 22px;
-        span {
-            font-size: 16px;
-            color: $secondaryFontColor;
-            font-family: $textFont;
-            font-style: normal;
-            &:hover {
-                color: $secondaryFontColor;
-            }
-        }
+  }
+  .rate-description {
+    margin: 16px 0 20px 16px;
+    ul {
+      list-style-position: inside;
+      margin-bottom: 15px;
+      line-height: 26px;
+      text-indent: -20px;
+      margin-left: 20px;
     }
-    .rate-description {
-        margin: 16px 0 20px 16px;
-        ul {
-            list-style-position: inside;
-            margin-bottom: 15px;
-            line-height: 26px;
-            text-indent: -20px;
-            margin-left: 20px;
-        }
-        display: none;
-        @include mQ(992px) {
-            max-width: 550px;
-        }
+    display: none;
+    @include mQ(992px) {
+      max-width: 550px;
     }
-    .select-rate {
-        @include mQ(992px) {
-            height: 53px;
-        }
+  }
+  .select-rate {
+    @include mQ(992px) {
+      height: 53px;
     }
-    .mobile-rate-free-cancel {
-        color: #6abb91;
-        font-size: 12px;
-        font-weight: 500;
-        margin-bottom: 5px;
+  }
+  .mobile-rate-free-cancel {
+    color: #6abb91;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  .mobile-rate-urgency {
+    color: #a51448;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  .rate-container {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #d8d8d8;
+    margin-bottom: 20px;
+    position: relative;
+    &:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
     }
-    .mobile-rate-urgency {
-        color: #a51448;
-        font-size: 12px;
-        font-weight: 500;
-        margin-bottom: 5px;
+    &:first-child {
+      border-top: 1px solid #d8d8d8;
+      padding-top: 20px;
+      @include mQ(992px) {
+        border-top: none;
+        padding-top: 0;
+      }
     }
-    .rate-container {
-        padding-bottom: 20px;
-        border-bottom: 1px solid #d8d8d8;
-        margin-bottom: 20px;
-        position: relative;
-        &:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-        &:first-child {
-            border-top: 1px solid #d8d8d8;
-            padding-top: 20px;
-            @include mQ(992px) {
-                border-top: none;
-                padding-top: 0;
-            }
-        }
-        .icon-info {
-            position: relative;
-            top: 3px;
-        }
+    .icon-info {
+      position: relative;
+      top: 3px;
     }
-    .rate-ribbon {
-        position: absolute;
-        top: -15px;
-        left: -40px;
-        span {
-            position: relative;
-            left: -117px;
-            top: -5px;
-            color: #fff;
-            font-size: 12px;
-            font-weight: 500;
-        }
-        @include mQmax(991px) {
-            display: none;
-        }
+  }
+  .rate-ribbon {
+    position: absolute;
+    top: -15px;
+    left: -40px;
+    span {
+      position: relative;
+      left: -117px;
+      top: -5px;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 500;
     }
-    // .rate-name {
-    //     font-family: $textFont;
-    // }
+    @include mQmax(991px) {
+      display: none;
+    }
+  }
+  // .rate-name {
+  //     font-family: $textFont;
+  // }
 }
 
 // Slick
 .slick-prev {
-    z-index: 100;
-    left: 5px;
-    &:before {
-        content: $iconGalleryArrowLeft;
-    }
+  z-index: 100;
+  left: 5px;
+  &:before {
+    content: $iconGalleryArrowLeft;
+  }
 }
 .slick-next {
-    z-index: 100;
-    right: 5px;
-    &:before {
-        content: $iconGalleryArrowRight;
-    }
+  z-index: 100;
+  right: 5px;
+  &:before {
+    content: $iconGalleryArrowRight;
+  }
 }
 .strike-through {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
-
 
 // Large Banner With Half Screen Image
 #banner {
-    background-color: $primaryColor;
-    color: #fff;
-    padding: 20px 0 27px 0;
-    position: relative;
-    // margin-bottom: 30px;
-    h1 {
-        font-size: 20px;
-        margin-top: 19px;
-        margin-bottom: 32px;
-    }
-    p {
-        font-size: 16px;
-        margin-bottom: 50px;
-        color: rgba(255, 255, 255, 0.8);
-    }
-    @include mQ(1200px) {
-        margin-bottom: 40px;
-    }
+  background-color: $primaryColor;
+  color: #fff;
+  padding: 20px 0 27px 0;
+  position: relative;
+  // margin-bottom: 30px;
+  h1 {
+    font-size: 20px;
+    margin-top: 19px;
+    margin-bottom: 32px;
+  }
+  p {
+    font-size: 16px;
+    margin-bottom: 50px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  @include mQ(1200px) {
+    margin-bottom: 40px;
+  }
 }
 
 // Addons Page
 .addon-heading {
-    h2 {
-        @include sectionHeading;
-    }
-    span {
-        font-size: 14px;
-        color: rgba(51, 50, 50, 0.5);
-        margin-left: 10px;
-        font-family: $textFont;
-    }
+  h2 {
+    @include sectionHeading;
+  }
+  span {
+    font-size: 14px;
+    color: rgba(51, 50, 50, 0.5);
+    margin-left: 10px;
+    font-family: $textFont;
+  }
 }
 .addon-heading-row {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 .addon-with-checkboxes-wrapper {
-    img {
-        height: 86px;
-        width: 130px;
-        object-fit: cover;
+  img {
+    height: 86px;
+    width: 130px;
+    object-fit: cover;
+  }
+  .addon-content {
+    padding: 20px 10px;
+    @include mQ(992px) {
+      padding: 20px;
+      width: 100%;
     }
-    .addon-content {
-        padding: 20px 10px;
-        @include mQ(992px) {
-            padding: 20px;
-            width: 100%;
-        }
-        h3 {
-            @include cardHeading;
-        }
-        p {
-            margin-bottom: 20px;
-        }
-        h4 {
-            @include addonPriceTag;
-        }
-        span {
-            @include smallText;
-        }
-        label {
-            font-size: 14px;
-            color: rgba(51, 50, 50, 0.8);
-            text-align: right;
-            font-family: $textFont;
-        }
-        .addon-price {
-            @include mQmax (991px) {
-                margin: 10px 0;
-            }
-            @include mQ (992px) {
-                text-align: center;
-            }
-        }
-        .form-check {
-            margin-bottom: 15px;
-            @include mQ(992px) {
-                margin-bottom: 10px;
-            }
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
+    h3 {
+      @include cardHeading;
     }
+    p {
+      margin-bottom: 20px;
+    }
+    h4 {
+      @include addonPriceTag;
+    }
+    span {
+      @include smallText;
+    }
+    label {
+      font-size: 14px;
+      color: rgba(51, 50, 50, 0.8);
+      text-align: right;
+      font-family: $textFont;
+    }
+    .addon-price {
+      @include mQmax(991px) {
+        margin: 10px 0;
+      }
+      @include mQ(992px) {
+        text-align: center;
+      }
+    }
+    .form-check {
+      margin-bottom: 15px;
+      @include mQ(992px) {
+        margin-bottom: 10px;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 .addon-with-checkbox-wrapper {
-    img {
-        height: 86px;
-        width: 130px;
-        object-fit: cover;
+  img {
+    height: 86px;
+    width: 130px;
+    object-fit: cover;
+  }
+  .addon-content {
+    padding: 20px 10px;
+    @include mQ(992px) {
+      padding: 20px;
+      width: 100%;
     }
-    .addon-content {
-        padding: 20px 10px;
-        @include mQ(992px) {
-            padding: 20px;
-            width: 100%;
-        }
-        h3 {
-            @include cardHeading;
-        }
-        p {
-            margin-bottom: 20px;
-        }
-        h4 {
-            @include addonPriceTag;
-        }
-        span {
-            @include smallText;
-        }
-        label {
-            font-size: 14px;
-            color: rgba(51, 50, 50, 0.8);
-            text-align: right;
-        }
-        .addon-price {
-            @include mQmax (991px) {
-                margin: 10px 0;
-            }
-            @include mQ (992px) {
-                text-align: center;
-            }
-        }
-        .form-check {
-            @include mQmax (991px) {
-                float: right;
-            }
-        }
+    h3 {
+      @include cardHeading;
     }
+    p {
+      margin-bottom: 20px;
+    }
+    h4 {
+      @include addonPriceTag;
+    }
+    span {
+      @include smallText;
+    }
+    label {
+      font-size: 14px;
+      color: rgba(51, 50, 50, 0.8);
+      text-align: right;
+    }
+    .addon-price {
+      @include mQmax(991px) {
+        margin: 10px 0;
+      }
+      @include mQ(992px) {
+        text-align: center;
+      }
+    }
+    .form-check {
+      @include mQmax(991px) {
+        float: right;
+      }
+    }
+  }
 }
 .addon-with-dropdown-wrapper {
-    img {
-        height: 86px;
-        width: 130px;
-        object-fit: cover;
+  img {
+    height: 86px;
+    width: 130px;
+    object-fit: cover;
+  }
+  .addon-content {
+    padding: 20px 10px;
+    @include mQ(992px) {
+      padding: 20px;
+      width: 100%;
     }
-    .addon-content {
-        padding: 20px 10px;
-        @include mQ(992px) {
-            padding: 20px;
-            width: 100%;
-        }
-        h3 {
-            @include cardHeading;
-        }
-        p {
-            margin-bottom: 20px;
-        }
-        h4 {
-            @include addonPriceTag;
-        }
-        span {
-            @include smallText;
-        }
-        label {
-            font-size: 14px;
-            color: rgba(51, 50, 50, 0.8);
-            text-align: right;
-        }
-        .addon-price {
-            @include mQmax (991px) {
-                margin: 10px 0;
-            }
-            @include mQ (992px) {
-                text-align: center;
-            }
-        }
-        .form-check {
-            @include mQmax (991px) {
-                float: right;
-            }
-        }
-        select {
-            @include formStyleElements;
-            background-image: $selectIcon;
-            width: 70px!important;
-            height: 50px!important;
-        }
+    h3 {
+      @include cardHeading;
     }
+    p {
+      margin-bottom: 20px;
+    }
+    h4 {
+      @include addonPriceTag;
+    }
+    span {
+      @include smallText;
+    }
+    label {
+      font-size: 14px;
+      color: rgba(51, 50, 50, 0.8);
+      text-align: right;
+    }
+    .addon-price {
+      @include mQmax(991px) {
+        margin: 10px 0;
+      }
+      @include mQ(992px) {
+        text-align: center;
+      }
+    }
+    .form-check {
+      @include mQmax(991px) {
+        float: right;
+      }
+    }
+    select {
+      @include formStyleElements;
+      background-image: $selectIcon;
+      width: 70px !important;
+      height: 50px !important;
+    }
+  }
 }
 .addon-content {
-    @include mQmax (991px) {
-        position: relative;
-        i {
-            position: absolute;
-            right: 15px;
-            top: -3px;
-        }
-        .icon-info {
-            height: 18px;
-            width: 18px;
-        }
+  @include mQmax(991px) {
+    position: relative;
+    i {
+      position: absolute;
+      right: 15px;
+      top: -3px;
     }
+    .icon-info {
+      height: 18px;
+      width: 18px;
+    }
+  }
 }
 .price-currency-decimal {
-    span {
-        font-family: $textFont!important;
-        color: $primaryColor!important;
-        font-style: normal!important;
-    }
+  span {
+    font-family: $textFont !important;
+    color: $primaryColor !important;
+    font-style: normal !important;
+  }
 }
 .addons-total-details {
-    font-family: $textFont;
-    .price-currency-decimal {
-        span {
-            @include priceSpan;
-        }
+  font-family: $textFont;
+  .price-currency-decimal {
+    span {
+      @include priceSpan;
     }
-    button {
-        width: 100%!important;
-    }
+  }
+  button {
+    width: 100% !important;
+  }
 }
 
 // Booker details
-.booker-details-wrapper, .guest-details-wrapper, .payment-details-wrapper {
-    padding: 20px 10px;
+.booker-details-wrapper,
+.guest-details-wrapper,
+.payment-details-wrapper {
+  padding: 20px 10px;
+  @include mQ(992px) {
+    padding: 20px 40px 40px 40px;
+  }
+  .custom-select {
+    @include formStyleElements;
+    border-radius: 0;
+  }
+  label {
+    @include formLabel;
+  }
+  p {
+    color: $primaryFontColor;
+  }
+  .collapse.show {
+    display: flex;
+  }
+  h3 {
+    margin-bottom: 16px;
+    @include cardHeading;
     @include mQ(992px) {
-        padding: 20px 40px 40px 40px;
+      margin-bottom: 20px;
     }
-    .custom-select {
-        @include formStyleElements;
-        border-radius: 0;
-    }
-    label {
-        @include formLabel;
-    }
-    p {
-        color: $primaryFontColor;
-    }
-    .collapse.show {
-        display: flex;
-    }
-    h3 {
-        margin-bottom: 16px;
-        @include cardHeading; 
-        @include mQ(992px) {
-            margin-bottom: 20px;
-        }
-    }
-    span.custom-check, span.custom-radio {
-        top: 0;
-    }
-    select {
-        @include selectIcon;
-        width: 80px!important;
-    }
-    .form-group {
-        margin-bottom: 20px;
-    }
+  }
+  span.custom-check,
+  span.custom-radio {
+    top: 0;
+  }
+  select {
+    @include selectIcon;
+    width: 80px !important;
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
 }
 .guest-details-wrapper {
-    padding: 20px 10px;
-    @include mQ(992px) {
-        padding: 40px;
-    }
+  padding: 20px 10px;
+  @include mQ(992px) {
+    padding: 40px;
+  }
 }
 .phone-input {
-    input {
-        width: 65%!important;
-    }
+  input {
+    width: 65% !important;
+  }
 }
 .section-heading {
-    margin: 30px 0;
-    h2{
-        @include sectionHeading;
-    }
+  margin: 30px 0;
+  h2 {
+    @include sectionHeading;
+  }
 }
 .payment-details-wrapper {
-
-    i {
-        margin-top: 35px;
-        height: 24px;
-        width: 24px;
+  i {
+    margin-top: 35px;
+    height: 24px;
+    width: 24px;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    float: right;
+  }
+  li {
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: bottom;
+    margin-left: 1px;
+  }
+  label {
+    @include mQmax(341px) {
+      font-size: 13px;
     }
-    ul {
-        margin: 0;
-        padding: 0;
-        float: right;
+  }
+  span.custom-check {
+    @include mQmax(410px) {
+      min-width: 20px;
     }
-    li {
-        display: inline-block;
-        margin-left: 10px;
-        vertical-align: bottom;
-        margin-left: 1px;
-    }
-    label {
-        @include mQmax (341px) {
-            font-size: 13px;
-        }
-    }
-    span.custom-check {
-        @include mQmax (410px) {
-            min-width: 20px;
-        }
-    }
-    a {
-        text-decoration: underline;
-    }
-    a.btn {
-        text-decoration: none;
-    }
+  }
+  a {
+    text-decoration: underline;
+  }
+  a.btn {
+    text-decoration: none;
+  }
 }
 // Payment Summary Box
 .payment-summary-extra {
-    margin-bottom: 30px;
-    .payment-summary-box {
-        border-radius: 2px;
-        background-color: #333232;
-        text-align: center;
-        padding: 20px;
-        margin-bottom: 20px;
-        h4 {
-            color: #ffffff;
-            font-weight: 500;
-            font-size: 17px;
-        }
-        p {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 13px;
-            line-height: 1;
-            margin-bottom: 10px;
-        }
-        .box-middle {
-            border-left: 1px solid rgba(255, 255, 255, 0.2);;
-            border-right: 1px solid rgba(255, 255, 255, 0.2);;
-        }
+  margin-bottom: 30px;
+  .payment-summary-box {
+    border-radius: 2px;
+    background-color: #333232;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    h4 {
+      color: #ffffff;
+      font-weight: 500;
+      font-size: 17px;
     }
-    ul {
-        list-style-position: inside;
+    p {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 13px;
+      line-height: 1;
+      margin-bottom: 10px;
     }
-    li {
-        text-indent: -20px;
-        margin-left: 20px;
+    .box-middle {
+      border-left: 1px solid rgba(255, 255, 255, 0.2);
+      border-right: 1px solid rgba(255, 255, 255, 0.2);
     }
+  }
+  ul {
+    list-style-position: inside;
+  }
+  li {
+    text-indent: -20px;
+    margin-left: 20px;
+  }
 }
 
 // Cofirmation Page
 .conf-card {
-    padding: 20px 10px;
+  padding: 20px 10px;
+  margin-bottom: 20px;
+  @include mQ(992px) {
+    padding: 20px 40px;
+    margin-bottom: 30px;
+  }
+  @include mQmax(1200px) {
+    margin-top: 20px;
+  }
+  .conf-icon {
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: $confirmationIcon;
+    height: 40px;
+    width: 40px;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 20px;
     @include mQ(992px) {
-        padding: 20px 40px;
-        margin-bottom: 30px;
+      height: 60px;
+      width: 60px;
     }
-    @include mQmax (1200px) {
-        margin-top: 20px;
+  }
+  h3 {
+    margin: 10px 0;
+    font-size: 20px;
+    color: $primaryFontColor;
+    font-family: $textFont;
+  }
+  .booking-summary-table {
+    border-top: none;
+  }
+  .booking-summary-data {
+    padding: 0;
+    display: block;
+    p {
+      width: 50%;
+      font-weight: 400;
     }
-    .conf-icon {
-        display: block;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-image: $confirmationIcon;
-        height: 40px;
-        width: 40px;
-        background-size: cover;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 20px;
-        @include mQ(992px) {
-            height: 60px;
-            width: 60px;
-        }
+    .booking-row {
+      padding: 10px 0;
     }
-    h3 {
-        margin: 10px 0;
-        font-size: 20px;
-        color: $primaryFontColor;
-        font-family: $textFont;
+    h2 {
+      font-size: 22px;
+      font-family: $textFont;
     }
-    .booking-summary-table {
-        border-top: none;
-    }
-    .booking-summary-data {
-        padding: 0;
-        display: block;
-        p {
-            width: 50%;
-            font-weight: 400;
-        }
-        .booking-row {
-            padding: 10px 0;
-        }
-        h2 {
-            font-size: 22px;
-            font-family: $textFont;
-        }
-    }
-    .booking-summary-rooms-section {
-        p {
-            width: 100%;
-            text-align: left!important
-        }
-        img {
-            height: 55px;
-            width: 90px;
-            object-fit: cover;
-        }
-        ul {
-            list-style-position: inside;
-            padding: 0 10px;
-            li {
-                text-indent: -22px;
-                margin-left: 22px;
-                font-weight: 400;
-                margin-bottom: 5px;      
-            }
-        }
-        .booking-summary-room-row p {
-            padding: 0 10px;
-        }
-        .booking-summary-room-row {
-            padding: 20px 0;
-        }
-        .booking-summary-room-row-expanded
-        {
-            display: block;
-            margin: 20px 0 20px 16px !important;
-        }
-        p.booking-summary-room-name {
-            color: $primaryFontColor;
-            font-weight: 500;
-        }
-        .booking-summary-room-heading {
-            @include mQ (992px) {
-                padding-left: 10px;
-            }
-        }
-    }
-}
-.icon-expand {
-    @include iconExpand;
-}
-.icon-collapse {
-    @include iconCollapse;
-}
-.confirmation-content-box {
-    margin-bottom: 30px;
-    .box-content {
-        padding: 20px 10px;
-        @include mQ(992px) {
-            padding: 30px 40px 40px 40px;
-        }
+  }
+  .booking-summary-rooms-section {
+    p {
+      width: 100%;
+      text-align: left !important;
     }
     img {
-        height: 136px;
-        width: 100%;
-        object-fit: cover;
-        @include mQ(721px) {
-            height: 200px;
-        }
+      height: 55px;
+      width: 90px;
+      object-fit: cover;
     }
-    h3 {
-        font-size: 20px;
-        color: $primaryFontColor;
-        margin-bottom: 10px;
+    ul {
+      list-style-position: inside;
+      padding: 0 10px;
+      li {
+        text-indent: -22px;
+        margin-left: 22px;
+        font-weight: 400;
+        margin-bottom: 5px;
+      }
     }
-    p {
-        margin-bottom: 20px;
+    .booking-summary-room-row p {
+      padding: 0 10px;
     }
+    .booking-summary-room-row {
+      padding: 20px 0;
+    }
+    .booking-summary-room-row-expanded {
+      display: block;
+      margin: 20px 0 20px 16px !important;
+    }
+    p.booking-summary-room-name {
+      color: $primaryFontColor;
+      font-weight: 500;
+    }
+    .booking-summary-room-heading {
+      @include mQ(992px) {
+        padding-left: 10px;
+      }
+    }
+  }
+}
+.icon-expand {
+  @include iconExpand;
+}
+.icon-collapse {
+  @include iconCollapse;
+}
+.confirmation-content-box {
+  margin-bottom: 30px;
+  .box-content {
+    padding: 20px 10px;
+    @include mQ(992px) {
+      padding: 30px 40px 40px 40px;
+    }
+  }
+  img {
+    height: 136px;
+    width: 100%;
+    object-fit: cover;
+    @include mQ(721px) {
+      height: 200px;
+    }
+  }
+  h3 {
+    font-size: 20px;
+    color: $primaryFontColor;
+    margin-bottom: 10px;
+  }
+  p {
+    margin-bottom: 20px;
+  }
 }
 
 // Modals
 .modal {
-    .icon-close {
-        @include iconClose;
-        @include mQ(992px) {
-            background-image: $iconCloseLightDefault!important;
-            transition: 0.3s;
-            &:hover {
-                background: $iconCloseLightHover!important;
-            }
-        }
+  .icon-close {
+    @include iconClose;
+    @include mQ(992px) {
+      background-image: $iconCloseLightDefault !important;
+      transition: 0.3s;
+      &:hover {
+        background: $iconCloseLightHover !important;
+      }
     }
+  }
 }
 .modal-full-width {
-
-    // Mobile Full Width Styling
-    @include mQmax (991px) {
-        .modal-dialog {
-            margin: 0;
-            height: 100%;
-            min-width: 100%!important;
-        }
-        .modal-content {
-            min-width: 100%;
-            min-height: 100%;
-        }
-        .modal-body {
-            background: #fff;
-        }
-
+  // Mobile Full Width Styling
+  @include mQmax(991px) {
+    .modal-dialog {
+      margin: 0;
+      height: 100%;
+      min-width: 100% !important;
     }
+    .modal-content {
+      min-width: 100%;
+      min-height: 100%;
+    }
+    .modal-body {
+      background: #fff;
+    }
+  }
 }
 
 .modal-body {
-    background: transparent;
-    .modal-room-content {
-        padding: 0;
-        .room-facilities {
-            span {
-                @include smallText;
-            }
-            img {
-                margin-right: 10px;
-            }
-            .div {
-                margin-bottom: 15px;
-            }
-        }
+  background: transparent;
+  .modal-room-content {
+    padding: 0;
+    .room-facilities {
+      span {
+        @include smallText;
+      }
+      img {
+        margin-right: 10px;
+      }
+      .div {
+        margin-bottom: 15px;
+      }
     }
-    h2 {
-        @include sectionHeading;
-        margin-bottom: 20px;
-    }
+  }
+  h2 {
+    @include sectionHeading;
+    margin-bottom: 20px;
+  }
 
-    p {
-        margin: 20px 0;
-    }
-    .rates-wrapper {
-        display: block;
-        padding: 0;
-    }
-
+  p {
+    margin: 20px 0;
+  }
+  .rates-wrapper {
+    display: block;
+    padding: 0;
+  }
 }
 // End Full Width Styling
 
 .modal-body {
-    padding: 0;
+  padding: 0;
 }
 .modal-dialog {
-    max-width: 945px!important;
+  max-width: 945px !important;
 }
 .modal-content {
-    background-color: transparent;
-    border: none;
+  background-color: transparent;
+  border: none;
 }
 
 .tab-content {
-    .info-tab {
-        padding: 20px 10px;
-        @include mQ(992px){
-            padding: 30px;
-        }
+  .info-tab {
+    padding: 20px 10px;
+    @include mQ(992px) {
+      padding: 30px;
     }
-    .gallery-tab {
-        margin: 10px 0;
-        background: $modalBackgroundColour;
-        // display: inline-block;
-        height: 100%;
-        @include mQ (992px) {
-            padding: 30px;
-            margin:0;
-        }
-    }
+  }
+  .gallery-tab {
+    margin: 10px 0;
     background: $modalBackgroundColour;
-    .modal-heading {
-        h2 {
-            @include sectionHeading;
-            margin-bottom: 20px;
-        }
+    // display: inline-block;
+    height: 100%;
+    @include mQ(992px) {
+      padding: 30px;
+      margin: 0;
     }
+  }
+  background: $modalBackgroundColour;
+  .modal-heading {
+    h2 {
+      @include sectionHeading;
+      margin-bottom: 20px;
+    }
+  }
+  p {
+    margin-bottom: 30px;
+  }
+  .tab-property-details {
     p {
-        margin-bottom: 30px;
+      margin-bottom: 17px;
+      margin-top: 0;
     }
-    .tab-property-details {
-        p {
-            margin-bottom: 17px;
-            margin-top: 0;
-        }
+  }
+  .hotel-info-img {
+    margin-bottom: 20px;
+  }
+  .hotel-info-wrapper {
+    @include mQmax(991px) {
+      padding: 0 20px;
     }
-    .hotel-info-img {
-        margin-bottom: 20px;
+  }
+  .description-2 {
+    padding: 20px;
+    background-color: $modalDescription2Background;
+    h2 {
+      color: $primaryFontColor;
+      font-size: 22px;
+      // font-weight: 600;
+      margin-bottom: 20px;
     }
-    .hotel-info-wrapper {
-        @include mQmax (991px) {
-            padding: 0 20px;
-        }
+    ul {
+      margin-left: 0;
+      line-height: 24px;
+      @include mQ(992px) {
+        line-height: 26px;
+      }
+      li {
+        text-indent: -22px;
+        margin-left: 20px;
+        margin-bottom: 10px;
+      }
     }
-    .description-2 {
-        padding: 20px;
-        background-color: $modalDescription2Background;
-        h2 {
-            color: $primaryFontColor;
-            font-size: 22px;
-            // font-weight: 600;
-            margin-bottom: 20px;
-        }
-        ul {
-            margin-left: 0;
-            line-height: 24px;
-            @include mQ(992px) {
-                line-height: 26px;
-            }
-            li {
-                text-indent: -22px;
-                margin-left: 20px;
-                margin-bottom: 10px;
-            }
-        }
-    } 
-    .gallery-slider {
-        img {
-            height: 184px;
-            width: 100%;
-            object-fit: cover;
-            @include mQ (500px) {
-                height: 498px;
-            }
-        }
+  }
+  .gallery-slider {
+    img {
+      height: 184px;
+      width: 100%;
+      object-fit: cover;
+      @include mQ(500px) {
+        height: 498px;
+      }
     }
-    .slider-nav {
-        @include mQmax(991px) {
-            display: none;
-        }
-        img {
-            height: 50px;
-            width: 90px!important;
-            object-fit: cover;
-            display: inline-block;
-            margin-top: 10px;
-            margin-right: 10px;
-            &:hover {
-                cursor: pointer;
-            }
-        }
-        .slick-list {
-            padding: 0!important;
-            .slick-track {
-                margin-left: 0!important;
-                margin-right: 0!important;
-                transform: none!important;
-                max-width: 885px!important;
-            }
-        }
+  }
+  .slider-nav {
+    @include mQmax(991px) {
+      display: none;
     }
-
+    img {
+      height: 50px;
+      width: 90px !important;
+      object-fit: cover;
+      display: inline-block;
+      margin-top: 10px;
+      margin-right: 10px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .slick-list {
+      padding: 0 !important;
+      .slick-track {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        transform: none !important;
+        max-width: 885px !important;
+      }
+    }
+  }
 }
 .nav-tabs {
-    border-bottom: none;
-    background: #f2f2f2;
-    background-image: linear-gradient(to bottom, #f0f0f0, #f2f2f2 92%, #cccccd);
-    @include mQ (992px) {
-        background: transparent;
+  border-bottom: none;
+  background: #f2f2f2;
+  background-image: linear-gradient(to bottom, #f0f0f0, #f2f2f2 92%, #cccccd);
+  @include mQ(992px) {
+    background: transparent;
+  }
+  .gallery-tab {
+    @include mQmax(991px) {
+      border-right: 1px solid #d8d8d8;
+      border-left: 1px solid #d8d8d8;
     }
-    .gallery-tab {
-        @include mQmax (991px) {
-            border-right: 1px solid #d8d8d8;
-            border-left: 1px solid #d8d8d8;
-        }
+  }
+  a {
+    padding: 17px 10px;
+    background-color: #f2f2f2;
+    height: 50px;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    background-image: linear-gradient(
+      to bottom,
+      transparent,
+      transparent 91%,
+      #f2f2f2 92%,
+      #cccccd
+    );
+    @include mQ(992px) {
+      margin-right: 5px;
+      border-top-left-radius: 5px !important;
+      border-top-right-radius: 5px !important;
+      padding: 17px 15px;
+      background-image: none;
     }
-    a {
-        padding: 17px 10px;
-        background-color: #f2f2f2;
-        height: 50px;
-        display: block;
-        font-size: 14px;
-        font-weight: 500;
-        background-image: linear-gradient(to bottom, transparent, transparent 91%, #f2f2f2 92%, #cccccd);
-        @include mQ(992px) {
-            margin-right: 5px;
-            border-top-left-radius: 5px!important;
-            border-top-right-radius: 5px!important;
-            padding: 17px 15px;
-            background-image: none;
-
-        }
+  }
+  .active {
+    background-color: #fff;
+    color: rgba(51, 50, 50, 0.8);
+    background-image: none;
+  }
+  .close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    opacity: 1;
+    @include mQ(992px) {
+      right: 0;
     }
-    .active {
-        background-color: #fff;
-        color: rgba(51, 50, 50, 0.8);
-        background-image: none;
-
-    }
-    .close {
-        position: absolute;
-        right: 10px;
-        top: 10px;
-        opacity: 1;
-        @include mQ(992px) {
-            right: 0;
-        }
-    }
+  }
 }
 
 .standard-modal {
-    .modal-content {
-        border: none;
+  .modal-content {
+    border: none;
+  }
+  .room-modal-slider {
+    @include mQ(992px) {
+      margin-bottom: 30px;
     }
-    .room-modal-slider {
-        @include mQ (992px) {
-            margin-bottom: 30px;
+    img {
+      height: 184px;
+      width: 100%;
+      object-fit: cover;
+      @include mQ(992px) {
+        height: 498px;
+      }
+    }
+  }
+  .modal-header {
+    background-color: #f6f6f6;
+    .close {
+      padding: 9px;
+      @include mQ(992px) {
+        padding: 0 0 20px 0;
+      }
+    }
+    @include mQ(992px) {
+      background-color: transparent;
+    }
+  }
+  .modal-body {
+    background-color: #fff;
+    padding: 20px;
+    @include mQ(992px) {
+      padding: 30px;
+    }
+    .modal-room-content {
+      padding: 0;
+      h2 {
+        @include sectionHeading;
+        font-family: $headingFont;
+        margin-bottom: 20px;
+      }
+      .room-facilities {
+        span {
+          @include smallText;
         }
         img {
-            height: 184px;
-            width: 100%;
-            object-fit: cover;
-            @include mQ (992px) {
-                height: 498px;
-            }
+          margin-right: 10px;
         }
+        div {
+          margin-bottom: 15px;
+          margin-right: 20px;
+        }
+      }
+      p {
+        margin: 20px 0;
+      }
     }
-    .modal-header {
-        background-color: #f6f6f6;
-        .close {
-            padding: 9px;
-            @include mQ(992px) {
-                padding: 0 0 20px 0;
-            }
-        }
-        @include mQ (992px) {
-            background-color: transparent;
-        }
+    .rates-wrapper {
+      display: block;
+      padding: 0;
     }
-    .modal-body {
-        background-color: #fff;
-        padding: 20px;
-        @include mQ(992px) {
-            padding: 30px;
-        }
-        .modal-room-content {
-            padding: 0;
-            h2 {
-                @include sectionHeading;
-                font-family: $headingFont;
-                margin-bottom: 20px;
-            }
-            .room-facilities {
-                span {
-                    @include smallText;
-                }
-                img {
-                    margin-right: 10px;
-                }
-                div {
-                    margin-bottom: 15px;
-                    margin-right: 20px;
-                }
-            }
-            p {
-                margin: 20px 0;
-            }
-        }
-        .rates-wrapper {
-            display: block;
-            padding: 0;
-        }
-    }
-    .close {
-        opacity: 1;
-    }
+  }
+  .close {
+    opacity: 1;
+  }
 }
 .room-modal {
-    ul.room-modal-list {
-        @include mQ (992px) {
-            columns: 2;
-        }
+  ul.room-modal-list {
+    @include mQ(992px) {
+      columns: 2;
     }
-    .standard-slider img {
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-        @include mQ (768px) {
-            height: 498px;
-        }
+  }
+  .standard-slider img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    @include mQ(768px) {
+      height: 498px;
     }
-
+  }
 }
 .terms-modal {
-    text-align: center;
+  text-align: center;
 }
 .addon-modal {
-    img {
-        width: 100%;
-        height: 209px;
-        object-fit: cover;
-        @include mQ(992px) {
-            max-width: 428px;
-            height: 280px;
-        }
+  img {
+    width: 100%;
+    height: 209px;
+    object-fit: cover;
+    @include mQ(992px) {
+      max-width: 428px;
+      height: 280px;
     }
-    .addon-modal-content {
-        @include mQ(992px) {
-            margin-left: 30px;
-        }
+  }
+  .addon-modal-content {
+    @include mQ(992px) {
+      margin-left: 30px;
     }
-} 
+  }
+}
 .signup-modal {
-    img {
-        min-width: 315px;
-        object-fit: cover;
+  img {
+    min-width: 315px;
+    object-fit: cover;
+  }
+  .signup-modal-content {
+    padding: 20px;
+    @include mQ(992px) {
+      padding: 30px;
     }
-    .signup-modal-content {
-        padding: 20px;
-        @include mQ (992px) {
-            padding: 30px;
-        }
-    }
-    label {
-        @include formLabel;
-    }
-} 
+  }
+  label {
+    @include formLabel;
+  }
+}
 .sign-up-thanks {
-    @include mQmax (991px) {
-        .btn {
-            width: 100%;
-        }
+  @include mQmax(991px) {
+    .btn {
+      width: 100%;
     }
-    @include mQ (992px) {
-        text-align: center;
-    }
+  }
+  @include mQ(992px) {
+    text-align: center;
+  }
 }
 
-.icon-info-white, .icon-search-white {
-    position: relative;
-    top: 3px;
+.icon-info-white,
+.icon-search-white {
+  position: relative;
+  top: 3px;
 }
 .special-request-input {
-    display: none;
+  display: none;
 }
 .invalid-feedback {
-    font-family: $textFont;
+  font-family: $textFont;
 }
 
 .loading-spinner {
-    .fa {
-        height: auto;
-        width: auto;
-        margin: 0;
-    }
+  .fa {
+    height: auto;
+    width: auto;
+    margin: 0;
+  }
 }
 
 .form-control.validationError {
+  border: 1px solid #dc3545;
+  padding-right: calc(1.5em + 0.75rem);
+  background-image: $iconInValid;
+  background-repeat: no-repeat;
+  background-position: center right calc(0.375em + 0.1875rem);
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  background-color: #fff !important;
+  &:focus {
+    background-image: none;
     border: 1px solid #dc3545;
-    padding-right: calc(1.5em + .75rem);
-    background-image: $iconInValid;
-    background-repeat: no-repeat;
-    background-position: center right calc(.375em + .1875rem);
-    background-size: calc(.75em + .375rem) calc(.75em + .375rem);
-    background-color: #fff!important;
-    &:focus {
-        background-image: none;
-        border: 1px solid #dc3545;
-    }
+  }
 }
 
 .form-control.valid {
+  border: 1px solid #28a745;
+  padding-right: calc(1.5em + 0.75rem);
+  background-image: $iconValid;
+  background-repeat: no-repeat;
+  background-position: center right calc(0.375em + 0.1875rem);
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  background-color: #fff !important;
+  &:focus {
+    background-image: none;
     border: 1px solid #28a745;
-    padding-right: calc(1.5em + .75rem);
-    background-image: $iconValid;
-    background-repeat: no-repeat;
-    background-position: center right calc(.375em + .1875rem);
-    background-size: calc(.75em + .375rem) calc(.75em + .375rem);
-    background-color: #fff!important;
-    &:focus {
-        background-image: none;
-        border: 1px solid #28a745;
+  }
+}
+
+
+// Offers
+
+.offers-list {
+    &__heading {
+        @include sectionHeading;
+        color: red;
+    }
+    &__filter {
+        .form-group {
+            @include formStyleElements;
+            max-width: 300px;
+        }
     }
 }

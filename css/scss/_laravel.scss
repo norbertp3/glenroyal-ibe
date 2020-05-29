@@ -1,0 +1,237 @@
+.single-form {
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.15);
+}
+  
+.errors-list {
+  list-style-type: none;
+  color: red;
+}
+  
+.modify-cover {
+  display: none;
+  border: 0;
+}
+
+
+.container .calendar {
+  background-color: transparent;
+}
+
+.container .calendar-heading {
+  font-size: 22px;
+  color: $primaryFontColor;
+  margin-bottom: 30px;
+  font-family: $headingFont;
+}
+
+.container .calendar-rows {
+  background-color: $cardBackgroundColor;
+  padding: 15px;
+}
+
+.container .calendar-weekdays {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.calendar-weekday {
+  color: $lightFontColor;
+  font-weight: 600;
+}
+
+.calendar img {
+  max-width: 25px;
+}
+
+.calendar .calendar-date {
+  border-radius: 5px;
+  border: solid 1px #d8d8d8;
+  min-height: 100px;
+}
+
+.calendar .calendar-date-no-availability {
+  margin-top: 10px;
+}
+
+.calendar .calendar-date.calendar-date--disabled {
+  background-color: #fff;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+.calendar .calendar-date.calendar-date--disabled {
+  background-color: #fff;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+
+.calendar .calendar-date:not(.calendar-date--disabled):hover {
+  background-color: $primaryColor;
+  color: #fff;
+}
+
+.calendar .calendar-date:hover .calendar-date-price
+{
+  color: #fff;
+}
+
+.calendar .calendar-date:hover.calendar-date--disabled .calendar-date-heading {
+  color: $lightFontColor;
+}
+.calendar .calendar-date:hover.calendar-date--disabled .calendar-date-price {
+  color: $lightFontColor;
+}
+
+.calendar .calendar-date .calendar-date-heading {
+  color: $lightFontColor;
+}
+
+.calendar .calendar-date:hover .calendar-date-heading {
+    color: #fff;
+}
+.calendar .calendar-date:hover .calendar-date-loading {
+    color: #fff;
+}
+.calendar .calendar-date .calendar-date-loading {
+    margin: auto 0;
+}
+
+.calendar .calendar-date-price {
+  text-align: center;
+  margin-top: 10px;
+  color: $primaryFontColor;
+  font-size: 18px;
+  flex: 1;
+}
+
+.calendar .calendar-heading-arrows {
+  font-size: 16px;
+  font-family: $headingFont;
+}
+
+.calendar .calendar-heading-arrows.calendar-heading-arrows--left {
+  float: left;
+}
+.calendar .calendar-heading-arrows.calendar-heading-arrows--right {
+  float: right;
+}
+
+.calendar .calendar-btn-img {
+  width: 16px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin: 0 0 0 5px;
+}
+
+.not-available-message {
+  color: $primaryFontColor;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  @include mQ (992px) {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+.not-available-message h4 {
+  @include sectionHeading;
+  margin-bottom: 10px;
+}
+
+.not-available-message p {
+  @include bodyText;
+}
+
+.calendar-date-price.two-night {
+  color: $lightFontColor;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 992px) {
+
+  .calendar .calendar-date-no-availability {
+    color: rgba(87, 86, 91, 0.8);
+    margin-top: 0px;
+  }
+
+  .container .calendar-rows {
+    background-color: transparent;
+    // padding: 15px;
+  }
+
+
+  .calendar .calendar-date-no-availability .not-available-text {
+    margin-right: 10px;
+  }
+
+  .container.calendar {
+    padding-left: 0px;
+    padding-right: 0px;
+    background-color: $cardBackgroundColor;
+  }
+  .calendar .calendar-date-price {
+    text-align: right;
+    margin-top: 0px;
+  }
+
+
+  .calendar .calendar-date {
+    border: 1px solid #abaaad;
+    min-height: 50px;
+  }
+
+  .calendar .calendar-mobile-btn {
+    width: 100%;
+  }
+
+  .calendar .calendar-mobile-btn,
+  .calendar .calendar-mobile-btn:hover,
+  .calendar .calendar-mobile-btn:active,
+  .calendar .calendar-mobile-btn:not(.disabled):active,
+  .calendar .calendar-mobile-btn:focus {
+    background-color: transparent;
+    border: none;
+  }
+
+  .calendar .calendar-btn {
+    border: solid 1px rgba(51, 50, 50, 0.8);
+    border-radius: 25px;
+    color: $primaryFontColor;
+    padding: 8.5px 25px;
+    background-color: none;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .calendar .calendar-mobile-btn--next {
+    margin-top: 0px;
+  }
+  .calendar .calendar-mobile-btn--prev {
+    margin-bottom: 0px;
+  }
+  .calendar-date-heading {
+    flex: 1;
+    span {
+      font-size: 22px;
+      font-weight: 500;
+      color: $primaryFontColor;
+    }
+  }
+  .calendar .calendar-date:hover span {
+    color: #fff;
+  }
+}
+
+.icon-min-stay {
+  background-image: $iconMinStay;
+  height: 16px;
+  width: 16px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  margin-left: 5px; 
+}
