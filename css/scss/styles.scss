@@ -768,6 +768,34 @@ sup {
         border-radius: 0;
       }
     }
+    &--widget {
+      .form-group {
+        &:focus {
+          border: none;
+          outline: none;
+        }
+        select {
+          background-color: transparent;
+          color: #fff;
+          box-shadow: none;
+          border-bottom: 2px solid #fff;
+          padding-left: 0;
+          background-image: url(/images/icons/icon-expand.png);
+          background-size: 25px;
+          background-position: calc(100% - -6px) 50%;
+          border-left: none;
+          border-right: none;
+          border-top: none;
+          &:focus {
+            border: none;
+            border-bottom: 2px solid #fff;
+          }
+        }
+        option {
+          color: #57565b;
+        }
+      }
+    }
   }
   &__banner {
     background-color: #57565b;
@@ -782,9 +810,72 @@ sup {
       border-left: solid 1px rgba(255, 255, 255, 0.5);
       border-right: solid 1px rgba(255, 255, 255, 0.5);
     }
-    a.btn-primary--offer {
+    a.btn-offer {
       @include hotelInfoBtn;
       width: 100%;
+      @include mQ(992px) {
+        margin-top: 50px;
+      }
+    }
+  }
+  &-details {
+    &__offer-name {
+      font-family: $headingFont;
+      font-size: 24px;
+      @include mQ (992px) {
+        font-size: 32px;
+        padding-top: 16px;
+      }
+    }
+    &__content {
+      ul {
+        margin-top: 20px;
+        margin-left: 10px;
+        @include mQ(992px) {
+          margin-left: 20px;
+        }
+      }
     }
   }
 }
+
+.offers-list {
+  &__article {
+    @include mQ(992px) {
+      position: relative;
+      height:429px;
+      background-color: transparent;
+      margin-bottom: 150px;
+    }
+    &--offer-name {
+      font-family: $headingFont;
+      font-size: 22px;
+      @include mQ(992px) {
+        font-size: 26px;
+      }
+    }
+
+    &--description {
+      @include mQ(992px) {
+        top: 40px;
+        position: absolute;
+        width: 70vw;
+        right: 0;
+        z-index: 9;
+        background-color:#fff;
+        @include mQ(1600px) {
+          width: 60vw;
+        }
+      }
+    }
+  }
+}
+.offers--social-media-share .fa {
+  background-color: transparent;
+  color: #abaaad;
+  border: none;
+  width: auto;
+  height: auto;
+  margin-left: 0; 
+}
+

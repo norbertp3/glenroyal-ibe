@@ -1553,8 +1553,10 @@ label.validationError {
       @include sectionHeading;
       text-align: center;
       margin: 30px 0;
+      font-size: 24px;
       @include mQ(992px) {
           margin: 50px 0;
+          font-size: 32px;
       }
   }
   &__filter {

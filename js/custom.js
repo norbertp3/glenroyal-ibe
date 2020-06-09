@@ -48,3 +48,14 @@ $( document ).ready(function() {
   });
 
 });
+
+if ($(window).width() > 991) {
+  $('.offers-list__article').each(function(){
+    var boxSize = 0;
+    $(this).find('.offers-list__article--description').each(function(){
+      boxSize = $(this).height();
+    });
+    boxSize = boxSize + 40;
+    $(this).closest('.offers-list__article').css({"height":boxSize+"px"});
+  });
+}

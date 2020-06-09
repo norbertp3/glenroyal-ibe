@@ -143,8 +143,8 @@
     }
     &:focus {
         box-shadow: none;
-        background-color: #fff;
-        color: #000;
+        // background-color: #fff;
+        // color: #000;
         border: solid 2px rgba(240, 240, 240, 0.2);
     }
     &:not(:disabled):not(.disabled):active {
@@ -182,8 +182,8 @@
     }
     &:focus {
         box-shadow: none;
-        background-color: #fff;
-        color: #000;
+        // background-color: #fff;
+        // color: #000;
         border: solid 1px rgba(255, 255, 255, 0.8);
     }
     &:not(:disabled):not(.disabled):active {
