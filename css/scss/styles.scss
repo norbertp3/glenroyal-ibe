@@ -733,8 +733,11 @@ sup {
       background-color: #d8d8d8;
     }
     .calendar-date {
-      border-radius: 2px;
+      border-radius: 0;
       border: none;
+      @include mQmax(991px){
+        border: solid 1px #abaaad;
+      }
     }
     .calendar-btn {
       @include mQmax (991px) {
@@ -760,6 +763,9 @@ sup {
         font-size: 16px;
       }
     }
+    .calendar-heading {
+      font-size: 32px;
+    }
   }
   &__search {
     &--widget{
@@ -779,7 +785,6 @@ sup {
           color: #fff;
           box-shadow: none;
           border-bottom: 2px solid #fff;
-          padding-left: 0;
           background-image: url(/images/icons/icon-expand.png);
           background-size: 25px;
           background-position: calc(100% - -6px) 50%;
@@ -807,12 +812,16 @@ sup {
       color: #cccccd;
     }
     .confirm-block--border {
-      border-left: solid 1px rgba(255, 255, 255, 0.5);
-      border-right: solid 1px rgba(255, 255, 255, 0.5);
+      @include mQ(992px){
+        border-left: solid 1px rgba(255, 255, 255, 0.5);
+        border-right: solid 1px rgba(255, 255, 255, 0.5);
+      }
     }
     a.btn-offer {
       @include hotelInfoBtn;
       width: 100%;
+      margin-bottom: 5px;
+      margin-right: 0;
       @include mQ(992px) {
         margin-top: 50px;
       }
@@ -835,6 +844,11 @@ sup {
           margin-left: 20px;
         }
       }
+    }
+  }
+  &__calendar {
+    .calendar-heading-arrows {
+      font-size: 20px!important;
     }
   }
 }

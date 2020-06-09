@@ -677,6 +677,9 @@ template {
   .calendar .calendar-date-price {
     text-align: right;
     margin-top: 0px;
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
   }
   .calendar .calendar-date {
     border: 1px solid #abaaad;
@@ -3400,6 +3403,8 @@ label.validationError {
 .offer-details__image {
   width: 100%;
   height: 199px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media screen and (min-width: 992px) {
@@ -3482,6 +3487,7 @@ label.validationError {
 
 .offer-details__terms-content {
   display: none;
+  padding-top: 10px;
 }
 
 @media screen and (min-width: 992px) {
@@ -3685,6 +3691,7 @@ label.validationError {
   .offer__banner .confirm-block--border {
     border-left: solid 1px #fff;
     text-align: right;
+    border-right: none;
   }
 }
 
@@ -5387,8 +5394,14 @@ sup {
 }
 
 .container-fluid .calendar .calendar-date {
-  border-radius: 2px;
+  border-radius: 0;
   border: none;
+}
+
+@media screen and (max-width: 991px) {
+  .container-fluid .calendar .calendar-date {
+    border: solid 1px #abaaad;
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -5416,6 +5429,10 @@ sup {
   font-weight: 400;
   color: rgba(87, 86, 91, 0.8);
   font-size: 16px;
+}
+
+.offer__calendar .calendar-heading {
+  font-size: 32px;
 }
 
 .offer__search--widget .btn-offer {
@@ -5479,7 +5496,6 @@ sup {
   -webkit-box-shadow: none;
           box-shadow: none;
   border-bottom: 2px solid #fff;
-  padding-left: 0;
   background-image: url(/images/icons/icon-expand.png);
   background-size: 25px;
   background-position: calc(100% - -6px) 50%;
@@ -5510,9 +5526,11 @@ sup {
   color: #cccccd;
 }
 
-.offer__banner .confirm-block--border {
-  border-left: solid 1px rgba(255, 255, 255, 0.5);
-  border-right: solid 1px rgba(255, 255, 255, 0.5);
+@media screen and (min-width: 992px) {
+  .offer__banner .confirm-block--border {
+    border-left: solid 1px rgba(255, 255, 255, 0.5);
+    border-right: solid 1px rgba(255, 255, 255, 0.5);
+  }
 }
 
 .offer__banner a.btn-offer {
@@ -5527,6 +5545,8 @@ sup {
   height: 50px;
   text-transform: uppercase;
   width: 100%;
+  margin-bottom: 5px;
+  margin-right: 0;
 }
 
 .offer__banner a.btn-offer:hover {
@@ -5592,6 +5612,10 @@ sup {
   .offer-details__content ul {
     margin-left: 20px;
   }
+}
+
+.offer__calendar .calendar-heading-arrows {
+  font-size: 20px !important;
 }
 
 @media screen and (min-width: 992px) {
