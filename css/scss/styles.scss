@@ -893,3 +893,27 @@ sup {
   margin-left: 0; 
 }
 
+.calendar-date--highlighted:not(.calendar-date--selected),
+.calendar-date--highlighted.calendar-date--disabled:not(.calendar-date--selected)
+{
+  background-color: $primaryColor;
+}
+.calendar .calendar-date--disabled:not(.calendar-date--selected) {
+  background-color: #fff;
+}
+.calendar-date-row {
+  @include mQmax (991px) {
+    padding: 0 5px 0;
+  }
+}
+
+.calendar .calendar-date-price {
+  @include mQmax(991px) {
+    flex: 1;
+  }
+}
+.calendar .calendar-date-price.two-night {
+  @include mQmax(991px) {
+    flex: 2;
+  }
+}

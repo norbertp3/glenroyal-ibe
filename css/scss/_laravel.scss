@@ -236,3 +236,25 @@
   background-size: 100% 100%;
   margin-left: 5px; 
 }
+
+// Special Offers
+
+.calendar .calendar-date--disabled:not(.calendar-date--selected) {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.calendar-date--selected {
+  background-color: $primaryColor;
+  color: #fff;
+}
+
+.calendar-date--highlighted:not(.calendar-date--selected),
+.calendar-date--highlighted.calendar-date--disabled:not(.calendar-date--selected)
+{
+  background-color: rgba(34, 34, 34, 0.5);
+}
+
+.calendar .calendar-date--selected .calendar-date-price,
+.calendar .calendar-date--selected .calendar-date-heading
+{
+  color: #fff;
+}

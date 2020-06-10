@@ -738,6 +738,25 @@ template {
   margin-left: 5px;
 }
 
+.calendar .calendar-date--disabled:not(.calendar-date--selected) {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.calendar-date--selected {
+  background-color: #57565b;
+  color: #fff;
+}
+
+.calendar-date--highlighted:not(.calendar-date--selected),
+.calendar-date--highlighted.calendar-date--disabled:not(.calendar-date--selected) {
+  background-color: rgba(34, 34, 34, 0.5);
+}
+
+.calendar .calendar-date--selected .calendar-date-price,
+.calendar .calendar-date--selected .calendar-date-heading {
+  color: #fff;
+}
+
 body {
   background-color: #f6f6f6;
 }
@@ -5662,5 +5681,36 @@ sup {
   width: auto;
   height: auto;
   margin-left: 0;
+}
+
+.calendar-date--highlighted:not(.calendar-date--selected),
+.calendar-date--highlighted.calendar-date--disabled:not(.calendar-date--selected) {
+  background-color: #57565b;
+}
+
+.calendar .calendar-date--disabled:not(.calendar-date--selected) {
+  background-color: #fff;
+}
+
+@media screen and (max-width: 991px) {
+  .calendar-date-row {
+    padding: 0 5px 0;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .calendar .calendar-date-price {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .calendar .calendar-date-price.two-night {
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
