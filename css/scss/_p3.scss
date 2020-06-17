@@ -1848,3 +1848,39 @@ label.validationError {
       }
   }
 }
+
+// Mobile sign-up Bottom
+
+.ibe-join-mobile {
+  position:fixed;
+  bottom: 0;
+  background-color: $primaryColor;
+  width: 100%;
+  z-index: 15;
+  padding: 5px 10px 5px 5px;
+  a {
+    background-color: #fff;
+    padding: 8px 15px;
+    color: $primaryColor!important;
+    border-radius: 15px!important;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: $textFont;
+  }
+  p {
+    color: #fff!important;
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 7px;
+  }
+}
+a.ibe-join-mobile-close {
+  background-color: $primaryColor;
+  color: #fff!important;
+  padding: 0;
+  font-size: 23px;
+  .icon-close {
+    @include iconClose;
+    background-image: $iconCloseLightDefault!important;
+  }
+}

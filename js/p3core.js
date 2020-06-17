@@ -140,3 +140,8 @@ $('.loading-spinner').one('click', function () {
   $('.offer-details__terms-link').click(function(){
     $(this).closest('.offer-details__content').find('.offer-details__terms-content').slideToggle();
   });
+
+  //Added 17/06/20
+  $('.ibe-join-mobile-close').click(function(){
+    $('.ibe-join-mobile').hide();
+  });
